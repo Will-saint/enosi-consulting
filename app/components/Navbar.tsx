@@ -17,19 +17,19 @@ const navItems: NavItem[] = [
   },
   {
     label: "Notre approche",
-    anchor: "#methode",
+    anchor: "/#methode",
     sub: [
-      { label: "Comment nous intervenons", href: "#methode" },
-      { label: "Notre méthode", href: "#methode" },
-      { label: "Ce qui nous distingue", href: "#methode" },
+      { label: "Comment nous intervenons", href: "/#methode" },
+      { label: "Notre méthode", href: "/#methode" },
+      { label: "Ce qui nous distingue", href: "/#methode" },
     ],
   },
   {
     label: "Interventions",
-    anchor: "#interventions",
+    anchor: "/#interventions",
     sub: [
-      { label: "Exemples de missions", href: "#interventions" },
-      { label: "Cas d'usage", href: "#interventions" },
+      { label: "Exemples de missions", href: "/#interventions" },
+      { label: "Cas d'usage", href: "/#interventions" },
     ],
   },
   {

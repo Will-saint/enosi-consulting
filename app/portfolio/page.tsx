@@ -208,25 +208,25 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Graphique Cas 1 — avant/après reporting */}
-            <div className="rounded-xl p-6 mb-6" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
-              <p className="text-xs text-gray-600 uppercase tracking-wider mb-5">Temps de production du reporting (jours)</p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-gray-500 w-10 shrink-0">Avant</span>
-                  <div className="flex-1 relative h-7 rounded" style={{ backgroundColor: "#1a1a1a" }}>
-                    <div className="h-full rounded" style={{ width: "90%", backgroundColor: "#ef444499" }} />
+            {/* Graphique Cas 1 */}
+            <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
+              <p className="text-xs text-gray-600 uppercase tracking-wider mb-6">Temps de production du reporting (jours)</p>
+              <div className="space-y-4">
+                {[
+                  { label: "Avant", value: 100, display: "6 jours", color: "#ef444460" },
+                  { label: "Après", value: 16, display: "1 jour", color: "#3ddc84" },
+                ].map(b => (
+                  <div key={b.label} className="flex items-center gap-4">
+                    <span className="text-xs w-10 shrink-0" style={{color: 'rgba(255,255,255,0.3)'}}>{b.label}</span>
+                    <div className="flex-1 h-7 rounded-full overflow-hidden" style={{background: 'rgba(255,255,255,0.04)'}}>
+                      <div className="h-full rounded-full transition-all duration-1000 flex items-center px-3"
+                           style={{width: `${b.value}%`, background: b.color}} />
+                    </div>
+                    <span className="text-xs w-12 text-right" style={{color: b.color}}>{b.display}</span>
                   </div>
-                  <span className="text-sm text-gray-400 w-12 text-right shrink-0">6 jours</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-gray-500 w-10 shrink-0">Après</span>
-                  <div className="flex-1 relative h-7 rounded" style={{ backgroundColor: "#1a1a1a" }}>
-                    <div className="h-full rounded" style={{ width: "15%", backgroundColor: "#3ddc84" }} />
-                  </div>
-                  <span className="text-sm font-semibold w-12 text-right shrink-0" style={{ color: "#3ddc84" }}>1 jour</span>
-                </div>
+                ))}
               </div>
+              <p className="text-xs mt-4" style={{color: 'rgba(61,220,132,0.6)'}}>→ Gain : −5 jours de production mensuelle</p>
             </div>
 
             {/* Résultat */}
@@ -390,37 +390,29 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Graphique Cas 2 — matrice impact/effort */}
-            <div className="rounded-xl p-6 mb-6 max-w-sm mx-auto" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
-              <p className="text-xs text-gray-600 uppercase tracking-wider mb-4">Matrice de scoring des cas d&apos;usage (schématique)</p>
-              <div className="relative" style={{ height: 220 }}>
-                {/* Axes */}
-                <div className="absolute bottom-6 left-6 right-2 top-2" style={{ border: "1px solid #2a2a2a" }}>
-                  {/* Ligne médiane verticale */}
-                  <div className="absolute top-0 bottom-0" style={{ left: "50%", borderLeft: "1px solid #222" }} />
-                  {/* Ligne médiane horizontale */}
-                  <div className="absolute left-0 right-0" style={{ top: "50%", borderTop: "1px solid #222" }} />
-                  {/* Points gris — autres cas */}
-                  {[
-                    { x: "20%", y: "25%" }, { x: "35%", y: "70%" },
-                    { x: "15%", y: "55%" }, { x: "60%", y: "75%" },
-                    { x: "70%", y: "30%" },
-                  ].map((p, i) => (
-                    <div key={i} className="absolute w-2 h-2 rounded-full -translate-x-1 -translate-y-1" style={{ left: p.x, top: p.y, backgroundColor: "#444" }} />
-                  ))}
-                  {/* Point retenu — vert, quadrant haute valeur + haute faisabilité */}
-                  <div className="absolute" style={{ left: "72%", top: "22%" }}>
-                    <div className="w-3 h-3 rounded-full -translate-x-1.5 -translate-y-1.5" style={{ backgroundColor: "#3ddc84" }} />
-                    <span className="absolute text-[10px] whitespace-nowrap" style={{ left: 14, top: -4, color: "#3ddc84" }}>Cas retenu</span>
-                  </div>
-                </div>
-                {/* Labels axes */}
-                <div className="absolute bottom-0 left-6 right-0 text-center">
-                  <span className="text-xs text-gray-600">Faisabilité →</span>
-                </div>
-                <div className="absolute top-2 left-0" style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
-                  <span className="text-xs text-gray-600">Valeur business ↑</span>
-                </div>
+            {/* Graphique Cas 2 */}
+            <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
+              <p className="text-xs text-gray-600 uppercase tracking-wider mb-6">Scoring des cas d&apos;usage (schématique)</p>
+              <div className="relative" style={{height: '200px'}}>
+                <div className="absolute bottom-0 left-8 right-0 h-px" style={{background: 'rgba(255,255,255,0.1)'}} />
+                <div className="absolute bottom-0 left-8 top-0 w-px" style={{background: 'rgba(255,255,255,0.1)'}} />
+                <span className="absolute bottom-[-18px] right-0 text-xs" style={{color: 'rgba(255,255,255,0.2)'}}>Faisabilité →</span>
+                <span className="absolute top-0 left-0 text-xs" style={{color: 'rgba(255,255,255,0.2)', writingMode: 'vertical-rl', transform: 'rotate(180deg)'}}>Valeur ↑</span>
+                {[
+                  {x: 20, y: 70}, {x: 35, y: 30}, {x: 55, y: 55},
+                  {x: 25, y: 50}, {x: 65, y: 25}, {x: 40, y: 75},
+                  {x: 70, y: 60}, {x: 50, y: 35}, {x: 30, y: 85},
+                  {x: 80, y: 45}, {x: 45, y: 20}, {x: 60, y: 80},
+                ].map((p, i) => (
+                  <div key={i} className="absolute w-2 h-2 rounded-full"
+                       style={{left: `calc(2rem + ${p.x}%)`, bottom: `${p.y * 1.8}px`, background: 'rgba(255,255,255,0.15)', transform: 'translate(-50%, 50%)'}} />
+                ))}
+                <div className="absolute w-4 h-4 rounded-full"
+                     style={{left: 'calc(2rem + 78%)', bottom: '145px', background: '#3ddc84', boxShadow: '0 0 12px rgba(61,220,132,0.5)', transform: 'translate(-50%, 50%)'}} />
+                <span className="absolute text-xs font-semibold"
+                      style={{left: 'calc(2rem + 78%)', bottom: '162px', transform: 'translateX(-50%)', color: '#3ddc84'}}>
+                  Cas retenu
+                </span>
               </div>
             </div>
 
@@ -566,28 +558,23 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Graphique Cas 3 — timeline comparative */}
-            <div className="rounded-xl p-6 mb-6" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
-              <p className="text-xs text-gray-600 uppercase tracking-wider mb-5">Cycle budgétaire (semaines)</p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-gray-500 w-10 shrink-0">Avant</span>
-                  <div className="flex-1 relative h-7 rounded" style={{ backgroundColor: "#1a1a1a" }}>
-                    <div className="h-full rounded flex items-center justify-end pr-2" style={{ width: "100%", backgroundColor: "#444" }}>
-                      <span className="text-xs text-gray-300">14 sem.</span>
+            {/* Graphique Cas 3 */}
+            <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
+              <p className="text-xs text-gray-600 uppercase tracking-wider mb-6">Durée du cycle budgétaire (semaines)</p>
+              <div className="space-y-4">
+                {[
+                  { label: "Avant", weeks: 14, color: "#ef444460", display: "14 sem." },
+                  { label: "Après", weeks: 11, color: "#3ddc84", display: "11 sem." },
+                ].map(b => (
+                  <div key={b.label} className="flex items-center gap-4">
+                    <span className="text-xs w-10 shrink-0" style={{color: 'rgba(255,255,255,0.3)'}}>{b.label}</span>
+                    <div className="flex-1 h-7 rounded-full overflow-hidden relative" style={{background: 'rgba(255,255,255,0.04)'}}>
+                      <div className="h-full rounded-full" style={{width: `${(b.weeks / 14) * 100}%`, background: b.color}} />
                     </div>
+                    <span className="text-xs w-14 text-right" style={{color: b.color}}>{b.display}</span>
                   </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-gray-500 w-10 shrink-0">Après</span>
-                  <div className="flex-1 relative h-7 rounded overflow-hidden" style={{ backgroundColor: "#1a1a1a" }}>
-                    <div className="h-full rounded-l" style={{ width: "78.5%", backgroundColor: "#3ddc84" }} />
-                    <div className="absolute top-0 h-full flex items-center px-2" style={{ left: "78.5%", right: 0, backgroundColor: "#3ddc8430" }}>
-                      <span className="text-[10px] font-semibold" style={{ color: "#3ddc84" }}>−3 sem.</span>
-                    </div>
-                    <span className="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-gray-300">11 sem.</span>
-                  </div>
-                </div>
+                ))}
+                <p className="text-xs pt-2" style={{color: 'rgba(61,220,132,0.6)'}}>→ Gain : 3 semaines récupérées dès la première année</p>
               </div>
             </div>
 

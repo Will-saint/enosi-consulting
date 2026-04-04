@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Awards from "./components/Awards";
+import Metrics from "./components/Metrics";
 import Platforms from "./components/Platforms";
 import Methode from "./components/Methode";
 import PortfolioPreview from "./components/PortfolioPreview";
@@ -25,6 +26,7 @@ export default function Home() {
       <main>
         <Hero />
         <Awards />
+        <Metrics />
         <Platforms />
         <Methode />
         <PortfolioPreview />

@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 const cas = [
   {
     badge: "Pilotage",
@@ -42,38 +44,41 @@ const cas = [
 
 export default function PortfolioPreview() {
   return (
-    <section className="py-28 px-6 border-b border-[#1e1e1e]">
+    <section className="py-28 px-6 border-b" style={{borderColor: 'rgba(255,255,255,0.06)'}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Portfolio</p>
+          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(255,255,255,0.25)'}}>Portfolio</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             Trois missions. Trois résultats concrets.
           </h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
+          <p className="max-w-xl mx-auto text-sm" style={{color: 'rgba(255,255,255,0.4)'}}>
             Des interventions réelles, présentées sans fioritures.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-          {cas.map((c) => (
-            <div key={c.titre} className="bg-[#111] border border-[#1e1e1e] rounded-2xl p-7 flex flex-col hover:border-[#3ddc84]/25 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-all duration-200">
-              <span className="text-xs font-semibold px-2.5 py-1 rounded-full self-start mb-4" style={{ backgroundColor: c.badgeBg, color: c.badgeColor }}>
-                {c.badge}
-              </span>
-              <h3 className="text-base font-bold text-white mb-2 leading-snug">{c.titre}</h3>
-              <p className="text-xs text-gray-600 mb-5">{c.contexte}</p>
-              <div className="space-y-2 flex-1">
-                {c.resultats.map((r) => (
-                  <div key={r} className="flex items-start gap-2 text-xs text-gray-400">
-                    <span className="text-[#3ddc84] shrink-0">→</span>
-                    {r}
-                  </div>
-                ))}
+          {cas.map((c, index) => (
+            <ScrollReveal key={c.titre} delay={index * 100}>
+              <div className="card-premium p-7 flex flex-col h-full">
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-full self-start mb-4"
+                      style={{ backgroundColor: c.badgeBg, color: c.badgeColor }}>
+                  {c.badge}
+                </span>
+                <h3 className="text-base font-bold text-white mb-2 leading-snug">{c.titre}</h3>
+                <p className="text-xs mb-5" style={{color: 'rgba(255,255,255,0.25)'}}>{c.contexte}</p>
+                <div className="space-y-2 flex-1">
+                  {c.resultats.map((r) => (
+                    <div key={r} className="flex items-start gap-2 text-xs" style={{color: 'rgba(255,255,255,0.5)'}}>
+                      <span className="text-[#3ddc84] shrink-0">→</span>
+                      {r}
+                    </div>
+                  ))}
+                </div>
+                <a href={c.href} className="text-xs text-[#3ddc84] hover:underline mt-5 block">
+                  Lire le cas complet →
+                </a>
               </div>
-              <a href={c.href} className="text-xs text-[#3ddc84] hover:underline mt-5 block">
-                Lire le cas complet →
-              </a>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

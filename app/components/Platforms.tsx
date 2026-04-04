@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 const offres = [
   {
     numero: "01",
@@ -60,79 +62,83 @@ const offres = [
 
 export default function Platforms() {
   return (
-    <section id="offres" className="py-28 px-6 border-b border-[#1e1e1e]">
+    <section id="offres" className="py-28 px-6 border-b" style={{borderColor: 'rgba(255,255,255,0.06)'}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Nos offres</p>
+          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(255,255,255,0.25)'}}>Nos offres</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             Trois domaines d&apos;intervention
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto" style={{color: 'rgba(255,255,255,0.4)'}}>
             Un périmètre resserré. Des expertises complémentaires. Une logique d&apos;impact.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {offres.map((o) => (
-            <div
-              key={o.nom}
-              className="bg-[#111] border border-[#1e1e1e] rounded-2xl p-8 flex flex-col hover:border-[#3ddc84]/25 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-all duration-200"
-            >
-              {/* Numéro + icône */}
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-xs text-gray-700 font-mono">{o.numero}</span>
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center text-lg"
-                  style={{ backgroundColor: `${o.couleur}12`, color: o.couleur }}
-                >
-                  {o.icone}
-                </div>
-              </div>
+          {offres.map((o, index) => (
+            <ScrollReveal key={o.nom} delay={index * 150}>
+              <div className="card-premium p-8 flex flex-col relative overflow-hidden group h-full">
 
-              {/* Titre + accroche */}
-              <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: o.couleur }}>
-                {o.accroche}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">{o.nom}</h3>
+                {/* Fond décoratif hover */}
+                <div className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-0
+                     group-hover:opacity-100 transition-opacity duration-500 -translate-y-8 translate-x-8"
+                     style={{background: `radial-gradient(circle, ${o.couleur}15, transparent)`}} />
 
-              {/* Problème */}
-              <div className="bg-[#0d0d0d] rounded-xl p-4 mb-5 border border-[#181818]">
-                <p className="text-xs text-gray-600 uppercase tracking-wider mb-1.5">Le constat</p>
-                <p className="text-sm text-gray-400 leading-relaxed">{o.probleme}</p>
-              </div>
+                {/* Numéro décoratif */}
+                <span className="font-serif text-[5rem] opacity-10 absolute top-4 right-6 leading-none select-none"
+                      style={{color: o.couleur, fontFamily: "'Playfair Display', serif"}}>
+                  {o.numero}
+                </span>
 
-              {/* Apport */}
-              <p className="text-sm text-gray-400 leading-relaxed mb-5 flex-1">{o.apport}</p>
-
-              {/* Sujets */}
-              <div className="space-y-2 mb-6">
-                {o.sujets.map((s) => (
-                  <div key={s} className="flex items-start gap-2 text-xs text-gray-500">
-                    <div
-                      className="w-1 h-1 rounded-full mt-1.5 shrink-0"
-                      style={{ backgroundColor: o.couleur }}
-                    />
-                    {s}
+                {/* Icône */}
+                <div className="flex items-center justify-between mb-6 relative z-10">
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center text-lg"
+                    style={{ backgroundColor: `${o.couleur}12`, color: o.couleur }}
+                  >
+                    {o.icone}
                   </div>
-                ))}
-              </div>
+                </div>
 
-              {/* Bénéfice */}
-              <div
-                className="text-xs font-medium leading-relaxed pt-4 border-t mb-4"
-                style={{ borderColor: `${o.couleur}20`, color: o.couleur }}
-              >
-                {o.benefice}
-              </div>
+                {/* Titre + accroche */}
+                <div className="text-xs font-semibold uppercase tracking-wider mb-2 relative z-10" style={{ color: o.couleur }}>
+                  {o.accroche}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 relative z-10">{o.nom}</h3>
 
-              {/* Lien page offre */}
-              <a
-                href={o.href}
-                className="inline-flex items-center gap-1 text-xs text-gray-600 hover:text-white transition-colors"
-              >
-                En savoir plus →
-              </a>
-            </div>
+                {/* Problème */}
+                <div className="rounded-xl p-4 mb-5 relative z-10"
+                     style={{background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.05)'}}>
+                  <p className="text-xs uppercase tracking-wider mb-1.5" style={{color: 'rgba(255,255,255,0.2)'}}>Le constat</p>
+                  <p className="text-sm leading-relaxed" style={{color: 'rgba(255,255,255,0.5)'}}>{o.probleme}</p>
+                </div>
+
+                {/* Apport */}
+                <p className="text-sm leading-relaxed mb-5 flex-1 relative z-10" style={{color: 'rgba(255,255,255,0.5)'}}>{o.apport}</p>
+
+                {/* Sujets */}
+                <div className="space-y-2 mb-6 relative z-10">
+                  {o.sujets.map((s) => (
+                    <div key={s} className="flex items-start gap-2 text-xs" style={{color: 'rgba(255,255,255,0.35)'}}>
+                      <div className="w-1 h-1 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: o.couleur }} />
+                      {s}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bénéfice */}
+                <div className="text-xs font-medium leading-relaxed pt-4 border-t mb-4 relative z-10"
+                     style={{ borderColor: `${o.couleur}20`, color: o.couleur }}>
+                  {o.benefice}
+                </div>
+
+                {/* Lien */}
+                <a href={o.href}
+                   className="inline-flex items-center gap-1 text-xs transition-colors relative z-10 text-[rgba(255,255,255,0.3)] hover:text-white">
+                  En savoir plus →
+                </a>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
