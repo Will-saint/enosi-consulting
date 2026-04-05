@@ -32,14 +32,14 @@ export default function CustomCursor() {
       <div ref={dot} style={{
         position:'fixed', pointerEvents:'none', zIndex:9999,
         width:'6px', height:'6px', borderRadius:'50%',
-        background:'#3ddc84',
+        background:'#1a9e5c',
         transform:'translate(-50%,-50%)',
         transition:'transform 0.1s'
       }}/>
       <div ref={ring} style={{
         position:'fixed', pointerEvents:'none', zIndex:9998,
         width:'28px', height:'28px', borderRadius:'50%',
-        border:'1px solid rgba(61,220,132,0.35)',
+        border:'1px solid rgba(26,158,92,0.4)',
         transform:'translate(-50%,-50%)'
       }}/>
     </>

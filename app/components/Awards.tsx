@@ -1,16 +1,16 @@
 export default function Awards() {
   return (
     <section style={{
-      background: '#131315',
+      background: '#FFFFFF',
       padding: '6rem 1.5rem',
-      borderTop: '1px solid rgba(144,143,158,0.06)',
-      borderBottom: '1px solid rgba(144,143,158,0.06)',
+      borderTop: '1px solid rgba(0,0,0,0.06)',
+      borderBottom: '1px solid rgba(0,0,0,0.06)',
     }}>
       <div style={{maxWidth: '80rem', margin: '0 auto'}}>
         <p style={{
           fontSize: '0.65rem', letterSpacing: '0.2em',
           textTransform: 'uppercase', textAlign: 'center',
-          color: 'rgba(198,197,213,0.25)', marginBottom: '2.5rem'
+          color: 'rgba(30,30,30,0.35)', marginBottom: '2.5rem'
         }}>
           Notre positionnement
         </p>
@@ -35,7 +35,7 @@ export default function Awards() {
             },
           ].map((c) => (
             <div key={c.titre} style={{
-              background: '#1c1b1d',
+              background: '#F2F0EC',
               borderRadius: '1.5rem',
               padding: '2rem 2.5rem',
               display: 'flex',
@@ -44,26 +44,26 @@ export default function Awards() {
             }}>
               <div style={{
                 width: '3rem', height: '3rem',
-                background: 'rgba(61,220,132,0.08)',
+                background: 'rgba(26,158,92,0.08)',
                 borderRadius: '0.75rem',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: '1.25rem', color: '#3ddc84', fontWeight: 700,
+                fontSize: '1.25rem', color: '#1a9e5c', fontWeight: 700,
                 flexShrink: 0,
               }}>{c.icone}</div>
               <div>
                 <p style={{
                   fontSize: '0.7rem', fontWeight: 600,
                   textTransform: 'uppercase', letterSpacing: '0.1em',
-                  color: '#3ddc84', marginBottom: '0.5rem'
+                  color: '#1a9e5c', marginBottom: '0.5rem'
                 }}>{c.label}</p>
                 <h3 style={{
                   fontFamily: "'Playfair Display', Georgia, serif",
                   fontSize: '1.1rem', fontWeight: 700,
-                  color: '#ffffff', marginBottom: '0.75rem'
+                  color: '#0f0f0f', marginBottom: '0.75rem'
                 }}>{c.titre}</h3>
                 <p style={{
                   fontSize: '0.85rem', lineHeight: 1.7,
-                  color: 'rgba(198,197,213,0.5)'
+                  color: 'rgba(30,30,30,0.5)'
                 }}>{c.texte}</p>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function Awards() {
         </div>
         <p style={{
           textAlign: 'center', fontSize: '0.75rem',
-          color: 'rgba(198,197,213,0.2)'
+          color: 'rgba(30,30,30,0.3)'
         }}>
           Cabinet fondé par William Saint-Dizier — consultant en performance, data et IA.
         </p>

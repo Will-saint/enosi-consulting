@@ -2,25 +2,25 @@
 @import "tailwindcss";
 
 :root {
-  --bg:           #0e0e10;
-  --surface:      #131315;
-  --surface-low:  #1c1b1d;
-  --surface-high: #2a2a2c;
-  --surface-float:#39393b;
+  --bg:           #F8F7F4;
+  --surface:      #FFFFFF;
+  --surface-low:  #F2F0EC;
+  --surface-high: #E8E5DF;
+  --surface-float:#FFFFFF;
 
-  --green:        #3ddc84;
-  --green-dark:   #2ab86e;
-  --green-glow:   rgba(61,220,132,0.12);
-  --violet:       #6366f1;
-  --amber:        #f59e0b;
+  --green:        #1a9e5c;
+  --green-dark:   #157a47;
+  --green-glow:   rgba(26,158,92,0.12);
+  --violet:       #4f46e5;
+  --amber:        #d97706;
 
-  --text-primary:   #e8e8f0;
-  --text-secondary: #c6c5d5;
-  --text-muted:     rgba(198,197,213,0.45);
-  --text-ghost:     rgba(198,197,213,0.2);
+  --text-primary:   #0f0f0f;
+  --text-secondary: #3a3a3a;
+  --text-muted:     rgba(30,30,30,0.5);
+  --text-ghost:     rgba(30,30,30,0.25);
 
-  --border-ghost:  rgba(144,143,158,0.12);
-  --border-hover:  rgba(61,220,132,0.2);
+  --border-ghost:  rgba(0,0,0,0.07);
+  --border-hover:  rgba(26,158,92,0.25);
 }
 
 body {
@@ -32,11 +32,12 @@ body {
 
 h1, h2, h3 {
   font-family: 'Playfair Display', Georgia, serif;
-  color: #ffffff;
+  color: #0f0f0f;
 }
 
 html { scroll-behavior: smooth; }
 
+/* Carrousel */
 @keyframes scrollX {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -59,16 +60,31 @@ html { scroll-behavior: smooth; }
   to   { transform: scaleX(1); opacity: 1; }
 }
 
+/* Card premium — light */
+.card-premium {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
+  border-radius: 16px;
+  transition: all 0.25s ease;
+}
+.card-premium:hover {
+  background: #FAFAF8;
+  box-shadow: 0 0 0 1px rgba(26,158,92,0.15), 0 8px 32px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+/* Grain texture réduit */
 body::after {
   content: '';
   position: fixed; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 200px;
-  opacity: 0.02;
+  opacity: 0.008;
   pointer-events: none;
   z-index: 9990;
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--surface-high); }
+::-webkit-scrollbar-track { background: #F2F0EC; }
+::-webkit-scrollbar-thumb { background: #D0CDC6; }

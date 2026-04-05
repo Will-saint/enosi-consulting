@@ -44,10 +44,10 @@ export default function Navbar() {
   return (
     <header style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
-      background: 'rgba(14,14,16,0.7)',
+      background: 'rgba(248,247,244,0.88)',
       backdropFilter: 'blur(24px)',
       WebkitBackdropFilter: 'blur(24px)',
-      borderBottom: '1px solid rgba(144,143,158,0.1)',
+      borderBottom: '1px solid rgba(0,0,0,0.07)',
     }}>
       <div style={{
         maxWidth: '80rem', margin: '0 auto',
@@ -58,7 +58,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="/" style={{display:'flex', alignItems:'center', flexShrink:0}}>
-          <Image src="/logo-full.svg" alt="Enosi Consulting" width={160} height={32} />
+          <Image src="/logo-dark.svg" alt="Enosi Consulting" width={180} height={40} />
         </a>
 
         {/* Desktop Nav */}
@@ -70,12 +70,12 @@ export default function Navbar() {
                    style={{
                      padding: '0.5rem 1rem',
                      fontSize: '0.85rem',
-                     color: '#c6c5d5',
+                     color: '#3a3a3a',
                      textDecoration: 'none',
                      transition: 'color 0.2s',
                    }}
-                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#ffffff'}
-                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='#c6c5d5'}>
+                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#0f0f0f'}
+                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='#3a3a3a'}>
                   {item.label}
                 </a>
               );
@@ -88,13 +88,13 @@ export default function Navbar() {
                    style={{
                      padding: '0.5rem 1rem',
                      fontSize: '0.85rem',
-                     color: '#c6c5d5',
+                     color: '#3a3a3a',
                      textDecoration: 'none',
                      transition: 'color 0.2s',
                      display: 'flex', alignItems: 'center', gap: '0.25rem',
                    }}
-                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#ffffff'}
-                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='#c6c5d5'}>
+                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#0f0f0f'}
+                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='#3a3a3a'}>
                   {item.label}
                   <svg className="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -103,13 +103,13 @@ export default function Navbar() {
                 {open === item.label && (
                   <div style={{
                     position: 'absolute', top: '100%', left: 0, marginTop: '0.25rem',
-                    background: 'rgba(19,19,21,0.95)',
+                    background: 'rgba(255,255,255,0.97)',
                     backdropFilter: 'blur(20px)',
-                    border: '1px solid rgba(144,143,158,0.1)',
+                    border: '1px solid rgba(0,0,0,0.07)',
                     borderRadius: '0.75rem',
                     padding: '0.5rem',
                     minWidth: '240px',
-                    boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
                   }}>
                     {item.sub.map((s) => (
                       <a key={s.label} href={s.href}
@@ -117,18 +117,18 @@ export default function Navbar() {
                            display: 'block',
                            padding: '0.6rem 1rem',
                            fontSize: '0.85rem',
-                           color: '#c6c5d5',
+                           color: '#3a3a3a',
                            textDecoration: 'none',
                            borderRadius: '0.5rem',
                            transition: 'background 0.15s, color 0.15s',
                          }}
                          onMouseEnter={e => {
-                           (e.currentTarget as HTMLElement).style.background='rgba(255,255,255,0.05)';
-                           (e.currentTarget as HTMLElement).style.color='#ffffff';
+                           (e.currentTarget as HTMLElement).style.background='rgba(26,158,92,0.06)';
+                           (e.currentTarget as HTMLElement).style.color='#1a9e5c';
                          }}
                          onMouseLeave={e => {
                            (e.currentTarget as HTMLElement).style.background='transparent';
-                           (e.currentTarget as HTMLElement).style.color='#c6c5d5';
+                           (e.currentTarget as HTMLElement).style.color='#3a3a3a';
                          }}>
                         {s.label}
                       </a>
@@ -146,16 +146,16 @@ export default function Navbar() {
              style={{
                padding: '0.5rem 1.5rem',
                borderRadius: '2rem',
-               background: 'linear-gradient(135deg, #3ddc84, #2ab86e)',
-               color: '#000',
+               background: 'linear-gradient(135deg, #1a9e5c, #157a47)',
+               color: '#fff',
                fontWeight: 600,
                fontSize: '0.8rem',
                textDecoration: 'none',
-               boxShadow: '0 0 20px rgba(61,220,132,0.2)',
+               boxShadow: '0 2px 12px rgba(26,158,92,0.25)',
                transition: 'box-shadow 0.3s',
              }}
-             onMouseEnter={e => (e.currentTarget as HTMLElement).style.boxShadow='0 0 35px rgba(61,220,132,0.35)'}
-             onMouseLeave={e => (e.currentTarget as HTMLElement).style.boxShadow='0 0 20px rgba(61,220,132,0.2)'}>
+             onMouseEnter={e => (e.currentTarget as HTMLElement).style.boxShadow='0 4px 20px rgba(26,158,92,0.4)'}
+             onMouseLeave={e => (e.currentTarget as HTMLElement).style.boxShadow='0 2px 12px rgba(26,158,92,0.25)'}>
             Nous contacter
           </a>
         </div>
@@ -163,7 +163,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           className="lg:hidden"
-          style={{color: '#c6c5d5', background: 'none', border: 'none', cursor: 'pointer'}}
+          style={{color: '#3a3a3a', background: 'none', border: 'none', cursor: 'pointer'}}
           onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,17 +180,17 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div style={{
-          background: 'rgba(14,14,16,0.97)',
+          background: 'rgba(248,247,244,0.98)',
           backdropFilter: 'blur(24px)',
-          borderTop: '1px solid rgba(144,143,158,0.08)',
+          borderTop: '1px solid rgba(0,0,0,0.06)',
           padding: '1rem 1.5rem 1.5rem',
         }}>
           {navItems.map((item) => {
             if (item.direct) {
               return (
-                <div key={item.label} style={{padding:'0.75rem 0', borderBottom:'1px solid rgba(144,143,158,0.06)'}}>
+                <div key={item.label} style={{padding:'0.75rem 0', borderBottom:'1px solid rgba(0,0,0,0.06)'}}>
                   <a href={item.anchor}
-                     style={{color:'#ffffff', fontSize:'0.9rem', fontWeight:600, textDecoration:'none'}}
+                     style={{color:'#0f0f0f', fontSize:'0.9rem', fontWeight:600, textDecoration:'none'}}
                      onClick={() => setMobileOpen(false)}>
                     {item.label}
                   </a>
@@ -198,15 +198,15 @@ export default function Navbar() {
               );
             }
             return (
-              <div key={item.label} style={{padding:'0.75rem 0', borderBottom:'1px solid rgba(144,143,158,0.06)'}}>
+              <div key={item.label} style={{padding:'0.75rem 0', borderBottom:'1px solid rgba(0,0,0,0.06)'}}>
                 <a href={item.anchor}
-                   style={{color:'#ffffff', fontSize:'0.9rem', fontWeight:600, textDecoration:'none', display:'block', marginBottom:'0.5rem'}}
+                   style={{color:'#0f0f0f', fontSize:'0.9rem', fontWeight:600, textDecoration:'none', display:'block', marginBottom:'0.5rem'}}
                    onClick={() => setMobileOpen(false)}>
                   {item.label}
                 </a>
                 {item.sub.map((s) => (
                   <a key={s.label} href={s.href}
-                     style={{display:'block', fontSize:'0.8rem', color:'rgba(198,197,213,0.5)', padding:'0.25rem 0 0.25rem 0.75rem', textDecoration:'none'}}
+                     style={{display:'block', fontSize:'0.8rem', color:'rgba(30,30,30,0.45)', padding:'0.25rem 0 0.25rem 0.75rem', textDecoration:'none'}}
                      onClick={() => setMobileOpen(false)}>
                     {s.label}
                   </a>
@@ -218,8 +218,8 @@ export default function Navbar() {
              style={{
                display:'block', marginTop:'1rem',
                padding:'0.75rem', borderRadius:'2rem', textAlign:'center',
-               background:'linear-gradient(135deg, #3ddc84, #2ab86e)',
-               color:'#000', fontWeight:600, fontSize:'0.85rem', textDecoration:'none',
+               background:'linear-gradient(135deg, #1a9e5c, #157a47)',
+               color:'#fff', fontWeight:600, fontSize:'0.85rem', textDecoration:'none',
              }}
              onClick={() => setMobileOpen(false)}>
             Nous contacter

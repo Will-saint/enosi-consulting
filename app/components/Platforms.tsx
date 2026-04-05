@@ -61,26 +61,26 @@ const offres = [
 export default function Platforms() {
   return (
     <section id="offres" style={{
-      background: '#1c1b1d',
+      background: '#F2F0EC',
       padding: '7rem 1.5rem',
-      borderTop: '1px solid rgba(144,143,158,0.06)',
-      borderBottom: '1px solid rgba(144,143,158,0.06)',
+      borderTop: '1px solid rgba(0,0,0,0.06)',
+      borderBottom: '1px solid rgba(0,0,0,0.06)',
     }}>
       <div style={{maxWidth: '80rem', margin: '0 auto'}}>
         <div style={{textAlign: 'center', marginBottom: '3.5rem'}}>
           <p style={{
             fontSize: '0.65rem', letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: 'rgba(198,197,213,0.25)', marginBottom: '1rem'
+            color: 'rgba(30,30,30,0.35)', marginBottom: '1rem'
           }}>Nos offres</p>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: 'clamp(2rem,4vw,3rem)',
-            fontWeight: 700, color: '#ffffff', marginBottom: '1rem'
+            fontWeight: 700, color: '#0f0f0f', marginBottom: '1rem'
           }}>
             Trois domaines d&apos;intervention
           </h2>
-          <p style={{color: 'rgba(198,197,213,0.4)', maxWidth: '40rem', margin: '0 auto', fontSize: '0.9rem'}}>
+          <p style={{color: 'rgba(30,30,30,0.5)', maxWidth: '40rem', margin: '0 auto', fontSize: '0.9rem'}}>
             Un périmètre resserré. Des expertises complémentaires. Une logique d&apos;impact.
           </p>
         </div>
@@ -93,33 +93,33 @@ export default function Platforms() {
           {offres.map((o, index) => (
             <ScrollReveal key={o.nom} delay={index * 150}>
               <div style={{
-                background: '#0e0e10',
+                background: '#FFFFFF',
                 borderRadius: '1.25rem',
                 padding: '2rem',
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
                 overflow: 'hidden',
-                boxShadow: '0 0 0 1px rgba(144,143,158,0.08)',
+                boxShadow: '0 0 0 1px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05)',
                 transition: 'box-shadow 0.25s, background 0.25s',
                 height: '100%',
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.boxShadow = `0 0 0 1px rgba(61,220,132,0.15), 0 8px 32px rgba(0,0,0,0.4)`;
-                el.style.background = '#131315';
+                el.style.boxShadow = `0 0 0 1px rgba(26,158,92,0.18), 0 8px 32px rgba(0,0,0,0.1)`;
+                el.style.background = '#FAFAF8';
               }}
               onMouseLeave={e => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.boxShadow = '0 0 0 1px rgba(144,143,158,0.08)';
-                el.style.background = '#0e0e10';
+                el.style.boxShadow = '0 0 0 1px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05)';
+                el.style.background = '#FFFFFF';
               }}>
 
                 {/* Numéro décoratif */}
                 <span style={{
                   position: 'absolute', top: '1rem', right: '1.5rem',
                   fontSize: '5rem', opacity: 0.06,
-                  color: '#ffffff',
+                  color: '#0f0f0f',
                   fontFamily: "'Playfair Display', serif",
                   fontWeight: 700, lineHeight: 1, userSelect: 'none',
                   pointerEvents: 'none',
@@ -149,12 +149,12 @@ export default function Platforms() {
                 <h3 style={{
                   fontFamily: "'Playfair Display', serif",
                   fontSize: '1.15rem', fontWeight: 700,
-                  color: '#ffffff', marginBottom: '1rem',
+                  color: '#0f0f0f', marginBottom: '1rem',
                   position: 'relative', zIndex: 1,
                 }}>{o.nom}</h3>
 
                 <div style={{
-                  background: 'rgba(0,0,0,0.3)',
+                  background: 'rgba(0,0,0,0.03)',
                   borderRadius: '0.75rem',
                   padding: '1rem',
                   marginBottom: '1.25rem',
@@ -163,13 +163,13 @@ export default function Platforms() {
                   <p style={{
                     fontSize: '0.7rem', textTransform: 'uppercase',
                     letterSpacing: '0.08em',
-                    color: 'rgba(255,255,255,0.2)', marginBottom: '0.5rem'
+                    color: 'rgba(30,30,30,0.35)', marginBottom: '0.5rem'
                   }}>Le constat</p>
-                  <p style={{fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6}}>{o.probleme}</p>
+                  <p style={{fontSize: '0.85rem', color: 'rgba(30,30,30,0.55)', lineHeight: 1.6}}>{o.probleme}</p>
                 </div>
 
                 <p style={{
-                  fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)',
+                  fontSize: '0.85rem', color: 'rgba(30,30,30,0.55)',
                   lineHeight: 1.7, marginBottom: '1.25rem',
                   flex: 1, position: 'relative', zIndex: 1,
                 }}>{o.apport}</p>
@@ -179,7 +179,7 @@ export default function Platforms() {
                     <div key={s} style={{
                       display: 'flex', alignItems: 'flex-start',
                       gap: '0.5rem', marginBottom: '0.4rem',
-                      fontSize: '0.78rem', color: 'rgba(255,255,255,0.35)',
+                      fontSize: '0.78rem', color: 'rgba(30,30,30,0.45)',
                     }}>
                       <span style={{
                         width: '4px', height: '4px', borderRadius: '50%',
@@ -201,13 +201,13 @@ export default function Platforms() {
 
                 <a href={o.href} style={{
                   fontSize: '0.78rem',
-                  color: 'rgba(255,255,255,0.3)',
+                  color: 'rgba(30,30,30,0.4)',
                   textDecoration: 'none',
                   transition: 'color 0.2s',
                   position: 'relative', zIndex: 1,
                 }}
-                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#ffffff'}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='rgba(255,255,255,0.3)'}>
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#1a9e5c'}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='rgba(30,30,30,0.4)'}>
                   En savoir plus →
                 </a>
               </div>

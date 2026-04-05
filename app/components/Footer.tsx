@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <div className="mb-4">
-              <Image src="/logo-full.svg" alt="Enosi Consulting" width={160} height={32} />
+              <Image src="/logo-full.svg" alt="Enosi Consulting" width={150} height={34} />
             </div>
             <p className="text-xs text-gray-600 leading-relaxed mb-5 max-w-[220px]">
               Cabinet de conseil en performance et création de valeur — finance, data et IA.

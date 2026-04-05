@@ -44,14 +44,14 @@ const cas = [
 
 export default function PortfolioPreview() {
   return (
-    <section className="py-28 px-6 border-b" style={{borderColor: 'rgba(255,255,255,0.06)'}}>
+    <section className="py-28 px-6 border-b" style={{borderColor: 'rgba(0,0,0,0.07)'}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(255,255,255,0.25)'}}>Portfolio</p>
+          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(30,30,30,0.35)'}}>Portfolio</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             Trois missions. Trois résultats concrets.
           </h2>
-          <p className="max-w-xl mx-auto text-sm" style={{color: 'rgba(255,255,255,0.4)'}}>
+          <p className="max-w-xl mx-auto text-sm" style={{color: 'rgba(30,30,30,0.5)'}}>
             Des interventions réelles, présentées sans fioritures.
           </p>
         </div>
@@ -64,11 +64,11 @@ export default function PortfolioPreview() {
                       style={{ backgroundColor: c.badgeBg, color: c.badgeColor }}>
                   {c.badge}
                 </span>
-                <h3 className="text-base font-bold text-white mb-2 leading-snug">{c.titre}</h3>
-                <p className="text-xs mb-5" style={{color: 'rgba(255,255,255,0.25)'}}>{c.contexte}</p>
+                <h3 className="text-base font-bold mb-2 leading-snug" style={{color:'#0f0f0f'}}>{c.titre}</h3>
+                <p className="text-xs mb-5" style={{color: 'rgba(30,30,30,0.4)'}}>{c.contexte}</p>
                 <div className="space-y-2 flex-1">
                   {c.resultats.map((r) => (
-                    <div key={r} className="flex items-start gap-2 text-xs" style={{color: 'rgba(255,255,255,0.5)'}}>
+                    <div key={r} className="flex items-start gap-2 text-xs" style={{color: 'rgba(30,30,30,0.55)'}}>
                       <span className="text-[#3ddc84] shrink-0">→</span>
                       {r}
                     </div>

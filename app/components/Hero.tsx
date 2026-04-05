@@ -9,12 +9,12 @@ export default function Hero() {
           position:'absolute', top:'-10%', left:'50%',
           transform:'translateX(-50%)',
           width:'1000px', height:'600px',
-          background:'radial-gradient(ellipse, rgba(61,220,132,0.07) 0%, rgba(99,102,241,0.04) 40%, transparent 70%)',
+          background:'radial-gradient(ellipse, rgba(26,158,92,0.06) 0%, rgba(79,70,229,0.03) 40%, transparent 70%)',
           filter:'blur(60px)'
         }}/>
         <div style={{
           position:'absolute', inset:0,
-          backgroundImage:'linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px)',
+          backgroundImage:'linear-gradient(rgba(0,0,0,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px)',
           backgroundSize:'100px 100px'
         }}/>
       </div>
@@ -27,14 +27,14 @@ export default function Hero() {
           {/* Label gauche */}
           <div className="md:w-48 shrink-0 mb-6 md:mb-0 md:pb-4">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4"
-                 style={{background:'rgba(61,220,132,0.08)', border:'1px solid rgba(61,220,132,0.15)'}}>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3ddc84] animate-pulse"/>
+                 style={{background:'rgba(26,158,92,0.08)', border:'1px solid rgba(26,158,92,0.18)'}}>
+              <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{background:'#1a9e5c'}}/>
               <span className="text-[10px] tracking-[0.15em] uppercase"
-                    style={{color:'rgba(61,220,132,0.8)'}}>
+                    style={{color:'#1a9e5c'}}>
                 Cabinet de conseil
               </span>
             </div>
-            <p className="text-xs leading-relaxed" style={{color:'rgba(198,197,213,0.4)'}}>
+            <p className="text-xs leading-relaxed" style={{color:'rgba(30,30,30,0.4)'}}>
               Performance · Data · IA
             </p>
           </div>
@@ -46,13 +46,13 @@ export default function Hero() {
             fontWeight:700,
             lineHeight:1.0,
             letterSpacing:'-0.02em',
-            color:'#ffffff',
+            color:'#0f0f0f',
             flex:1
           }}>
             Donnez à vos
             <br/>
             <span style={{
-              background:'linear-gradient(135deg, #3ddc84 0%, #2ab86e 50%, #6366f1 100%)',
+              background:'linear-gradient(135deg, #1a9e5c 0%, #157a47 50%, #4f46e5 100%)',
               WebkitBackgroundClip:'text',
               WebkitTextFillColor:'transparent',
               backgroundClip:'text',
@@ -67,9 +67,9 @@ export default function Hero() {
 
         {/* Sous-titre + CTAs */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-20"
-             style={{borderTop:'1px solid rgba(255,255,255,0.05)', paddingTop:'2rem'}}>
+             style={{borderTop:'1px solid rgba(0,0,0,0.07)', paddingTop:'2rem'}}>
           <p style={{
-            color:'rgba(198,197,213,0.5)',
+            color:'rgba(30,30,30,0.5)',
             fontSize:'1rem',
             fontWeight:300,
             lineHeight:1.7,
@@ -84,11 +84,11 @@ export default function Hero() {
                style={{
                  padding:'0.875rem 2rem',
                  borderRadius:'2rem',
-                 background:'linear-gradient(135deg, #3ddc84, #2ab86e)',
-                 color:'#000',
+                 background:'linear-gradient(135deg, #1a9e5c, #157a47)',
+                 color:'#fff',
                  fontWeight:600,
                  fontSize:'0.85rem',
-                 boxShadow:'0 0 30px rgba(61,220,132,0.25)',
+                 boxShadow:'0 4px 20px rgba(26,158,92,0.3)',
                  textDecoration:'none',
                  whiteSpace:'nowrap',
                }}>
@@ -98,13 +98,13 @@ export default function Hero() {
                style={{
                  padding:'0.875rem 2rem',
                  borderRadius:'2rem',
-                 border:'1px solid rgba(255,255,255,0.1)',
-                 color:'rgba(255,255,255,0.7)',
+                 border:'1px solid rgba(0,0,0,0.12)',
+                 color:'#3a3a3a',
                  fontWeight:500,
                  fontSize:'0.85rem',
                  textDecoration:'none',
                  whiteSpace:'nowrap',
-                 background:'rgba(255,255,255,0.03)',
+                 background:'rgba(0,0,0,0.03)',
                  backdropFilter:'blur(8px)'
                }}>
               Nos offres
@@ -115,25 +115,23 @@ export default function Hero() {
         {/* 3 piliers glassmorphism */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
-            {label:'Pilotage', desc:"Indicateurs, reporting, aide à la décision.", color:'#3ddc84'},
-            {label:'Data & IA', desc:"Automatisation, prévision, cas d'usage concrets.", color:'#6366f1'},
-            {label:'Efficacité', desc:"Processus, frictions, création de valeur.", color:'#f59e0b'},
+            {label:'Pilotage', desc:"Indicateurs, reporting, aide à la décision.", color:'#1a9e5c'},
+            {label:'Data & IA', desc:"Automatisation, prévision, cas d'usage concrets.", color:'#4f46e5'},
+            {label:'Efficacité', desc:"Processus, frictions, création de valeur.", color:'#d97706'},
           ].map((p) => (
             <div key={p.label} style={{
-              background:'rgba(255,255,255,0.03)',
-              backdropFilter:'blur(16px)',
-              border:'1px solid rgba(144,143,158,0.1)',
+              background:'rgba(0,0,0,0.02)',
+              border:'1px solid rgba(0,0,0,0.07)',
               borderRadius:'1rem',
               padding:'1.25rem 1.5rem',
             }}>
               <div style={{
                 width:'6px', height:'6px', borderRadius:'50%',
                 background:p.color,
-                boxShadow:`0 0 8px ${p.color}`,
                 marginBottom:'0.75rem'
               }}/>
-              <p style={{fontSize:'0.85rem', fontWeight:600, color:'#ffffff', marginBottom:'0.35rem'}}>{p.label}</p>
-              <p style={{fontSize:'0.75rem', color:'rgba(198,197,213,0.4)', lineHeight:1.5}}>{p.desc}</p>
+              <p style={{fontSize:'0.85rem', fontWeight:600, color:'#0f0f0f', marginBottom:'0.35rem'}}>{p.label}</p>
+              <p style={{fontSize:'0.75rem', color:'rgba(30,30,30,0.4)', lineHeight:1.5}}>{p.desc}</p>
             </div>
           ))}
         </div>
@@ -146,8 +144,8 @@ export default function Hero() {
         transform:'translateX(-50%)',
         display:'flex', flexDirection:'column', alignItems:'center', gap:'0.5rem'
       }}>
-        <span style={{fontSize:'0.65rem', letterSpacing:'0.15em', textTransform:'uppercase', color:'rgba(255,255,255,0.15)'}}>Scroll</span>
-        <div style={{width:'1px', height:'40px', background:'linear-gradient(to bottom, rgba(61,220,132,0.4), transparent)'}}/>
+        <span style={{fontSize:'0.65rem', letterSpacing:'0.15em', textTransform:'uppercase', color:'rgba(0,0,0,0.2)'}}>Scroll</span>
+        <div style={{width:'1px', height:'40px', background:'linear-gradient(to bottom, rgba(26,158,92,0.4), transparent)'}}/>
       </div>
 
     </section>

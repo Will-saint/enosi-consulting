@@ -30,7 +30,7 @@ const differenciants = [
 export default function CompanyStats() {
   return (
     <section className="py-24 px-6 border-b relative overflow-hidden"
-             style={{borderColor: 'rgba(255,255,255,0.06)'}}>
+             style={{borderColor: 'rgba(0,0,0,0.07)'}}>
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] rounded-full blur-3xl"
              style={{background: 'rgba(61,220,132,0.03)'}} />
@@ -38,12 +38,12 @@ export default function CompanyStats() {
 
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-14">
-          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(255,255,255,0.25)'}}>Ce qui nous distingue</p>
+          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(30,30,30,0.35)'}}>Ce qui nous distingue</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             Pas de reporting décoratif.<br />
-            <span className="text-[#3ddc84]">Pas d&apos;IA gadget.</span>
+            <span className="text-[#1a9e5c]">Pas d&apos;IA gadget.</span>
           </h2>
-          <p className="max-w-xl mx-auto text-sm leading-relaxed" style={{color: 'rgba(255,255,255,0.4)'}}>
+          <p className="max-w-xl mx-auto text-sm leading-relaxed" style={{color: 'rgba(30,30,30,0.5)'}}>
             Notre différence ne tient pas à une méthode propriétaire ou à un
             logiciel maison. Elle tient à une exigence permanente : que chaque
             intervention soit utile, utilisée et appropriée.
@@ -54,10 +54,10 @@ export default function CompanyStats() {
           {differenciants.map((d, index) => (
             <ScrollReveal key={d.titre} delay={index * 100}>
               <div className="card-premium p-7 flex gap-5">
-                <div className="text-[#3ddc84] text-xl shrink-0 mt-0.5 font-bold">{d.icone}</div>
+                <div className="text-[#1a9e5c] text-xl shrink-0 mt-0.5 font-bold">{d.icone}</div>
                 <div>
-                  <h3 className="text-base font-bold text-white mb-2">{d.titre}</h3>
-                  <p className="text-sm leading-relaxed" style={{color: 'rgba(255,255,255,0.4)'}}>{d.description}</p>
+                  <h3 className="text-base font-bold mb-2" style={{color:'#0f0f0f'}}>{d.titre}</h3>
+                  <p className="text-sm leading-relaxed" style={{color: 'rgba(30,30,30,0.5)'}}>{d.description}</p>
                 </div>
               </div>
             </ScrollReveal>
