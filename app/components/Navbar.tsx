@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 type NavItem =
   | { label: string; anchor: string; direct: true }
@@ -55,14 +56,9 @@ export default function Navbar() {
         justifyContent: 'space-between', height: '4rem'
       }}>
 
-        {/* Logo SVG */}
+        {/* Logo */}
         <a href="/" style={{display:'flex', alignItems:'center', flexShrink:0}}>
-          <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="8" width="16" height="16" fill="none" stroke="#3ddc84" strokeWidth="1.5"/>
-            <rect x="4" y="12" width="8" height="8" fill="#3ddc84"/>
-            <text x="24" y="22" fontFamily="'DM Sans', sans-serif" fontSize="14" fontWeight="700" letterSpacing="0.08em" fill="white">ENOSI</text>
-            <text x="24" y="30" fontFamily="'DM Sans', sans-serif" fontSize="7" fontWeight="400" letterSpacing="0.18em" fill="#3ddc84">CONSULTING</text>
-          </svg>
+          <Image src="/logo-full.svg" alt="Enosi Consulting" width={160} height={32} />
         </a>
 
         {/* Desktop Nav */}

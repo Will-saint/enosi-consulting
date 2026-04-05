@@ -1,0 +1,23 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="rounded">
+      <rect width="32" height="32" rx="7" ry="7"/>
+    </clipPath>
+  </defs>
+  <!-- Fond -->
+  <rect width="32" height="32" rx="7" fill="#0e0e10"/>
+  <!-- Symbole centré (16,16), rayon 10 — clip appliqué -->
+  <g clip-path="url(#rounded)">
+    <!-- Horizontal -->
+    <line x1="6" y1="16" x2="26" y2="16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Vertical -->
+    <line x1="16" y1="6" x2="16" y2="26" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Diagonal NW-SE -->
+    <line x1="9.1" y1="9.1" x2="22.9" y2="22.9" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Diagonal NE-SW -->
+    <line x1="22.9" y1="9.1" x2="9.1" y2="22.9" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Centre -->
+    <circle cx="16" cy="16" r="3" fill="none" stroke="white" stroke-width="1.5"/>
+    <circle cx="16" cy="16" r="1.2" fill="white"/>
+  </g>
+</svg>

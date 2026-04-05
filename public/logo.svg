@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Horizontal -->
+  <line x1="28" y1="100" x2="172" y2="100" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Vertical -->
+  <line x1="100" y1="28" x2="100" y2="172" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Diagonal NW-SE -->
+  <line x1="49.5" y1="49.5" x2="150.5" y2="150.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Diagonal NE-SW -->
+  <line x1="150.5" y1="49.5" x2="49.5" y2="150.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Centre -->
+  <circle cx="100" cy="100" r="5" fill="none" stroke="white" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="2" fill="white"/>
+</svg>
