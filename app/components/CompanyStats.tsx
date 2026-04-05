@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 const differenciants = [
   {
     titre: "Pas de techno pour la techno",
@@ -27,19 +29,21 @@ const differenciants = [
 
 export default function CompanyStats() {
   return (
-    <section className="py-24 px-6 border-b border-[#1e1e1e] relative overflow-hidden">
+    <section className="py-24 px-6 border-b relative overflow-hidden"
+             style={{borderColor: 'rgba(255,255,255,0.06)'}}>
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#3ddc84]/3 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] rounded-full blur-3xl"
+             style={{background: 'rgba(61,220,132,0.03)'}} />
       </div>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-14">
-          <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Ce qui nous distingue</p>
+          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(255,255,255,0.25)'}}>Ce qui nous distingue</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             Pas de reporting décoratif.<br />
             <span className="text-[#3ddc84]">Pas d&apos;IA gadget.</span>
           </h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="max-w-xl mx-auto text-sm leading-relaxed" style={{color: 'rgba(255,255,255,0.4)'}}>
             Notre différence ne tient pas à une méthode propriétaire ou à un
             logiciel maison. Elle tient à une exigence permanente : que chaque
             intervention soit utile, utilisée et appropriée.
@@ -47,17 +51,16 @@ export default function CompanyStats() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {differenciants.map((d) => (
-            <div
-              key={d.titre}
-              className="bg-[#111] border border-[#1e1e1e] rounded-2xl p-7 flex gap-5 hover:border-[#3ddc84]/25 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-all duration-200"
-            >
-              <div className="text-[#3ddc84] text-xl shrink-0 mt-0.5 font-bold">{d.icone}</div>
-              <div>
-                <h3 className="text-base font-bold text-white mb-2">{d.titre}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{d.description}</p>
+          {differenciants.map((d, index) => (
+            <ScrollReveal key={d.titre} delay={index * 100} direction="left">
+              <div className="card-premium p-7 flex gap-5">
+                <div className="text-[#3ddc84] text-xl shrink-0 mt-0.5 font-bold">{d.icone}</div>
+                <div>
+                  <h3 className="text-base font-bold text-white mb-2">{d.titre}</h3>
+                  <p className="text-sm leading-relaxed" style={{color: 'rgba(255,255,255,0.4)'}}>{d.description}</p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
