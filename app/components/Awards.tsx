@@ -1,60 +1,78 @@
 export default function Awards() {
   return (
-    <section className="py-24 px-6 border-b border-[#1e1e1e]">
-      <div className="max-w-7xl mx-auto">
-        <p className="text-xs text-gray-600 uppercase tracking-widest text-center mb-10">
+    <section style={{
+      background: '#131315',
+      padding: '6rem 1.5rem',
+      borderTop: '1px solid rgba(144,143,158,0.06)',
+      borderBottom: '1px solid rgba(144,143,158,0.06)',
+    }}>
+      <div style={{maxWidth: '80rem', margin: '0 auto'}}>
+        <p style={{
+          fontSize: '0.65rem', letterSpacing: '0.2em',
+          textTransform: 'uppercase', textAlign: 'center',
+          color: 'rgba(198,197,213,0.25)', marginBottom: '2.5rem'
+        }}>
           Notre positionnement
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {/* Carte 1 */}
-          <div className="bg-[#111] border border-[#1e1e1e] rounded-2xl p-8 flex items-start gap-6 hover:border-[#3ddc84]/20 transition-colors duration-300">
-            <div className="w-12 h-12 bg-[#3ddc84]/8 rounded-xl flex items-center justify-center shrink-0 text-xl text-[#3ddc84] font-bold">
-              ◎
-            </div>
-            <div>
-              <div className="text-xs text-[#3ddc84] font-semibold uppercase tracking-wider mb-2">
-                Finance · Performance · Data · IA
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '1.5rem',
+          marginBottom: '2rem'
+        }}>
+          {[
+            {
+              icone: '◎',
+              label: 'Finance · Performance · Data · IA',
+              titre: 'À l\'intersection de quatre disciplines',
+              texte: 'Enosi Consulting intervient là où la finance, la performance, la data et l\'IA se croisent. Pas pour faire de la techno. Pour générer un impact décisionnel concret.',
+            },
+            {
+              icone: '◉',
+              label: 'Exécution · Clarté · Valeur',
+              titre: 'Du diagnostic à l\'outil opérationnel',
+              texte: 'Nous ne livrons pas des recommandations. Nous structurons, outillons et transférons — pour que les équipes puissent décider et agir plus vite, avec plus de clarté.',
+            },
+          ].map((c) => (
+            <div key={c.titre} style={{
+              background: '#1c1b1d',
+              borderRadius: '1.5rem',
+              padding: '2rem 2.5rem',
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '1.5rem',
+            }}>
+              <div style={{
+                width: '3rem', height: '3rem',
+                background: 'rgba(61,220,132,0.08)',
+                borderRadius: '0.75rem',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '1.25rem', color: '#3ddc84', fontWeight: 700,
+                flexShrink: 0,
+              }}>{c.icone}</div>
+              <div>
+                <p style={{
+                  fontSize: '0.7rem', fontWeight: 600,
+                  textTransform: 'uppercase', letterSpacing: '0.1em',
+                  color: '#3ddc84', marginBottom: '0.5rem'
+                }}>{c.label}</p>
+                <h3 style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontSize: '1.1rem', fontWeight: 700,
+                  color: '#ffffff', marginBottom: '0.75rem'
+                }}>{c.titre}</h3>
+                <p style={{
+                  fontSize: '0.85rem', lineHeight: 1.7,
+                  color: 'rgba(198,197,213,0.5)'
+                }}>{c.texte}</p>
               </div>
-              <h3
-                className="text-lg font-bold text-white mb-2"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-              >
-                À l&apos;intersection de quatre disciplines
-              </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Enosi Consulting intervient là où la finance, la performance, la data et l&apos;IA
-                se croisent. Pas pour faire de la techno. Pour générer un impact
-                décisionnel concret.
-              </p>
             </div>
-          </div>
-
-          {/* Carte 2 */}
-          <div className="bg-[#111] border border-[#1e1e1e] rounded-2xl p-8 flex items-start gap-6 hover:border-[#3ddc84]/20 transition-colors duration-300">
-            <div className="w-12 h-12 bg-[#3ddc84]/8 rounded-xl flex items-center justify-center shrink-0 text-xl text-[#3ddc84] font-bold">
-              ◉
-            </div>
-            <div>
-              <div className="text-xs text-[#3ddc84] font-semibold uppercase tracking-wider mb-2">
-                Exécution · Clarté · Valeur
-              </div>
-              <h3
-                className="text-lg font-bold text-white mb-2"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-              >
-                Du diagnostic à l&apos;outil opérationnel
-              </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Nous ne livrons pas des recommandations. Nous structurons,
-                outillons et transférons — pour que les équipes puissent décider
-                et agir plus vite, avec plus de clarté.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
-
-        {/* Fondateur */}
-        <p className="text-center text-xs text-gray-700">
+        <p style={{
+          textAlign: 'center', fontSize: '0.75rem',
+          color: 'rgba(198,197,213,0.2)'
+        }}>
           Cabinet fondé par William Saint-Dizier — consultant en performance, data et IA.
         </p>
       </div>

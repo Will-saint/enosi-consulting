@@ -52,7 +52,7 @@ export default function CompanyStats() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {differenciants.map((d, index) => (
-            <ScrollReveal key={d.titre} delay={index * 100} direction="left">
+            <ScrollReveal key={d.titre} delay={index * 100}>
               <div className="card-premium p-7 flex gap-5">
                 <div className="text-[#3ddc84] text-xl shrink-0 mt-0.5 font-bold">{d.icone}</div>
                 <div>

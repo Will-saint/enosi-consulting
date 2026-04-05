@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 type NavItem =
   | { label: string; anchor: string; direct: true }
@@ -32,40 +32,31 @@ const navItems: NavItem[] = [
       { label: "Cas d'usage", href: "/#interventions" },
     ],
   },
-  {
-    label: "Portfolio",
-    anchor: "/portfolio",
-    direct: true,
-  },
-  {
-    label: "À propos",
-    anchor: "/a-propos",
-    direct: true,
-  },
+  { label: "Portfolio", anchor: "/portfolio", direct: true },
+  { label: "À propos", anchor: "/a-propos", direct: true },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#0a0a0a]/98 border-b border-[#1e1e1e] shadow-[0_1px_20px_rgba(0,0,0,0.5)]"
-          : "bg-[#0a0a0a]/80 border-b border-transparent"
-      } backdrop-blur-md`}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+    <header style={{
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
+      background: 'rgba(14,14,16,0.7)',
+      backdropFilter: 'blur(24px)',
+      WebkitBackdropFilter: 'blur(24px)',
+      borderBottom: '1px solid rgba(144,143,158,0.1)',
+    }}>
+      <div style={{
+        maxWidth: '80rem', margin: '0 auto',
+        padding: '0 1.5rem',
+        display: 'flex', alignItems: 'center',
+        justifyContent: 'space-between', height: '4rem'
+      }}>
+
         {/* Logo SVG */}
-        <a href="/" className="flex items-center shrink-0">
+        <a href="/" style={{display:'flex', alignItems:'center', flexShrink:0}}>
           <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0" y="8" width="16" height="16" fill="none" stroke="#3ddc84" strokeWidth="1.5"/>
             <rect x="4" y="12" width="8" height="8" fill="#3ddc84"/>
@@ -79,39 +70,70 @@ export default function Navbar() {
           {navItems.map((item) => {
             if (item.direct) {
               return (
-                <a
-                  key={item.label}
-                  href={item.anchor}
-                  className="px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors"
-                >
+                <a key={item.label} href={item.anchor}
+                   style={{
+                     padding: '0.5rem 1rem',
+                     fontSize: '0.85rem',
+                     color: '#c6c5d5',
+                     textDecoration: 'none',
+                     transition: 'color 0.2s',
+                   }}
+                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#ffffff'}
+                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='#c6c5d5'}>
                   {item.label}
                 </a>
               );
             }
             return (
-              <div
-                key={item.label}
-                className="relative"
-                onMouseEnter={() => setOpen(item.label)}
-                onMouseLeave={() => setOpen(null)}
-              >
-                <a
-                  href={item.anchor}
-                  className="px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1"
-                >
+              <div key={item.label} className="relative"
+                   onMouseEnter={() => setOpen(item.label)}
+                   onMouseLeave={() => setOpen(null)}>
+                <a href={item.anchor}
+                   style={{
+                     padding: '0.5rem 1rem',
+                     fontSize: '0.85rem',
+                     color: '#c6c5d5',
+                     textDecoration: 'none',
+                     transition: 'color 0.2s',
+                     display: 'flex', alignItems: 'center', gap: '0.25rem',
+                   }}
+                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#ffffff'}
+                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='#c6c5d5'}>
                   {item.label}
-                  <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </a>
                 {open === item.label && (
-                  <div className="absolute top-full left-0 mt-1 bg-[#111] border border-[#1e1e1e] rounded-xl shadow-2xl py-2 min-w-[240px]">
+                  <div style={{
+                    position: 'absolute', top: '100%', left: 0, marginTop: '0.25rem',
+                    background: 'rgba(19,19,21,0.95)',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(144,143,158,0.1)',
+                    borderRadius: '0.75rem',
+                    padding: '0.5rem',
+                    minWidth: '240px',
+                    boxShadow: '0 16px 48px rgba(0,0,0,0.5)',
+                  }}>
                     {item.sub.map((s) => (
-                      <a
-                        key={s.label}
-                        href={s.href}
-                        className="block px-4 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-[#181818] transition-colors"
-                      >
+                      <a key={s.label} href={s.href}
+                         style={{
+                           display: 'block',
+                           padding: '0.6rem 1rem',
+                           fontSize: '0.85rem',
+                           color: '#c6c5d5',
+                           textDecoration: 'none',
+                           borderRadius: '0.5rem',
+                           transition: 'background 0.15s, color 0.15s',
+                         }}
+                         onMouseEnter={e => {
+                           (e.currentTarget as HTMLElement).style.background='rgba(255,255,255,0.05)';
+                           (e.currentTarget as HTMLElement).style.color='#ffffff';
+                         }}
+                         onMouseLeave={e => {
+                           (e.currentTarget as HTMLElement).style.background='transparent';
+                           (e.currentTarget as HTMLElement).style.color='#c6c5d5';
+                         }}>
                         {s.label}
                       </a>
                     ))}
@@ -123,20 +145,30 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <div className="hidden lg:flex items-center">
-          <a
-            href="/contact"
-            className="px-5 py-2 text-sm font-semibold bg-[#3ddc84] text-black rounded-full hover:bg-[#2ab86e] transition-colors"
-          >
+        <div className="hidden lg:flex">
+          <a href="/contact"
+             style={{
+               padding: '0.5rem 1.5rem',
+               borderRadius: '2rem',
+               background: 'linear-gradient(135deg, #3ddc84, #2ab86e)',
+               color: '#000',
+               fontWeight: 600,
+               fontSize: '0.8rem',
+               textDecoration: 'none',
+               boxShadow: '0 0 20px rgba(61,220,132,0.2)',
+               transition: 'box-shadow 0.3s',
+             }}
+             onMouseEnter={e => (e.currentTarget as HTMLElement).style.boxShadow='0 0 35px rgba(61,220,132,0.35)'}
+             onMouseLeave={e => (e.currentTarget as HTMLElement).style.boxShadow='0 0 20px rgba(61,220,132,0.2)'}>
             Nous contacter
           </a>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden text-gray-400 hover:text-white transition-colors"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+          className="lg:hidden"
+          style={{color: '#c6c5d5', background: 'none', border: 'none', cursor: 'pointer'}}
+          onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -151,48 +183,49 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#0f0f0f] border-t border-[#1e1e1e] px-6 py-4">
+        <div style={{
+          background: 'rgba(14,14,16,0.97)',
+          backdropFilter: 'blur(24px)',
+          borderTop: '1px solid rgba(144,143,158,0.08)',
+          padding: '1rem 1.5rem 1.5rem',
+        }}>
           {navItems.map((item) => {
             if (item.direct) {
               return (
-                <div key={item.label} className="py-3 border-b border-[#1a1a1a] last:border-0">
-                  <a
-                    href={item.anchor}
-                    className="text-white font-semibold text-sm block"
-                    onClick={() => setMobileOpen(false)}
-                  >
+                <div key={item.label} style={{padding:'0.75rem 0', borderBottom:'1px solid rgba(144,143,158,0.06)'}}>
+                  <a href={item.anchor}
+                     style={{color:'#ffffff', fontSize:'0.9rem', fontWeight:600, textDecoration:'none'}}
+                     onClick={() => setMobileOpen(false)}>
                     {item.label}
                   </a>
                 </div>
               );
             }
             return (
-              <div key={item.label} className="py-3 border-b border-[#1a1a1a] last:border-0">
-                <a
-                  href={item.anchor}
-                  className="text-white font-semibold text-sm mb-2 block"
-                  onClick={() => setMobileOpen(false)}
-                >
+              <div key={item.label} style={{padding:'0.75rem 0', borderBottom:'1px solid rgba(144,143,158,0.06)'}}>
+                <a href={item.anchor}
+                   style={{color:'#ffffff', fontSize:'0.9rem', fontWeight:600, textDecoration:'none', display:'block', marginBottom:'0.5rem'}}
+                   onClick={() => setMobileOpen(false)}>
                   {item.label}
                 </a>
                 {item.sub.map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.href}
-                    className="block text-sm text-gray-600 hover:text-white py-1 pl-3 transition-colors"
-                    onClick={() => setMobileOpen(false)}
-                  >
+                  <a key={s.label} href={s.href}
+                     style={{display:'block', fontSize:'0.8rem', color:'rgba(198,197,213,0.5)', padding:'0.25rem 0 0.25rem 0.75rem', textDecoration:'none'}}
+                     onClick={() => setMobileOpen(false)}>
                     {s.label}
                   </a>
                 ))}
               </div>
             );
           })}
-          <a
-            href="/contact"
-            className="mt-4 w-full py-2.5 text-sm font-semibold bg-[#3ddc84] text-black rounded-full hover:bg-[#2ab86e] transition-colors block text-center"
-            onClick={() => setMobileOpen(false)}
-          >
+          <a href="/contact"
+             style={{
+               display:'block', marginTop:'1rem',
+               padding:'0.75rem', borderRadius:'2rem', textAlign:'center',
+               background:'linear-gradient(135deg, #3ddc84, #2ab86e)',
+               color:'#000', fontWeight:600, fontSize:'0.85rem', textDecoration:'none',
+             }}
+             onClick={() => setMobileOpen(false)}>
             Nous contacter
           </a>
         </div>

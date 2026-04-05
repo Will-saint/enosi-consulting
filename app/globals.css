@@ -2,82 +2,73 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #080810;
-  --green: #3ddc84;
-  --green-dark: #2ab86e;
-  --border: rgba(255,255,255,0.06);
-  --border-hover: rgba(61,220,132,0.2);
-  --muted: rgba(255,255,255,0.4);
-  --card: #0f0f18;
-  --card-hover: #13131f;
-}
+  --bg:           #0e0e10;
+  --surface:      #131315;
+  --surface-low:  #1c1b1d;
+  --surface-high: #2a2a2c;
+  --surface-float:#39393b;
 
-* { box-sizing: border-box; }
+  --green:        #3ddc84;
+  --green-dark:   #2ab86e;
+  --green-glow:   rgba(61,220,132,0.12);
+  --violet:       #6366f1;
+  --amber:        #f59e0b;
+
+  --text-primary:   #e8e8f0;
+  --text-secondary: #c6c5d5;
+  --text-muted:     rgba(198,197,213,0.45);
+  --text-ghost:     rgba(198,197,213,0.2);
+
+  --border-ghost:  rgba(144,143,158,0.12);
+  --border-hover:  rgba(61,220,132,0.2);
+}
 
 body {
   background: var(--bg);
-  color: #fff;
+  color: var(--text-primary);
   font-family: 'DM Sans', system-ui, sans-serif;
   cursor: none;
 }
 
-h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #ffffff;
+}
 
 html { scroll-behavior: smooth; }
 
-/* Carrousel partenaires */
-@keyframes scroll {
+@keyframes scrollX {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
 .animate-scroll {
-  animation: scroll 35s linear infinite;
+  animation: scrollX 35s linear infinite;
   width: max-content;
   display: flex;
   gap: 1.5rem;
 }
 .animate-scroll:hover { animation-play-state: paused; }
 
-/* Ligne hero */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes lineGrow {
   from { transform: scaleX(0); opacity: 0; }
   to   { transform: scaleX(1); opacity: 1; }
 }
 
-/* Fade up générique */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.fade-up { animation: fadeUp 0.6s ease forwards; }
-
-/* Grain texture */
 body::after {
   content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 128px;
-  opacity: 0.015;
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+  opacity: 0.02;
   pointer-events: none;
-  z-index: 9997;
+  z-index: 9990;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #2a2a3a; }
-
-/* Card premium */
-.card-premium {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  transition: all 0.25s ease;
-}
-.card-premium:hover {
-  background: var(--card-hover);
-  border-color: var(--border-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(61,220,132,0.08);
-}
+::-webkit-scrollbar-thumb { background: var(--surface-high); }

@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Awards from "./components/Awards";
 import Partners from "./components/Partners";
+import Awards from "./components/Awards";
 import Metrics from "./components/Metrics";
 import Platforms from "./components/Platforms";
 import Methode from "./components/Methode";
@@ -26,8 +26,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Awards />
         <Partners />
+        <Awards />
         <Metrics />
         <Platforms />
         <Methode />

@@ -1,3 +1,4 @@
+"use client";
 import ScrollReveal from "./ScrollReveal";
 
 const offres = [
@@ -6,8 +7,7 @@ const offres = [
     nom: "Pilotage de la performance",
     accroche: "Rendre la performance lisible, fiable et utile.",
     probleme: "Les indicateurs existent, mais le pilotage reste flou. Les décisions s'appuient sur des données mal structurées ou mal lues.",
-    apport:
-      "Nous structurons les indicateurs clés, fiabilisons les données de référence et construisons les dispositifs de pilotage dont les directions ont vraiment besoin pour décider.",
+    apport: "Nous structurons les indicateurs clés, fiabilisons les données de référence et construisons les dispositifs de pilotage dont les directions ont vraiment besoin pour décider.",
     sujets: [
       "Structuration des KPI et indicateurs de performance",
       "Refonte du reporting de pilotage",
@@ -25,8 +25,7 @@ const offres = [
     nom: "Data & IA pour la décision",
     accroche: "Transformer les données en leviers de décision concrets.",
     probleme: "Les données sont disponibles, parfois abondantes — mais elles ne se traduisent pas encore en avantages décisionnels ou opérationnels.",
-    apport:
-      "Nous identifions les cas d'usage à forte valeur, structurons les analyses et déployons des outils d'aide à la décision qui s'intègrent dans les processus réels des équipes.",
+    apport: "Nous identifions les cas d'usage à forte valeur, structurons les analyses et déployons des outils d'aide à la décision qui s'intègrent dans les processus réels des équipes.",
     sujets: [
       "Automatisation et fiabilisation du reporting",
       "Modèles de prévision et de projection",
@@ -44,8 +43,7 @@ const offres = [
     nom: "Efficacité et création de valeur",
     accroche: "Améliorer l'exécution, réduire les frictions, piloter ce qui compte.",
     probleme: "Les processus ralentissent l'organisation. La coordination entre métier, finance et data coûte plus qu'elle ne produit.",
-    apport:
-      "Nous analysons les flux, identifions les points de friction, rationalisons les processus critiques et mettons en place un pilotage orienté valeur — pragmatique, transférable, durable.",
+    apport: "Nous analysons les flux, identifions les points de friction, rationalisons les processus critiques et mettons en place un pilotage orienté valeur — pragmatique, transférable, durable.",
     sujets: [
       "Optimisation de processus métier et de pilotage",
       "Réduction des redondances et des délais",
@@ -62,79 +60,154 @@ const offres = [
 
 export default function Platforms() {
   return (
-    <section id="offres" className="py-28 px-6 border-b" style={{borderColor: 'rgba(255,255,255,0.06)'}}>
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-14">
-          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(255,255,255,0.25)'}}>Nos offres</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+    <section id="offres" style={{
+      background: '#1c1b1d',
+      padding: '7rem 1.5rem',
+      borderTop: '1px solid rgba(144,143,158,0.06)',
+      borderBottom: '1px solid rgba(144,143,158,0.06)',
+    }}>
+      <div style={{maxWidth: '80rem', margin: '0 auto'}}>
+        <div style={{textAlign: 'center', marginBottom: '3.5rem'}}>
+          <p style={{
+            fontSize: '0.65rem', letterSpacing: '0.2em',
+            textTransform: 'uppercase',
+            color: 'rgba(198,197,213,0.25)', marginBottom: '1rem'
+          }}>Nos offres</p>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: 'clamp(2rem,4vw,3rem)',
+            fontWeight: 700, color: '#ffffff', marginBottom: '1rem'
+          }}>
             Trois domaines d&apos;intervention
           </h2>
-          <p className="max-w-2xl mx-auto" style={{color: 'rgba(255,255,255,0.4)'}}>
+          <p style={{color: 'rgba(198,197,213,0.4)', maxWidth: '40rem', margin: '0 auto', fontSize: '0.9rem'}}>
             Un périmètre resserré. Des expertises complémentaires. Une logique d&apos;impact.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '1.5rem'
+        }}>
           {offres.map((o, index) => (
             <ScrollReveal key={o.nom} delay={index * 150}>
-              <div className="card-premium p-8 flex flex-col relative overflow-hidden group h-full">
-
-                {/* Fond décoratif hover */}
-                <div className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-0
-                     group-hover:opacity-100 transition-opacity duration-500 -translate-y-8 translate-x-8"
-                     style={{background: `radial-gradient(circle, ${o.couleur}15, transparent)`}} />
+              <div style={{
+                background: '#0e0e10',
+                borderRadius: '1.25rem',
+                padding: '2rem',
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
+                overflow: 'hidden',
+                boxShadow: '0 0 0 1px rgba(144,143,158,0.08)',
+                transition: 'box-shadow 0.25s, background 0.25s',
+                height: '100%',
+              }}
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLElement;
+                el.style.boxShadow = `0 0 0 1px rgba(61,220,132,0.15), 0 8px 32px rgba(0,0,0,0.4)`;
+                el.style.background = '#131315';
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLElement;
+                el.style.boxShadow = '0 0 0 1px rgba(144,143,158,0.08)';
+                el.style.background = '#0e0e10';
+              }}>
 
                 {/* Numéro décoratif */}
-                <span className="font-serif text-[5rem] opacity-10 absolute top-4 right-6 leading-none select-none"
-                      style={{color: o.couleur, fontFamily: "'Playfair Display', serif"}}>
+                <span style={{
+                  position: 'absolute', top: '1rem', right: '1.5rem',
+                  fontSize: '5rem', opacity: 0.06,
+                  color: '#ffffff',
+                  fontFamily: "'Playfair Display', serif",
+                  fontWeight: 700, lineHeight: 1, userSelect: 'none',
+                  pointerEvents: 'none',
+                }}>
                   {o.numero}
                 </span>
 
                 {/* Icône */}
-                <div className="flex items-center justify-between mb-6 relative z-10">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center text-lg"
-                    style={{ backgroundColor: `${o.couleur}12`, color: o.couleur }}
-                  >
-                    {o.icone}
-                  </div>
+                <div style={{
+                  width: '2.5rem', height: '2.5rem',
+                  borderRadius: '0.625rem',
+                  background: `${o.couleur}12`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '1.1rem', color: o.couleur,
+                  marginBottom: '1.5rem', position: 'relative', zIndex: 1,
+                }}>
+                  {o.icone}
                 </div>
 
-                {/* Titre + accroche */}
-                <div className="text-xs font-semibold uppercase tracking-wider mb-2 relative z-10" style={{ color: o.couleur }}>
-                  {o.accroche}
+                <p style={{
+                  fontSize: '0.7rem', fontWeight: 600,
+                  textTransform: 'uppercase', letterSpacing: '0.1em',
+                  color: o.couleur, marginBottom: '0.5rem',
+                  position: 'relative', zIndex: 1,
+                }}>{o.accroche}</p>
+
+                <h3 style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: '1.15rem', fontWeight: 700,
+                  color: '#ffffff', marginBottom: '1rem',
+                  position: 'relative', zIndex: 1,
+                }}>{o.nom}</h3>
+
+                <div style={{
+                  background: 'rgba(0,0,0,0.3)',
+                  borderRadius: '0.75rem',
+                  padding: '1rem',
+                  marginBottom: '1.25rem',
+                  position: 'relative', zIndex: 1,
+                }}>
+                  <p style={{
+                    fontSize: '0.7rem', textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    color: 'rgba(255,255,255,0.2)', marginBottom: '0.5rem'
+                  }}>Le constat</p>
+                  <p style={{fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6}}>{o.probleme}</p>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 relative z-10">{o.nom}</h3>
 
-                {/* Problème */}
-                <div className="rounded-xl p-4 mb-5 relative z-10"
-                     style={{background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.05)'}}>
-                  <p className="text-xs uppercase tracking-wider mb-1.5" style={{color: 'rgba(255,255,255,0.2)'}}>Le constat</p>
-                  <p className="text-sm leading-relaxed" style={{color: 'rgba(255,255,255,0.5)'}}>{o.probleme}</p>
-                </div>
+                <p style={{
+                  fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)',
+                  lineHeight: 1.7, marginBottom: '1.25rem',
+                  flex: 1, position: 'relative', zIndex: 1,
+                }}>{o.apport}</p>
 
-                {/* Apport */}
-                <p className="text-sm leading-relaxed mb-5 flex-1 relative z-10" style={{color: 'rgba(255,255,255,0.5)'}}>{o.apport}</p>
-
-                {/* Sujets */}
-                <div className="space-y-2 mb-6 relative z-10">
+                <div style={{marginBottom: '1.25rem', position: 'relative', zIndex: 1}}>
                   {o.sujets.map((s) => (
-                    <div key={s} className="flex items-start gap-2 text-xs" style={{color: 'rgba(255,255,255,0.35)'}}>
-                      <div className="w-1 h-1 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: o.couleur }} />
+                    <div key={s} style={{
+                      display: 'flex', alignItems: 'flex-start',
+                      gap: '0.5rem', marginBottom: '0.4rem',
+                      fontSize: '0.78rem', color: 'rgba(255,255,255,0.35)',
+                    }}>
+                      <span style={{
+                        width: '4px', height: '4px', borderRadius: '50%',
+                        background: o.couleur, marginTop: '0.45rem', flexShrink: 0,
+                      }}/>
                       {s}
                     </div>
                   ))}
                 </div>
 
-                {/* Bénéfice */}
-                <div className="text-xs font-medium leading-relaxed pt-4 border-t mb-4 relative z-10"
-                     style={{ borderColor: `${o.couleur}20`, color: o.couleur }}>
-                  {o.benefice}
-                </div>
+                <div style={{
+                  fontSize: '0.78rem', fontWeight: 500,
+                  color: o.couleur, lineHeight: 1.6,
+                  paddingTop: '1rem',
+                  borderTop: `1px solid ${o.couleur}20`,
+                  marginBottom: '1rem',
+                  position: 'relative', zIndex: 1,
+                }}>{o.benefice}</div>
 
-                {/* Lien */}
-                <a href={o.href}
-                   className="inline-flex items-center gap-1 text-xs transition-colors relative z-10 text-[rgba(255,255,255,0.3)] hover:text-white">
+                <a href={o.href} style={{
+                  fontSize: '0.78rem',
+                  color: 'rgba(255,255,255,0.3)',
+                  textDecoration: 'none',
+                  transition: 'color 0.2s',
+                  position: 'relative', zIndex: 1,
+                }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#ffffff'}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='rgba(255,255,255,0.3)'}>
                   En savoir plus →
                 </a>
               </div>

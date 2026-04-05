@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import PageTransition from "./components/PageTransition";
 import CustomCursor from "./components/CustomCursor";
+import PageTransition from "./components/PageTransition";
 
 const geist = Geist({
   variable: "--font-geist-sans",

@@ -5,46 +5,43 @@ export default function CustomCursor() {
   const dot = useRef<HTMLDivElement>(null);
   const ring = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
-
-    const onMove = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      if (dot.current) {
-        dot.current.style.left = mouseX + "px";
-        dot.current.style.top = mouseY + "px";
+  useEffect(()=>{
+    let mx=0, my=0, rx=0, ry=0;
+    const move = (e:MouseEvent) => {
+      mx=e.clientX; my=e.clientY;
+      if(dot.current){
+        dot.current.style.left=mx+"px";
+        dot.current.style.top=my+"px";
       }
     };
-
-    const animate = () => {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
-      if (ring.current) {
-        ring.current.style.left = ringX + "px";
-        ring.current.style.top = ringY + "px";
+    const animate = ()=>{
+      rx+=(mx-rx)*0.1; ry+=(my-ry)*0.1;
+      if(ring.current){
+        ring.current.style.left=rx+"px";
+        ring.current.style.top=ry+"px";
       }
       requestAnimationFrame(animate);
     };
-
-    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mousemove",move);
     animate();
-    return () => window.removeEventListener("mousemove", onMove);
-  }, []);
+    return ()=>window.removeEventListener("mousemove",move);
+  },[]);
 
   return (
     <>
-      <div
-        ref={dot}
-        className="fixed pointer-events-none z-[9999] w-1.5 h-1.5 rounded-full bg-[#3ddc84]"
-        style={{transform: 'translate(-50%, -50%)'}}
-      />
-      <div
-        ref={ring}
-        className="fixed pointer-events-none z-[9998] w-8 h-8 rounded-full border border-[#3ddc84]"
-        style={{transform: 'translate(-50%, -50%)', opacity: 0.4}}
-      />
+      <div ref={dot} style={{
+        position:'fixed', pointerEvents:'none', zIndex:9999,
+        width:'6px', height:'6px', borderRadius:'50%',
+        background:'#3ddc84',
+        transform:'translate(-50%,-50%)',
+        transition:'transform 0.1s'
+      }}/>
+      <div ref={ring} style={{
+        position:'fixed', pointerEvents:'none', zIndex:9998,
+        width:'28px', height:'28px', borderRadius:'50%',
+        border:'1px solid rgba(61,220,132,0.35)',
+        transform:'translate(-50%,-50%)'
+      }}/>
     </>
   );
 }
