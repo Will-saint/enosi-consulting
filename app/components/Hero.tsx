@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import ConvergenceViz from "./ConvergenceViz";
 
 export default function Hero() {
   const words = ["Donnez", "à", "vos", "décisions", "une", "base", "solide."];
@@ -38,6 +39,12 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
+
+        {/* 2-col layout on lg */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 lg:items-center">
+
+        {/* LEFT COLUMN */}
+        <div>
 
         <div className="flex flex-col md:flex-row md:items-end md:gap-16 mb-8">
 
@@ -154,6 +161,15 @@ export default function Hero() {
             </div>
           ))}
         </div>
+
+        </div>{/* end LEFT COLUMN */}
+
+        {/* RIGHT COLUMN — hidden on mobile */}
+        <div className="hidden lg:flex items-center justify-center" style={{height:'420px'}}>
+          <ConvergenceViz />
+        </div>
+
+        </div>{/* end 2-col grid */}
 
       </div>
 

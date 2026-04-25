@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { seoConfig } from "../seo";
+import BeforeAfter from "../components/BeforeAfter";
 
 export const metadata: Metadata = {
   title: seoConfig.portfolio.title,
@@ -134,6 +135,21 @@ export default function Portfolio() {
               probleme="Reporting exhaustif, inutilisé pour décider"
               action="Reconstruction autour des 5 décisions clés + alertes automatiques"
               impact="−5 jours de production · ÷3 sur le temps de décision en COMEX"
+            />
+            <BeforeAfter
+              color="#1a9e5c"
+              before={[
+                "Reporting de 40 pages produit en 6 jours",
+                "Indicateurs sans lien avec les décisions",
+                "COMEX informé, rarement orienté",
+                "Aucune alerte sur les seuils critiques",
+              ]}
+              after={[
+                "Reporting 8 pages produit en 1 jour",
+                "5 indicateurs clés par décision COMEX",
+                "Décision orientée avant la réunion",
+                "5 alertes automatiques sur signaux critiques",
+              ]}
             />
 
             {/* Contexte */}
@@ -291,6 +307,21 @@ export default function Portfolio() {
               probleme="12 cas d'usage IA identifiés, aucun en production depuis 18 mois"
               action="Scoring, sélection du cas prioritaire, déploiement en 8 semaines"
               impact="1 modèle en prod · 94% de détection · 3–4 ETP économisés"
+            />
+            <BeforeAfter
+              color="#4f46e5"
+              before={[
+                "12 cas d'usage IA, aucun critère de sélection",
+                "Équipes data sans interlocuteur métier",
+                "18 mois sans aucun déploiement",
+                "Valeur IA restée théorique",
+              ]}
+              after={[
+                "1 cas prioritaire sélectionné sur 4 critères",
+                "Métier impliqué dès le cadrage",
+                "Modèle en production en 8 semaines",
+                "94% de détection, 3–4 ETP économisés",
+              ]}
             />
 
             {/* Contexte */}
@@ -478,6 +509,21 @@ export default function Portfolio() {
               probleme="14 semaines de budget, validé trop tard pour être utile"
               action="Cartographie des frictions + référentiel d'hypothèses commun"
               impact="−3 semaines · −60% d'allers-retours · budget utilisé en pilotage"
+            />
+            <BeforeAfter
+              color="#d97706"
+              before={[
+                "14 semaines de cycle budgétaire",
+                "Hypothèses divergentes par direction",
+                "Réconciliation manuelle en fin de cycle",
+                "Budget archivé dès février",
+              ]}
+              after={[
+                "11 semaines de cycle (−3 sem.)",
+                "Référentiel d'hypothèses commun centralisé",
+                "−60% d'allers-retours entre directions",
+                "Budget utilisé en pilotage mensuel",
+              ]}
             />
 
             {/* Contexte */}
