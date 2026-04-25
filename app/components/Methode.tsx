@@ -1,86 +1,187 @@
+"use client";
+import { useRef, useState } from "react";
+
 const etapes = [
   {
-    numero: "1",
+    n: "01",
     titre: "Cadrer",
-    description:
-      "Comprendre le contexte réel avant de proposer quoi que ce soit. Identifier les vrais enjeux, pas ceux du cahier des charges.",
+    description: "Comprendre le contexte réel avant de proposer quoi que ce soit. Identifier les vrais enjeux, pas ceux du cahier des charges.",
+    icon: "◎",
+    color: "#1a9e5c",
   },
   {
-    numero: "2",
+    n: "02",
     titre: "Analyser",
-    description:
-      "Aller dans les données, les processus, les systèmes. Nommer clairement ce qui fonctionne, ce qui bloque, ce qui manque.",
+    description: "Aller dans les données, les processus, les systèmes. Nommer clairement ce qui fonctionne, ce qui bloque, ce qui manque.",
+    icon: "◈",
+    color: "#4f46e5",
   },
   {
-    numero: "3",
+    n: "03",
     titre: "Structurer",
-    description:
-      "Concevoir une réponse cohérente : indicateurs, architecture de pilotage, cas d'usage, processus, adaptée à l'organisation.",
+    description: "Concevoir une réponse cohérente : indicateurs, architecture de pilotage, cas d'usage, processus, adaptée à l'organisation.",
+    icon: "◉",
+    color: "#d97706",
   },
   {
-    numero: "4",
+    n: "04",
     titre: "Déployer",
-    description:
-      "Implémenter avec les équipes. Pas en chambre. Dans les outils réels, avec les contraintes réelles.",
+    description: "Implémenter avec les équipes. Pas en chambre. Dans les outils réels, avec les contraintes réelles.",
+    icon: "◎",
+    color: "#1a9e5c",
   },
   {
-    numero: "5",
+    n: "05",
     titre: "Transférer",
-    description:
-      "Rendre les équipes autonomes. La dépendance n'est pas un objectif. L'appropriation, si.",
+    description: "Rendre les équipes autonomes. La dépendance n'est pas un objectif. L'appropriation, si.",
+    icon: "◈",
+    color: "#4f46e5",
   },
 ];
 
 export default function Methode() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  const scrollTo = (i: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const card = el.children[i] as HTMLElement;
+    el.scrollTo({ left: card.offsetLeft - 24, behavior: "smooth" });
+    setActive(i);
+  };
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const index = Math.round(el.scrollLeft / (el.scrollWidth / etapes.length));
+    setActive(Math.min(index, etapes.length - 1));
+  };
+
   return (
-    <section id="methode" className="py-28 px-6 border-b bg-[#F2F0EC]" style={{borderColor:'rgba(0,0,0,0.07)'}}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Gauche — texte */}
-          <div>
-            <p className="text-xs uppercase tracking-widest mb-4" style={{color:'rgba(30,30,30,0.4)'}}>Notre approche</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Nous clarifions.<br />
-              Nous outillons.<br />
-              <span className="text-[#1a9e5c]">Nous rendons utile.</span>
-            </h2>
-            <p className="leading-relaxed mb-6" style={{color:'rgba(30,30,30,0.55)'}}>
-              Nos interventions suivent une logique simple : comprendre avant de
-              recommander, outiller avant de livrer, transférer avant de partir.
-            </p>
-            <p className="text-sm leading-relaxed" style={{color:'rgba(30,30,30,0.45)'}}>
-              Chaque mission est cadrée avec précision. Les livrables sont conçus
-              pour être utilisés, pas archivés. Et les équipes repartent avec
-              des capacités nouvelles, pas une dépendance supplémentaire.
-            </p>
-          </div>
-
-          {/* Droite — étapes */}
-          <div className="space-y-0">
-            {etapes.map((e, index) => (
-              <div
-                key={e.numero}
-                className="flex gap-5 group"
-              >
-                {/* Ligne verticale + numéro */}
-                <div className="flex flex-col items-center">
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors"
-                       style={{background:'#FFFFFF', border:'1px solid rgba(0,0,0,0.1)'}}>
-                    <span className="text-xs font-bold" style={{color:'#1a9e5c'}}>{e.numero}</span>
-                  </div>
-                  {index < etapes.length - 1 && (
-                    <div className="w-px flex-1 my-1" style={{background:'rgba(0,0,0,0.1)'}} />
-                  )}
-                </div>
-
-                {/* Contenu */}
-                <div className={`pb-6 ${index < etapes.length - 1 ? "" : ""}`}>
-                  <h3 className="text-base font-bold mb-1" style={{color:'#0f0f0f'}}>{e.titre}</h3>
-                  <p className="text-sm leading-relaxed" style={{color:'rgba(30,30,30,0.5)'}}>{e.description}</p>
-                </div>
-              </div>
+    <section id="methode" style={{
+      background: "#FFFFFF",
+      padding: "7rem 0",
+      borderTop: "1px solid rgba(0,0,0,0.05)",
+      borderBottom: "1px solid rgba(0,0,0,0.05)",
+      overflow: "hidden",
+    }}>
+      {/* Header */}
+      <div style={{ padding: "0 1.5rem", maxWidth: "64rem", margin: "0 auto 3rem" }}>
+        <p style={{
+          fontSize: "0.65rem", letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          color: "rgba(30,30,30,0.3)", marginBottom: "1rem"
+        }}>Notre approche</p>
+        <div style={{ display: "flex", alignItems: "flex-end",
+                      justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: "clamp(2rem, 4vw, 3rem)",
+            fontWeight: 700, color: "#0f0f0f",
+            margin: 0, lineHeight: 1.1,
+          }}>
+            Nous clarifions.<br />
+            Nous outillons.<br />
+            <span style={{ color: "#1a9e5c" }}>Nous rendons utile.</span>
+          </h2>
+          {/* Dots navigation */}
+          <div style={{ display: "flex", gap: "0.5rem", paddingBottom: "0.25rem" }}>
+            {etapes.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollTo(i)}
+                style={{
+                  width: i === active ? "24px" : "8px",
+                  height: "8px",
+                  borderRadius: "4px",
+                  border: "none",
+                  cursor: "pointer",
+                  background: i === active ? "#1a9e5c" : "rgba(0,0,0,0.15)",
+                  transition: "all 0.3s ease",
+                  padding: 0,
+                }}
+              />
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Scroll horizontal */}
+      <div
+        ref={scrollRef}
+        onScroll={handleScroll}
+        style={{
+          display: "flex",
+          gap: "1.5rem",
+          overflowX: "auto",
+          paddingLeft: "max(1.5rem, calc((100vw - 64rem) / 2))",
+          paddingRight: "1.5rem",
+          paddingBottom: "1rem",
+          scrollSnapType: "x mandatory",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
+      >
+        {etapes.map((e, i) => (
+          <div
+            key={e.n}
+            onClick={() => setActive(i)}
+            style={{
+              flexShrink: 0,
+              width: "clamp(260px, 35vw, 320px)",
+              scrollSnapAlign: "start",
+              background: i === active ? "#F8F7F4" : "#FAFAF8",
+              border: `1px solid ${i === active
+                ? "rgba(26,158,92,0.2)"
+                : "rgba(0,0,0,0.06)"}`,
+              borderRadius: "1.25rem",
+              padding: "2rem",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              boxShadow: i === active
+                ? "0 4px 24px rgba(26,158,92,0.08)"
+                : "none",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center",
+                          justifyContent: "space-between", marginBottom: "1.5rem" }}>
+              <span style={{
+                fontSize: "0.65rem", fontFamily: "monospace",
+                color: e.color, letterSpacing: "0.1em"
+              }}>{e.n}</span>
+              <span style={{ fontSize: "1.5rem", color: e.color }}>{e.icon}</span>
+            </div>
+            <h3 style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "1.4rem", fontWeight: 700,
+              color: "#0f0f0f", marginBottom: "0.75rem",
+            }}>{e.titre}</h3>
+            <p style={{
+              fontSize: "0.85rem",
+              color: "rgba(30,30,30,0.55)",
+              lineHeight: 1.7,
+            }}>{e.description}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Barre de progression */}
+      <div style={{
+        maxWidth: "64rem", margin: "1.5rem auto 0",
+        padding: "0 1.5rem"
+      }}>
+        <div style={{
+          height: "2px", background: "rgba(0,0,0,0.06)",
+          borderRadius: "1px", overflow: "hidden"
+        }}>
+          <div style={{
+            height: "100%",
+            width: `${((active + 1) / etapes.length) * 100}%`,
+            background: "linear-gradient(to right, #1a9e5c, #4f46e5)",
+            transition: "width 0.4s ease",
+            borderRadius: "1px",
+          }} />
         </div>
       </div>
     </section>
