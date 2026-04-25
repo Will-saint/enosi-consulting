@@ -92,7 +92,7 @@ export default function PagePilotage() {
               Rendre la performance lisible, fiable et utile.
             </h1>
             <p className="text-gray-500 text-base leading-relaxed max-w-xl">
-              Nous aidons les directions à construire un pilotage qui sert vraiment à décider — pas à constater.
+              Nous aidons les directions à construire un pilotage qui sert vraiment à décider, pas à constater.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export default function PagePilotage() {
               {[
                 { icone: "◎", titre: "Directions financières", texte: "Vous produisez un reporting mensuel exhaustif. Il arrive trop tard, il est trop long, et les décisions sont souvent déjà prises avant qu'il soit lu." },
                 { icone: "◈", titre: "Directions de la performance", texte: "Vous avez des indicateurs. Mais ils ne sont pas alignés entre les directions, et personne ne regarde les mêmes chiffres pour décider." },
-                { icone: "◉", titre: "COMEX et directions générales", texte: "Vous avez besoin d'une vision synthétique, fiable et actionnable de la performance — pas d'un tableau de bord de plus." },
+                { icone: "◉", titre: "COMEX et directions générales", texte: "Vous avez besoin d'une vision synthétique, fiable et actionnable de la performance, pas d'un tableau de bord de plus." },
               ].map((p) => (
                 <div key={p.titre} className="flex gap-4 bg-[#111] border border-[#1e1e1e] rounded-xl p-5 hover:border-[#3ddc84]/25 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-all duration-200">
                   <span className="text-lg shrink-0 mt-0.5" style={{ color: COLOR }}>{p.icone}</span>

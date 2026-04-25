@@ -17,12 +17,12 @@ const interventions = [
   {
     n: "02",
     titre: "Cadrage orienté décision",
-    texte: "Pour chaque cas retenu : définition précise de la décision que le modèle doit déclencher. Un modèle sans décision associée n'est pas un cas d'usage — c'est un projet R&D.",
+    texte: "Pour chaque cas retenu : définition précise de la décision que le modèle doit déclencher. Un modèle sans décision associée n'est pas un cas d'usage, c'est un projet R&D.",
   },
   {
     n: "03",
     titre: "Automatisation du reporting",
-    texte: "Connexion aux sources, transformation des données, production automatique. Le reporting n'est plus un travail manuel — c'est un flux.",
+    texte: "Connexion aux sources, transformation des données, production automatique. Le reporting n'est plus un travail manuel, c'est un flux.",
   },
   {
     n: "04",
@@ -92,7 +92,7 @@ export default function PageDataIA() {
               Transformer vos données en décisions concrètes.
             </h1>
             <p className="text-gray-500 text-base leading-relaxed max-w-xl">
-              Nous aidons les directions à identifier les cas d&apos;usage à forte valeur, et à les déployer — pas à les lister.
+              Nous aidons les directions à identifier les cas d&apos;usage à forte valeur, et à les déployer, pas à les lister.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export default function PageDataIA() {
               {[
                 { icone: "◎", titre: "Directions transformation", texte: "Vous avez des cas d'usage IA identifiés mais aucun en production. Le manque de priorisation et de lien avec le métier bloque tout." },
                 { icone: "◈", titre: "Directions data", texte: "Vos équipes data produisent des modèles. Mais ils ne sont pas adoptés par le métier, parce qu'ils ne s'intègrent dans aucun processus de décision réel." },
-                { icone: "◉", titre: "Directions financières et performance", texte: "Vous cherchez à automatiser votre reporting, améliorer vos prévisions, ou détecter les anomalies plus tôt — sans savoir par où commencer." },
+                { icone: "◉", titre: "Directions financières et performance", texte: "Vous cherchez à automatiser votre reporting, améliorer vos prévisions, ou détecter les anomalies plus tôt, sans savoir par où commencer." },
               ].map((p) => (
                 <div key={p.titre} className="flex gap-4 bg-[#111] border border-[#1e1e1e] rounded-xl p-5 hover:border-[#3ddc84]/25 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-all duration-200">
                   <span className="text-lg shrink-0 mt-0.5" style={{ color: COLOR }}>{p.icone}</span>
@@ -176,7 +176,7 @@ export default function PageDataIA() {
               <h3 className="text-sm font-bold text-white mb-4">Ce que cette offre n&apos;est pas</h3>
               <div className="space-y-3">
                 {[
-                  "De l'IA pour l'IA — sans cas d'usage métier défini",
+                  "De l'IA pour l'IA, sans cas d'usage métier défini",
                   "Des POC non déployables ou non maintenables",
                   "Des modèles opaques que personne ne comprend ni n'utilise",
                 ].map((item) => (

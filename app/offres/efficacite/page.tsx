@@ -27,7 +27,7 @@ const interventions = [
   {
     n: "04",
     titre: "Pilotage orienté valeur",
-    texte: "Mise en place d'indicateurs centrés sur la création de valeur réelle — pas sur l'activité. Ce qui se mesure, se pilote. Ce qui se pilote, s'améliore.",
+    texte: "Mise en place d'indicateurs centrés sur la création de valeur réelle, pas sur l'activité. Ce qui se mesure, se pilote. Ce qui se pilote, s'améliore.",
   },
   {
     n: "05",
@@ -103,7 +103,7 @@ export default function PageEfficacite() {
               {[
                 { icone: "◎", titre: "Directions en transformation", texte: "Votre organisation grandit ou se transforme. Les processus hérités ne tiennent plus. Il faut reconstruire sans tout arrêter." },
                 { icone: "◈", titre: "Directions financières et performance", texte: "Vos cycles budgétaires, vos clôtures, vos processus de reporting prennent trop de temps et génèrent trop de frictions entre les équipes." },
-                { icone: "◉", titre: "COMEX et directions générales", texte: "Vous cherchez à aligner les priorités opérationnelles sur les leviers de performance réels — et à mesurer ce qui crée vraiment de la valeur." },
+                { icone: "◉", titre: "COMEX et directions générales", texte: "Vous cherchez à aligner les priorités opérationnelles sur les leviers de performance réels et à mesurer ce qui crée vraiment de la valeur." },
               ].map((p) => (
                 <div key={p.titre} className="flex gap-4 bg-[#111] border border-[#1e1e1e] rounded-xl p-5 hover:border-[#3ddc84]/25 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-all duration-200">
                   <span className="text-lg shrink-0 mt-0.5" style={{ color: COLOR }}>{p.icone}</span>

@@ -1,5 +1,23 @@
 "use client";
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+  const words = ["Donnez", "à", "vos", "décisions", "une", "base", "solide."];
+  const [visibleWords, setVisibleWords] = useState<number>(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setVisibleWords(prev => {
+        if (prev >= words.length) {
+          clearInterval(timer);
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, 120);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
 
@@ -21,7 +39,6 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
 
-        {/* Layout asymétrique */}
         <div className="flex flex-col md:flex-row md:items-end md:gap-16 mb-8">
 
           {/* Label gauche */}
@@ -29,8 +46,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4"
                  style={{background:'rgba(26,158,92,0.08)', border:'1px solid rgba(26,158,92,0.18)'}}>
               <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{background:'#1a9e5c'}}/>
-              <span className="text-[10px] tracking-[0.15em] uppercase"
-                    style={{color:'#1a9e5c'}}>
+              <span className="text-[10px] tracking-[0.15em] uppercase" style={{color:'#1a9e5c'}}>
                 Cabinet de conseil
               </span>
             </div>
@@ -39,7 +55,7 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Titre */}
+          {/* Titre animé mot à mot */}
           <h1 style={{
             fontFamily:"'Playfair Display', serif",
             fontSize:'clamp(3.5rem, 8vw, 7rem)',
@@ -47,21 +63,24 @@ export default function Hero() {
             lineHeight:1.0,
             letterSpacing:'-0.02em',
             color:'#0f0f0f',
-            flex:1
+            flex:1,
           }}>
-            Donnez à vos
-            <br/>
-            <span style={{
-              background:'linear-gradient(135deg, #1a9e5c 0%, #157a47 50%, #4f46e5 100%)',
-              WebkitBackgroundClip:'text',
-              WebkitTextFillColor:'transparent',
-              backgroundClip:'text',
-              fontStyle:'italic'
-            }}>
-              décisions
-            </span>
-            <br/>
-            une base solide.
+            {words.map((word, i) => (
+              <span
+                key={i}
+                style={{
+                  display:'inline-block',
+                  marginRight:'0.25em',
+                  opacity: i < visibleWords ? 1 : 0,
+                  transform: i < visibleWords ? 'translateY(0)' : 'translateY(12px)',
+                  transition: 'opacity 0.4s ease, transform 0.4s ease',
+                  color: i >= 4 ? '#1a9e5c' : '#0f0f0f',
+                  fontStyle: i === 3 ? 'italic' : 'normal',
+                }}
+              >
+                {word}
+              </span>
+            ))}
           </h1>
         </div>
 
@@ -112,7 +131,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* 3 piliers glassmorphism */}
+        {/* 3 piliers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
             {label:'Pilotage', desc:"Indicateurs, reporting, aide à la décision.", color:'#1a9e5c'},

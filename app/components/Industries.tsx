@@ -40,7 +40,7 @@ export default function Industries() {
           </h2>
           <p className="max-w-xl mx-auto text-sm leading-relaxed" style={{color: 'rgba(30,30,30,0.5)'}}>
             Nous intervenons auprès de directions qui cherchent à mieux piloter,
-            mieux décider et mieux créer de la valeur — quelle que soit la taille
+            mieux décider et mieux créer de la valeur, quelle que soit la taille
             de l&apos;organisation.
           </p>
         </div>

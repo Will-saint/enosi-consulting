@@ -15,7 +15,7 @@ const etapes = [
     numero: "3",
     titre: "Structurer",
     description:
-      "Concevoir une réponse cohérente — indicateurs, architecture de pilotage, cas d'usage, processus — adaptée à l'organisation.",
+      "Concevoir une réponse cohérente : indicateurs, architecture de pilotage, cas d'usage, processus, adaptée à l'organisation.",
   },
   {
     numero: "4",
@@ -50,7 +50,7 @@ export default function Methode() {
             </p>
             <p className="text-sm leading-relaxed" style={{color:'rgba(30,30,30,0.45)'}}>
               Chaque mission est cadrée avec précision. Les livrables sont conçus
-              pour être utilisés — pas archivés. Et les équipes repartent avec
+              pour être utilisés, pas archivés. Et les équipes repartent avec
               des capacités nouvelles, pas une dépendance supplémentaire.
             </p>
           </div>

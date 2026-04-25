@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
 import PageTransition from "./components/PageTransition";
+import ScrollProgress from "./components/ScrollProgress";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -76,6 +77,7 @@ export default function RootLayout({
             })
           }}
         />
+        <ScrollProgress />
         <CustomCursor />
         <PageTransition>
           {children}

@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import GlowCard from "./GlowCard";
 
 const differenciants = [
   {
@@ -33,7 +34,7 @@ export default function CompanyStats() {
              style={{borderColor: 'rgba(0,0,0,0.07)'}}>
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] rounded-full blur-3xl"
-             style={{background: 'rgba(61,220,132,0.03)'}} />
+             style={{background: 'rgba(26,158,92,0.04)'}} />
       </div>
 
       <div className="max-w-7xl mx-auto relative">
@@ -53,13 +54,13 @@ export default function CompanyStats() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {differenciants.map((d, index) => (
             <ScrollReveal key={d.titre} delay={index * 100}>
-              <div className="card-premium p-7 flex gap-5">
+              <GlowCard className="card-premium p-7 flex gap-5">
                 <div className="text-[#1a9e5c] text-xl shrink-0 mt-0.5 font-bold">{d.icone}</div>
                 <div>
                   <h3 className="text-base font-bold mb-2" style={{color:'#0f0f0f'}}>{d.titre}</h3>
                   <p className="text-sm leading-relaxed" style={{color: 'rgba(30,30,30,0.5)'}}>{d.description}</p>
                 </div>
-              </div>
+              </GlowCard>
             </ScrollReveal>
           ))}
         </div>

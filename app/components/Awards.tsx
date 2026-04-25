@@ -31,7 +31,7 @@ export default function Awards() {
               icone: '◉',
               label: 'Exécution · Clarté · Valeur',
               titre: 'Du diagnostic à l\'outil opérationnel',
-              texte: 'Nous ne livrons pas des recommandations. Nous structurons, outillons et transférons — pour que les équipes puissent décider et agir plus vite, avec plus de clarté.',
+              texte: 'Nous ne livrons pas des recommandations. Nous structurons, outillons et transférons, pour que les équipes puissent décider et agir plus vite, avec plus de clarté.',
             },
           ].map((c) => (
             <div key={c.titre} style={{
@@ -73,7 +73,7 @@ export default function Awards() {
           textAlign: 'center', fontSize: '0.75rem',
           color: 'rgba(30,30,30,0.3)'
         }}>
-          Cabinet fondé par William Saint-Dizier — consultant en performance, data et IA.
+          Cabinet fondé par William Saint-Dizier, consultant en performance, data et IA.
         </p>
       </div>
     </section>

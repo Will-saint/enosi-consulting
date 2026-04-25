@@ -102,7 +102,7 @@ export default function Portfolio() {
             </h1>
             <p className="text-gray-500 text-base leading-relaxed max-w-xl">
               Trois interventions représentatives de notre approche.
-              Les organisations ne sont pas nommées — les résultats, si.
+              Les organisations ne sont pas nommées. Les résultats, si.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export default function Portfolio() {
               >
                 Pilotage
               </span>
-              <span className="text-xs text-gray-600">Direction financière — ETI industrielle</span>
+              <span className="text-xs text-gray-600">Direction financière, ETI industrielle</span>
             </div>
             <h2
               className="text-3xl md:text-4xl font-bold text-white mb-8"
@@ -131,7 +131,7 @@ export default function Portfolio() {
             {/* En bref */}
             <EnBref
               sujet="Pilotage de la performance"
-              probleme="Reporting exhaustif — inutilisé pour décider"
+              probleme="Reporting exhaustif, inutilisé pour décider"
               action="Reconstruction autour des 5 décisions clés + alertes automatiques"
               impact="−5 jours de production · ÷3 sur le temps de décision en COMEX"
             />
@@ -141,12 +141,12 @@ export default function Portfolio() {
               <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le contexte</h3>
               <p className="text-gray-300 leading-relaxed mb-3">
                 ETI industrielle, 800 personnes. Le COMEX attendait un reporting
-                mensuel de 6 jours pour prendre des décisions — et finissait
+                mensuel de 6 jours pour prendre des décisions, et finissait
                 souvent par les prendre avant qu&apos;il arrive.
               </p>
               <p className="text-gray-400 text-sm leading-relaxed">
                 La direction financière produisait chaque mois un document de 40 pages,
-                exhaustif, bien mis en page — et consulté en diagonale pendant
+                exhaustif, bien mis en page, et consulté en diagonale pendant
                 5 minutes en réunion. Personne ne savait exactement quels indicateurs
                 regarder pour décider quoi.
               </p>
@@ -160,7 +160,7 @@ export default function Portfolio() {
               <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le vrai problème</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Le reporting n&apos;avait jamais été conçu pour décider.
-                Il avait été conçu pour informer — ce qui est différent.
+                Il avait été conçu pour informer. Ce qui est différent.
                 La profusion d&apos;indicateurs masquait les quelques signaux
                 qui auraient suffi à orienter les arbitrages mensuels.
               </p>
@@ -252,7 +252,7 @@ export default function Portfolio() {
             {/* Citation */}
             <blockquote className="bg-[#0d0d0d] border-l-4 border-[#3ddc84]/30 p-6 rounded-r-xl mb-8">
               <p className="italic text-gray-400 text-sm leading-relaxed">
-                &ldquo;Pour la première fois, on entre en réunion COMEX en sachant déjà quoi décider — pas juste quoi constater.&rdquo;
+                &ldquo;Pour la première fois, on entre en réunion COMEX en sachant déjà quoi décider, pas juste quoi constater.&rdquo;
               </p>
               <footer className="text-xs text-gray-600 mt-3">— Directeur Financier, ETI industrielle</footer>
             </blockquote>
@@ -276,7 +276,7 @@ export default function Portfolio() {
               >
                 Data & IA
               </span>
-              <span className="text-xs text-gray-600">Direction transformation — Grand groupe</span>
+              <span className="text-xs text-gray-600">Direction transformation, Grand groupe</span>
             </div>
             <h2
               className="text-3xl md:text-4xl font-bold text-white mb-8"
@@ -288,7 +288,7 @@ export default function Portfolio() {
             {/* En bref */}
             <EnBref
               sujet="IA décisionnelle sur flux financiers"
-              probleme="12 cas d'usage IA identifiés — aucun en production depuis 18 mois"
+              probleme="12 cas d'usage IA identifiés, aucun en production depuis 18 mois"
               action="Scoring, sélection du cas prioritaire, déploiement en 8 semaines"
               impact="1 modèle en prod · 94% de détection · 3–4 ETP économisés"
             />
@@ -299,7 +299,7 @@ export default function Portfolio() {
               <p className="text-gray-300 leading-relaxed mb-3">
                 Grand groupe de services, direction transformation.
                 Depuis 18 mois, 12 cas d&apos;usage IA avaient été identifiés
-                en atelier — et aucun n&apos;était passé en production.
+                en atelier, et aucun n&apos;était passé en production.
               </p>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Le problème n&apos;était pas technique. C&apos;était un problème de
@@ -316,7 +316,7 @@ export default function Portfolio() {
             >
               <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le vrai problème</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                L&apos;organisation avait besoin d&apos;une victoire visible et rapide —
+                L&apos;organisation avait besoin d&apos;une victoire visible et rapide :
                 un cas d&apos;usage déployé, utilisé, avec un impact chiffré.
                 Pas d&apos;un nouveau rapport sur les 12 opportunités.
                 La valeur n&apos;est pas dans l&apos;inventaire. Elle est dans l&apos;exécution.
@@ -359,7 +359,7 @@ export default function Portfolio() {
                   {
                     n: "5",
                     titre: "Choix assumé : interprétabilité avant performance brute",
-                    desc: "Nous avons sacrifié 5 points de performance du modèle au profit de son interprétabilité — un modèle à 94% qu'on utilise vaut mieux qu'un modèle à 99% qu'on ne comprend pas.",
+                    desc: "Nous avons sacrifié 5 points de performance du modèle au profit de son interprétabilité : un modèle à 94% qu'on utilise vaut mieux qu'un modèle à 99% qu'on ne comprend pas.",
                     color: "#6366f1",
                     italic: true,
                   },
@@ -463,7 +463,7 @@ export default function Portfolio() {
               >
                 Efficacité
               </span>
-              <span className="text-xs text-gray-600">Direction performance / COMEX — ETI en croissance</span>
+              <span className="text-xs text-gray-600">Direction performance / COMEX, ETI en croissance</span>
             </div>
             <h2
               className="text-3xl md:text-4xl font-bold text-white mb-8"
@@ -475,7 +475,7 @@ export default function Portfolio() {
             {/* En bref */}
             <EnBref
               sujet="Transformation du cycle budgétaire"
-              probleme="14 semaines de budget — validé trop tard pour être utile"
+              probleme="14 semaines de budget, validé trop tard pour être utile"
               action="Cartographie des frictions + référentiel d'hypothèses commun"
               impact="−3 semaines · −60% d'allers-retours · budget utilisé en pilotage"
             />
@@ -493,7 +493,7 @@ export default function Portfolio() {
                 14 semaines de processus budgétaire. Des hypothèses de volume
                 et de prix recalculées à chaque aller-retour entre les directions
                 et la Direction performance / COMEX. Un outil de consolidation
-                qui ne consolidait rien automatiquement — tout était fait à la main,
+                qui ne consolidait rien automatiquement, tout était fait à la main,
                 dans des fichiers individuels, avec des versions qui se perdaient.
               </p>
             </div>
@@ -508,7 +508,7 @@ export default function Portfolio() {
                 Chaque direction budgétait avec ses propres hypothèses.
                 Pas de référentiel commun sur les volumes, les prix, les effectifs.
                 La Direction performance / COMEX passait l&apos;essentiel de son temps
-                à réconcilier des données incompatibles — plutôt qu&apos;à analyser.
+                à réconcilier des données incompatibles, plutôt qu&apos;à analyser.
               </p>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Résultat : un document de référence que personne

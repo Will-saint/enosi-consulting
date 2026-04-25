@@ -1,12 +1,13 @@
 import ScrollReveal from "./ScrollReveal";
+import GlowCard from "./GlowCard";
 
 const cas = [
   {
     badge: "Pilotage",
-    badgeBg: "#3ddc8415",
-    badgeColor: "#3ddc84",
+    badgeBg: "#1a9e5c15",
+    badgeColor: "#1a9e5c",
     titre: "D'un reporting subi à un pilotage qui décide",
-    contexte: "Direction financière — ETI industrielle",
+    contexte: "Direction financière, ETI industrielle",
     resultats: [
       "Production reporting : 6 jours → 1 jour",
       "Temps de décision COMEX divisé par 3",
@@ -16,10 +17,10 @@ const cas = [
   },
   {
     badge: "Data & IA",
-    badgeBg: "#6366f115",
-    badgeColor: "#6366f1",
-    titre: "De l'IA qui tourne en prod — pas en démo",
-    contexte: "Direction transformation — Grand groupe",
+    badgeBg: "#4f46e515",
+    badgeColor: "#4f46e5",
+    titre: "De l'IA qui tourne en prod, pas en démo",
+    contexte: "Direction transformation, Grand groupe",
     resultats: [
       "12 cas d'usage scorés et priorisés",
       "1 modèle en production en 8 semaines",
@@ -29,10 +30,10 @@ const cas = [
   },
   {
     badge: "Efficacité",
-    badgeBg: "#f59e0b15",
-    badgeColor: "#f59e0b",
+    badgeBg: "#d9770615",
+    badgeColor: "#d97706",
     titre: "14 semaines de budget. Réduit à 11.",
-    contexte: "Direction performance — ETI en croissance",
+    contexte: "Direction performance, ETI en croissance",
     resultats: [
       "Cycle budgétaire raccourci de 3 semaines",
       "Allers-retours divisés par 2,5",
@@ -59,7 +60,7 @@ export default function PortfolioPreview() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
           {cas.map((c, index) => (
             <ScrollReveal key={c.titre} delay={index * 100}>
-              <div className="card-premium p-7 flex flex-col h-full">
+              <GlowCard className="card-premium p-7 flex flex-col h-full">
                 <span className="text-xs font-semibold px-2.5 py-1 rounded-full self-start mb-4"
                       style={{ backgroundColor: c.badgeBg, color: c.badgeColor }}>
                   {c.badge}
@@ -69,21 +70,21 @@ export default function PortfolioPreview() {
                 <div className="space-y-2 flex-1">
                   {c.resultats.map((r) => (
                     <div key={r} className="flex items-start gap-2 text-xs" style={{color: 'rgba(30,30,30,0.55)'}}>
-                      <span className="text-[#3ddc84] shrink-0">→</span>
+                      <span style={{color:'#1a9e5c'}} className="shrink-0">→</span>
                       {r}
                     </div>
                   ))}
                 </div>
-                <a href={c.href} className="text-xs text-[#3ddc84] hover:underline mt-5 block">
+                <a href={c.href} className="text-xs hover:underline mt-5 block" style={{color:'#1a9e5c'}}>
                   Lire le cas complet →
                 </a>
-              </div>
+              </GlowCard>
             </ScrollReveal>
           ))}
         </div>
 
         <div className="text-center">
-          <a href="/portfolio" className="text-sm text-[#3ddc84] hover:underline">
+          <a href="/portfolio" className="text-sm hover:underline" style={{color:'#1a9e5c'}}>
             Voir tous les cas →
           </a>
         </div>

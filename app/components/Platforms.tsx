@@ -1,5 +1,6 @@
 "use client";
 import ScrollReveal from "./ScrollReveal";
+import GlowCard from "./GlowCard";
 
 const offres = [
   {
@@ -24,7 +25,7 @@ const offres = [
     numero: "02",
     nom: "Data & IA pour la décision",
     accroche: "Transformer les données en leviers de décision concrets.",
-    probleme: "Les données sont disponibles, parfois abondantes — mais elles ne se traduisent pas encore en avantages décisionnels ou opérationnels.",
+    probleme: "Les données sont disponibles, parfois abondantes, mais elles ne se traduisent pas encore en avantages décisionnels ou opérationnels.",
     apport: "Nous identifions les cas d'usage à forte valeur, structurons les analyses et déployons des outils d'aide à la décision qui s'intègrent dans les processus réels des équipes.",
     sujets: [
       "Automatisation et fiabilisation du reporting",
@@ -43,7 +44,7 @@ const offres = [
     nom: "Efficacité et création de valeur",
     accroche: "Améliorer l'exécution, réduire les frictions, piloter ce qui compte.",
     probleme: "Les processus ralentissent l'organisation. La coordination entre métier, finance et data coûte plus qu'elle ne produit.",
-    apport: "Nous analysons les flux, identifions les points de friction, rationalisons les processus critiques et mettons en place un pilotage orienté valeur — pragmatique, transférable, durable.",
+    apport: "Nous analysons les flux, identifions les points de friction, rationalisons les processus critiques et mettons en place un pilotage orienté valeur, pragmatique, transférable, durable.",
     sujets: [
       "Optimisation de processus métier et de pilotage",
       "Réduction des redondances et des délais",
@@ -114,6 +115,7 @@ export default function Platforms() {
                 el.style.boxShadow = '0 0 0 1px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05)';
                 el.style.background = '#FFFFFF';
               }}>
+              <GlowCard style={{height:'100%', display:'flex', flexDirection:'column', borderRadius:'inherit'}}>
 
                 {/* Numéro décoratif */}
                 <span style={{
@@ -210,6 +212,7 @@ export default function Platforms() {
                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='rgba(30,30,30,0.4)'}>
                   En savoir plus →
                 </a>
+              </GlowCard>
               </div>
             </ScrollReveal>
           ))}

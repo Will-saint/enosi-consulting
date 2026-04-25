@@ -59,15 +59,15 @@ export default function APropos() {
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Le problème n&apos;est pas technique.
-                C&apos;est un problème de traduction — entre ce que
+                C&apos;est un problème de traduction, entre ce que
                 les données disent et ce que les équipes peuvent
                 en faire concrètement.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Enosi Consulting a été fondé pour combler cet écart.
                 Nous intervenons à l&apos;intersection de la finance,
-                de la performance, de la data et de l&apos;IA —
-                pas pour faire de la technologie, mais pour aider
+                de la performance, de la data et de l&apos;IA.
+                Pas pour faire de la technologie, mais pour aider
                 les directions à mieux décider, plus vite,
                 avec une base plus solide.
               </p>
@@ -114,7 +114,7 @@ export default function APropos() {
                   couleur: "#f59e0b",
                   titre: "IA appliquée",
                   texte:
-                    "Prédiction, détection d'anomalies, aide à la décision. Nous déployons l'IA là où elle crée une valeur mesurable — pas là où elle impressionne.",
+                    "Prédiction, détection d'anomalies, aide à la décision. Nous déployons l'IA là où elle crée une valeur mesurable, pas là où elle impressionne.",
                 },
               ].map((c) => (
                 <div
@@ -145,7 +145,7 @@ export default function APropos() {
               <p className="text-gray-400 leading-relaxed">
                 Notre expérience s&apos;est construite dans des organisations
                 où la data, la finance, le business et l&apos;IT
-                coexistent — et doivent se parler.
+                coexistent et doivent se parler.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Nous avons vu de l&apos;intérieur comment les problèmes
