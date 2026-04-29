@@ -62,7 +62,7 @@ function ArcMetric({
 }
 
 const stats = [
-  { end: 60, suffix: "%", label: "Réduction temps reporting", color: "#1a9e5c" },
+  { end: 25, suffix: "%", label: "Réduction temps reporting", color: "#1a9e5c" },
   { end: 8, suffix: "sem", label: "Zéro à modèle en production", color: "#4f46e5" },
   { end: 3, suffix: "×", label: "Plus rapide en décision", color: "#d97706" },
   { end: 94, suffix: "%", label: "Détection anomalies", color: "#1a9e5c" },

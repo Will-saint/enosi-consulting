@@ -256,6 +256,82 @@ export default function APropos() {
             </div>
           </section>
 
+          {/* ── Section 5b : Le fondateur ───────────── */}
+          <section className="mb-16 pb-16 border-b border-[#1e1e1e]">
+            <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Le fondateur</p>
+            <h2
+              className="text-3xl font-bold text-white mb-7"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            >
+              William Saint-Dizier
+            </h2>
+
+            <p className="text-gray-400 leading-relaxed mb-8">
+              Consultant en performance, data et IA. Double diplôme Panthéon-Sorbonne × PSTB,
+              Master Data IA for Business (2026). Expériences en France, Nouvelle-Zélande
+              et La Réunion, dans des environnements grands groupes et ETI.
+            </p>
+
+            {/* Expériences */}
+            <div className="mb-8">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-5">Expériences clés</p>
+              <div className="space-y-0">
+                {[
+                  {
+                    org: "Moët Hennessy — LVMH",
+                    desc: "Pilotage financier de projets Data/IA — déploiement d'outils de tracking et reporting analytique pour une maison du groupe.",
+                  },
+                  {
+                    org: "Périmètre 100 M€ de revenus",
+                    desc: "Contrôle financier et automatisation du reporting : réduction de 25 % du temps de production des reportings de pilotage.",
+                  },
+                  {
+                    org: "Groupe 200 M€",
+                    desc: "Audit financier et conformité sur 98 sites — structuration des données, fiabilisation des indicateurs de performance.",
+                  },
+                ].map((e, i, arr) => (
+                  <div
+                    key={e.org}
+                    className={`flex gap-5 py-5 ${i < arr.length - 1 ? "border-b border-[#1e1e1e]" : ""}`}
+                  >
+                    <span
+                      className="shrink-0 w-2 h-2 rounded-full mt-2"
+                      style={{ background: "#1a9e5c", minWidth: "8px", maxHeight: "8px", display: "block" }}
+                    />
+                    <div>
+                      <h3 className="text-sm font-bold text-white mb-1">{e.org}</h3>
+                      <p className="text-sm text-gray-500 leading-relaxed">{e.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Certifications */}
+            <div>
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-5">Certifications</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { label: "Power BI", detail: "PL-300 Microsoft Certified" },
+                  { label: "Microsoft Azure", detail: "Certification cloud" },
+                  { label: "Dataiku", detail: "ML & data pipeline" },
+                  { label: "IBM Data Science + AI Engineering", detail: "340h cumulées" },
+                ].map((c) => (
+                  <div
+                    key={c.label}
+                    className="flex gap-3 items-start rounded-xl p-4 bg-[#0d0d0d] border border-[#1e1e1e]"
+                  >
+                    <span className="text-xs shrink-0 mt-0.5" style={{ color: "#1a9e5c" }}>✓</span>
+                    <div>
+                      <p className="text-xs font-bold text-white">{c.label}</p>
+                      <p className="text-xs text-gray-600 mt-0.5">{c.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* ── Section 6 : CTA final ────────────────── */}
           <section className="py-16 text-center">
             <h2

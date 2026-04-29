@@ -38,5 +38,13 @@ export const seoConfig = {
   contact: {
     title: "Contact — Échangeons sur vos enjeux | Enosi Consulting",
     description: "Un premier échange de 30 minutes pour comprendre vos priorités. Cabinet de conseil en performance, data et IA."
+  },
+  mentionsLegales: {
+    title: "Mentions légales | Enosi Consulting",
+    description: "Mentions légales du site enosi-consulting.fr — éditeur, hébergeur et informations légales."
+  },
+  politiqueConfidentialite: {
+    title: "Politique de confidentialité | Enosi Consulting",
+    description: "Politique de confidentialité et de traitement des données personnelles — conformité RGPD."
   }
 }

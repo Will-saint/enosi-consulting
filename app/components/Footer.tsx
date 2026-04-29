@@ -23,9 +23,9 @@ const liens: Record<string, { label: string; href: string }[]> = {
 };
 
 const legalLinks: { label: string; href: string }[] = [
-  { label: "Mentions légales", href: "/contact" },
-  { label: "Politique de confidentialité", href: "/contact" },
-  { label: "Cookies", href: "/contact" },
+  { label: "Mentions légales", href: "/mentions-legales" },
+  { label: "Politique de confidentialité", href: "/politique-confidentialite" },
+  { label: "Cookies", href: "/politique-confidentialite" },
 ];
 
 export default function Footer() {

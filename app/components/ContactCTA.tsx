@@ -30,16 +30,32 @@ export default function ContactCTA() {
         }}>
           Un premier échange de 30 minutes, sans engagement.
         </p>
-        <a href="/contact" style={{
-          display:'inline-block',
-          padding:'1rem 3rem',
-          borderRadius:'2rem',
-          background:'linear-gradient(135deg, #1a9e5c, #157a47)',
-          color:'#fff', fontWeight:700,
-          fontSize:'0.85rem', textDecoration:'none',
-          boxShadow:'0 4px 24px rgba(26,158,92,0.25)',
-          letterSpacing:'0.02em'
-        }}>Prendre contact</a>
+        <div style={{ display:'flex', gap:'1rem', justifyContent:'center', flexWrap:'wrap' }}>
+          <a href="/contact" style={{
+            display:'inline-block',
+            padding:'1rem 3rem',
+            borderRadius:'2rem',
+            background:'linear-gradient(135deg, #1a9e5c, #157a47)',
+            color:'#fff', fontWeight:700,
+            fontSize:'0.85rem', textDecoration:'none',
+            boxShadow:'0 4px 24px rgba(26,158,92,0.25)',
+            letterSpacing:'0.02em'
+          }}>Prendre contact</a>
+          <a
+            href="https://calendly.com/williamsaintdizier"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display:'inline-block',
+              padding:'1rem 2.5rem',
+              borderRadius:'2rem',
+              border:'1.5px solid #1a9e5c',
+              color:'#1a9e5c', fontWeight:700,
+              fontSize:'0.85rem', textDecoration:'none',
+              letterSpacing:'0.02em',
+            }}
+          >Réserver 30 minutes →</a>
+        </div>
       </div>
     </section>
   );
