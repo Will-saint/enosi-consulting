@@ -1,3 +1,5 @@
+import { CALENDLY_URL } from "@/lib/constants";
+
 export default function ContactCTA() {
   return (
     <section style={{
@@ -42,7 +44,7 @@ export default function ContactCTA() {
             letterSpacing:'0.02em'
           }}>Prendre contact</a>
           <a
-            href="https://calendly.com/williamsaintdizier"
+            href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
             style={{

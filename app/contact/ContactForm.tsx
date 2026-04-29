@@ -11,14 +11,35 @@ const sujets = [
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     prenom: "", nom: "", entreprise: "", email: "",
     fonction: "", sujet: "", message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json() as { success?: boolean; error?: string };
+      if (!res.ok || !data.success) {
+        setError("Une erreur est survenue, veuillez réessayer ou nous écrire directement.");
+      } else {
+        setSubmitted(true);
+      }
+    } catch {
+      setError("Une erreur est survenue, veuillez réessayer ou nous écrire directement.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -26,10 +47,9 @@ export default function ContactForm() {
       {submitted ? (
         <div className="text-center py-12">
           <div className="text-3xl mb-5 text-[#3ddc84]">◎</div>
-          <h3 className="text-xl font-bold text-white mb-3">Message reçu.</h3>
+          <h3 className="text-xl font-bold text-white mb-3">Message envoyé.</h3>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
-            Nous reviendrons vers vous sous 48h pour organiser un
-            premier échange sur vos enjeux.
+            Votre message a bien été envoyé. Nous vous répondons sous 48h ouvrées.
           </p>
         </div>
       ) : (
@@ -108,8 +128,9 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block text-xs text-gray-600 mb-1.5">Décrivez brièvement votre enjeu</label>
+            <label className="block text-xs text-gray-600 mb-1.5">Décrivez brièvement votre enjeu *</label>
             <textarea
+              required
               rows={3}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -118,11 +139,18 @@ export default function ContactForm() {
             />
           </div>
 
+          {error && (
+            <p className="text-xs text-red-400 text-center py-1">
+              {error}
+            </p>
+          )}
+
           <button
             type="submit"
-            className="w-full py-3 bg-[#3ddc84] text-black font-semibold rounded-lg hover:bg-[#2ab86e] transition-colors text-sm mt-1"
+            disabled={loading}
+            className="w-full py-3 bg-[#3ddc84] text-black font-semibold rounded-lg hover:bg-[#2ab86e] transition-colors text-sm mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Envoyer le message
+            {loading ? "Envoi en cours…" : "Envoyer le message"}
           </button>
 
           <p className="text-xs text-gray-700 text-center pt-1">

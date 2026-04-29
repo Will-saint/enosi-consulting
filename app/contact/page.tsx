@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactForm from "./ContactForm";
 import { seoConfig } from "../seo";
+import { CALENDLY_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: seoConfig.contact.title,
@@ -103,7 +104,7 @@ export default function PageContact() {
               Sélectionnez un créneau de 30 minutes dans l&apos;agenda. Confirmation automatique, sans intermédiaire.
             </p>
             <a
-              href="https://calendly.com/williamsaintdizier"
+              href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold border border-[#1a9e5c] text-[#1a9e5c] hover:bg-[#1a9e5c] hover:text-white transition-colors"
