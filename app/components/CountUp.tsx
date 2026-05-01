@@ -17,15 +17,10 @@ export default function CountUp({
   useEffect(() => {
     if (hasStarted) return;
 
-    const fallback = setTimeout(() => {
-      setHasStarted(true);
-    }, 500);
-
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            clearTimeout(fallback);
             setHasStarted(true);
             obs.disconnect();
           }
@@ -35,10 +30,7 @@ export default function CountUp({
     );
 
     if (ref.current) obs.observe(ref.current);
-    return () => {
-      obs.disconnect();
-      clearTimeout(fallback);
-    };
+    return () => obs.disconnect();
   }, [hasStarted]);
 
   useEffect(() => {

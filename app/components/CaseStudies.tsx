@@ -3,10 +3,10 @@ const interventions = [
     contexte: "Direction financière — ETI industrielle",
     titre: "Refonte du pilotage de la performance",
     description:
-      "Structuration d'un nouveau dispositif de pilotage mensuel : indicateurs clés, reporting automatisé, tableau de bord décisionnel. Réduction du temps de production du reporting de 60 %.",
+      "Structuration d'un nouveau dispositif de pilotage mensuel : indicateurs clés, reporting automatisé, tableau de bord décisionnel. Réduction du temps de production du reporting de 25 %.",
     pilier: "Pilotage",
     couleurPilier: "#3ddc84",
-    impact: "−60% de temps de production reporting",
+    impact: "−25% de temps de production reporting",
   },
   {
     contexte: "Direction transformation — Grand groupe",

@@ -13,6 +13,7 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [consent, setConsent] = useState(false);
   const [form, setForm] = useState({
     prenom: "", nom: "", entreprise: "", email: "",
     fonction: "", sujet: "", message: "",
@@ -20,6 +21,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!consent) return;
     setLoading(true);
     setError(null);
 
@@ -139,6 +141,22 @@ export default function ContactForm() {
             />
           </div>
 
+          <div className="flex items-start gap-3 pt-1">
+            <input
+              type="checkbox"
+              id="consent"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-0.5 shrink-0 accent-[#3ddc84]"
+            />
+            <label htmlFor="consent" className="text-xs text-gray-600 leading-relaxed cursor-pointer">
+              J&apos;accepte que mes données soient utilisées pour répondre à ma demande.{" "}
+              <a href="/politique-confidentialite" className="text-[#3ddc84] hover:underline">
+                Politique de confidentialité
+              </a>
+            </label>
+          </div>
+
           {error && (
             <p className="text-xs text-red-400 text-center py-1">
               {error}
@@ -147,7 +165,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || !consent}
             className="w-full py-3 bg-[#3ddc84] text-black font-semibold rounded-lg hover:bg-[#2ab86e] transition-colors text-sm mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {loading ? "Envoi en cours…" : "Envoyer le message"}
