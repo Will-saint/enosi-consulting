@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { CALENDLY_URL } from "@/lib/constants";
 
 type NavItem =
   | { label: string; anchor: string; direct: true }
@@ -140,8 +141,29 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* CTA */}
-        <div className="hidden lg:flex">
+        {/* CTAs desktop */}
+        <div className="hidden lg:flex items-center gap-2">
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"
+             style={{
+               padding: '0.5rem 1.25rem',
+               borderRadius: '2rem',
+               border: '1.5px solid #1a9e5c',
+               color: '#1a9e5c',
+               fontWeight: 600,
+               fontSize: '0.78rem',
+               textDecoration: 'none',
+               transition: 'background 0.2s, color 0.2s',
+             }}
+             onMouseEnter={e => {
+               (e.currentTarget as HTMLElement).style.background='#1a9e5c';
+               (e.currentTarget as HTMLElement).style.color='#fff';
+             }}
+             onMouseLeave={e => {
+               (e.currentTarget as HTMLElement).style.background='transparent';
+               (e.currentTarget as HTMLElement).style.color='#1a9e5c';
+             }}>
+            Réserver 30 min
+          </a>
           <a href="/contact"
              style={{
                padding: '0.5rem 1.5rem',
@@ -149,14 +171,14 @@ export default function Navbar() {
                background: 'linear-gradient(135deg, #1a9e5c, #157a47)',
                color: '#fff',
                fontWeight: 600,
-               fontSize: '0.8rem',
+               fontSize: '0.78rem',
                textDecoration: 'none',
                boxShadow: '0 2px 12px rgba(26,158,92,0.25)',
                transition: 'box-shadow 0.3s',
              }}
              onMouseEnter={e => (e.currentTarget as HTMLElement).style.boxShadow='0 4px 20px rgba(26,158,92,0.4)'}
              onMouseLeave={e => (e.currentTarget as HTMLElement).style.boxShadow='0 2px 12px rgba(26,158,92,0.25)'}>
-            Nous contacter
+            Prendre contact
           </a>
         </div>
 
@@ -214,16 +236,26 @@ export default function Navbar() {
               </div>
             );
           })}
-          <a href="/contact"
-             style={{
-               display:'block', marginTop:'1rem',
-               padding:'0.75rem', borderRadius:'2rem', textAlign:'center',
-               background:'linear-gradient(135deg, #1a9e5c, #157a47)',
-               color:'#fff', fontWeight:600, fontSize:'0.85rem', textDecoration:'none',
-             }}
-             onClick={() => setMobileOpen(false)}>
-            Nous contacter
-          </a>
+          <div style={{display:'flex', flexDirection:'column', gap:'0.75rem', marginTop:'1rem'}}>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"
+               style={{
+                 display:'block', padding:'0.75rem', borderRadius:'2rem', textAlign:'center',
+                 border:'1.5px solid #1a9e5c',
+                 color:'#1a9e5c', fontWeight:600, fontSize:'0.85rem', textDecoration:'none',
+               }}
+               onClick={() => setMobileOpen(false)}>
+              Réserver 30 min →
+            </a>
+            <a href="/contact"
+               style={{
+                 display:'block', padding:'0.75rem', borderRadius:'2rem', textAlign:'center',
+                 background:'linear-gradient(135deg, #1a9e5c, #157a47)',
+                 color:'#fff', fontWeight:600, fontSize:'0.85rem', textDecoration:'none',
+               }}
+               onClick={() => setMobileOpen(false)}>
+              Prendre contact
+            </a>
+          </div>
         </div>
       )}
     </header>

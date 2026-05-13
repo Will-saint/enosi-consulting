@@ -52,9 +52,25 @@ export default function PortfolioPreview() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             Trois missions. Trois résultats concrets.
           </h2>
-          <p className="max-w-xl mx-auto text-sm" style={{color: 'rgba(30,30,30,0.5)'}}>
+          <p className="max-w-xl mx-auto text-sm mb-6" style={{color: 'rgba(30,30,30,0.5)'}}>
             Des interventions réelles, présentées sans fioritures.
           </p>
+          {/* Références clients */}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <span style={{fontSize:'0.65rem', letterSpacing:'0.15em', textTransform:'uppercase', color:'rgba(30,30,30,0.3)'}}>
+              Parmi nos clients
+            </span>
+            {["Moët Hennessy — LVMH", "Bourbon Voyages", "Appart’City"].map((c) => (
+              <span key={c} style={{
+                fontSize:'0.75rem', fontWeight:600,
+                color:'rgba(30,30,30,0.45)',
+                padding:'0.3rem 0.85rem',
+                border:'1px solid rgba(0,0,0,0.08)',
+                borderRadius:'2rem',
+                background:'rgba(0,0,0,0.02)',
+              }}>{c}</span>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">

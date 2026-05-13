@@ -25,7 +25,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 md:px-6 pt-20">
 
       {/* Fond ambiant */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -97,7 +97,7 @@ export default function Hero() {
         </div>
 
         {/* Sous-titre + CTAs */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-20"
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-20"
              style={{borderTop:'1px solid rgba(0,0,0,0.07)', paddingTop:'2rem'}}>
           <p style={{
             color:'rgba(30,30,30,0.5)',
