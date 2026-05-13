@@ -39,6 +39,10 @@ export const seoConfig = {
     title: "Contact — Échangeons sur vos enjeux | Enosi Consulting",
     description: "Un premier échange de 30 minutes pour comprendre vos priorités. Cabinet de conseil en performance, data et IA."
   },
+  demo: {
+    title: "Démo — Tableau de bord interactif | Enosi Consulting",
+    description: "Voyez en direct ce que vos données pourraient ressembler. Dashboard financier animé et calculateur ROI pour directeurs financiers et CDO."
+  },
   mentionsLegales: {
     title: "Mentions légales | Enosi Consulting",
     description: "Mentions légales du site enosi-consulting.fr — éditeur, hébergeur et informations légales."

@@ -36,6 +36,7 @@ const navItems: NavItem[] = [
   },
   { label: "Portfolio", anchor: "/portfolio", direct: true },
   { label: "À propos", anchor: "/a-propos", direct: true },
+  { label: "Démo live", anchor: "/demo", direct: true },
 ];
 
 export default function Navbar() {
@@ -66,17 +67,30 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => {
             if (item.direct) {
+              const isDemo = item.label === "Démo live";
               return (
                 <a key={item.label} href={item.anchor}
                    style={{
-                     padding: '0.5rem 1rem',
+                     padding: isDemo ? '0.35rem 0.875rem' : '0.5rem 1rem',
                      fontSize: '0.85rem',
-                     color: '#3a3a3a',
+                     color: isDemo ? '#1a9e5c' : '#3a3a3a',
                      textDecoration: 'none',
-                     transition: 'color 0.2s',
+                     transition: 'color 0.2s, background 0.2s',
+                     borderRadius: isDemo ? '2rem' : undefined,
+                     border: isDemo ? '1px solid rgba(26,158,92,0.3)' : undefined,
+                     background: isDemo ? 'rgba(26,158,92,0.06)' : undefined,
+                     fontWeight: isDemo ? 600 : undefined,
                    }}
-                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='#0f0f0f'}
-                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='#3a3a3a'}>
+                   onMouseEnter={e => {
+                     const el = e.currentTarget as HTMLElement;
+                     el.style.color = isDemo ? '#fff' : '#0f0f0f';
+                     if (isDemo) el.style.background = '#1a9e5c';
+                   }}
+                   onMouseLeave={e => {
+                     const el = e.currentTarget as HTMLElement;
+                     el.style.color = isDemo ? '#1a9e5c' : '#3a3a3a';
+                     if (isDemo) el.style.background = 'rgba(26,158,92,0.06)';
+                   }}>
                   {item.label}
                 </a>
               );
