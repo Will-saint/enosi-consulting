@@ -45,7 +45,7 @@ const cas = [
 
 export default function PortfolioPreview() {
   return (
-    <section className="py-28 px-6 border-b" style={{borderColor: 'rgba(0,0,0,0.07)'}}>
+    <section id="interventions" className="py-28 px-6 border-b" style={{borderColor: 'rgba(0,0,0,0.07)'}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(30,30,30,0.35)'}}>Portfolio</p>
