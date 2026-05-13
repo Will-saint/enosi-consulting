@@ -16,7 +16,6 @@ import Methode from "./components/Methode";
 import PortfolioPreview from "./components/PortfolioPreview";
 import Industries from "./components/Industries";
 import CompanyStats from "./components/CompanyStats";
-import CTABanner from "./components/CTABanner";
 import ContactCTA from "./components/ContactCTA";
 import Footer from "./components/Footer";
 
@@ -34,7 +33,6 @@ export default function Home() {
         <PortfolioPreview />
         <Industries />
         <CompanyStats />
-        <CTABanner />
         <ContactCTA />
       </main>
       <Footer />

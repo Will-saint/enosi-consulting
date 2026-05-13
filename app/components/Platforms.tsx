@@ -102,18 +102,20 @@ export default function Platforms() {
                 position: 'relative',
                 overflow: 'hidden',
                 boxShadow: '0 0 0 1px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05)',
-                transition: 'box-shadow 0.25s, background 0.25s',
+                transition: 'box-shadow 0.25s, background 0.25s, transform 0.25s',
                 height: '100%',
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.boxShadow = `0 0 0 1px rgba(26,158,92,0.18), 0 8px 32px rgba(0,0,0,0.1)`;
+                el.style.boxShadow = `0 0 0 1px rgba(26,158,92,0.18), 0 12px 36px rgba(0,0,0,0.1)`;
                 el.style.background = '#FAFAF8';
+                el.style.transform = 'translateY(-4px)';
               }}
               onMouseLeave={e => {
                 const el = e.currentTarget as HTMLElement;
                 el.style.boxShadow = '0 0 0 1px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.05)';
                 el.style.background = '#FFFFFF';
+                el.style.transform = 'translateY(0)';
               }}>
               <GlowCard style={{height:'100%', display:'flex', flexDirection:'column', borderRadius:'inherit'}}>
 

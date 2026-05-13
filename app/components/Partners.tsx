@@ -16,9 +16,9 @@ export default function Partners() {
 
   return (
     <section style={{
-      background:'#FFFFFF',
-      borderTop:'1px solid rgba(0,0,0,0.06)',
-      borderBottom:'1px solid rgba(0,0,0,0.06)',
+      background:'#F2F0EC',
+      borderTop:'1px solid rgba(0,0,0,0.07)',
+      borderBottom:'1px solid rgba(0,0,0,0.07)',
       padding:'4rem 0', overflow:'hidden'
     }}>
       <p style={{

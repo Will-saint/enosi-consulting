@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto w-full">
 
         {/* 2-col layout on lg */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 lg:items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] lg:gap-12 lg:items-center">
 
         {/* LEFT COLUMN */}
         <div>
@@ -70,7 +70,7 @@ export default function Hero() {
           {/* Titre animé mot à mot */}
           <h1 style={{
             fontFamily:"'Playfair Display', serif",
-            fontSize:'clamp(3.5rem, 8vw, 7rem)',
+            fontSize:'clamp(2.8rem, 6vw, 5.5rem)',
             fontWeight:700,
             lineHeight:1.0,
             letterSpacing:'-0.02em',

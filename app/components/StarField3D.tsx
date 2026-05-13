@@ -31,20 +31,20 @@ export default function StarField3D() {
     renderer.toneMappingExposure = 0.95;
     container.appendChild(renderer.domElement);
 
-    // --- Lights ---
-    const key = new THREE.DirectionalLight(0xfff0d2, 1.2);
+    // --- Lights (thème clair) ---
+    const key = new THREE.DirectionalLight(0xffffff, 1.1);
     key.position.set(-3.5, 4, 4);
     scene.add(key);
 
-    const fill = new THREE.DirectionalLight(0x9fb4d6, 0.32);
+    const fill = new THREE.DirectionalLight(0xd4ede0, 0.5);
     fill.position.set(4, 0, 3);
     scene.add(fill);
 
-    const rim = new THREE.DirectionalLight(0x1a9e5c, 0.45);
+    const rim = new THREE.DirectionalLight(0xa8d5bc, 0.7);
     rim.position.set(2, -1, -3);
     scene.add(rim);
 
-    const ambient = new THREE.AmbientLight(0x0c1018, 0.5);
+    const ambient = new THREE.AmbientLight(0xffffff, 0.75);
     scene.add(ambient);
 
     // --- Branch geometry (bipyramid wedge) ---
@@ -71,17 +71,17 @@ export default function StarField3D() {
       return g;
     }
 
-    const geom = makeBranchGeometry(0.42, 1.35, 0.55);
+    const geom = makeBranchGeometry(0.42, 1.25, 0.50);
 
     const material = new THREE.MeshPhysicalMaterial({
-      color: 0x0c1410,
-      emissive: new THREE.Color(0x0a1c14),
-      emissiveIntensity: 0.18,
-      metalness: 0.05,
-      roughness: 0.34,
-      ior: 1.5,
-      clearcoat: 0.85,
-      clearcoatRoughness: 0.28,
+      color: 0xe8ede9,
+      emissive: new THREE.Color(0x2a6040),
+      emissiveIntensity: 0.12,
+      metalness: 0.0,
+      roughness: 0.22,
+      ior: 1.6,
+      clearcoat: 1.0,
+      clearcoatRoughness: 0.05,
       flatShading: true,
     });
 
@@ -89,12 +89,14 @@ export default function StarField3D() {
     const root = new THREE.Group();
     scene.add(root);
 
+    root.scale.setScalar(0.76);
+
     function placeRoot() {
       if (!container || !container.isConnected) return;
       const aspect = container.clientWidth / (container.clientHeight || 1);
-      root.position.x = aspect > 1.2 ? 0.4 : aspect > 0.85 ? 0.15 : 0;
-      root.position.y = 0.05;
-      root.rotation.x = -0.16;
+      root.position.x = aspect > 1.2 ? 0.2 : aspect > 0.85 ? 0.1 : 0;
+      root.position.y = 0.0;
+      root.rotation.x = -0.12;
     }
     placeRoot();
 
