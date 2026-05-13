@@ -1,6 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import ConvergenceViz from "./ConvergenceViz";
+import dynamic from "next/dynamic";
+
+const StarField3D = dynamic(() => import("./StarField3D"), {
+  ssr: false,
+  loading: () => <div style={{ width: "100%", height: "100%" }} aria-hidden="true" />,
+});
 
 export default function Hero() {
   const words = ["Vos", "données", "méritent", "mieux", "qu'un", "rapport", "PowerPoint."];
@@ -166,7 +171,7 @@ export default function Hero() {
 
         {/* RIGHT COLUMN — hidden on mobile */}
         <div className="hidden lg:flex items-center justify-center" style={{height:'420px'}}>
-          <ConvergenceViz />
+          <StarField3D />
         </div>
 
         </div>{/* end 2-col grid */}
