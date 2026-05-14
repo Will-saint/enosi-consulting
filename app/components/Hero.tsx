@@ -8,7 +8,7 @@ const StarField3D = dynamic(() => import("./StarField3D"), {
 });
 
 export default function Hero() {
-  const words = ["Vos", "données", "méritent", "mieux", "qu'un", "rapport", "PowerPoint."];
+  const words = ["Vos", "données", "savent", "déjà", "la", "réponse."];
   const [visibleWords, setVisibleWords] = useState<number>(0);
 
   useEffect(() => {
@@ -123,7 +123,7 @@ export default function Hero() {
                  textDecoration:'none',
                  whiteSpace:'nowrap',
                }}>
-              Échangeons
+              Mon diagnostic gratuit →
             </a>
             <a href="#offres"
                style={{

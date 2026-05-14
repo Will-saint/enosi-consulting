@@ -53,6 +53,14 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        {/* Plausible Analytics — RGPD-friendly, pas de cookie banner requis */}
+        {/* Créer un compte sur plausible.io et ajouter le domaine pour activer */}
+        <Script
+          defer
+          data-domain="enosi-consulting.vercel.app"
+          src="https://plausible.io/js/script.js"
+          strategy="afterInteractive"
+        />
         <Script
           id="schema-org"
           type="application/ld+json"

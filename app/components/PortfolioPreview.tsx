@@ -43,55 +43,46 @@ const cas = [
   },
 ];
 
+const sectionStyle = { borderColor: "rgba(0,0,0,0.07)" };
+const labelColor = { color: "rgba(30,30,30,0.35)" };
+const subtitleColor = { color: "rgba(30,30,30,0.5)" };
+const h2Style = { fontFamily: "Playfair Display, Georgia, serif" };
+const contexteStyle = { color: "rgba(30,30,30,0.4)" };
+const resultatStyle = { color: "rgba(30,30,30,0.55)" };
+const greenStyle = { color: "#1a9e5c" };
+const darkStyle = { color: "#0f0f0f" };
+
 export default function PortfolioPreview() {
   return (
-    <section id="interventions" className="py-28 px-6 border-b" style={{borderColor: 'rgba(0,0,0,0.07)'}}>
+    <section id="interventions" className="py-28 px-6 border-b" style={sectionStyle}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(30,30,30,0.35)'}}>Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-            Trois missions. Trois résultats concrets.
-          </h2>
-          <p className="max-w-xl mx-auto text-sm mb-6" style={{color: 'rgba(30,30,30,0.5)'}}>
-            Des interventions réelles, présentées sans fioritures.
-          </p>
-          {/* Références clients */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <span style={{fontSize:'0.65rem', letterSpacing:'0.15em', textTransform:'uppercase', color:'rgba(30,30,30,0.3)'}}>
-              Parmi nos clients
-            </span>
-            {["Moët Hennessy — LVMH", "Bourbon Voyages", "Appart’City"].map((c) => (
-              <span key={c} style={{
-                fontSize:'0.75rem', fontWeight:600,
-                color:'rgba(30,30,30,0.45)',
-                padding:'0.3rem 0.85rem',
-                border:'1px solid rgba(0,0,0,0.08)',
-                borderRadius:'2rem',
-                background:'rgba(0,0,0,0.02)',
-              }}>{c}</span>
-            ))}
-          </div>
+          <p className="text-xs uppercase tracking-widest mb-3" style={labelColor}>Portfolio</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={h2Style}>Trois missions. Trois résultats concrets.</h2>
+          <p className="max-w-xl mx-auto text-sm" style={subtitleColor}>Des interventions réelles, présentées sans fioritures.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
           {cas.map((c, index) => (
             <ScrollReveal key={c.titre} delay={index * 100}>
               <GlowCard className="card-premium p-7 flex flex-col h-full">
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full self-start mb-4"
-                      style={{ backgroundColor: c.badgeBg, color: c.badgeColor }}>
+                <span
+                  className="text-xs font-semibold px-2.5 py-1 rounded-full self-start mb-4"
+                  style={{ backgroundColor: c.badgeBg, color: c.badgeColor }}
+                >
                   {c.badge}
                 </span>
-                <h3 className="text-base font-bold mb-2 leading-snug" style={{color:'#0f0f0f'}}>{c.titre}</h3>
-                <p className="text-xs mb-5" style={{color: 'rgba(30,30,30,0.4)'}}>{c.contexte}</p>
+                <h3 className="text-base font-bold mb-2 leading-snug" style={darkStyle}>{c.titre}</h3>
+                <p className="text-xs mb-5" style={contexteStyle}>{c.contexte}</p>
                 <div className="space-y-2 flex-1">
                   {c.resultats.map((r) => (
-                    <div key={r} className="flex items-start gap-2 text-xs" style={{color: 'rgba(30,30,30,0.55)'}}>
-                      <span style={{color:'#1a9e5c'}} className="shrink-0">→</span>
+                    <div key={r} className="flex items-start gap-2 text-xs" style={resultatStyle}>
+                      <span style={greenStyle} className="shrink-0">→</span>
                       {r}
                     </div>
                   ))}
                 </div>
-                <a href={c.href} className="text-xs hover:underline mt-5 block" style={{color:'#1a9e5c'}}>
+                <a href={c.href} className="text-xs hover:underline mt-5 block" style={greenStyle}>
                   Lire le cas complet →
                 </a>
               </GlowCard>
@@ -100,7 +91,7 @@ export default function PortfolioPreview() {
         </div>
 
         <div className="text-center">
-          <a href="/portfolio" className="text-sm hover:underline" style={{color:'#1a9e5c'}}>
+          <a href="/portfolio" className="text-sm hover:underline" style={greenStyle}>
             Voir tous les cas →
           </a>
         </div>

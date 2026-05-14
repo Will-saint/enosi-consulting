@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import ClientLogos from "./components/ClientLogos";
 import Partners from "./components/Partners";
 import Awards from "./components/Awards";
 import Metrics from "./components/Metrics";
@@ -16,6 +17,7 @@ import Methode from "./components/Methode";
 import PortfolioPreview from "./components/PortfolioPreview";
 import Industries from "./components/Industries";
 import CompanyStats from "./components/CompanyStats";
+import FAQ from "./components/FAQ";
 import ContactCTA from "./components/ContactCTA";
 import Footer from "./components/Footer";
 
@@ -25,6 +27,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ClientLogos />
         <Partners />
         <Awards />
         <Metrics />
@@ -33,6 +36,7 @@ export default function Home() {
         <PortfolioPreview />
         <Industries />
         <CompanyStats />
+        <FAQ />
         <ContactCTA />
       </main>
       <Footer />
