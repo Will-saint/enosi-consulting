@@ -49,7 +49,7 @@ export default function Industries() {
           {contextes.map((c, index) => (
             <ScrollReveal key={c.fonction} delay={index * 80}>
               <div className="card-premium p-6 group">
-                <div className="text-[#3ddc84] text-base mb-3 font-bold">{c.icone}</div>
+                <div className="text-[#1a9e5c] text-base mb-3 font-bold">{c.icone}</div>
                 <h3 className="text-sm font-bold mb-2 transition-colors" style={{color:'#0f0f0f'}} onMouseOver={e=>(e.currentTarget as HTMLElement).style.color='#1a9e5c'} onMouseOut={e=>(e.currentTarget as HTMLElement).style.color='#0f0f0f'}>
                   {c.fonction}
                 </h3>

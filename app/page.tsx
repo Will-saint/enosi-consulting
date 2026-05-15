@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ClientLogos from "./components/ClientLogos";
 import Partners from "./components/Partners";
-import Awards from "./components/Awards";
+import Testimonials from "./components/Testimonials";
 import Metrics from "./components/Metrics";
 import Platforms from "./components/Platforms";
 import Methode from "./components/Methode";
@@ -29,11 +29,11 @@ export default function Home() {
         <Hero />
         <ClientLogos />
         <Partners />
-        <Awards />
         <Metrics />
         <Platforms />
         <Methode />
         <PortfolioPreview />
+        <Testimonials />
         <Industries />
         <CompanyStats />
         <FAQ />

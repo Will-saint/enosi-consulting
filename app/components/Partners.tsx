@@ -31,11 +31,11 @@ export default function Partners() {
       <div style={{position:'relative'}}>
         <div style={{
           position:'absolute', left:0, top:0, bottom:0, width:'8rem', zIndex:10,
-          background:'linear-gradient(to right, #FFFFFF, transparent)'
+          background:'linear-gradient(to right, #F2F0EC, transparent)'
         }}/>
         <div style={{
           position:'absolute', right:0, top:0, bottom:0, width:'8rem', zIndex:10,
-          background:'linear-gradient(to left, #FFFFFF, transparent)'
+          background:'linear-gradient(to left, #F2F0EC, transparent)'
         }}/>
         <div className="animate-scroll">
           {[...items, ...items].map((item, i) => (
