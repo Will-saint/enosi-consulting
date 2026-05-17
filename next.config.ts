@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const csp = [
   "default-src 'self'",
@@ -22,7 +23,7 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   productionBrowserSourceMaps: false,
   turbopack: {
-    root: __dirname,
+    root: path.resolve('.'),
   },
   async headers() {
     return [

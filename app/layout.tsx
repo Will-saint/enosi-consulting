@@ -26,17 +26,17 @@ export const metadata: Metadata = {
     title: 'Enosi Consulting — Performance, Data & IA',
     description: 'Cabinet de conseil en performance et création de valeur. Finance, data et IA au service de vos décisions.',
     images: [{
-      url: '/og-image.png',
+      url: '/opengraph-image',
       width: 1200,
       height: 630,
-      alt: 'Enosi Consulting'
+      alt: 'Enosi Consulting — Performance, Data & IA'
     }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Enosi Consulting — Performance, Data & IA',
     description: 'Cabinet de conseil en performance et création de valeur.',
-    images: ['/og-image.png'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,

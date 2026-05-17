@@ -27,6 +27,11 @@ const contextes = [
     desc: "Intervenir en environnements multi-acteurs, multi-périmètres, créer les conditions d'une décision plus rapide.",
     icone: "◈",
   },
+  {
+    fonction: "DSI et directions data",
+    desc: "Connecter la logique métier à l'architecture data. Rendre les investissements data utiles aux décideurs.",
+    icone: "◉",
+  },
 ];
 
 export default function Industries() {
@@ -45,7 +50,7 @@ export default function Industries() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{gridTemplateColumns: "repeat(3, 1fr)"}}>
           {contextes.map((c, index) => (
             <ScrollReveal key={c.fonction} delay={index * 80}>
               <div className="card-premium p-6 group">

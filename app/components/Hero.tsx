@@ -106,9 +106,9 @@ export default function Hero() {
             lineHeight:1.7,
             maxWidth:'480px'
           }}>
-            Enosi Consulting structure votre pilotage, automatise
-            vos reportings et déploie des cas d&apos;usage IA concrets —
-            en semaines, pas en mois.
+            Nous intervenons quand les données existent mais ne décident
+            pas encore. Du diagnostic à l&apos;outil opérationnel,
+            avec vos équipes.
           </p>
           <div className="flex gap-4 shrink-0">
             <a href="/contact"
@@ -146,9 +146,9 @@ export default function Hero() {
         {/* 3 piliers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
-            {label:'Interlocuteur senior direct', desc:"Indicateurs, reporting, aide à la décision.", color:'#1a9e5c'},
-            {label:'Finance × Data × IA', desc:"Automatisation, prévision, cas d'usage concrets.", color:'#4f46e5'},
-            {label:'Livrables en semaines', desc:"Processus, frictions, création de valeur.", color:'#d97706'},
+            {label:'Interlocuteur senior direct', desc:"Celui qui propose est celui qui exécute — pas d'intermédiaire.", color:'#1a9e5c'},
+            {label:'Finance × Data × IA', desc:"Trois expertises dans la même conversation, sans silos.", color:'#4f46e5'},
+            {label:'Livrables en semaines', desc:"Premier résultat en 2–3 jours. Mission complète en 6–12 semaines.", color:'#d97706'},
           ].map((p) => (
             <div key={p.label} style={{
               background:'rgba(0,0,0,0.02)',
