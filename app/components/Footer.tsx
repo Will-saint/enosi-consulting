@@ -5,6 +5,12 @@ const liens: Record<string, { label: string; href: string }[]> = {
     { label: "Pilotage de la performance", href: "/offres/pilotage" },
     { label: "Data & IA pour la décision", href: "/offres/data-ia" },
     { label: "Efficacité et création de valeur", href: "/offres/efficacite" },
+    { label: "Audit 5 jours — prix fixe", href: "/offres/quick-win" },
+  ],
+  "Secteurs": [
+    { label: "ETI industrielles", href: "/secteurs/eti-industrielle" },
+    { label: "Direction financière", href: "/secteurs/direction-financiere" },
+    { label: "Direction transformation", href: "/secteurs/direction-transformation" },
   ],
   "Notre approche": [
     { label: "Comment nous intervenons", href: "/#methode" },

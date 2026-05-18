@@ -142,6 +142,39 @@ export default function Platforms() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Quick Win strip */}
+        <div style={{
+          marginTop: "2rem",
+          padding: "1.25rem 2rem",
+          background: "rgba(26,158,92,0.06)",
+          border: "1px solid rgba(26,158,92,0.15)",
+          borderRadius: "1rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: "1rem",
+        }}>
+          <div>
+            <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "#0f0f0f", marginBottom: "0.2rem" }}>
+              Pas encore prêt à vous engager sur 3 mois ?
+            </p>
+            <p style={{ fontSize: "0.8rem", color: "rgba(30,30,30,0.5)" }}>
+              Commencez par un audit de 5 jours à prix fixe — livrables garantis, zéro risque.
+            </p>
+          </div>
+          <a href="/offres/quick-win" style={{
+            padding: "0.65rem 1.5rem",
+            borderRadius: "2rem",
+            background: "linear-gradient(135deg, #1a9e5c, #157a47)",
+            color: "#fff",
+            fontWeight: 600,
+            fontSize: "0.8rem",
+            textDecoration: "none",
+            whiteSpace: "nowrap",
+          }}>Découvrir l&apos;offre →</a>
+        </div>
       </div>
     </section>
   );

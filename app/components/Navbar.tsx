@@ -15,6 +15,7 @@ const navItems: NavItem[] = [
       { label: "Pilotage de la performance", href: "/offres/pilotage" },
       { label: "Data & IA pour la décision", href: "/offres/data-ia" },
       { label: "Efficacité et création de valeur", href: "/offres/efficacite" },
+      { label: "⚡ Audit 5 jours — prix fixe", href: "/offres/quick-win" },
     ],
   },
   {
