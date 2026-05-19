@@ -80,7 +80,7 @@ export default function PolitiqueConfidentialite() {
                 ))}
               </ul>
               <p className="text-sm text-gray-500 mt-4 leading-relaxed">
-                Aucune autre donnée n&apos;est collectée. Ce site ne dépose pas de cookies de traçage ou d&apos;analyse (V1).
+                Aucune autre donnée n&apos;est collectée. Ce site n&apos;utilise pas de cookies de traçage ou d&apos;identification.
               </p>
             </section>
 
@@ -92,8 +92,34 @@ export default function PolitiqueConfidentialite() {
                 Finalité du traitement
               </h2>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Les données collectées sont utilisées exclusivement pour répondre à votre demande de contact et établir un premier échange professionnel. Elles ne sont pas utilisées à des fins commerciales, de prospection, ni partagées avec des tiers.
+                Les données collectées sont utilisées exclusivement pour répondre à votre demande de contact et établir un premier échange professionnel. Elles ne sont pas utilisées à des fins commerciales, de prospection, ni partagées avec des tiers à des fins marketing.
               </p>
+            </section>
+
+            <section className="pb-10 border-b border-[#1e1e1e]">
+              <h2
+                className="text-xl font-bold text-white mb-5"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                Sous-traitants et transferts de données
+              </h2>
+              <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                Conformément à l&apos;article 28 du RGPD, les sous-traitants suivants traitent des données pour le compte d&apos;Enosi Consulting :
+              </p>
+              <div className="space-y-4">
+                <div className="rounded-lg border border-[#1e1e1e] p-4">
+                  <p className="text-sm text-gray-300 font-medium mb-1">Resend (resend.com)</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">Service d&apos;envoi d&apos;emails transactionnels — traite les données du formulaire de contact (nom, email, message) pour acheminer votre message. Données hébergées aux États-Unis, transfert encadré par des clauses contractuelles types (CCT). Politique de confidentialité : <span className="text-gray-400">resend.com/privacy</span></p>
+                </div>
+                <div className="rounded-lg border border-[#1e1e1e] p-4">
+                  <p className="text-sm text-gray-300 font-medium mb-1">Vercel Inc. (vercel.com)</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">Hébergeur du site — traite les données de navigation (logs serveur) de façon transitoire. Données hébergées aux États-Unis, transfert encadré par des CCT.</p>
+                </div>
+                <div className="rounded-lg border border-[#1e1e1e] p-4">
+                  <p className="text-sm text-gray-300 font-medium mb-1">Plausible Analytics (plausible.io)</p>
+                  <p className="text-sm text-gray-500 leading-relaxed">Outil de mesure d&apos;audience privacy-first — ne dépose aucun cookie, ne collecte aucune donnée personnelle identifiable, ne permet aucun suivi individuel. Données agrégées hébergées dans l&apos;UE. Aucun consentement préalable requis au titre de la CNIL.</p>
+                </div>
+              </div>
             </section>
 
             <section className="pb-10 border-b border-[#1e1e1e]">
@@ -149,10 +175,10 @@ export default function PolitiqueConfidentialite() {
                 className="text-xl font-bold text-white mb-5"
                 style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
               >
-                Cookies
+                Cookies et traceurs
               </h2>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Ce site n&apos;utilise pas de cookies tiers à ce stade (V1). Aucun outil d&apos;analyse ni de tracking n&apos;est actif. En cas d&apos;ajout futur, cette politique sera mise à jour et un bandeau de consentement conforme CNIL sera mis en place.
+                Ce site n&apos;utilise aucun cookie de traçage, de publicité ou d&apos;identification. L&apos;outil d&apos;audience Plausible Analytics ne dépose aucun cookie et ne permet aucun suivi individuel. Aucun bandeau de consentement n&apos;est requis au titre de la réglementation CNIL.
               </p>
             </section>
 

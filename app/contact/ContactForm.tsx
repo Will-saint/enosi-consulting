@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const sujets = [
   "Pilotage de la performance",
@@ -14,6 +14,8 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [consent, setConsent] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const mountTime = useRef(Date.now());
   const [form, setForm] = useState({
     prenom: "", nom: "", entreprise: "", email: "",
     fonction: "", sujet: "", message: "",
@@ -29,7 +31,7 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, _hp: honeypot, _t: Date.now() - mountTime.current }),
       });
       const data = await res.json() as { success?: boolean; error?: string };
       if (!res.ok || !data.success) {
@@ -56,6 +58,17 @@ export default function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Honeypot — invisible, rempli uniquement par les bots */}
+          <input
+            type="text"
+            name="website"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0, pointerEvents: "none" }}
+          />
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-xs text-gray-600 mb-1.5">Prénom *</label>

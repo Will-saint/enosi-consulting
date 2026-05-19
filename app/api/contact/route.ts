@@ -2,6 +2,24 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MIN_FILL_MS = 3_000;
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 15 * 60 * 1_000;
+
+// Persists within the same serverless instance — catches most simple spam bursts.
+const rateLimitStore = new Map<string, { count: number; resetAt: number }>();
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = rateLimitStore.get(ip);
+  if (!record || now > record.resetAt) {
+    rateLimitStore.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return true;
+  }
+  if (record.count >= RATE_LIMIT) return false;
+  record.count++;
+  return true;
+}
 
 function escapeHtml(str: string): string {
   return str
@@ -12,11 +30,28 @@ function escapeHtml(str: string): string {
 }
 
 export async function POST(req: Request) {
+  const forwarded = req.headers.get("x-forwarded-for");
+  const ip = forwarded ? forwarded.split(",")[0].trim() : "unknown";
+  if (!checkRateLimit(ip)) {
+    return NextResponse.json({ error: "Trop de requêtes, veuillez réessayer dans 15 minutes." }, { status: 429 });
+  }
+
   let body: Record<string, unknown>;
   try {
     body = await req.json() as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: "Corps de requête invalide" }, { status: 400 });
+  }
+
+  // Honeypot — bots fill this, humans don't see it
+  if (typeof body._hp === "string" && body._hp !== "") {
+    return NextResponse.json({ success: true }); // silent accept
+  }
+
+  // Timing — under 3s = bot
+  const fillTime = typeof body._t === "number" ? body._t : MIN_FILL_MS;
+  if (fillTime < MIN_FILL_MS) {
+    return NextResponse.json({ error: "Formulaire soumis trop rapidement." }, { status: 400 });
   }
 
   const prenom = typeof body.prenom === "string" ? body.prenom.trim() : "";
@@ -30,11 +65,11 @@ export async function POST(req: Request) {
   if (!prenom || !email || !message) {
     return NextResponse.json({ error: "Champs requis manquants" }, { status: 400 });
   }
-
   if (!EMAIL_RE.test(email)) {
     return NextResponse.json({ error: "Adresse email invalide" }, { status: 400 });
   }
 
+  // RESEND_API_KEY must never have NEXT_PUBLIC_ prefix — server-only
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: "Service email non configuré" }, { status: 500 });
