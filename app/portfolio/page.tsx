@@ -35,8 +35,8 @@ function EnBref({
         { label: "Impact", value: impact },
       ].map((item) => (
         <div key={item.label}>
-          <p className="text-xs uppercase tracking-wider text-gray-600 mb-1">{item.label}</p>
-          <p className="text-sm font-medium text-white leading-snug">{item.value}</p>
+          <p className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-1">{item.label}</p>
+          <p className="text-sm font-medium text-[#0f0f0f] leading-snug">{item.value}</p>
         </div>
       ))}
     </div>
@@ -53,10 +53,10 @@ function ApprocheBanner() {
       style={{
         backgroundColor: "#0d0d0d",
         border: "1px solid #1e1e1e",
-        borderLeft: "2px solid #3ddc84",
+        borderLeft: "2px solid #1a9e5c",
       }}
     >
-      <p className="text-sm italic text-gray-400 leading-relaxed">
+      <p className="text-sm italic text-[rgba(30,30,30,0.55)] leading-relaxed">
         &ldquo;Ce projet illustre notre approche : partir de la décision,
         structurer la donnée, et créer un impact mesurable.&rdquo;
       </p>
@@ -71,7 +71,7 @@ function BackButton() {
   return (
     <a
       href="/"
-      className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors"
+      className="inline-flex items-center gap-2 text-sm text-[rgba(30,30,30,0.5)] hover:text-[#0f0f0f] transition-colors"
     >
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -94,14 +94,14 @@ export default function Portfolio() {
           {/* En-tête de page */}
           <div className="mb-16">
             <BackButton />
-            <p className="text-xs text-gray-600 uppercase tracking-widest mt-8 mb-3">Portfolio</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mt-8 mb-3">Portfolio</p>
             <h1
-              className="text-5xl md:text-6xl font-bold leading-tight text-white mb-5"
+              className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Exemples de missions
             </h1>
-            <p className="text-gray-500 text-base leading-relaxed max-w-xl">
+            <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
               Trois interventions représentatives de notre approche.
               Les organisations ne sont pas nommées. Les résultats, si.
             </p>
@@ -110,20 +110,20 @@ export default function Portfolio() {
           {/* ══════════════════════════════════════
               CAS 1 — PILOTAGE DE LA PERFORMANCE
           ══════════════════════════════════════ */}
-          <article className="mb-20 pb-20 border-b border-[#1e1e1e]">
+          <article className="mb-20 pb-20 border-b border-[rgba(0,0,0,0.08)]">
 
             {/* Badge + titre */}
             <div className="flex items-center gap-3 mb-4">
               <span
                 className="text-xs font-semibold px-3 py-1 rounded-full"
-                style={{ backgroundColor: "#3ddc8415", color: "#3ddc84" }}
+                style={{ backgroundColor: "#1a9e5c15", color: "#1a9e5c" }}
               >
                 Pilotage
               </span>
-              <span className="text-xs text-gray-600">Direction financière, ETI industrielle</span>
+              <span className="text-xs text-[rgba(30,30,30,0.4)]">Direction financière, ETI industrielle</span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-bold text-white mb-8"
+              className="text-3xl md:text-4xl font-bold text-[#0f0f0f] mb-8"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Refonte du pilotage de la performance
@@ -154,13 +154,13 @@ export default function Portfolio() {
 
             {/* Contexte */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le contexte</h3>
-              <p className="text-gray-300 leading-relaxed mb-3">
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le contexte</h3>
+              <p className="text-[#3a3a3a] leading-relaxed mb-3">
                 ETI industrielle, 800 personnes. Le COMEX attendait un reporting
                 mensuel de 6 jours pour prendre des décisions, et finissait
                 souvent par les prendre avant qu&apos;il arrive.
               </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 La direction financière produisait chaque mois un document de 40 pages,
                 exhaustif, bien mis en page, et consulté en diagonale pendant
                 5 minutes en réunion. Personne ne savait exactement quels indicateurs
@@ -173,8 +173,8 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-8"
               style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le vrai problème</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le vrai problème</h3>
+              <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 Le reporting n&apos;avait jamais été conçu pour décider.
                 Il avait été conçu pour informer. Ce qui est différent.
                 La profusion d&apos;indicateurs masquait les quelques signaux
@@ -184,7 +184,7 @@ export default function Portfolio() {
 
             {/* Ce que nous avons fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-4">Ce que nous avons fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que nous avons fait</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -211,13 +211,13 @@ export default function Portfolio() {
                   <div key={e.n} className="flex gap-4">
                     <div
                       className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold"
-                      style={{ backgroundColor: "#3ddc8415", color: "#3ddc84" }}
+                      style={{ backgroundColor: "#1a9e5c15", color: "#1a9e5c" }}
                     >
                       {e.n}
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-white mb-1">{e.titre}</p>
-                      <p className="text-sm text-gray-500 leading-relaxed">{e.desc}</p>
+                      <p className="text-sm font-semibold text-[#0f0f0f] mb-1">{e.titre}</p>
+                      <p className="text-sm text-[rgba(30,30,30,0.5)] leading-relaxed">{e.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -226,11 +226,11 @@ export default function Portfolio() {
 
             {/* Graphique Cas 1 */}
             <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
-              <p className="text-xs text-gray-600 uppercase tracking-wider mb-6">Temps de production du reporting (jours)</p>
+              <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-6">Temps de production du reporting (jours)</p>
               <div className="space-y-4">
                 {[
                   { label: "Avant", value: 100, display: "6 jours", color: "#ef444460" },
-                  { label: "Après", value: 16, display: "1 jour", color: "#3ddc84" },
+                  { label: "Après", value: 16, display: "1 jour", color: "#1a9e5c" },
                 ].map(b => (
                   <div key={b.label} className="flex items-center gap-4">
                     <span className="text-xs w-10 shrink-0" style={{color: 'rgba(255,255,255,0.3)'}}>{b.label}</span>
@@ -250,7 +250,7 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-10"
               style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-4">Le résultat</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
                   { val: "−5 j", label: "de production" },
@@ -258,19 +258,19 @@ export default function Portfolio() {
                   { val: "−60%", label: "d'indicateurs" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">
-                    <div className="text-2xl font-bold text-[#3ddc84] mb-1">{s.val}</div>
-                    <div className="text-xs text-gray-600">{s.label}</div>
+                    <div className="text-2xl font-bold text-[#1a9e5c] mb-1">{s.val}</div>
+                    <div className="text-xs text-[rgba(30,30,30,0.4)]">{s.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Citation */}
-            <blockquote className="bg-[#0d0d0d] border-l-4 border-[#3ddc84]/30 p-6 rounded-r-xl mb-8">
-              <p className="italic text-gray-400 text-sm leading-relaxed">
+            <blockquote className="bg-[#F2F0EC] border-l-4 border-[#1a9e5c]/30 p-6 rounded-r-xl mb-8">
+              <p className="italic text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 &ldquo;Pour la première fois, on entre en réunion COMEX en sachant déjà quoi décider, pas juste quoi constater.&rdquo;
               </p>
-              <footer className="text-xs text-gray-600 mt-3">— Directeur Financier, ETI industrielle</footer>
+              <footer className="text-xs text-[rgba(30,30,30,0.4)] mt-3">— Directeur Financier, ETI industrielle</footer>
             </blockquote>
 
             {/* Approche */}
@@ -282,7 +282,7 @@ export default function Portfolio() {
           {/* ══════════════════════════════════════
               CAS 2 — DATA & IA DÉCISIONNELLE
           ══════════════════════════════════════ */}
-          <article className="mb-20 pb-20 border-b border-[#1e1e1e]">
+          <article className="mb-20 pb-20 border-b border-[rgba(0,0,0,0.08)]">
 
             {/* Badge + titre */}
             <div className="flex items-center gap-3 mb-4">
@@ -292,10 +292,10 @@ export default function Portfolio() {
               >
                 Data & IA
               </span>
-              <span className="text-xs text-gray-600">Direction transformation, Grand groupe</span>
+              <span className="text-xs text-[rgba(30,30,30,0.4)]">Direction transformation, Grand groupe</span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-bold text-white mb-8"
+              className="text-3xl md:text-4xl font-bold text-[#0f0f0f] mb-8"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Cadrage et déploiement d&apos;un cas d&apos;usage IA
@@ -326,13 +326,13 @@ export default function Portfolio() {
 
             {/* Contexte */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le contexte</h3>
-              <p className="text-gray-300 leading-relaxed mb-3">
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le contexte</h3>
+              <p className="text-[#3a3a3a] leading-relaxed mb-3">
                 Grand groupe de services, direction transformation.
                 Depuis 18 mois, 12 cas d&apos;usage IA avaient été identifiés
                 en atelier, et aucun n&apos;était passé en production.
               </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 Le problème n&apos;était pas technique. C&apos;était un problème de
                 priorisation : trop de sujets ouverts, pas de critères de sélection,
                 des équipes data sans interlocuteur métier clair, et un sponsorship
@@ -345,8 +345,8 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-8"
               style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le vrai problème</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le vrai problème</h3>
+              <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 L&apos;organisation avait besoin d&apos;une victoire visible et rapide :
                 un cas d&apos;usage déployé, utilisé, avec un impact chiffré.
                 Pas d&apos;un nouveau rapport sur les 12 opportunités.
@@ -356,35 +356,35 @@ export default function Portfolio() {
 
             {/* Ce que nous avons fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-4">Ce que nous avons fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que nous avons fait</h3>
               <div className="space-y-4">
                 {[
                   {
                     n: "1",
                     titre: "Scoring des 12 cas d'usage",
                     desc: "Évaluation selon 4 critères : faisabilité technique, disponibilité des données, valeur métier attendue, rapidité de déploiement. Chaque cas noté et positionné sur une matrice impact / effort.",
-                    color: "#3ddc84",
+                    color: "#1a9e5c",
                     italic: false,
                   },
                   {
                     n: "2",
                     titre: "Sélection du cas prioritaire",
                     desc: "Détection d'anomalies sur flux de facturation : données disponibles, périmètre limité, impact financier direct mesurable, équipe métier motivée.",
-                    color: "#3ddc84",
+                    color: "#1a9e5c",
                     italic: false,
                   },
                   {
                     n: "3",
                     titre: "Déploiement en 8 semaines",
                     desc: "Préparation des données, entraînement du modèle, validation métier, intégration dans le workflow de contrôle existant. Passage en production avec suivi hebdomadaire.",
-                    color: "#3ddc84",
+                    color: "#1a9e5c",
                     italic: false,
                   },
                   {
                     n: "4",
                     titre: "Transfert et adoption",
                     desc: "Formation des équipes de contrôle. Documentation des règles de décision. Mise en place d'un tableau de suivi de la performance du modèle en temps réel.",
-                    color: "#3ddc84",
+                    color: "#1a9e5c",
                     italic: false,
                   },
                   {
@@ -423,7 +423,7 @@ export default function Portfolio() {
 
             {/* Graphique Cas 2 */}
             <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
-              <p className="text-xs text-gray-600 uppercase tracking-wider mb-6">Scoring des cas d&apos;usage (schématique)</p>
+              <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-6">Scoring des cas d&apos;usage (schématique)</p>
               <div className="relative" style={{height: '200px'}}>
                 <div className="absolute bottom-0 left-8 right-0 h-px" style={{background: 'rgba(255,255,255,0.1)'}} />
                 <div className="absolute bottom-0 left-8 top-0 w-px" style={{background: 'rgba(255,255,255,0.1)'}} />
@@ -439,9 +439,9 @@ export default function Portfolio() {
                        style={{left: `calc(2rem + ${p.x}%)`, bottom: `${p.y * 1.8}px`, background: 'rgba(255,255,255,0.15)', transform: 'translate(-50%, 50%)'}} />
                 ))}
                 <div className="absolute w-4 h-4 rounded-full"
-                     style={{left: 'calc(2rem + 78%)', bottom: '145px', background: '#3ddc84', boxShadow: '0 0 12px rgba(61,220,132,0.5)', transform: 'translate(-50%, 50%)'}} />
+                     style={{left: 'calc(2rem + 78%)', bottom: '145px', background: '#1a9e5c', boxShadow: '0 0 12px rgba(61,220,132,0.5)', transform: 'translate(-50%, 50%)'}} />
                 <span className="absolute text-xs font-semibold"
-                      style={{left: 'calc(2rem + 78%)', bottom: '162px', transform: 'translateX(-50%)', color: '#3ddc84'}}>
+                      style={{left: 'calc(2rem + 78%)', bottom: '162px', transform: 'translateX(-50%)', color: '#1a9e5c'}}>
                   Cas retenu
                 </span>
               </div>
@@ -452,7 +452,7 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-10"
               style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-4">Le résultat</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
                   { val: "94%", label: "taux de détection" },
@@ -461,18 +461,18 @@ export default function Portfolio() {
                 ].map((s) => (
                   <div key={s.label} className="text-center">
                     <div className="text-2xl font-bold text-[#6366f1] mb-1">{s.val}</div>
-                    <div className="text-xs text-gray-600">{s.label}</div>
+                    <div className="text-xs text-[rgba(30,30,30,0.4)]">{s.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Citation */}
-            <blockquote className="bg-[#0d0d0d] border-l-4 border-[#3ddc84]/30 p-6 rounded-r-xl mb-8">
-              <p className="italic text-gray-400 text-sm leading-relaxed">
+            <blockquote className="bg-[#F2F0EC] border-l-4 border-[#1a9e5c]/30 p-6 rounded-r-xl mb-8">
+              <p className="italic text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 &ldquo;On avait les données depuis 3 ans. Il manquait quelqu&apos;un capable de faire le lien entre ce qu&apos;on avait et ce qu&apos;on devait décider.&rdquo;
               </p>
-              <footer className="text-xs text-gray-600 mt-3">— Directeur Transformation, Grand groupe</footer>
+              <footer className="text-xs text-[rgba(30,30,30,0.4)] mt-3">— Directeur Transformation, Grand groupe</footer>
             </blockquote>
 
             {/* Approche */}
@@ -494,10 +494,10 @@ export default function Portfolio() {
               >
                 Efficacité
               </span>
-              <span className="text-xs text-gray-600">Direction performance / COMEX, ETI en croissance</span>
+              <span className="text-xs text-[rgba(30,30,30,0.4)]">Direction performance / COMEX, ETI en croissance</span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-bold text-white mb-8"
+              className="text-3xl md:text-4xl font-bold text-[#0f0f0f] mb-8"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Transformation du cycle budgétaire
@@ -528,14 +528,14 @@ export default function Portfolio() {
 
             {/* Contexte */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le contexte</h3>
-              <p className="text-gray-300 leading-relaxed mb-3">
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le contexte</h3>
+              <p className="text-[#3a3a3a] leading-relaxed mb-3">
                 ETI en forte croissance, 500 personnes, 11 directions.
                 Le budget arrivait validé trop tard pour être encore utile.
                 Les vraies décisions avaient déjà été prises ailleurs,
                 sans base commune.
               </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 14 semaines de processus budgétaire. Des hypothèses de volume
                 et de prix recalculées à chaque aller-retour entre les directions
                 et la Direction performance / COMEX. Un outil de consolidation
@@ -549,14 +549,14 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-8"
               style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-3">Le vrai problème</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-2">
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le vrai problème</h3>
+              <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed mb-2">
                 Chaque direction budgétait avec ses propres hypothèses.
                 Pas de référentiel commun sur les volumes, les prix, les effectifs.
                 La Direction performance / COMEX passait l&apos;essentiel de son temps
                 à réconcilier des données incompatibles, plutôt qu&apos;à analyser.
               </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 Résultat : un document de référence que personne
                 ne regardait après le mois de février.
               </p>
@@ -564,7 +564,7 @@ export default function Portfolio() {
 
             {/* Ce que nous avons fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-4">Ce que nous avons fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que nous avons fait</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -596,8 +596,8 @@ export default function Portfolio() {
                       {e.n}
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-white mb-1">{e.titre}</p>
-                      <p className="text-sm text-gray-500 leading-relaxed">{e.desc}</p>
+                      <p className="text-sm font-semibold text-[#0f0f0f] mb-1">{e.titre}</p>
+                      <p className="text-sm text-[rgba(30,30,30,0.5)] leading-relaxed">{e.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -606,11 +606,11 @@ export default function Portfolio() {
 
             {/* Graphique Cas 3 */}
             <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
-              <p className="text-xs text-gray-600 uppercase tracking-wider mb-6">Durée du cycle budgétaire (semaines)</p>
+              <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-6">Durée du cycle budgétaire (semaines)</p>
               <div className="space-y-4">
                 {[
                   { label: "Avant", weeks: 14, color: "#ef444460", display: "14 sem." },
-                  { label: "Après", weeks: 11, color: "#3ddc84", display: "11 sem." },
+                  { label: "Après", weeks: 11, color: "#1a9e5c", display: "11 sem." },
                 ].map(b => (
                   <div key={b.label} className="flex items-center gap-4">
                     <span className="text-xs w-10 shrink-0" style={{color: 'rgba(255,255,255,0.3)'}}>{b.label}</span>
@@ -629,7 +629,7 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-10"
               style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-gray-600 mb-4">Le résultat</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
                   { val: "−3 sem.", label: "sur le cycle" },
@@ -638,18 +638,18 @@ export default function Portfolio() {
                 ].map((s) => (
                   <div key={s.label} className="text-center">
                     <div className="text-2xl font-bold text-[#f59e0b] mb-1">{s.val}</div>
-                    <div className="text-xs text-gray-600">{s.label}</div>
+                    <div className="text-xs text-[rgba(30,30,30,0.4)]">{s.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Citation */}
-            <blockquote className="bg-[#0d0d0d] border-l-4 border-[#3ddc84]/30 p-6 rounded-r-xl mb-8">
-              <p className="italic text-gray-400 text-sm leading-relaxed">
+            <blockquote className="bg-[#F2F0EC] border-l-4 border-[#1a9e5c]/30 p-6 rounded-r-xl mb-8">
+              <p className="italic text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
                 &ldquo;Ce n&apos;était pas un problème d&apos;outil. C&apos;était un problème de méthode. Maintenant tout le monde travaille avec les mêmes règles.&rdquo;
               </p>
-              <footer className="text-xs text-gray-600 mt-3">— Directeur de la Performance, ETI en croissance</footer>
+              <footer className="text-xs text-[rgba(30,30,30,0.4)] mt-3">— Directeur de la Performance, ETI en croissance</footer>
             </blockquote>
 
             {/* Approche */}

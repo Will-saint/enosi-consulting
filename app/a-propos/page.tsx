@@ -19,51 +19,51 @@ export default function APropos() {
           <div className="mb-16">
             <a
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-[rgba(30,30,30,0.5)] hover:text-[#0f0f0f] transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               Retour à l&apos;accueil
             </a>
-            <p className="text-xs text-gray-600 uppercase tracking-widest mt-8 mb-3">À propos</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mt-8 mb-3">À propos</p>
             <h1
-              className="text-5xl md:text-6xl font-bold leading-tight text-white mb-5"
+              className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Un cabinet construit autour d&apos;une conviction.
             </h1>
-            <p className="text-gray-500 text-base leading-relaxed max-w-xl">
+            <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
               Que la donnée, la finance et l&apos;IA ne sont utiles
               que si elles améliorent une décision réelle.
             </p>
           </div>
 
           {/* ── Section 1 : Pourquoi Enosi ──────────── */}
-          <section className="mb-16 pb-16 border-b border-[#1e1e1e]">
-            <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Le cabinet</p>
+          <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Le cabinet</p>
             <h2
-              className="text-3xl font-bold text-white mb-7"
+              className="text-3xl font-bold text-[#0f0f0f] mb-7"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Pourquoi Enosi Consulting existe
             </h2>
 
             <div className="space-y-5">
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
                 La plupart des organisations ont aujourd&apos;hui accès
                 à plus de données qu&apos;elles n&apos;en ont jamais eu.
                 Et pourtant, les décisions restent lentes,
                 les reportings peu utilisés, les projets IA bloqués
                 avant la mise en production.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
                 Le problème n&apos;est pas technique.
                 C&apos;est un problème de traduction, entre ce que
                 les données disent et ce que les équipes peuvent
                 en faire concrètement.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
                 Enosi Consulting a été fondé pour combler cet écart.
                 Nous intervenons à l&apos;intersection de la finance,
                 de la performance, de la data et de l&apos;IA.
@@ -73,21 +73,21 @@ export default function APropos() {
               </p>
             </div>
 
-            <p className="text-xs text-gray-600 italic mt-6">
+            <p className="text-xs text-[rgba(30,30,30,0.4)] italic mt-6">
               &ldquo;Enosi&rdquo; signifie &ldquo;union&rdquo; en grec.
             </p>
           </section>
 
           {/* ── Section 2 : Ce qu'on fait vraiment ─── */}
-          <section className="mb-16 pb-16 border-b border-[#1e1e1e]">
-            <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Notre positionnement</p>
+          <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Notre positionnement</p>
             <h2
-              className="text-3xl font-bold text-white mb-4"
+              className="text-3xl font-bold text-[#0f0f0f] mb-4"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Le lien entre vos données, votre performance et vos décisions.
             </h2>
-            <p className="text-gray-400 mb-8 leading-relaxed">
+            <p className="text-[rgba(30,30,30,0.55)] mb-8 leading-relaxed">
               Nous intervenons là où peu de profils savent opérer :
               à l&apos;intersection de la logique financière,
               de la maîtrise de la data et de l&apos;application concrète de l&apos;IA.
@@ -97,7 +97,7 @@ export default function APropos() {
               {[
                 {
                   icone: "◎",
-                  couleur: "#3ddc84",
+                  couleur: "#1a9e5c",
                   titre: "Finance & Performance",
                   texte:
                     "Lecture de la performance, logique business, rentabilité, KPIs, vision management. Nous comprenons ce que les directions financières et de performance cherchent à piloter.",
@@ -119,35 +119,35 @@ export default function APropos() {
               ].map((c) => (
                 <div
                   key={c.titre}
-                  className="bg-[#111] border border-[#1e1e1e] rounded-xl p-6 hover:border-[#2a2a2a] transition-colors"
+                  className="bg-white border border-[rgba(0,0,0,0.08)] rounded-xl p-6 hover:border-[#2a2a2a] transition-colors"
                 >
                   <div className="text-xl font-bold mb-3" style={{ color: c.couleur }}>
                     {c.icone}
                   </div>
-                  <h3 className="text-sm font-bold text-white mb-2">{c.titre}</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">{c.texte}</p>
+                  <h3 className="text-sm font-bold text-[#0f0f0f] mb-2">{c.titre}</h3>
+                  <p className="text-xs text-[rgba(30,30,30,0.5)] leading-relaxed">{c.texte}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* ── Section 3 : Notre contexte ──────────── */}
-          <section className="mb-16 pb-16 border-b border-[#1e1e1e]">
-            <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Notre ancrage</p>
+          <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Notre ancrage</p>
             <h2
-              className="text-3xl font-bold text-white mb-7"
+              className="text-3xl font-bold text-[#0f0f0f] mb-7"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Une expertise forgée dans des environnements complexes
             </h2>
 
             <div className="space-y-5">
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
                 Notre expérience s&apos;est construite dans des organisations
                 où la data, la finance, le business et l&apos;IT
                 coexistent et doivent se parler.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
                 Nous avons vu de l&apos;intérieur comment les problèmes
                 de pilotage se posent vraiment : la complexité
                 organisationnelle, les contraintes système,
@@ -155,7 +155,7 @@ export default function APropos() {
                 entre ce que les outils peuvent faire
                 et ce que les équipes sont prêtes à adopter.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
                 C&apos;est cette expérience terrain qui structure
                 notre façon d&apos;intervenir.
               </p>
@@ -163,10 +163,10 @@ export default function APropos() {
           </section>
 
           {/* ── Section 4 : Notre approche ──────────── */}
-          <section className="mb-16 pb-16 border-b border-[#1e1e1e]">
-            <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Comment nous travaillons</p>
+          <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Comment nous travaillons</p>
             <h2
-              className="text-3xl font-bold text-white mb-8"
+              className="text-3xl font-bold text-[#0f0f0f] mb-8"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Trois principes. Pas de méthode propriétaire.
@@ -195,17 +195,17 @@ export default function APropos() {
               ].map((b, i, arr) => (
                 <div
                   key={b.n}
-                  className={`flex gap-5 py-6 ${i < arr.length - 1 ? "border-b border-[#1e1e1e]" : ""}`}
+                  className={`flex gap-5 py-6 ${i < arr.length - 1 ? "border-b border-[rgba(0,0,0,0.08)]" : ""}`}
                 >
                   <span
                     className="text-sm font-mono shrink-0 mt-0.5"
-                    style={{ color: "#3ddc84" }}
+                    style={{ color: "#1a9e5c" }}
                   >
                     {b.n}
                   </span>
                   <div>
-                    <h3 className="text-base font-bold text-white mb-2">{b.titre}</h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">{b.texte}</p>
+                    <h3 className="text-base font-bold text-[#0f0f0f] mb-2">{b.titre}</h3>
+                    <p className="text-sm text-[rgba(30,30,30,0.5)] leading-relaxed">{b.texte}</p>
                   </div>
                 </div>
               ))}
@@ -214,12 +214,12 @@ export default function APropos() {
 
           {/* ── Section 5 : Ce qu'on n'est pas ─────── */}
           <section
-            className="mb-16 py-16 px-8 rounded-2xl border-y border-[#1e1e1e]"
+            className="mb-16 py-16 px-8 rounded-2xl border-y border-[rgba(0,0,0,0.08)]"
             style={{ backgroundColor: "#0d0d0d" }}
           >
-            <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Pour être clair</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Pour être clair</p>
             <h2
-              className="text-2xl font-bold text-white mb-8"
+              className="text-2xl font-bold text-[#0f0f0f] mb-8"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Ce que nous ne sommes pas
@@ -234,8 +234,8 @@ export default function APropos() {
                   "Un éditeur de logiciel",
                 ].map((item) => (
                   <div key={item} className="flex gap-3 items-start">
-                    <span className="text-gray-600 text-sm shrink-0 mt-0.5">✗</span>
-                    <p className="text-sm text-gray-500">{item}</p>
+                    <span className="text-[rgba(30,30,30,0.4)] text-sm shrink-0 mt-0.5">✗</span>
+                    <p className="text-sm text-[rgba(30,30,30,0.5)]">{item}</p>
                   </div>
                 ))}
               </div>
@@ -248,8 +248,8 @@ export default function APropos() {
                   "Un pont entre business, data et décision",
                 ].map((item) => (
                   <div key={item} className="flex gap-3 items-start">
-                    <span className="text-sm shrink-0 mt-0.5" style={{ color: "#3ddc84" }}>✓</span>
-                    <p className="text-sm text-gray-300">{item}</p>
+                    <span className="text-sm shrink-0 mt-0.5" style={{ color: "#1a9e5c" }}>✓</span>
+                    <p className="text-sm text-[#3a3a3a]">{item}</p>
                   </div>
                 ))}
               </div>
@@ -257,16 +257,16 @@ export default function APropos() {
           </section>
 
           {/* ── Section 5b : Le fondateur ───────────── */}
-          <section className="mb-16 pb-16 border-b border-[#1e1e1e]">
-            <p className="text-xs text-gray-600 uppercase tracking-widest mb-3">Le fondateur</p>
+          <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Le fondateur</p>
             <h2
-              className="text-3xl font-bold text-white mb-7"
+              className="text-3xl font-bold text-[#0f0f0f] mb-7"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               William Saint-Dizier
             </h2>
 
-            <p className="text-gray-400 leading-relaxed mb-8">
+            <p className="text-[rgba(30,30,30,0.55)] leading-relaxed mb-8">
               Consultant en performance, data et IA. Double diplôme Panthéon-Sorbonne × PSTB,
               Master Data IA for Business (2026). Expériences en France, Nouvelle-Zélande
               et La Réunion, dans des environnements grands groupes et ETI.
@@ -274,7 +274,7 @@ export default function APropos() {
 
             {/* Expériences */}
             <div className="mb-8">
-              <p className="text-xs text-gray-600 uppercase tracking-widest mb-5">Expériences clés</p>
+              <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-5">Expériences clés</p>
               <div className="space-y-0">
                 {[
                   {
@@ -292,15 +292,15 @@ export default function APropos() {
                 ].map((e, i, arr) => (
                   <div
                     key={e.org}
-                    className={`flex gap-5 py-5 ${i < arr.length - 1 ? "border-b border-[#1e1e1e]" : ""}`}
+                    className={`flex gap-5 py-5 ${i < arr.length - 1 ? "border-b border-[rgba(0,0,0,0.08)]" : ""}`}
                   >
                     <span
                       className="shrink-0 w-2 h-2 rounded-full mt-2"
                       style={{ background: "#1a9e5c", minWidth: "8px", maxHeight: "8px", display: "block" }}
                     />
                     <div>
-                      <h3 className="text-sm font-bold text-white mb-1">{e.org}</h3>
-                      <p className="text-sm text-gray-500 leading-relaxed">{e.desc}</p>
+                      <h3 className="text-sm font-bold text-[#0f0f0f] mb-1">{e.org}</h3>
+                      <p className="text-sm text-[rgba(30,30,30,0.5)] leading-relaxed">{e.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -309,7 +309,7 @@ export default function APropos() {
 
             {/* Certifications */}
             <div>
-              <p className="text-xs text-gray-600 uppercase tracking-widest mb-5">Certifications</p>
+              <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-5">Certifications</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { label: "Power BI", detail: "PL-300 Microsoft Certified" },
@@ -319,12 +319,12 @@ export default function APropos() {
                 ].map((c) => (
                   <div
                     key={c.label}
-                    className="flex gap-3 items-start rounded-xl p-4 bg-[#0d0d0d] border border-[#1e1e1e]"
+                    className="flex gap-3 items-start rounded-xl p-4 bg-[#F2F0EC] border border-[rgba(0,0,0,0.08)]"
                   >
                     <span className="text-xs shrink-0 mt-0.5" style={{ color: "#1a9e5c" }}>✓</span>
                     <div>
-                      <p className="text-xs font-bold text-white">{c.label}</p>
-                      <p className="text-xs text-gray-600 mt-0.5">{c.detail}</p>
+                      <p className="text-xs font-bold text-[#0f0f0f]">{c.label}</p>
+                      <p className="text-xs text-[rgba(30,30,30,0.4)] mt-0.5">{c.detail}</p>
                     </div>
                   </div>
                 ))}
@@ -335,19 +335,19 @@ export default function APropos() {
           {/* ── Section 6 : CTA final ────────────────── */}
           <section className="py-16 text-center">
             <h2
-              className="text-3xl font-bold text-white mb-5"
+              className="text-3xl font-bold text-[#0f0f0f] mb-5"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Discutons de vos enjeux.
             </h2>
-            <p className="text-gray-500 max-w-sm mx-auto text-sm leading-relaxed mb-8">
+            <p className="text-[rgba(30,30,30,0.5)] max-w-sm mx-auto text-sm leading-relaxed mb-8">
               Un premier échange de 30 minutes,
               sans engagement, pour voir si nous pouvons
               vous aider.
             </p>
             <a
               href="/contact"
-              className="inline-block px-10 py-3.5 bg-[#3ddc84] text-black font-semibold rounded-full hover:bg-[#2ab86e] transition-colors text-sm"
+              className="inline-block px-10 py-3.5 bg-[#1a9e5c] text-black font-semibold rounded-full hover:bg-[#157a47] transition-colors text-sm"
             >
               Prendre contact
             </a>

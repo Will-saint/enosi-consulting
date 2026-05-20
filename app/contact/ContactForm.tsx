@@ -47,12 +47,12 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-[#111] border border-[#1e1e1e] rounded-2xl p-8">
+    <div className="bg-white border border-[rgba(0,0,0,0.08)] rounded-2xl p-8">
       {submitted ? (
         <div className="text-center py-12">
-          <div className="text-3xl mb-5 text-[#3ddc84]">◎</div>
-          <h3 className="text-xl font-bold text-white mb-3">Message envoyé.</h3>
-          <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+          <div className="text-3xl mb-5 text-[#1a9e5c]">◎</div>
+          <h3 className="text-xl font-bold text-[#0f0f0f] mb-3">Message envoyé.</h3>
+          <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed max-w-xs mx-auto">
             Votre message a bien été envoyé. Nous vous répondons sous 48h ouvrées.
           </p>
         </div>
@@ -71,70 +71,70 @@ export default function ContactForm() {
           />
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs text-gray-600 mb-1.5">Prénom *</label>
+              <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Prénom *</label>
               <input
                 required
                 type="text"
                 value={form.prenom}
                 onChange={(e) => setForm({ ...form, prenom: e.target.value })}
-                className="w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-800 focus:outline-none focus:border-[#3ddc84]/50 transition-colors"
+                className="w-full bg-white border border-[rgba(0,0,0,0.08)] rounded-lg px-3 py-2.5 text-sm text-[#0f0f0f] placeholder-[rgba(30,30,30,0.25)] focus:outline-none focus:border-[#1a9e5c]/50 transition-colors"
                 placeholder="Jean"
               />
             </div>
             <div>
-              <label className="block text-xs text-gray-600 mb-1.5">Nom *</label>
+              <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Nom *</label>
               <input
                 required
                 type="text"
                 value={form.nom}
                 onChange={(e) => setForm({ ...form, nom: e.target.value })}
-                className="w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-800 focus:outline-none focus:border-[#3ddc84]/50 transition-colors"
+                className="w-full bg-white border border-[rgba(0,0,0,0.08)] rounded-lg px-3 py-2.5 text-sm text-[#0f0f0f] placeholder-[rgba(30,30,30,0.25)] focus:outline-none focus:border-[#1a9e5c]/50 transition-colors"
                 placeholder="Dupont"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs text-gray-600 mb-1.5">Entreprise *</label>
+            <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Entreprise *</label>
             <input
               required
               type="text"
               value={form.entreprise}
               onChange={(e) => setForm({ ...form, entreprise: e.target.value })}
-              className="w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-800 focus:outline-none focus:border-[#3ddc84]/50 transition-colors"
+              className="w-full bg-white border border-[rgba(0,0,0,0.08)] rounded-lg px-3 py-2.5 text-sm text-[#0f0f0f] placeholder-[rgba(30,30,30,0.25)] focus:outline-none focus:border-[#1a9e5c]/50 transition-colors"
               placeholder="Nom de votre organisation"
             />
           </div>
 
           <div>
-            <label className="block text-xs text-gray-600 mb-1.5">Adresse email professionnelle *</label>
+            <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Adresse email professionnelle *</label>
             <input
               required
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-800 focus:outline-none focus:border-[#3ddc84]/50 transition-colors"
+              className="w-full bg-white border border-[rgba(0,0,0,0.08)] rounded-lg px-3 py-2.5 text-sm text-[#0f0f0f] placeholder-[rgba(30,30,30,0.25)] focus:outline-none focus:border-[#1a9e5c]/50 transition-colors"
               placeholder="jean.dupont@entreprise.fr"
             />
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs text-gray-600 mb-1.5">Fonction</label>
+              <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Fonction</label>
               <input
                 type="text"
                 value={form.fonction}
                 onChange={(e) => setForm({ ...form, fonction: e.target.value })}
-                className="w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-800 focus:outline-none focus:border-[#3ddc84]/50 transition-colors"
+                className="w-full bg-white border border-[rgba(0,0,0,0.08)] rounded-lg px-3 py-2.5 text-sm text-[#0f0f0f] placeholder-[rgba(30,30,30,0.25)] focus:outline-none focus:border-[#1a9e5c]/50 transition-colors"
                 placeholder="DAF, DPERF, DSI…"
               />
             </div>
             <div>
-              <label className="block text-xs text-gray-600 mb-1.5">Sujet principal</label>
+              <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Sujet principal</label>
               <select
                 value={form.sujet}
                 onChange={(e) => setForm({ ...form, sujet: e.target.value })}
-                className="w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-lg px-3 py-2.5 text-sm text-white focus:outline-none focus:border-[#3ddc84]/50 transition-colors"
+                className="w-full bg-white border border-[rgba(0,0,0,0.08)] rounded-lg px-3 py-2.5 text-sm text-[#0f0f0f] focus:outline-none focus:border-[#1a9e5c]/50 transition-colors"
               >
                 <option value="">Choisir…</option>
                 {sujets.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -143,13 +143,13 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block text-xs text-gray-600 mb-1.5">Décrivez brièvement votre enjeu *</label>
+            <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Décrivez brièvement votre enjeu *</label>
             <textarea
               required
               rows={3}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-800 focus:outline-none focus:border-[#3ddc84]/50 transition-colors resize-none"
+              className="w-full bg-white border border-[rgba(0,0,0,0.08)] rounded-lg px-3 py-2.5 text-sm text-[#0f0f0f] placeholder-[rgba(30,30,30,0.25)] focus:outline-none focus:border-[#1a9e5c]/50 transition-colors resize-none"
               placeholder="Contexte, objectif, contrainte principale…"
             />
           </div>
@@ -160,11 +160,11 @@ export default function ContactForm() {
               id="consent"
               checked={consent}
               onChange={(e) => setConsent(e.target.checked)}
-              className="mt-0.5 shrink-0 accent-[#3ddc84]"
+              className="mt-0.5 shrink-0 accent-[#1a9e5c]"
             />
-            <label htmlFor="consent" className="text-xs text-gray-600 leading-relaxed cursor-pointer">
+            <label htmlFor="consent" className="text-xs text-[rgba(30,30,30,0.4)] leading-relaxed cursor-pointer">
               J&apos;accepte que mes données soient utilisées pour répondre à ma demande.{" "}
-              <a href="/politique-confidentialite" className="text-[#3ddc84] hover:underline">
+              <a href="/politique-confidentialite" className="text-[#1a9e5c] hover:underline">
                 Politique de confidentialité
               </a>
             </label>
@@ -179,12 +179,12 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={loading || !consent}
-            className="w-full py-3 bg-[#3ddc84] text-black font-semibold rounded-lg hover:bg-[#2ab86e] transition-colors text-sm mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full py-3 bg-[#1a9e5c] text-black font-semibold rounded-lg hover:bg-[#157a47] transition-colors text-sm mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {loading ? "Envoi en cours…" : "Envoyer le message"}
           </button>
 
-          <p className="text-xs text-gray-700 text-center pt-1">
+          <p className="text-xs text-[rgba(30,30,30,0.3)] text-center pt-1">
             Réponse sous 48h · Échange sans engagement
           </p>
         </form>

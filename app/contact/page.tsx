@@ -19,14 +19,14 @@ export default function PageContact() {
 
           {/* En-tête */}
           <div className="mb-14">
-            <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">Contact</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-4">Contact</p>
             <h1
-              className="text-5xl md:text-6xl font-bold leading-tight text-white mb-5"
+              className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Discutons de vos enjeux.
             </h1>
-            <p className="text-gray-500 text-base leading-relaxed max-w-lg">
+            <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-lg">
               Un premier échange de 30 minutes pour comprendre
               votre situation. Pas de présentation commerciale.
               Une conversation sur vos priorités réelles.
@@ -59,31 +59,31 @@ export default function PageContact() {
                 ].map((b, i, arr) => (
                   <div
                     key={b.n}
-                    className={`flex gap-5 pb-8 ${i < arr.length - 1 ? "border-b border-[#1e1e1e]" : ""}`}
+                    className={`flex gap-5 pb-8 ${i < arr.length - 1 ? "border-b border-[rgba(0,0,0,0.08)]" : ""}`}
                   >
                     <div
                       className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold"
-                      style={{ backgroundColor: "#3ddc8415", color: "#3ddc84" }}
+                      style={{ backgroundColor: "#1a9e5c15", color: "#1a9e5c" }}
                     >
                       {b.n}
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-white mb-2">{b.titre}</h3>
-                      <p className="text-sm text-gray-500 leading-relaxed">{b.texte}</p>
+                      <h3 className="text-sm font-bold text-[#0f0f0f] mb-2">{b.titre}</h3>
+                      <p className="text-sm text-[rgba(30,30,30,0.5)] leading-relaxed">{b.texte}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Encadré email */}
-              <div className="rounded-xl p-5 bg-[#0d0d0d] border border-[#1e1e1e]">
+              <div className="rounded-xl p-5 bg-[#F2F0EC] border border-[rgba(0,0,0,0.08)]">
                 <a
                   href="mailto:william.saint-dizier@enosi-consulting.fr"
-                  className="text-sm text-[#3ddc84] block"
+                  className="text-sm text-[#1a9e5c] block"
                 >
                   william.saint-dizier@enosi-consulting.fr
                 </a>
-                <p className="text-xs text-gray-600 mt-1">Réponse sous 48h ouvrées</p>
+                <p className="text-xs text-[rgba(30,30,30,0.4)] mt-1">Réponse sous 48h ouvrées</p>
               </div>
             </div>
 
@@ -92,22 +92,22 @@ export default function PageContact() {
           </div>
 
           {/* Bloc Calendly */}
-          <div className="mt-16 pt-16 border-t border-[#1e1e1e] text-center">
-            <p className="text-xs text-gray-600 uppercase tracking-widest mb-4">Préférence directe</p>
+          <div className="mt-16 pt-16 border-t border-[rgba(0,0,0,0.08)] text-center">
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-4">Préférence directe</p>
             <h2
-              className="text-2xl font-bold text-white mb-3"
+              className="text-2xl font-bold text-[#0f0f0f] mb-3"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Vous préférez réserver directement un créneau ?
             </h2>
-            <p className="text-sm text-gray-500 mb-8 max-w-md mx-auto leading-relaxed">
+            <p className="text-sm text-[rgba(30,30,30,0.5)] mb-8 max-w-md mx-auto leading-relaxed">
               Sélectionnez un créneau de 30 minutes dans l&apos;agenda. Confirmation automatique, sans intermédiaire.
             </p>
             <a
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold border border-[#1a9e5c] text-[#1a9e5c] hover:bg-[#1a9e5c] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold border border-[#1a9e5c] text-[#1a9e5c] hover:bg-[#1a9e5c] hover:text-[#0f0f0f] transition-colors"
             >
               Réserver 30 minutes
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
