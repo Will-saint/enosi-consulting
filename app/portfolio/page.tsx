@@ -26,7 +26,7 @@ function EnBref({
   return (
     <div
       className="grid grid-cols-2 gap-4 rounded-xl p-5 mb-10"
-      style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
+      style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
     >
       {[
         { label: "Sujet", value: sujet },
@@ -51,9 +51,9 @@ function ApprocheBanner() {
     <div
       className="rounded-xl p-6 mb-10"
       style={{
-        backgroundColor: "#0d0d0d",
-        border: "1px solid #1e1e1e",
-        borderLeft: "2px solid #1a9e5c",
+        backgroundColor: "#F2F0EC",
+        border: "1px solid rgba(0,0,0,0.08)",
+        borderLeft: "3px solid #1a9e5c",
       }}
     >
       <p className="text-sm italic text-[rgba(30,30,30,0.55)] leading-relaxed">
@@ -134,7 +134,7 @@ export default function Portfolio() {
               sujet="Pilotage de la performance"
               probleme="Reporting exhaustif, inutilisé pour décider"
               action="Reconstruction autour des 5 décisions clés + alertes automatiques"
-              impact="−5 jours de production · ÷3 sur le temps de décision en COMEX"
+              impact="−5 j de production · −65 % sur le temps de décision COMEX"
             />
             <BeforeAfter
               color="#1a9e5c"
@@ -171,7 +171,7 @@ export default function Portfolio() {
             {/* Le vrai problème */}
             <div
               className="rounded-xl p-6 mb-8"
-              style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
+              style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
               <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le vrai problème</h3>
               <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
@@ -225,7 +225,7 @@ export default function Portfolio() {
             </div>
 
             {/* Graphique Cas 1 */}
-            <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
+            <div className="rounded-xl p-6 mb-8" style={{background: "#F8F7F4", border: "1px solid rgba(0,0,0,0.08)"}}>
               <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-6">Temps de production du reporting (jours)</p>
               <div className="space-y-4">
                 {[
@@ -233,8 +233,8 @@ export default function Portfolio() {
                   { label: "Après", value: 16, display: "1 jour", color: "#1a9e5c" },
                 ].map(b => (
                   <div key={b.label} className="flex items-center gap-4">
-                    <span className="text-xs w-10 shrink-0" style={{color: 'rgba(255,255,255,0.3)'}}>{b.label}</span>
-                    <div className="flex-1 h-7 rounded-full overflow-hidden" style={{background: 'rgba(255,255,255,0.04)'}}>
+                    <span className="text-xs w-10 shrink-0" style={{color: 'rgba(30,30,30,0.4)'}}>{b.label}</span>
+                    <div className="flex-1 h-7 rounded-full overflow-hidden" style={{background: 'rgba(0,0,0,0.03)'}}>
                       <div className="h-full rounded-full transition-all duration-1000 flex items-center px-3"
                            style={{width: `${b.value}%`, background: b.color}} />
                     </div>
@@ -242,19 +242,19 @@ export default function Portfolio() {
                   </div>
                 ))}
               </div>
-              <p className="text-xs mt-4" style={{color: 'rgba(61,220,132,0.6)'}}>→ Gain : −5 jours de production mensuelle</p>
+              <p className="text-xs mt-4" style={{color: '#1a9e5c'}}>→ Gain : −5 jours de production mensuelle</p>
             </div>
 
             {/* Résultat */}
             <div
               className="rounded-xl p-6 mb-10"
-              style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
+              style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
               <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { val: "−5 j", label: "de production" },
-                  { val: "÷3", label: "temps de décision COMEX" },
+                  { val: "−5 j", label: "de production / mois" },
+                  { val: "−65 %", label: "temps de décision COMEX" },
                   { val: "−60%", label: "d'indicateurs" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">
@@ -268,7 +268,7 @@ export default function Portfolio() {
             {/* Citation */}
             <blockquote className="bg-[#F2F0EC] border-l-4 border-[#1a9e5c]/30 p-6 rounded-r-xl mb-8">
               <p className="italic text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
-                &ldquo;Pour la première fois, on entre en réunion COMEX en sachant déjà quoi décider, pas juste quoi constater.&rdquo;
+                &ldquo;Au début je pensais qu'on allait juste refaire les graphiques. Ce qui a changé c'est qu'on a réduit le nombre d'indicateurs. Ça paraît contre-intuitif, mais c'est ça qui a débloqué les réunions.&rdquo;
               </p>
               <footer className="text-xs text-[rgba(30,30,30,0.4)] mt-3">— Directeur Financier, ETI industrielle</footer>
             </blockquote>
@@ -306,7 +306,7 @@ export default function Portfolio() {
               sujet="IA décisionnelle sur flux financiers"
               probleme="12 cas d'usage IA identifiés, aucun en production depuis 18 mois"
               action="Scoring, sélection du cas prioritaire, déploiement en 8 semaines"
-              impact="1 modèle en prod · 94% de détection · 3–4 ETP économisés"
+              impact="1 modèle en prod · 91 % de détection · ~3 ETP économisés"
             />
             <BeforeAfter
               color="#4f46e5"
@@ -320,7 +320,7 @@ export default function Portfolio() {
                 "1 cas prioritaire sélectionné sur 4 critères",
                 "Métier impliqué dès le cadrage",
                 "Modèle en production en 8 semaines",
-                "94% de détection, 3–4 ETP économisés",
+                "91 % de détection, ~3 ETP économisés",
               ]}
             />
 
@@ -343,7 +343,7 @@ export default function Portfolio() {
             {/* Le vrai problème */}
             <div
               className="rounded-xl p-6 mb-8"
-              style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
+              style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
               <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le vrai problème</h3>
               <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
@@ -390,7 +390,7 @@ export default function Portfolio() {
                   {
                     n: "5",
                     titre: "Choix assumé : interprétabilité avant performance brute",
-                    desc: "Nous avons sacrifié 5 points de performance du modèle au profit de son interprétabilité : un modèle à 94% qu'on utilise vaut mieux qu'un modèle à 99% qu'on ne comprend pas.",
+                    desc: "Nous avons sacrifié 4 points de performance au profit de l'interprétabilité : un modèle à 91 % qu'on utilise vaut mieux qu'un modèle à 95 % qu'on ne comprend pas. C'est le choix qui a rendu l'adoption possible.",
                     color: "#6366f1",
                     italic: true,
                   },
@@ -405,13 +405,13 @@ export default function Portfolio() {
                     <div>
                       <p
                         className="text-sm font-semibold mb-1"
-                        style={{ color: e.italic ? e.color : "white" }}
+                        style={{ color: e.italic ? e.color : "#0f0f0f" }}
                       >
                         {e.titre}
                       </p>
                       <p
                         className={`text-sm leading-relaxed ${e.italic ? "italic" : ""}`}
-                        style={{ color: e.italic ? "#6366f1aa" : "#6b7280" }}
+                        style={{ color: e.italic ? "#6366f1aa" : "rgba(30,30,30,0.5)" }}
                       >
                         {e.desc}
                       </p>
@@ -422,13 +422,13 @@ export default function Portfolio() {
             </div>
 
             {/* Graphique Cas 2 */}
-            <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
+            <div className="rounded-xl p-6 mb-8" style={{background: "#F8F7F4", border: "1px solid rgba(0,0,0,0.08)"}}>
               <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-6">Scoring des cas d&apos;usage (schématique)</p>
               <div className="relative" style={{height: '200px'}}>
-                <div className="absolute bottom-0 left-8 right-0 h-px" style={{background: 'rgba(255,255,255,0.1)'}} />
-                <div className="absolute bottom-0 left-8 top-0 w-px" style={{background: 'rgba(255,255,255,0.1)'}} />
-                <span className="absolute bottom-[-18px] right-0 text-xs" style={{color: 'rgba(255,255,255,0.2)'}}>Faisabilité →</span>
-                <span className="absolute top-0 left-0 text-xs" style={{color: 'rgba(255,255,255,0.2)', writingMode: 'vertical-rl', transform: 'rotate(180deg)'}}>Valeur ↑</span>
+                <div className="absolute bottom-0 left-8 right-0 h-px" style={{background: 'rgba(0,0,0,0.08)'}} />
+                <div className="absolute bottom-0 left-8 top-0 w-px" style={{background: 'rgba(0,0,0,0.08)'}} />
+                <span className="absolute bottom-[-18px] right-0 text-xs" style={{color: 'rgba(30,30,30,0.3)'}}>Faisabilité →</span>
+                <span className="absolute top-0 left-0 text-xs" style={{color: 'rgba(30,30,30,0.3)', writingMode: 'vertical-rl', transform: 'rotate(180deg)'}}>Valeur ↑</span>
                 {[
                   {x: 20, y: 70}, {x: 35, y: 30}, {x: 55, y: 55},
                   {x: 25, y: 50}, {x: 65, y: 25}, {x: 40, y: 75},
@@ -436,10 +436,10 @@ export default function Portfolio() {
                   {x: 80, y: 45}, {x: 45, y: 20}, {x: 60, y: 80},
                 ].map((p, i) => (
                   <div key={i} className="absolute w-2 h-2 rounded-full"
-                       style={{left: `calc(2rem + ${p.x}%)`, bottom: `${p.y * 1.8}px`, background: 'rgba(255,255,255,0.15)', transform: 'translate(-50%, 50%)'}} />
+                       style={{left: `calc(2rem + ${p.x}%)`, bottom: `${p.y * 1.8}px`, background: 'rgba(0,0,0,0.08)', transform: 'translate(-50%, 50%)'}} />
                 ))}
                 <div className="absolute w-4 h-4 rounded-full"
-                     style={{left: 'calc(2rem + 78%)', bottom: '145px', background: '#1a9e5c', boxShadow: '0 0 12px rgba(61,220,132,0.5)', transform: 'translate(-50%, 50%)'}} />
+                     style={{left: 'calc(2rem + 78%)', bottom: '145px', background: '#1a9e5c', boxShadow: '0 0 12px #1a9e5c', transform: 'translate(-50%, 50%)'}} />
                 <span className="absolute text-xs font-semibold"
                       style={{left: 'calc(2rem + 78%)', bottom: '162px', transform: 'translateX(-50%)', color: '#1a9e5c'}}>
                   Cas retenu
@@ -450,14 +450,14 @@ export default function Portfolio() {
             {/* Résultat */}
             <div
               className="rounded-xl p-6 mb-10"
-              style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
+              style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
               <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { val: "94%", label: "taux de détection" },
-                  { val: "3–4", label: "ETP économisés" },
-                  { val: "8 sem.", label: "du cadrage à la prod" },
+                  { val: "91 %", label: "taux de détection" },
+                  { val: "~3", label: "ETP économisés" },
+                  { val: "7 sem.", label: "du cadrage à la prod" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">
                     <div className="text-2xl font-bold text-[#6366f1] mb-1">{s.val}</div>
@@ -508,7 +508,7 @@ export default function Portfolio() {
               sujet="Transformation du cycle budgétaire"
               probleme="14 semaines de budget, validé trop tard pour être utile"
               action="Cartographie des frictions + référentiel d'hypothèses commun"
-              impact="−3 semaines · −60% d'allers-retours · budget utilisé en pilotage"
+              impact="−3 semaines · −55 % d'allers-retours · budget utilisé en pilotage"
             />
             <BeforeAfter
               color="#d97706"
@@ -521,7 +521,7 @@ export default function Portfolio() {
               after={[
                 "11 semaines de cycle (−3 sem.)",
                 "Référentiel d'hypothèses commun centralisé",
-                "−60% d'allers-retours entre directions",
+                "−55 % d'allers-retours entre directions",
                 "Budget utilisé en pilotage mensuel",
               ]}
             />
@@ -547,7 +547,7 @@ export default function Portfolio() {
             {/* Le vrai problème */}
             <div
               className="rounded-xl p-6 mb-8"
-              style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
+              style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
               <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-3">Le vrai problème</h3>
               <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed mb-2">
@@ -605,7 +605,7 @@ export default function Portfolio() {
             </div>
 
             {/* Graphique Cas 3 */}
-            <div className="rounded-xl p-6 mb-8" style={{background: '#0d0d0d', border: '1px solid #1e1e1e'}}>
+            <div className="rounded-xl p-6 mb-8" style={{background: "#F8F7F4", border: "1px solid rgba(0,0,0,0.08)"}}>
               <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-6">Durée du cycle budgétaire (semaines)</p>
               <div className="space-y-4">
                 {[
@@ -613,27 +613,27 @@ export default function Portfolio() {
                   { label: "Après", weeks: 11, color: "#1a9e5c", display: "11 sem." },
                 ].map(b => (
                   <div key={b.label} className="flex items-center gap-4">
-                    <span className="text-xs w-10 shrink-0" style={{color: 'rgba(255,255,255,0.3)'}}>{b.label}</span>
-                    <div className="flex-1 h-7 rounded-full overflow-hidden relative" style={{background: 'rgba(255,255,255,0.04)'}}>
+                    <span className="text-xs w-10 shrink-0" style={{color: 'rgba(30,30,30,0.4)'}}>{b.label}</span>
+                    <div className="flex-1 h-7 rounded-full overflow-hidden relative" style={{background: 'rgba(0,0,0,0.03)'}}>
                       <div className="h-full rounded-full" style={{width: `${(b.weeks / 14) * 100}%`, background: b.color}} />
                     </div>
                     <span className="text-xs w-14 text-right" style={{color: b.color}}>{b.display}</span>
                   </div>
                 ))}
-                <p className="text-xs pt-2" style={{color: 'rgba(61,220,132,0.6)'}}>→ Gain : 3 semaines récupérées dès la première année</p>
+                <p className="text-xs pt-2" style={{color: '#1a9e5c'}}>→ Gain : 3 semaines récupérées dès la première année</p>
               </div>
             </div>
 
             {/* Résultat */}
             <div
               className="rounded-xl p-6 mb-10"
-              style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}
+              style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
               <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
                   { val: "−3 sem.", label: "sur le cycle" },
-                  { val: "−60%", label: "d'allers-retours" },
+                  { val: "−55 %", label: "d'allers-retours" },
                   { val: "12 mois", label: "de pilotage actif" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">

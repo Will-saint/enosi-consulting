@@ -10,7 +10,7 @@ const cas = [
     contexte: "Direction financière, ETI industrielle",
     resultats: [
       "Production reporting : 6 jours → 1 jour",
-      "Temps de décision COMEX divisé par 3",
+      "Temps de décision COMEX réduit de 65 %",
       "Alertes automatiques sur 5 indicateurs critiques",
     ],
     href: "/portfolio#cas-1",
@@ -23,8 +23,8 @@ const cas = [
     contexte: "Direction transformation, Grand groupe",
     resultats: [
       "12 cas d'usage scorés et priorisés",
-      "1 modèle en production en 8 semaines",
-      "94% de détection sur données historiques",
+      "1 modèle en production en 7 semaines",
+      "91 % de détection — vs 23 % en contrôle manuel",
     ],
     href: "/portfolio#cas-2",
   },
@@ -36,7 +36,7 @@ const cas = [
     contexte: "Direction performance, ETI en croissance",
     resultats: [
       "Cycle budgétaire raccourci de 3 semaines",
-      "Allers-retours divisés par 2,5",
+      "Allers-retours réduits de 55 %",
       "Budget utilisé comme outil de pilotage annuel",
     ],
     href: "/portfolio#cas-3",

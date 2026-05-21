@@ -2,19 +2,19 @@ import ScrollReveal from "./ScrollReveal";
 
 const verbatims = [
   {
-    quote: "En six semaines, nous avions un reporting fiable, des alertes automatiques et un COMEX qui regardait enfin les mêmes chiffres. Je n'avais pas vu ça en dix ans.",
+    quote: "Franchement, le premier mois on n'y croyait pas vraiment. Et puis le rapport de clôture est sorti en une journée. Ça a changé quelque chose dans la façon dont le COMEX prépare ses réunions — pas juste dans le délai, dans la qualité des échanges.",
     role: "Directeur Financier",
     company: "ETI industrielle, 800 M€ de CA",
     accent: "#1a9e5c",
   },
   {
-    quote: "Ils n'ont pas livré une recommandation. Ils ont livré un modèle en production. La différence est immense quand on a déjà vu des consultants disparaître avec leurs slides.",
+    quote: "Ce qui m'a surpris, c'est qu'ils ont poussé pour un cas d'usage plus simple que ce qu'on avait en tête. Sur le moment j'étais un peu frustré. Avec le recul, c'est exactement ce qui a rendu le déploiement possible.",
     role: "Directeur Transformation",
     company: "Grand groupe, 3 500 collaborateurs",
     accent: "#4f46e5",
   },
   {
-    quote: "Le cycle budgétaire qu'on trouvait normal à 14 semaines est passé à 11. Ce n'est pas une optimisation marginale — c'est trois semaines restituées à toute la direction.",
+    quote: "On a récupéré 3 semaines sur le cycle. Ce n'est pas spectaculaire sur le papier, mais dans la pratique on arrive en COMEX de décembre avec une vraie visibilité sur l'année suivante. Avant, c'était en janvier que tout était finalisé.",
     role: "Directeur de la Performance",
     company: "ETI en croissance rapide",
     accent: "#d97706",
