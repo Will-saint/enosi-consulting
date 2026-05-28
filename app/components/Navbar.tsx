@@ -36,6 +36,7 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Portfolio", anchor: "/portfolio", direct: true },
+  { label: "Notes", anchor: "/blog", direct: true },
   { label: "À propos", anchor: "/a-propos", direct: true },
   { label: "Démo live", anchor: "/demo", direct: true },
 ];

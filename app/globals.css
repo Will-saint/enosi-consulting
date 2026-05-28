@@ -88,3 +88,36 @@ body::after {
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: #F2F0EC; }
 ::-webkit-scrollbar-thumb { background: #D0CDC6; }
+
+/* Article body typography */
+.article-body { color: rgba(30,30,30,0.7); font-size: 0.95rem; line-height: 1.85; }
+.article-body p { margin-bottom: 1.5rem; }
+.article-body p.article-lead {
+  font-size: 1.05rem; color: rgba(30,30,30,0.75);
+  line-height: 1.8; margin-bottom: 2rem;
+}
+.article-body h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem; font-weight: 700; color: #0f0f0f;
+  margin: 2.5rem 0 1rem; line-height: 1.2;
+}
+.article-body h3 {
+  font-size: 1rem; font-weight: 700; color: #0f0f0f;
+  margin: 2rem 0 0.75rem;
+}
+.article-body ul {
+  margin: 1rem 0 1.5rem 0;
+  display: flex; flex-direction: column; gap: 0.6rem;
+  padding-left: 0; list-style: none;
+}
+.article-body ul li {
+  padding-left: 1.5rem; position: relative;
+  font-size: 0.92rem; color: rgba(30,30,30,0.65);
+  line-height: 1.7;
+}
+.article-body ul li::before {
+  content: '→'; position: absolute; left: 0;
+  color: #1a9e5c; font-weight: 600;
+}
+.article-body strong { color: #0f0f0f; font-weight: 600; }
+.article-body em { font-style: italic; color: rgba(30,30,30,0.6); }
