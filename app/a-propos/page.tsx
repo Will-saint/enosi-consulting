@@ -8,9 +8,34 @@ export const metadata: Metadata = {
   description: seoConfig.aPropos.description,
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "William Saint-Dizier",
+  "jobTitle": "Consultant en performance, data et IA",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Enosi Consulting",
+    "url": "https://enosi-consulting.vercel.app"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Université Paris 1 Panthéon-Sorbonne" }
+  ],
+  "knowsAbout": [
+    "Pilotage de la performance", "Reporting financier", "Data engineering",
+    "Intelligence artificielle", "Business intelligence", "Power BI", "Dataiku"
+  ],
+  "sameAs": ["https://www.linkedin.com/in/williamsaintdizier"],
+  "url": "https://enosi-consulting.vercel.app/a-propos"
+};
+
 export default function APropos() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <Navbar />
       <main className="pt-28 pb-24 px-6">
         <div className="max-w-3xl mx-auto">
@@ -214,13 +239,13 @@ export default function APropos() {
 
           {/* ── Section 5 : Ce qu'on n'est pas ─────── */}
           <section
-            className="mb-16 py-16 px-8 rounded-2xl border-y border-[rgba(0,0,0,0.08)]"
+            className="mb-16 py-16 px-8 rounded-2xl"
             style={{ backgroundColor: "#0d0d0d" }}
           >
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Pour être clair</p>
+            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>Pour être clair</p>
             <h2
-              className="text-2xl font-bold text-[#0f0f0f] mb-8"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              className="text-2xl font-bold mb-8"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif", color: "#ffffff" }}
             >
               Ce que nous ne sommes pas
             </h2>
@@ -234,8 +259,8 @@ export default function APropos() {
                   "Un éditeur de logiciel",
                 ].map((item) => (
                   <div key={item} className="flex gap-3 items-start">
-                    <span className="text-[rgba(30,30,30,0.4)] text-sm shrink-0 mt-0.5">✗</span>
-                    <p className="text-sm text-[rgba(30,30,30,0.5)]">{item}</p>
+                    <span className="text-sm shrink-0 mt-0.5" style={{ color: "rgba(255,255,255,0.3)" }}>✗</span>
+                    <p className="text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>{item}</p>
                   </div>
                 ))}
               </div>
@@ -249,7 +274,7 @@ export default function APropos() {
                 ].map((item) => (
                   <div key={item} className="flex gap-3 items-start">
                     <span className="text-sm shrink-0 mt-0.5" style={{ color: "#1a9e5c" }}>✓</span>
-                    <p className="text-sm text-[#3a3a3a]">{item}</p>
+                    <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>{item}</p>
                   </div>
                 ))}
               </div>
@@ -271,6 +296,23 @@ export default function APropos() {
               Master Data IA for Business (2026). Expériences en France, Nouvelle-Zélande
               et La Réunion, dans des environnements grands groupes et ETI.
             </p>
+
+            {/* Logo strip */}
+            <div className="mb-8 py-6 border-y border-[rgba(0,0,0,0.06)]">
+              <p className="text-xs text-[rgba(30,30,30,0.35)] uppercase tracking-widest mb-5">Environnements d&apos;exercice</p>
+              <div className="flex flex-wrap items-center gap-8">
+                {[
+                  { wordmark: "LVMH", sub: "Moët Hennessy", style: { fontFamily: "'Playfair Display', serif", fontSize: "1.05rem", letterSpacing: "0.18em" } },
+                  { wordmark: "BOURBON", sub: "Voyages", style: { fontFamily: "DM Sans, sans-serif", fontSize: "0.9rem", letterSpacing: "0.22em" } },
+                  { wordmark: "APPART’CITY", sub: "Groupe hôtelier", style: { fontFamily: "DM Sans, sans-serif", fontSize: "0.82rem", letterSpacing: "0.12em" } },
+                ].map((c) => (
+                  <div key={c.wordmark} className="flex flex-col items-start gap-0.5 opacity-40">
+                    <span className="font-bold text-[#0f0f0f]" style={c.style}>{c.wordmark}</span>
+                    <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[rgba(30,30,30,0.5)]">{c.sub}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             {/* Expériences */}
             <div className="mb-8">

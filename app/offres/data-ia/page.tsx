@@ -8,6 +8,18 @@ export const metadata: Metadata = {
   description: seoConfig.offresDataIA.description,
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Data & IA pour la décision",
+  "description": "Transformer les données en décisions concrètes. Automatisation du reporting, déploiement de cas d'usage IA en 6 à 10 semaines pour les directions transformation et DSI.",
+  "provider": { "@type": "Organization", "name": "Enosi Consulting" },
+  "areaServed": "France",
+  "serviceType": "Conseil en intelligence artificielle et data engineering",
+  "audience": { "@type": "Audience", "audienceType": "Direction Transformation, CDO, DSI, Direction générale" },
+  "url": "https://enosi-consulting.vercel.app/offres/data-ia"
+};
+
 const interventions = [
   {
     n: "01",
@@ -71,6 +83,10 @@ const COLOR = "#6366f1";
 export default function PageDataIA() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className="pt-28 pb-24 px-6">
         <div className="max-w-3xl mx-auto">

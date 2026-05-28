@@ -8,6 +8,18 @@ export const metadata: Metadata = {
   description: seoConfig.offresPilotage.description,
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Pilotage de la performance",
+  "description": "Structurer les indicateurs, fiabiliser le reporting, construire un dispositif de pilotage décisionnel pour les directions financières et de performance.",
+  "provider": { "@type": "Organization", "name": "Enosi Consulting" },
+  "areaServed": "France",
+  "serviceType": "Conseil en pilotage de la performance",
+  "audience": { "@type": "Audience", "audienceType": "Direction financière, Direction de la performance, COMEX" },
+  "url": "https://enosi-consulting.vercel.app/offres/pilotage"
+};
+
 const interventions = [
   {
     n: "01",
@@ -71,6 +83,10 @@ const COLOR = "#1a9e5c";
 export default function PagePilotage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className="pt-28 pb-24 px-6">
         <div className="max-w-3xl mx-auto">

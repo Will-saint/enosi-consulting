@@ -111,7 +111,7 @@ export default function Hero() {
             avec vos équipes.
           </p>
           <div className="flex gap-4 shrink-0">
-            <a href="/contact"
+            <a href="/diagnostic"
                style={{
                  padding:'0.875rem 2rem',
                  borderRadius:'2rem',

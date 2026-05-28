@@ -71,17 +71,41 @@ export default function RootLayout({
               "name": "Enosi Consulting",
               "description": "Cabinet de conseil en performance et création de valeur, combinant finance, data et IA.",
               "url": "https://enosi-consulting.vercel.app",
+              "logo": "https://enosi-consulting.vercel.app/opengraph-image",
               "founder": {
                 "@type": "Person",
-                "name": "William Saint-Dizier"
+                "name": "William Saint-Dizier",
+                "jobTitle": "Consultant en performance, data et IA",
+                "sameAs": "https://www.linkedin.com/in/williamsaintdizier"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/in/williamsaintdizier"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Paris",
+                "addressRegion": "Île-de-France",
+                "addressCountry": "FR"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "France"
               },
               "serviceType": [
                 "Conseil en pilotage de la performance",
                 "Data & IA pour la décision",
-                "Efficacité et création de valeur"
+                "Efficacité et création de valeur",
+                "Audit reporting 5 jours"
               ],
-              "areaServed": "France",
-              "inLanguage": "fr"
+              "inLanguage": "fr",
+              "knowsAbout": [
+                "Pilotage de la performance",
+                "Reporting financier",
+                "Intelligence artificielle",
+                "Data engineering",
+                "Business intelligence",
+                "Transformation digitale"
+              ]
             })
           }}
         />

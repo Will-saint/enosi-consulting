@@ -8,6 +8,18 @@ export const metadata: Metadata = {
   description: seoConfig.offresEfficacite.description,
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Efficacité et création de valeur",
+  "description": "Réduire les frictions, améliorer les processus critiques, piloter ce qui crée vraiment de la valeur. Pour ETI en croissance et directions en transformation.",
+  "provider": { "@type": "Organization", "name": "Enosi Consulting" },
+  "areaServed": "France",
+  "serviceType": "Conseil en optimisation des processus et création de valeur",
+  "audience": { "@type": "Audience", "audienceType": "Direction générale, Direction de la performance, ETI" },
+  "url": "https://enosi-consulting.vercel.app/offres/efficacite"
+};
+
 const interventions = [
   {
     n: "01",
@@ -71,6 +83,10 @@ const COLOR = "#f59e0b";
 export default function PageEfficacite() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
       <main className="pt-28 pb-24 px-6">
         <div className="max-w-3xl mx-auto">

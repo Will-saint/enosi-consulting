@@ -50,5 +50,13 @@ export const seoConfig = {
   politiqueConfidentialite: {
     title: "Politique de confidentialité | Enosi Consulting",
     description: "Politique de confidentialité et de traitement des données personnelles — conformité RGPD."
+  },
+  diagnostic: {
+    title: "Diagnostic de maturité Data & IA — Outil gratuit | Enosi Consulting",
+    description: "Évaluez la maturité Data/IA de votre organisation en 12 questions. Rapport personnalisé sur 4 axes avec vos priorités d'action. Gratuit, 3 minutes."
+  },
+  quickWin: {
+    title: "Audit Reporting 5 jours — Offre prix fixe | Enosi Consulting",
+    description: "Un diagnostic complet de vos reportings et tableaux de bord en 5 jours, à prix fixe. Livrables concrets, sans engagement long terme."
   }
 }
