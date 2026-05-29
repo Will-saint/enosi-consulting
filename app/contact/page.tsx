@@ -8,6 +8,11 @@ import { CALENDLY_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: seoConfig.contact.title,
   description: seoConfig.contact.description,
+  openGraph: {
+    title: seoConfig.contact.title,
+    description: seoConfig.contact.description,
+    url: 'https://enosi-consulting.vercel.app/contact',
+  },
 };
 
 export default function PageContact() {

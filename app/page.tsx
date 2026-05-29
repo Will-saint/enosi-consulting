@@ -4,6 +4,11 @@ import { seoConfig } from "./seo";
 export const metadata: Metadata = {
   title: seoConfig.home.title,
   description: seoConfig.home.description,
+  openGraph: {
+    title: seoConfig.home.title,
+    description: seoConfig.home.description,
+    url: 'https://enosi-consulting.vercel.app',
+  },
 };
 
 import Navbar from "./components/Navbar";

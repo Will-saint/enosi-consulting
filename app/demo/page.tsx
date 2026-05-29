@@ -9,6 +9,11 @@ import { CALENDLY_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: seoConfig.demo.title,
   description: seoConfig.demo.description,
+  openGraph: {
+    title: seoConfig.demo.title,
+    description: seoConfig.demo.description,
+    url: 'https://enosi-consulting.vercel.app/demo',
+  },
 };
 
 export default function DemoPage() {

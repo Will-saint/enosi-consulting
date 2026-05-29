@@ -7,6 +7,11 @@ import BeforeAfter from "../components/BeforeAfter";
 export const metadata: Metadata = {
   title: seoConfig.portfolio.title,
   description: seoConfig.portfolio.description,
+  openGraph: {
+    title: seoConfig.portfolio.title,
+    description: seoConfig.portfolio.description,
+    url: 'https://enosi-consulting.vercel.app/portfolio',
+  },
 };
 
 /* ─────────────────────────────────────────────

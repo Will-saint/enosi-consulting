@@ -6,6 +6,11 @@ import { seoConfig } from "../seo";
 export const metadata: Metadata = {
   title: seoConfig.mentionsLegales.title,
   description: seoConfig.mentionsLegales.description,
+  openGraph: {
+    title: seoConfig.mentionsLegales.title,
+    description: seoConfig.mentionsLegales.description,
+    url: 'https://enosi-consulting.vercel.app/mentions-legales',
+  },
 };
 
 export default function MentionsLegales() {

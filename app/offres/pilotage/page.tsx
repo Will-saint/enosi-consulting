@@ -6,6 +6,11 @@ import { seoConfig } from "../../seo";
 export const metadata: Metadata = {
   title: seoConfig.offresPilotage.title,
   description: seoConfig.offresPilotage.description,
+  openGraph: {
+    title: seoConfig.offresPilotage.title,
+    description: seoConfig.offresPilotage.description,
+    url: 'https://enosi-consulting.vercel.app/offres/pilotage',
+  },
 };
 
 const serviceSchema = {

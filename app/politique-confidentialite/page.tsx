@@ -6,6 +6,11 @@ import { seoConfig } from "../seo";
 export const metadata: Metadata = {
   title: seoConfig.politiqueConfidentialite.title,
   description: seoConfig.politiqueConfidentialite.description,
+  openGraph: {
+    title: seoConfig.politiqueConfidentialite.title,
+    description: seoConfig.politiqueConfidentialite.description,
+    url: 'https://enosi-consulting.vercel.app/politique-confidentialite',
+  },
 };
 
 export default function PolitiqueConfidentialite() {

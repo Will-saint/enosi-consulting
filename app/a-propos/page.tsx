@@ -6,6 +6,11 @@ import { seoConfig } from "../seo";
 export const metadata: Metadata = {
   title: seoConfig.aPropos.title,
   description: seoConfig.aPropos.description,
+  openGraph: {
+    title: seoConfig.aPropos.title,
+    description: seoConfig.aPropos.description,
+    url: 'https://enosi-consulting.vercel.app/a-propos',
+  },
 };
 
 const personSchema = {

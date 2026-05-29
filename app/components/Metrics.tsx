@@ -88,12 +88,30 @@ export default function Metrics() {
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
+    const start = () => setStarted(true);
+
+    // If already visible on mount, start immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.9) {
+      start();
+      return;
+    }
+
+    // Fallback: force after 4s in case observer never fires
+    const fallback = setTimeout(start, 4000);
+
     const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setStarted(true); obs.disconnect(); } },
-      { threshold: 0.15 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          start();
+          obs.disconnect();
+          clearTimeout(fallback);
+        }
+      },
+      { threshold: 0.05 }
     );
     obs.observe(el);
-    return () => obs.disconnect();
+    return () => { obs.disconnect(); clearTimeout(fallback); };
   }, []);
 
   return (
