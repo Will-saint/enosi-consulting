@@ -292,16 +292,16 @@ export default function APropos() {
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Le fondateur</p>
 
             {/* Two-column layout: polaroid left, text right */}
-            <div style={{ display: "flex", gap: "3rem", alignItems: "flex-start", marginBottom: "2rem" }}>
+            <div className="flex flex-col sm:flex-row gap-10 sm:gap-12 items-center sm:items-start mb-8">
 
               {/* 3D Polaroid */}
               <div style={{
                 flexShrink: 0,
-                width: "240px",
-                height: "300px",
+                width: "200px",
+                height: "260px",
                 borderRadius: "12px",
-                overflow: "hidden",
-                background: "linear-gradient(160deg, #1a1a1a, #2e2e2e)",
+                overflow: "visible",
+                background: "transparent",
               }}>
                 <PolaroidWrapper />
               </div>
