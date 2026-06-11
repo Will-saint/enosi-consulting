@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { seoConfig } from "../seo";
-import PolaroidViewer from "../components/PolaroidViewer";
+import PolaroidWrapper from "../components/PolaroidWrapper";
 
 export const metadata: Metadata = {
   title: seoConfig.aPropos.title,
@@ -301,9 +301,9 @@ export default function APropos() {
                 height: "300px",
                 borderRadius: "12px",
                 overflow: "hidden",
-                background: "linear-gradient(135deg, #f0ede8, #e8e4de)",
+                background: "linear-gradient(160deg, #1a1a1a, #2e2e2e)",
               }}>
-                <PolaroidViewer />
+                <PolaroidWrapper />
               </div>
 
               {/* Text */}
