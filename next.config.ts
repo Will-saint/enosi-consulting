@@ -9,6 +9,7 @@ const csp = [
   "img-src 'self' data: blob:",
   "connect-src 'self' https://plausible.io",
   "frame-ancestors 'none'",
+  "frame-src 'self'",
 ].join("; ");
 
 const securityHeaders = [

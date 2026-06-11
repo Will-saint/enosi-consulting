@@ -294,14 +294,14 @@ export default function APropos() {
             {/* Two-column layout: polaroid left, text right */}
             <div className="flex flex-col sm:flex-row gap-10 sm:gap-12 items-center sm:items-start mb-8">
 
-              {/* 3D Polaroid */}
+              {/* 3D Camera model */}
               <div style={{
                 flexShrink: 0,
-                width: "200px",
-                height: "260px",
-                borderRadius: "12px",
-                overflow: "visible",
-                background: "transparent",
+                width: "260px",
+                height: "280px",
+                borderRadius: "16px",
+                overflow: "hidden",
+                background: "linear-gradient(160deg, #141414, #252525)",
               }}>
                 <PolaroidWrapper />
               </div>
