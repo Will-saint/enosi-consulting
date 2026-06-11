@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { seoConfig } from "../seo";
+import PolaroidViewer from "../components/PolaroidViewer";
 
 export const metadata: Metadata = {
   title: seoConfig.aPropos.title,
@@ -289,18 +290,37 @@ export default function APropos() {
           {/* ── Section 5b : Le fondateur ───────────── */}
           <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Le fondateur</p>
-            <h2
-              className="text-3xl font-bold text-[#0f0f0f] mb-7"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-            >
-              William Saint-Dizier
-            </h2>
 
-            <p className="text-[rgba(30,30,30,0.55)] leading-relaxed mb-8">
-              Consultant en performance, data et IA. Double diplôme Panthéon-Sorbonne × PSTB,
-              Master Data IA for Business (2026). Expériences en France, Nouvelle-Zélande
-              et La Réunion, dans des environnements grands groupes et ETI.
-            </p>
+            {/* Two-column layout: polaroid left, text right */}
+            <div style={{ display: "flex", gap: "3rem", alignItems: "flex-start", marginBottom: "2rem" }}>
+
+              {/* 3D Polaroid */}
+              <div style={{
+                flexShrink: 0,
+                width: "240px",
+                height: "300px",
+                borderRadius: "12px",
+                overflow: "hidden",
+                background: "linear-gradient(135deg, #f0ede8, #e8e4de)",
+              }}>
+                <PolaroidViewer />
+              </div>
+
+              {/* Text */}
+              <div style={{ flex: 1 }}>
+                <h2
+                  className="text-3xl font-bold text-[#0f0f0f] mb-4"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  William Saint-Dizier
+                </h2>
+                <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
+                  Consultant en performance, data et IA. Double diplôme Panthéon-Sorbonne × PSTB,
+                  Master Data IA for Business (2026). Expériences en France, Nouvelle-Zélande
+                  et La Réunion, dans des environnements grands groupes et ETI.
+                </p>
+              </div>
+            </div>
 
             {/* Logo strip */}
             <div className="mb-8 py-6 border-y border-[rgba(0,0,0,0.06)]">
