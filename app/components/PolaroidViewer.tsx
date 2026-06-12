@@ -22,21 +22,20 @@ export default function PolaroidViewer() {
         }}>
           <div style={{
             height: "140px",
-            background: "linear-gradient(140deg, #0d0d0d, #1a1a1a)",
             borderRadius: "1px",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            position: "relative",
+            overflow: "hidden",
           }}>
-            <span style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontWeight: 700, fontSize: "3rem",
-              color: "rgba(255,255,255,0.12)",
-              userSelect: "none",
-            }}>W</span>
-            <div style={{
-              position: "absolute", bottom: 0, left: 0, right: 0, height: "2px",
-              background: "linear-gradient(90deg, transparent, #1a9e5c, transparent)",
-            }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/william.jpg"
+              alt="William Saint-Dizier"
+              style={{
+                width: "100%", height: "100%",
+                objectFit: "cover",
+                objectPosition: "center top",
+                display: "block",
+              }}
+            />
           </div>
           <p style={{
             textAlign: "center", marginTop: "8px",
