@@ -107,7 +107,7 @@ export default function Portfolio() {
               Exemples de missions
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              Trois interventions représentatives de notre approche.
+              Trois résultats concrets issus de mon parcours.
               Les organisations ne sont pas nommées. Les résultats, si.
             </p>
           </div>

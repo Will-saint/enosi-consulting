@@ -9,9 +9,9 @@ const stats = [
 ];
 
 function useCountUp(end: number, duration: number, started: boolean) {
-  const [val, setVal] = useState(0);
+  const [val, setVal] = useState(end);
   useEffect(() => {
-    if (!started) return;
+    if (!started) { setVal(end); return; }
     let frame: number;
     const t0 = performance.now();
     const tick = (now: number) => {
@@ -127,7 +127,7 @@ export default function Metrics() {
           textTransform: "uppercase", textAlign: "center",
           color: "rgba(30,30,30,0.3)", marginBottom: "3.5rem",
         }}>
-          Résultats typiques de nos interventions
+          Résultats typiques de mes interventions
         </p>
         <div style={{
           display: "grid",

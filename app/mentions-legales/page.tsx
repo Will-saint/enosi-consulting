@@ -51,15 +51,13 @@ export default function MentionsLegales() {
               <div className="space-y-2 text-sm text-[rgba(30,30,30,0.55)] leading-relaxed">
                 <p><span className="text-[#3a3a3a] font-medium">Dénomination sociale :</span> Enosi Consulting</p>
                 <p><span className="text-[#3a3a3a] font-medium">Responsable de la publication :</span> William Saint-Dizier</p>
-                <p><span className="text-[#3a3a3a] font-medium">Adresse :</span> [Adresse à compléter]</p>
-                <p><span className="text-[#3a3a3a] font-medium">SIRET :</span> [SIRET à compléter]</p>
                 <p>
                   <span className="text-[#3a3a3a] font-medium">Contact :</span>{" "}
                   <a
-                    href="mailto:contact@enosi-consulting.fr"
+                    href="mailto:williamsaintdizier34@gmail.com"
                     className="text-[#1a9e5c] hover:underline"
                   >
-                    contact@enosi-consulting.fr
+                    williamsaintdizier34@gmail.com
                   </a>
                 </p>
               </div>

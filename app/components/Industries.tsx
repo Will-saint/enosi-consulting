@@ -41,10 +41,10 @@ export default function Industries() {
         <div className="text-center mb-14">
           <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(30,30,30,0.35)'}}>Contextes d&apos;intervention</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-            Avec qui nous travaillons
+            Avec qui je travaille
           </h2>
           <p className="max-w-xl mx-auto text-sm leading-relaxed" style={{color: 'rgba(30,30,30,0.5)'}}>
-            Nous intervenons auprès de directions qui cherchent à mieux piloter,
+            J&apos;interviens auprès de directions qui cherchent à mieux piloter,
             mieux décider et mieux créer de la valeur, quelle que soit la taille
             de l&apos;organisation.
           </p>

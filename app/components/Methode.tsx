@@ -72,7 +72,7 @@ export default function Methode() {
           fontSize: "0.65rem", letterSpacing: "0.2em",
           textTransform: "uppercase",
           color: "rgba(30,30,30,0.3)", marginBottom: "1rem"
-        }}>Notre approche</p>
+        }}>Mon approche</p>
         <div style={{ display: "flex", alignItems: "flex-end",
                       justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
           <h2 style={{
@@ -81,9 +81,9 @@ export default function Methode() {
             fontWeight: 700, color: "#0f0f0f",
             margin: 0, lineHeight: 1.1,
           }}>
-            Nous clarifions.<br />
-            Nous outillons.<br />
-            <span style={{ color: "#1a9e5c" }}>Nous rendons utile.</span>
+            Je clarifie.<br />
+            J&apos;outille.<br />
+            <span style={{ color: "#1a9e5c" }}>Je rends utile.</span>
           </h2>
           {/* Dots navigation */}
           <div style={{ display: "flex", gap: "0.5rem", paddingBottom: "0.25rem" }}>

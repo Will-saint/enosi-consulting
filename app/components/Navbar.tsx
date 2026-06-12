@@ -9,7 +9,7 @@ type NavItem =
 
 const navItems: NavItem[] = [
   {
-    label: "Nos offres",
+    label: "Mes offres",
     anchor: "#offres",
     sub: [
       { label: "Pilotage de la performance", href: "/offres/pilotage" },
@@ -19,12 +19,12 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Notre approche",
+    label: "Mon approche",
     anchor: "/#methode",
     sub: [
-      { label: "Comment nous intervenons", href: "/#methode" },
-      { label: "Notre méthode", href: "/#methode" },
-      { label: "Ce qui nous distingue", href: "/#methode" },
+      { label: "Comment j'interviens", href: "/#methode" },
+      { label: "Ma méthode", href: "/#methode" },
+      { label: "Ce qui me distingue", href: "/#methode" },
     ],
   },
   {

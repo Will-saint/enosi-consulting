@@ -8,7 +8,7 @@ const questions = [
   },
   {
     q: "Quel ROI peut-on attendre ?",
-    a: "Sur les missions de pilotage et reporting, nos clients récupèrent en moyenne 25 % du temps de production dès les 3 premiers mois. Sur les cas d'usage IA, le premier modèle en production est opérationnel en 6 à 10 semaines. Notre calculateur sur la page Démo vous donnera une estimation basée sur votre situation réelle.",
+    a: "Sur les missions de pilotage et reporting, mes clients récupèrent en moyenne 25 % du temps de production dès les 3 premiers mois. Sur les cas d'usage IA, le premier modèle en production est opérationnel en 6 à 10 semaines. Mon calculateur sur la page Démo vous donnera une estimation basée sur votre situation réelle.",
   },
   {
     q: "Combien de temps dure une intervention ?",
@@ -16,7 +16,7 @@ const questions = [
   },
   {
     q: "Comment se déroule concrètement une mission ?",
-    a: "On commence par comprendre vos décisions, pas vos données. Puis on analyse les flux, les outils, les contraintes réelles. On structure la solution dans vos systèmes existants, on déploie avec vos équipes et on transfère les compétences. Vous restez autonomes après notre départ — c'est l'objectif depuis le début.",
+    a: "Je commence par comprendre vos décisions, pas vos données. Puis j'analyse les flux, les outils, les contraintes réelles. Je structure la solution dans vos systèmes existants, je déploie avec vos équipes et je transfère les compétences. Vous restez autonomes après mon départ — c'est l'objectif depuis le début.",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function FAQ() {
             fontSize: 'clamp(2rem,4vw,3rem)',
             fontWeight: 700, color: '#0f0f0f', lineHeight: 1.1,
           }}>
-            Ce que les décideurs<br />nous demandent d&apos;abord.
+            Ce que les décideurs<br />me demandent d&apos;abord.
           </h2>
         </div>
 

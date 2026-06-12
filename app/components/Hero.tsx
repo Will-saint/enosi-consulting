@@ -97,48 +97,97 @@ export default function Hero() {
         </div>
 
         {/* Sous-titre + CTAs */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10 md:mb-20"
+        <div className="mb-10 md:mb-20"
              style={{borderTop:'1px solid rgba(0,0,0,0.07)', paddingTop:'2rem'}}>
-          <p style={{
-            color:'rgba(30,30,30,0.5)',
-            fontSize:'1rem',
-            fontWeight:300,
-            lineHeight:1.7,
-            maxWidth:'480px'
+
+          {/* Subtitle + CTA row */}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6"
+               style={{marginBottom:'1.5rem'}}>
+            <p style={{
+              color:'rgba(30,30,30,0.5)',
+              fontSize:'1rem',
+              fontWeight:300,
+              lineHeight:1.7,
+              maxWidth:'480px'
+            }}>
+              Conseil en pilotage de la performance, data et IA pour les directions financières.
+              Du diagnostic à l&apos;outil opérationnel, déployé avec vos équipes —
+              premier résultat en 2–3 jours.
+            </p>
+            <div style={{display:'flex', flexDirection:'column', gap:'0.75rem', flexShrink:0, alignItems:'flex-start'}}>
+              <div style={{display:'flex', gap:'0.75rem', flexWrap:'wrap'}}>
+                <a href="/diagnostic"
+                   style={{
+                     padding:'0.875rem 2rem',
+                     borderRadius:'2rem',
+                     background:'linear-gradient(135deg, #1a9e5c, #157a47)',
+                     color:'#fff',
+                     fontWeight:600,
+                     fontSize:'0.85rem',
+                     boxShadow:'0 4px 20px rgba(26,158,92,0.3)',
+                     textDecoration:'none',
+                     whiteSpace:'nowrap',
+                   }}>
+                  Mon diagnostic gratuit →
+                </a>
+                <a href="/demo"
+                   style={{
+                     padding:'0.875rem 2rem',
+                     borderRadius:'2rem',
+                     border:'1px solid rgba(26,158,92,0.35)',
+                     color:'#1a9e5c',
+                     fontWeight:600,
+                     fontSize:'0.85rem',
+                     textDecoration:'none',
+                     whiteSpace:'nowrap',
+                     background:'rgba(26,158,92,0.05)',
+                   }}>
+                  Voir la démo live →
+                </a>
+              </div>
+              <a href="#offres"
+                 style={{
+                   fontSize:'0.8rem',
+                   color:'rgba(30,30,30,0.4)',
+                   textDecoration:'none',
+                   paddingLeft:'0.25rem',
+                 }}>
+                Mes offres ↓
+              </a>
+            </div>
+          </div>
+
+          {/* Fondateur — juste sous les CTAs */}
+          <div style={{
+            display:'flex', alignItems:'center', gap:'0.875rem',
+            padding:'0.875rem 1.125rem',
+            background:'rgba(0,0,0,0.025)',
+            border:'1px solid rgba(0,0,0,0.07)',
+            borderRadius:'0.875rem',
           }}>
-            Nous intervenons quand les données existent mais ne décident
-            pas encore. Du diagnostic à l&apos;outil opérationnel,
-            avec vos équipes.
-          </p>
-          <div className="flex gap-4 shrink-0">
-            <a href="/diagnostic"
-               style={{
-                 padding:'0.875rem 2rem',
-                 borderRadius:'2rem',
-                 background:'linear-gradient(135deg, #1a9e5c, #157a47)',
-                 color:'#fff',
-                 fontWeight:600,
-                 fontSize:'0.85rem',
-                 boxShadow:'0 4px 20px rgba(26,158,92,0.3)',
-                 textDecoration:'none',
-                 whiteSpace:'nowrap',
-               }}>
-              Mon diagnostic gratuit →
-            </a>
-            <a href="#offres"
-               style={{
-                 padding:'0.875rem 2rem',
-                 borderRadius:'2rem',
-                 border:'1px solid rgba(0,0,0,0.12)',
-                 color:'#3a3a3a',
-                 fontWeight:500,
-                 fontSize:'0.85rem',
-                 textDecoration:'none',
-                 whiteSpace:'nowrap',
-                 background:'rgba(0,0,0,0.03)',
-                 backdropFilter:'blur(8px)'
-               }}>
-              Nos offres
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/william.jpg"
+              alt="William Saint-Dizier"
+              style={{width:'42px', height:'42px', borderRadius:'50%', objectFit:'cover', objectPosition:'center top', flexShrink:0, border:'2px solid rgba(26,158,92,0.25)'}}
+            />
+            <div style={{lineHeight:1.4, minWidth:0}}>
+              <p style={{fontSize:'0.8rem', fontWeight:600, color:'#0f0f0f', margin:'0 0 0.15rem'}}>
+                William Saint-Dizier — Fondateur
+              </p>
+              <p style={{fontSize:'0.67rem', color:'rgba(30,30,30,0.42)', margin:0, lineHeight:1.5}}>
+                Ex-Moët Hennessy (LVMH), Value Management Data &amp; IA
+                &nbsp;·&nbsp;Certifié Power BI PL-300 &amp; Azure DP-100
+                &nbsp;·&nbsp;Master Data Analytics, Paris&nbsp;1 Panthéon-Sorbonne
+              </p>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/william-saint-dizier/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{marginLeft:'auto', fontSize:'0.7rem', color:'#1a9e5c', textDecoration:'none', flexShrink:0, whiteSpace:'nowrap'}}
+            >
+              → LinkedIn
             </a>
           </div>
         </div>
@@ -146,7 +195,7 @@ export default function Hero() {
         {/* 3 piliers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
-            {label:'Interlocuteur senior direct', desc:"Celui qui propose est celui qui exécute — pas d'intermédiaire.", color:'#1a9e5c'},
+            {label:'Un seul interlocuteur, de bout en bout', desc:"Celui qui propose est celui qui exécute — pas d'intermédiaire.", color:'#1a9e5c'},
             {label:'Finance × Data × IA', desc:"Trois expertises dans la même conversation, sans silos.", color:'#4f46e5'},
             {label:'Livrables en semaines', desc:"Premier résultat en 2–3 jours. Mission complète en 6–12 semaines.", color:'#d97706'},
           ].map((p) => (

@@ -57,7 +57,7 @@ export default function Platforms() {
             fontSize: "0.65rem", letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: "rgba(30,30,30,0.35)", marginBottom: "1rem",
-          }}>Nos offres</p>
+          }}>Mes offres</p>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(2rem,4vw,3rem)",

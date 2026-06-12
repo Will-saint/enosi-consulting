@@ -4,14 +4,8 @@ export default function Partners() {
     {name:"Python", cat:"Data & IA"},
     {name:"SQL", cat:"Data"},
     {name:"Azure", cat:"Cloud"},
-    {name:"Databricks", cat:"Platform"},
-    {name:"dbt", cat:"Transform"},
-    {name:"OpenAI", cat:"IA"},
-    {name:"Spark", cat:"Big Data"},
     {name:"Excel / VBA", cat:"Finance"},
-    {name:"SAP", cat:"ERP"},
-    {name:"Snowflake", cat:"Warehouse"},
-    {name:"Tableau", cat:"Viz"},
+    {name:"OpenAI", cat:"IA"},
   ];
 
   return (

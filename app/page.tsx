@@ -41,7 +41,7 @@ const faqSchema = {
       "name": "Quel ROI peut-on attendre ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sur les missions de pilotage et reporting, nos clients récupèrent en moyenne 25 % du temps de production dès les 3 premiers mois. Sur les cas d'usage IA, le premier modèle en production est opérationnel en 6 à 10 semaines."
+        "text": "Sur les missions de pilotage et reporting, mes clients récupèrent en moyenne 25 % du temps de production dès les 3 premiers mois. Sur les cas d'usage IA, le premier modèle en production est opérationnel en 6 à 10 semaines."
       }
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       "name": "Comment se déroule concrètement une mission ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On commence par comprendre vos décisions, pas vos données. Puis on analyse les flux, les outils, les contraintes réelles. On structure la solution dans vos systèmes existants, on déploie avec vos équipes et on transfère les compétences."
+        "text": "Je commence par comprendre vos décisions, pas vos données. Puis j'analyse les flux, les outils, les contraintes réelles. Je structure la solution dans vos systèmes existants, je déploie avec vos équipes et je transfère les compétences."
       }
     }
   ]

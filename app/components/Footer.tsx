@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const liens: Record<string, { label: string; href: string }[]> = {
-  "Nos offres": [
+  "Mes offres": [
     { label: "Pilotage de la performance", href: "/offres/pilotage" },
     { label: "Data & IA pour la décision", href: "/offres/data-ia" },
     { label: "Efficacité et création de valeur", href: "/offres/efficacite" },
@@ -12,10 +12,10 @@ const liens: Record<string, { label: string; href: string }[]> = {
     { label: "Direction financière", href: "/secteurs/direction-financiere" },
     { label: "Direction transformation", href: "/secteurs/direction-transformation" },
   ],
-  "Notre approche": [
-    { label: "Comment nous intervenons", href: "/#methode" },
-    { label: "Ce qui nous distingue", href: "/#methode" },
-    { label: "Notre méthode", href: "/#methode" },
+  "Mon approche": [
+    { label: "Comment j'interviens", href: "/#methode" },
+    { label: "Ce qui me distingue", href: "/#methode" },
+    { label: "Ma méthode", href: "/#methode" },
   ],
   "Interventions": [
     { label: "Exemples de missions", href: "/portfolio" },
@@ -23,7 +23,7 @@ const liens: Record<string, { label: string; href: string }[]> = {
   ],
   "Cabinet": [
     { label: "À propos", href: "/a-propos" },
-    { label: "Notre positionnement", href: "/a-propos" },
+    { label: "Mon positionnement", href: "/a-propos" },
     { label: "Contact", href: "/contact" },
   ],
 };
@@ -53,7 +53,7 @@ export default function Footer() {
               className="inline-block px-4 py-2 text-xs font-semibold text-white rounded-full transition-colors"
               style={{background:'linear-gradient(135deg,#1a9e5c,#157a47)'}}
             >
-              Nous contacter
+              Me contacter
             </a>
             <a
               href="https://www.linkedin.com/in/williamsaintdizier"
