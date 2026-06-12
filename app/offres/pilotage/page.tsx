@@ -62,7 +62,7 @@ const etapes = [
   {
     n: "1",
     titre: "Comprendre avant de construire",
-    texte: "Nous ne commençons pas par les outils. Nous commençons par comprendre quelles décisions le pilotage doit permettre, et dans quel contexte organisationnel elles se prennent.",
+    texte: "Je ne commence pas par les outils. Je commence par comprendre quelles décisions le pilotage doit permettre, et dans quel contexte organisationnel elles se prennent.",
   },
   {
     n: "2",
@@ -72,7 +72,7 @@ const etapes = [
   {
     n: "3",
     titre: "Transférer la maîtrise",
-    texte: "L'objectif final est que les équipes puissent faire évoluer le dispositif elles-mêmes. Nous documentons, formons, et rendons autonome.",
+    texte: "L'objectif final est que les équipes puissent faire évoluer le dispositif elles-mêmes. Je documente, je forme, et je rends autonome.",
   },
 ];
 
@@ -113,7 +113,7 @@ export default function PagePilotage() {
               Rendre la performance lisible, fiable et utile.
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              Nous aidons les directions à construire un pilotage qui sert vraiment à décider, pas à constater.
+              J&apos;aide les directions à construire un pilotage qui sert vraiment à décider, pas à constater.
             </p>
           </div>
 
@@ -139,9 +139,9 @@ export default function PagePilotage() {
 
           {/* Ce que nous faisons */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Nos interventions</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Mes interventions</p>
             <h2 className="text-3xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Ce que nous faisons concrètement
+              Ce que je fais concrètement
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {interventions.map((item) => (
@@ -156,7 +156,7 @@ export default function PagePilotage() {
 
           {/* Notre approche */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Notre méthode sur ce sujet</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Ma méthode sur ce sujet</p>
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               On part de la décision. Pas de la donnée.
             </h2>
@@ -179,7 +179,7 @@ export default function PagePilotage() {
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Les résultats typiques</p>
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Ce que nos clients obtiennent
+              Ce que mes clients obtiennent
             </h2>
             <div className="grid grid-cols-2 gap-4">
               {resultats.map((r) => (
@@ -227,7 +227,7 @@ export default function PagePilotage() {
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               Ce sujet vous concerne&nbsp;?
             </h2>
-            <p className="text-[rgba(30,30,30,0.5)] text-sm mb-7">Un premier échange de 30 minutes pour évaluer comment nous pouvons intervenir.</p>
+            <p className="text-[rgba(30,30,30,0.5)] text-sm mb-7">Un premier échange de 30 minutes pour évaluer comment je peux intervenir.</p>
             <a href="/contact" className="inline-block px-10 py-3.5 bg-[#1a9e5c] text-black font-semibold rounded-full hover:bg-[#157a47] transition-colors text-sm">
               Échangeons sur vos enjeux
             </a>

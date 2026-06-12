@@ -96,7 +96,7 @@ export default function APropos() {
               </p>
               <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
                 Enosi Consulting a été fondé pour combler cet écart.
-                Nous intervenons à l&apos;intersection de la finance,
+                J&apos;interviens à l&apos;intersection de la finance,
                 de la performance, de la data et de l&apos;IA.
                 Pas pour faire de la technologie, mais pour aider
                 les directions à mieux décider, plus vite,
@@ -111,7 +111,7 @@ export default function APropos() {
 
           {/* ── Section 2 : Ce qu'on fait vraiment ─── */}
           <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Notre positionnement</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Mon positionnement</p>
             <h2
               className="text-3xl font-bold text-[#0f0f0f] mb-4"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -119,7 +119,7 @@ export default function APropos() {
               Le lien entre vos données, votre performance et vos décisions.
             </h2>
             <p className="text-[rgba(30,30,30,0.55)] mb-8 leading-relaxed">
-              Nous intervenons là où peu de profils savent opérer :
+              J&apos;interviens là où peu de profils savent opérer :
               à l&apos;intersection de la logique financière,
               de la maîtrise de la data et de l&apos;application concrète de l&apos;IA.
             </p>
@@ -131,21 +131,21 @@ export default function APropos() {
                   couleur: "#1a9e5c",
                   titre: "Finance & Performance",
                   texte:
-                    "Lecture de la performance, logique business, rentabilité, KPIs, vision management. Nous comprenons ce que les directions financières et de performance cherchent à piloter.",
+                    "Lecture de la performance, logique business, rentabilité, KPIs, vision management. Je comprends ce que les directions financières et de performance cherchent à piloter.",
                 },
                 {
                   icone: "◈",
                   couleur: "#6366f1",
                   titre: "Data & Automatisation",
                   texte:
-                    "Analyse, structuration, dashboards, automatisation. Nous transformons les données disponibles en dispositifs utiles et adoptés.",
+                    "Analyse, structuration, dashboards, automatisation. Je transforme les données disponibles en dispositifs utiles et adoptés.",
                 },
                 {
                   icone: "◉",
                   couleur: "#f59e0b",
                   titre: "IA appliquée",
                   texte:
-                    "Prédiction, détection d'anomalies, aide à la décision. Nous déployons l'IA là où elle crée une valeur mesurable, pas là où elle impressionne.",
+                    "Prédiction, détection d'anomalies, aide à la décision. Je déploie l'IA là où elle crée une valeur mesurable, pas là où elle impressionne.",
                 },
               ].map((c) => (
                 <div
@@ -164,7 +164,7 @@ export default function APropos() {
 
           {/* ── Section 3 : Notre contexte ──────────── */}
           <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Notre ancrage</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Mon ancrage</p>
             <h2
               className="text-3xl font-bold text-[#0f0f0f] mb-7"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -174,12 +174,12 @@ export default function APropos() {
 
             <div className="space-y-5">
               <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
-                Notre expérience s&apos;est construite dans des organisations
+                Mon expérience s&apos;est construite dans des organisations
                 où la data, la finance, le business et l&apos;IT
                 coexistent et doivent se parler.
               </p>
               <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
-                Nous avons vu de l&apos;intérieur comment les problèmes
+                J&apos;ai vu de l&apos;intérieur comment les problèmes
                 de pilotage se posent vraiment : la complexité
                 organisationnelle, les contraintes système,
                 les dynamiques entre directions, la distance
@@ -188,14 +188,14 @@ export default function APropos() {
               </p>
               <p className="text-[rgba(30,30,30,0.55)] leading-relaxed">
                 C&apos;est cette expérience terrain qui structure
-                notre façon d&apos;intervenir.
+                ma façon d&apos;intervenir.
               </p>
             </div>
           </section>
 
           {/* ── Section 4 : Notre approche ──────────── */}
           <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Comment nous travaillons</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Comment je travaille</p>
             <h2
               className="text-3xl font-bold text-[#0f0f0f] mb-8"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -215,7 +215,7 @@ export default function APropos() {
                   n: "02",
                   titre: "On outille, on ne recommande pas",
                   texte:
-                    "Nous ne livrons pas des rapports. Nous construisons des dispositifs que les équipes utilisent après notre départ. L'autonomie du client est l'objectif.",
+                    "Je ne livre pas des rapports. Je construis des dispositifs que les équipes utilisent après mon départ. L'autonomie du client est l'objectif.",
                 },
                 {
                   n: "03",
@@ -253,7 +253,7 @@ export default function APropos() {
               className="text-2xl font-bold mb-8"
               style={{ fontFamily: "'Playfair Display', Georgia, serif", color: "#ffffff" }}
             >
-              Ce que nous ne sommes pas
+              Ce que je ne suis pas
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -409,7 +409,7 @@ export default function APropos() {
             </h2>
             <p className="text-[rgba(30,30,30,0.5)] max-w-sm mx-auto text-sm leading-relaxed mb-8">
               Un premier échange de 30 minutes,
-              sans engagement, pour voir si nous pouvons
+              sans engagement, pour voir si je peux
               vous aider.
             </p>
             <a

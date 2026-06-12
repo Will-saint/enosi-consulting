@@ -67,7 +67,7 @@ export default function BlogPage() {
               Points de vue sur la data,<br />l&apos;IA et la performance.
             </h1>
             <p style={{ color: "rgba(30,30,30,0.5)", fontSize: "1rem", maxWidth: "480px", lineHeight: 1.7 }}>
-              Articles de fond sur ce que nous observons sur le terrain — sans
+              Articles de fond sur ce que j&apos;observe sur le terrain — sans
               jargon, avec des cas concrets.
             </p>
           </div>

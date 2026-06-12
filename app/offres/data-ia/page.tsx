@@ -54,7 +54,7 @@ const interventions = [
   {
     n: "06",
     titre: "Intégration et transfert",
-    texte: "Le modèle déployé s'intègre dans le workflow existant. Les équipes comprennent comment il fonctionne et peuvent l'interpréter. Nous ne livrons pas des boîtes noires.",
+    texte: "Le modèle déployé s'intègre dans le workflow existant. Les équipes comprennent comment il fonctionne et peuvent l'interpréter. Je ne livre pas des boîtes noires.",
   },
 ];
 
@@ -62,12 +62,12 @@ const etapes = [
   {
     n: "1",
     titre: "Commencer par la valeur business",
-    texte: "Nous ne partons jamais d'un algorithme. Nous partons d'un problème de décision réel, et nous choisissons l'approche technique la plus simple qui le résout.",
+    texte: "Je ne pars jamais d'un algorithme. Je pars d'un problème de décision réel, et je choisis l'approche technique la plus simple qui le résout.",
   },
   {
     n: "2",
     titre: "Privilégier l'interprétabilité",
-    texte: "Un modèle que les équipes ne comprennent pas ne sera pas utilisé. Nous sacrifions parfois quelques points de performance pour gagner en clarté et en adoption.",
+    texte: "Un modèle que les équipes ne comprennent pas ne sera pas utilisé. Je sacrifie parfois quelques points de performance pour gagner en clarté et en adoption.",
   },
   {
     n: "3",
@@ -113,7 +113,7 @@ export default function PageDataIA() {
               Transformer vos données en décisions concrètes.
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              Nous aidons les directions à identifier les cas d&apos;usage à forte valeur, et à les déployer, pas à les lister.
+              J&apos;aide les directions à identifier les cas d&apos;usage à forte valeur, et à les déployer, pas à les lister.
             </p>
           </div>
 
@@ -139,9 +139,9 @@ export default function PageDataIA() {
 
           {/* Ce que nous faisons */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Nos interventions</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Mes interventions</p>
             <h2 className="text-3xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Ce que nous faisons concrètement
+              Ce que je fais concrètement
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {interventions.map((item) => (
@@ -156,7 +156,7 @@ export default function PageDataIA() {
 
           {/* Notre approche */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Notre méthode sur ce sujet</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Ma méthode sur ce sujet</p>
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               L&apos;IA utile, c&apos;est celle qu&apos;on utilise.
             </h2>
@@ -179,7 +179,7 @@ export default function PageDataIA() {
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Les résultats typiques</p>
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Ce que nos clients obtiennent
+              Ce que mes clients obtiennent
             </h2>
             <div className="grid grid-cols-2 gap-4">
               {resultats.map((r) => (
@@ -227,7 +227,7 @@ export default function PageDataIA() {
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               Ce sujet vous concerne&nbsp;?
             </h2>
-            <p className="text-[rgba(30,30,30,0.5)] text-sm mb-7">Un premier échange de 30 minutes pour évaluer comment nous pouvons intervenir.</p>
+            <p className="text-[rgba(30,30,30,0.5)] text-sm mb-7">Un premier échange de 30 minutes pour évaluer comment je peux intervenir.</p>
             <a href="/contact" className="inline-block px-10 py-3.5 bg-[#1a9e5c] text-black font-semibold rounded-full hover:bg-[#157a47] transition-colors text-sm">
               Échangeons sur vos enjeux
             </a>

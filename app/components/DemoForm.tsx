@@ -33,7 +33,7 @@ export default function DemoForm() {
               <span className="text-[#3ddc84]">priorités.</span>
             </h2>
             <p className="text-gray-400 mb-10 leading-relaxed text-sm">
-              Un échange de 30 minutes suffit pour savoir si nous pouvons
+              Un échange de 30 minutes suffit pour savoir si je peux
               vous aider. Pas de présentation commerciale. Pas de réponse
               générique. Une conversation sur vos enjeux réels.
             </p>
@@ -42,15 +42,15 @@ export default function DemoForm() {
               {[
                 {
                   titre: "Vous avez un sujet précis",
-                  desc: "Décrivez-le brièvement dans le formulaire. Nous revenons vers vous sous 48h avec un premier point de vue.",
+                  desc: "Décrivez-le brièvement dans le formulaire. Je reviens vers vous sous 48h avec un premier point de vue.",
                 },
                 {
                   titre: "Vous cherchez à structurer votre approche",
-                  desc: "Nous pouvons vous aider à cadrer le problème avant de parler de solution.",
+                  desc: "Je peux vous aider à cadrer le problème avant de parler de solution.",
                 },
                 {
                   titre: "Vous évaluez plusieurs options",
-                  desc: "Un échange préliminaire sans engagement vous permettra de nous positionner clairement.",
+                  desc: "Un échange préliminaire sans engagement vous permettra de me positionner clairement.",
                 },
               ].map((item) => (
                 <div key={item.titre} className="flex gap-4">
@@ -71,7 +71,7 @@ export default function DemoForm() {
                 <div className="text-3xl mb-5 text-[#3ddc84]">◎</div>
                 <h3 className="text-xl font-bold text-white mb-3">Message reçu.</h3>
                 <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
-                  Nous reviendrons vers vous sous 48h pour organiser un
+                  Je reviendrai vers vous sous 48h pour organiser un
                   premier échange sur vos enjeux.
                 </p>
               </div>

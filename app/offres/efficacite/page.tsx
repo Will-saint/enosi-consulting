@@ -62,12 +62,12 @@ const etapes = [
   {
     n: "1",
     titre: "Diagnostiquer avant de prescrire",
-    texte: "Nous ne proposons pas de solution avant d'avoir compris le problème réel. La plupart des inefficacités ont une cause cachée que seul un diagnostic honnête révèle.",
+    texte: "Je ne propose pas de solution avant d'avoir compris le problème réel. La plupart des inefficacités ont une cause cachée que seul un diagnostic honnête révèle.",
   },
   {
     n: "2",
     titre: "Travailler avec les équipes, pas sur elles",
-    texte: "Les personnes qui vivent les frictions au quotidien savent où elles sont. Nous les faisons parler, nous structurons, nous priorisons ensemble.",
+    texte: "Les personnes qui vivent les frictions au quotidien savent où elles sont. Je les fais parler, je structure, je priorise avec elles.",
   },
   {
     n: "3",
@@ -139,9 +139,9 @@ export default function PageEfficacite() {
 
           {/* Ce que nous faisons */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Nos interventions</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Mes interventions</p>
             <h2 className="text-3xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Ce que nous faisons concrètement
+              Ce que je fais concrètement
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {interventions.map((item) => (
@@ -179,7 +179,7 @@ export default function PageEfficacite() {
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Les résultats typiques</p>
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Ce que nos clients obtiennent
+              Ce que mes clients obtiennent
             </h2>
             <div className="grid grid-cols-2 gap-4">
               {resultats.map((r) => (
@@ -227,7 +227,7 @@ export default function PageEfficacite() {
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               Ce sujet vous concerne&nbsp;?
             </h2>
-            <p className="text-[rgba(30,30,30,0.5)] text-sm mb-7">Un premier échange de 30 minutes pour évaluer comment nous pouvons intervenir.</p>
+            <p className="text-[rgba(30,30,30,0.5)] text-sm mb-7">Un premier échange de 30 minutes pour évaluer comment je peux intervenir.</p>
             <a href="/contact" className="inline-block px-10 py-3.5 bg-[#1a9e5c] text-black font-semibold rounded-full hover:bg-[#157a47] transition-colors text-sm">
               Échangeons sur vos enjeux
             </a>

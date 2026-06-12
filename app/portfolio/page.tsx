@@ -62,7 +62,7 @@ function ApprocheBanner() {
       }}
     >
       <p className="text-sm italic text-[rgba(30,30,30,0.55)] leading-relaxed">
-        &ldquo;Ce projet illustre notre approche : partir de la décision,
+        &ldquo;Ce projet illustre mon approche : partir de la décision,
         structurer la donnée, et créer un impact mesurable.&rdquo;
       </p>
     </div>
@@ -187,9 +187,9 @@ export default function Portfolio() {
               </p>
             </div>
 
-            {/* Ce que nous avons fait */}
+            {/* Ce que j&apos;ai fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que nous avons fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que j&apos;ai fait</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -359,9 +359,9 @@ export default function Portfolio() {
               </p>
             </div>
 
-            {/* Ce que nous avons fait */}
+            {/* Ce que j&apos;ai fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que nous avons fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que j&apos;ai fait</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -395,7 +395,7 @@ export default function Portfolio() {
                   {
                     n: "5",
                     titre: "Choix assumé : interprétabilité avant performance brute",
-                    desc: "Nous avons sacrifié 4 points de performance au profit de l'interprétabilité : un modèle à 91 % qu'on utilise vaut mieux qu'un modèle à 95 % qu'on ne comprend pas. C'est le choix qui a rendu l'adoption possible.",
+                    desc: "J'ai sacrifié 4 points de performance au profit de l'interprétabilité : un modèle à 91 % qu'on utilise vaut mieux qu'un modèle à 95 % qu'on ne comprend pas. C'est le choix qui a rendu l'adoption possible.",
                     color: "#6366f1",
                     italic: true,
                   },
@@ -567,9 +567,9 @@ export default function Portfolio() {
               </p>
             </div>
 
-            {/* Ce que nous avons fait */}
+            {/* Ce que j&apos;ai fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que nous avons fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que j&apos;ai fait</h3>
               <div className="space-y-4">
                 {[
                   {

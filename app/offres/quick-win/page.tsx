@@ -36,7 +36,7 @@ const livrables = [
   "Rapport d'audit structuré (15–20 pages)",
   "Cartographie des flux de données et des outils",
   "Plan d'action priorisé avec impact estimé",
-  "Prototype d'un dashboard amélioré (Power BI, Notion ou autre)",
+  "Prototype d'un dashboard amélioré (Power BI ou Excel, dans votre environnement existant)",
 ];
 
 const pourQui = [
@@ -85,7 +85,7 @@ export default function QuickWinPage() {
               Résultats concrets, livrables garantis, sans engagement de suite.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <a href="/contact" style={{
+              <a href="https://calendly.com/williamsaintdizier" target="_blank" rel="noopener noreferrer" style={{
                 padding: "0.9rem 2.5rem", borderRadius: "2rem",
                 background: "linear-gradient(135deg, #1a9e5c, #157a47)",
                 color: "#fff", fontWeight: 700, fontSize: "0.88rem",
@@ -114,9 +114,9 @@ export default function QuickWinPage() {
           }}>
             {[
               { label: "5 jours", desc: "calendaires" },
-              { label: "Prix fixe", desc: "devis sous 24h" },
+              { label: "2 900 € HT", desc: "Prix de lancement 2026" },
               { label: "4 livrables", desc: "garantis" },
-              { label: "Zéro risque", desc: "satisfaction J+2 ou remboursé" },
+              { label: "Zéro risque", desc: "résiliation sans frais à J+2" },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: "center", minWidth: "120px" }}>
                 <p style={{ fontSize: "1.1rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.2rem" }}>{item.label}</p>
@@ -249,8 +249,10 @@ export default function QuickWinPage() {
               color: "#0f0f0f", marginBottom: "1rem",
             }}>Zéro risque.</h2>
             <p style={{ fontSize: "0.95rem", color: "rgba(30,30,30,0.6)", lineHeight: 1.8 }}>
-              Si à la fin du jour 2 vous estimez que l&apos;intervention ne crée pas de valeur,
-              vous ne payez rien. Cette offre est conçue pour que vous ayez un retour
+              La fin du Jour 2 est un point d&apos;étape formel. Si vous estimez que
+              l&apos;intervention ne crée pas de valeur, vous pouvez y mettre fin
+              sans frais — la facturation intervient à la livraison des livrables J5,
+              pas à l&apos;avance. Cette offre est conçue pour que vous ayez un retour
               concret avant de décider de la suite.
             </p>
           </div>
@@ -270,7 +272,7 @@ export default function QuickWinPage() {
               marginBottom: "1rem",
             }}>Prêt à voir où vous en êtes ?</h2>
             <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.7, marginBottom: "2.5rem" }}>
-              Un devis sous 24h. Une date calée en moins d&apos;une semaine.
+              Réservez directement un créneau de 30 min. Une date calée en moins d&apos;une semaine.
             </p>
             <a href="/contact" style={{
               display: "inline-block",

@@ -14,7 +14,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL('https://enosi-consulting.vercel.app'),
   title: 'Enosi Consulting — Performance, Data & IA',
-  description: "Cabinet de conseil en performance et création de valeur. Nous aidons les directions à mieux piloter, exploiter leurs données et intégrer l'IA là où elle crée une valeur concrète.",
+  description: "Conseil en pilotage de la performance, data et IA pour les directions financières. J'aide les directions à mieux décider, exploiter leurs données et déployer l'IA là où elle crée une valeur concrète.",
   keywords: ['conseil performance', 'pilotage data', 'IA décisionnelle', 'consultant finance data', 'cabinet conseil ETI', 'reporting automatisation', 'cas usage IA finance'],
   authors: [{ name: 'William Saint-Dizier' }],
   creator: 'Enosi Consulting',
