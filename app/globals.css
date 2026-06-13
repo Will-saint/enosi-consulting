@@ -40,10 +40,10 @@ html { scroll-behavior: smooth; }
 /* Carrousel */
 @keyframes scrollX {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to   { transform: translateX(-20%); }
 }
 .animate-scroll {
-  animation: scrollX 35s linear infinite;
+  animation: scrollX 17.5s linear infinite;
   width: max-content;
   display: flex;
   gap: 1.5rem;

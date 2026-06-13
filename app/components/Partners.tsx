@@ -32,7 +32,7 @@ export default function Partners() {
           background:'linear-gradient(to left, #F2F0EC, transparent)'
         }}/>
         <div className="animate-scroll">
-          {[...items, ...items].map((item, i) => (
+          {[...items, ...items, ...items, ...items, ...items].map((item, i) => (
             <div key={i} style={{
               flexShrink:0,
               padding:'0.6rem 1.5rem',
