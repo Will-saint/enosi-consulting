@@ -10,7 +10,7 @@ type NavItem =
 const navItems: NavItem[] = [
   {
     label: "Mes offres",
-    anchor: "#offres",
+    anchor: "/#offres",
     sub: [
       { label: "Pilotage de la performance", href: "/offres/pilotage" },
       { label: "Data & IA pour la décision", href: "/offres/data-ia" },

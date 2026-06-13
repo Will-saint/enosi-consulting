@@ -1,12 +1,18 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CustomCursor() {
   const dot = useRef<HTMLDivElement>(null);
   const ring = useRef<HTMLDivElement>(null);
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    setEnabled(window.matchMedia("(pointer: fine)").matches);
+  }, []);
 
   useEffect(()=>{
-    let mx=0, my=0, rx=0, ry=0;
+    if (!enabled) return;
+    let mx=0, my=0, rx=0, ry=0, frame=0;
     const move = (e:MouseEvent) => {
       mx=e.clientX; my=e.clientY;
       if(dot.current){
@@ -20,12 +26,17 @@ export default function CustomCursor() {
         ring.current.style.left=rx+"px";
         ring.current.style.top=ry+"px";
       }
-      requestAnimationFrame(animate);
+      frame=requestAnimationFrame(animate);
     };
     window.addEventListener("mousemove",move);
-    animate();
-    return ()=>window.removeEventListener("mousemove",move);
-  },[]);
+    frame=requestAnimationFrame(animate);
+    return ()=>{
+      window.removeEventListener("mousemove",move);
+      cancelAnimationFrame(frame);
+    };
+  },[enabled]);
+
+  if (!enabled) return null;
 
   return (
     <>
