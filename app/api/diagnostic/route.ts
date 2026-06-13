@@ -9,6 +9,11 @@ function escapeHtml(s: string): string {
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
+function encodeId(scores: number[]): string {
+  const str = scores.join("");
+  return btoa(str).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
+}
+
 const LEVELS = [
   { label: "Latent",    min: 0,  max: 9  },
   { label: "Émergent",  min: 10, max: 19 },
@@ -31,9 +36,11 @@ export async function POST(req: Request) {
   const email  = typeof body.email === "string" ? body.email.trim() : "";
   const prenom = typeof body.prenom === "string" ? body.prenom.trim() : "";
   const entreprise = typeof body.entreprise === "string" ? body.entreprise.trim() : "";
-  const id     = typeof body.id === "string" ? body.id : "";
 
-  if (!Array.isArray(scores) || scores.length !== 12) {
+  if (
+    !Array.isArray(scores) || scores.length !== 12 ||
+    !scores.every((s) => Number.isInteger(s) && s >= 0 && s <= 4)
+  ) {
     return NextResponse.json({ error: "Invalid scores" }, { status: 400 });
   }
   if (!email || !EMAIL_RE.test(email)) {
@@ -41,6 +48,7 @@ export async function POST(req: Request) {
   }
 
   const nums = scores as number[];
+  const id = encodeId(nums);
   const total = nums.reduce((a, b) => a + b, 0);
   const axisScores = [
     nums[0] + nums[1] + nums[2],
