@@ -40,7 +40,7 @@ export default function Testimonials() {
             fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(2rem,4vw,3rem)",
             fontWeight: 700, color: "#0f0f0f", lineHeight: 1.1,
-          }}>Pas notre parole.<br />La leur.</h2>
+          }}>Pas ma parole.<br />La leur.</h2>
         </div>
 
         <div style={{

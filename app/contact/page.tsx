@@ -49,17 +49,17 @@ export default function PageContact() {
                   {
                     n: "01",
                     titre: "Vous avez un sujet précis",
-                    texte: "Décrivez-le brièvement dans le formulaire. Nous revenons vers vous sous 48h avec un premier point de vue structuré.",
+                    texte: "Décrivez-le brièvement dans le formulaire. Je reviens vers vous sous 48h avec un premier point de vue structuré.",
                   },
                   {
                     n: "02",
                     titre: "Vous cherchez à cadrer un problème",
-                    texte: "Avant de parler solution, nous pouvons vous aider à poser le bon diagnostic. C'est souvent là que ça commence.",
+                    texte: "Avant de parler solution, je peux vous aider à poser le bon diagnostic. C'est souvent là que ça commence.",
                   },
                   {
                     n: "03",
                     titre: "Vous évaluez plusieurs options",
-                    texte: "Un échange préliminaire sans engagement vous permettra de nous positionner clairement par rapport à vos besoins.",
+                    texte: "Un échange préliminaire sans engagement vous permettra de me positionner clairement par rapport à vos besoins.",
                   },
                 ].map((b, i, arr) => (
                   <div

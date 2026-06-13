@@ -215,7 +215,7 @@ export default async function ArticlePage({
                   fontSize: "0.82rem", textDecoration: "none",
                 }}
               >
-                Nous contacter
+                Me contacter
               </a>
             </div>
           </div>

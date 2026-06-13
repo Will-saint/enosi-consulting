@@ -113,7 +113,7 @@ export default function PageEfficacite() {
               Améliorer l&apos;exécution. Réduire les frictions. Piloter ce qui compte.
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              Nous intervenons sur les processus qui ralentissent l&apos;organisation et sur les mécanismes qui empêchent de créer de la valeur.
+              J&apos;interviens sur les processus qui ralentissent l&apos;organisation et sur les mécanismes qui empêchent de créer de la valeur.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export default function PageEfficacite() {
 
           {/* Notre approche */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Notre méthode sur ce sujet</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Ma méthode sur ce sujet</p>
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               Le problème n&apos;est presque jamais l&apos;outil.
             </h2>

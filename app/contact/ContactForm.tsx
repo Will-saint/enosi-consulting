@@ -35,7 +35,7 @@ export default function ContactForm() {
       });
       const data = await res.json() as { success?: boolean; error?: string };
       if (!res.ok || !data.success) {
-        setError("Une erreur est survenue, veuillez réessayer ou nous écrire directement.");
+        setError("Une erreur est survenue, veuillez réessayer ou m'écrire directement.");
       } else {
         setSubmitted(true);
       }
@@ -53,7 +53,7 @@ export default function ContactForm() {
           <div className="text-3xl mb-5 text-[#1a9e5c]">◎</div>
           <h3 className="text-xl font-bold text-[#0f0f0f] mb-3">Message envoyé.</h3>
           <p className="text-[rgba(30,30,30,0.55)] text-sm leading-relaxed max-w-xs mx-auto">
-            Votre message a bien été envoyé. Nous vous répondons sous 48h ouvrées.
+            Votre message a bien été envoyé. Je vous réponds sous 48h ouvrées.
           </p>
         </div>
       ) : (

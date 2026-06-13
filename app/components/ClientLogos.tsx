@@ -35,7 +35,7 @@ export default function ClientLogos() {
             fontSize: '0.6rem', letterSpacing: '0.2em', textTransform: 'uppercase',
             color: 'rgba(30,30,30,0.28)', whiteSpace: 'nowrap',
           }}>
-            Ils nous font confiance
+            Ils me font confiance
           </span>
           <div style={{ width: '1px', height: '24px', background: 'rgba(0,0,0,0.08)' }} />
           {clients.map((c) => (

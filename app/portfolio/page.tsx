@@ -115,7 +115,7 @@ export default function Portfolio() {
           {/* ══════════════════════════════════════
               CAS 1 — PILOTAGE DE LA PERFORMANCE
           ══════════════════════════════════════ */}
-          <article className="mb-20 pb-20 border-b border-[rgba(0,0,0,0.08)]">
+          <article id="cas-1" className="mb-20 pb-20 border-b border-[rgba(0,0,0,0.08)] scroll-mt-24">
 
             {/* Badge + titre */}
             <div className="flex items-center gap-3 mb-4">
@@ -287,7 +287,7 @@ export default function Portfolio() {
           {/* ══════════════════════════════════════
               CAS 2 — DATA & IA DÉCISIONNELLE
           ══════════════════════════════════════ */}
-          <article className="mb-20 pb-20 border-b border-[rgba(0,0,0,0.08)]">
+          <article id="cas-2" className="mb-20 pb-20 border-b border-[rgba(0,0,0,0.08)] scroll-mt-24">
 
             {/* Badge + titre */}
             <div className="flex items-center gap-3 mb-4">
@@ -489,7 +489,7 @@ export default function Portfolio() {
           {/* ══════════════════════════════════════
               CAS 3 — EFFICACITÉ / CYCLE BUDGÉTAIRE
           ══════════════════════════════════════ */}
-          <article className="mb-8">
+          <article id="cas-3" className="mb-8 scroll-mt-24">
 
             {/* Badge + titre */}
             <div className="flex items-center gap-3 mb-4">

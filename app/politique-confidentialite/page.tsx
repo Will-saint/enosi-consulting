@@ -163,14 +163,14 @@ export default function PolitiqueConfidentialite() {
                 ))}
               </ul>
               <p className="text-sm text-[rgba(30,30,30,0.55)] leading-relaxed">
-                Pour exercer ces droits, contactez-nous à{" "}
+                Pour exercer ces droits, contactez-moi à{" "}
                 <a
                   href="mailto:contact@enosi-consulting.fr"
                   className="text-[#1a9e5c] hover:underline"
                 >
                   contact@enosi-consulting.fr
                 </a>
-                . Nous répondrons dans un délai de 30 jours. En cas de litige non résolu, vous pouvez saisir la{" "}
+                . Je répondrai dans un délai de 30 jours. En cas de litige non résolu, vous pouvez saisir la{" "}
                 <span className="text-[#3a3a3a]">CNIL (cnil.fr)</span>.
               </p>
             </section>

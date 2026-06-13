@@ -97,7 +97,7 @@ export default function MentionsLegales() {
                 Données personnelles
               </h2>
               <p className="text-sm text-[rgba(30,30,30,0.55)] leading-relaxed">
-                Le traitement des données personnelles collectées via le formulaire de contact est décrit dans notre{" "}
+                Le traitement des données personnelles collectées via le formulaire de contact est décrit dans ma{" "}
                 <a href="/politique-confidentialite" className="text-[#1a9e5c] hover:underline">
                   politique de confidentialité
                 </a>.
