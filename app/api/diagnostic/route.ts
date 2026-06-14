@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 15 * 60 * 1_000;
+
+const checkRateLimit = createRateLimiter(RATE_LIMIT, RATE_WINDOW_MS);
 
 function escapeHtml(s: string): string {
   return s
@@ -25,6 +30,11 @@ const LEVELS = [
 const AXIS_LABELS = ["Données", "Pilotage", "IA", "Culture"];
 
 export async function POST(req: Request) {
+  const ip = getClientIp(req);
+  if (!checkRateLimit(ip)) {
+    return NextResponse.json({ error: "Trop de requêtes, veuillez réessayer dans 15 minutes." }, { status: 429 });
+  }
+
   let body: Record<string, unknown>;
   try {
     body = await req.json() as Record<string, unknown>;

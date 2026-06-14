@@ -1,25 +1,13 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MIN_FILL_MS = 3_000;
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 15 * 60 * 1_000;
 
-// Persists within the same serverless instance — catches most simple spam bursts.
-const rateLimitStore = new Map<string, { count: number; resetAt: number }>();
-
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now();
-  const record = rateLimitStore.get(ip);
-  if (!record || now > record.resetAt) {
-    rateLimitStore.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
-    return true;
-  }
-  if (record.count >= RATE_LIMIT) return false;
-  record.count++;
-  return true;
-}
+const checkRateLimit = createRateLimiter(RATE_LIMIT, RATE_WINDOW_MS);
 
 function escapeHtml(str: string): string {
   return str
@@ -30,8 +18,7 @@ function escapeHtml(str: string): string {
 }
 
 export async function POST(req: Request) {
-  const forwarded = req.headers.get("x-forwarded-for");
-  const ip = forwarded ? forwarded.split(",")[0].trim() : "unknown";
+  const ip = getClientIp(req);
   if (!checkRateLimit(ip)) {
     return NextResponse.json({ error: "Trop de requêtes, veuillez réessayer dans 15 minutes." }, { status: 429 });
   }
