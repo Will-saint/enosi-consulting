@@ -11,25 +11,13 @@ export const seoConfig = {
     title: "À propos — Cabinet conseil finance, data et IA | Enosi Consulting",
     description: "Enosi Consulting : cabinet à l'intersection de la finance, de la data et de l'IA. Fondé par William Saint-Dizier, consultant en performance et création de valeur."
   },
-  offrePilotage: {
-    title: "Pilotage de la performance — Conseil KPI et reporting | Enosi Consulting",
-    description: "Structurer les indicateurs, fiabiliser le reporting, construire un dispositif de pilotage décisionnel. Pour directions financières et performance."
-  },
   offresPilotage: {
     title: "Pilotage de la performance — Conseil KPI et reporting | Enosi Consulting",
     description: "Structurer les indicateurs, fiabiliser le reporting, construire un dispositif de pilotage décisionnel. Pour directions financières et performance."
   },
-  offreeDataIA: {
-    title: "Data & IA pour la décision — Conseil cas usage IA | Enosi Consulting",
-    description: "Transformer les données en décisions concrètes. Automatisation reporting, prévision, détection anomalies, déploiement cas usage IA en 6 à 10 semaines."
-  },
   offresDataIA: {
     title: "Data & IA pour la décision — Conseil cas usage IA | Enosi Consulting",
     description: "Transformer les données en décisions concrètes. Automatisation reporting, prévision, détection anomalies, déploiement cas usage IA en 6 à 10 semaines."
-  },
-  offreeEfficacite: {
-    title: "Efficacité et création de valeur — Optimisation processus | Enosi Consulting",
-    description: "Réduire les frictions, améliorer les processus critiques, piloter ce qui crée vraiment de la valeur. Pour ETI en croissance et directions en transformation."
   },
   offresEfficacite: {
     title: "Efficacité et création de valeur — Optimisation processus | Enosi Consulting",
@@ -54,9 +42,5 @@ export const seoConfig = {
   diagnostic: {
     title: "Diagnostic de maturité Data & IA — Outil gratuit | Enosi Consulting",
     description: "Évaluez la maturité Data/IA de votre organisation en 12 questions. Rapport personnalisé sur 4 axes avec vos priorités d'action. Gratuit, 3 minutes."
-  },
-  quickWin: {
-    title: "Audit Reporting 5 jours — Offre prix fixe | Enosi Consulting",
-    description: "Un diagnostic complet de vos reportings et tableaux de bord en 5 jours, à prix fixe. Livrables concrets, sans engagement long terme."
   }
 }
