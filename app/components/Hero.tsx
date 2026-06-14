@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const StarField3D = dynamic(() => import("./StarField3D"), {
   ssr: false,
@@ -165,10 +166,11 @@ export default function Hero() {
             border:'1px solid rgba(0,0,0,0.07)',
             borderRadius:'0.875rem',
           }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/william.jpg"
               alt="William Saint-Dizier"
+              width={42}
+              height={42}
               style={{width:'42px', height:'42px', borderRadius:'50%', objectFit:'cover', objectPosition:'center top', flexShrink:0, border:'2px solid rgba(26,158,92,0.25)'}}
             />
             <div style={{lineHeight:1.4, minWidth:0}}>

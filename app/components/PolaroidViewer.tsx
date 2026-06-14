@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function PolaroidViewer() {
   return (
@@ -25,10 +26,11 @@ export default function PolaroidViewer() {
             borderRadius: "1px",
             overflow: "hidden",
           }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/william.jpg"
               alt="William Saint-Dizier"
+              width={140}
+              height={140}
               style={{
                 width: "100%", height: "100%",
                 objectFit: "cover",
