@@ -40,7 +40,7 @@ export default function ContactForm() {
         setSubmitted(true);
       }
     } catch {
-      setError("Une erreur est survenue, veuillez réessayer ou nous écrire directement.");
+      setError("Une erreur est survenue, veuillez réessayer ou m'écrire directement.");
     } finally {
       setLoading(false);
     }
@@ -71,8 +71,9 @@ export default function ContactForm() {
           />
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Prénom *</label>
+              <label htmlFor="prenom" className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Prénom *</label>
               <input
+                id="prenom"
                 required
                 type="text"
                 value={form.prenom}
@@ -82,8 +83,9 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Nom *</label>
+              <label htmlFor="nom" className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Nom *</label>
               <input
+                id="nom"
                 required
                 type="text"
                 value={form.nom}
@@ -95,8 +97,9 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Entreprise *</label>
+            <label htmlFor="entreprise" className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Entreprise *</label>
             <input
+              id="entreprise"
               required
               type="text"
               value={form.entreprise}
@@ -107,8 +110,9 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Adresse email professionnelle *</label>
+            <label htmlFor="email" className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Adresse email professionnelle *</label>
             <input
+              id="email"
               required
               type="email"
               value={form.email}
@@ -120,8 +124,9 @@ export default function ContactForm() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Fonction</label>
+              <label htmlFor="fonction" className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Fonction</label>
               <input
+                id="fonction"
                 type="text"
                 value={form.fonction}
                 onChange={(e) => setForm({ ...form, fonction: e.target.value })}
@@ -130,8 +135,9 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Sujet principal</label>
+              <label htmlFor="sujet" className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Sujet principal</label>
               <select
+                id="sujet"
                 value={form.sujet}
                 onChange={(e) => setForm({ ...form, sujet: e.target.value })}
                 className="w-full bg-white border border-[rgba(0,0,0,0.08)] rounded-lg px-3 py-2.5 text-sm text-[#0f0f0f] focus:outline-none focus:border-[#1a9e5c]/50 transition-colors"
@@ -143,8 +149,9 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Décrivez brièvement votre enjeu *</label>
+            <label htmlFor="message" className="block text-xs text-[rgba(30,30,30,0.4)] mb-1.5">Décrivez brièvement votre enjeu *</label>
             <textarea
+              id="message"
               required
               rows={3}
               value={form.message}

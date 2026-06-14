@@ -439,12 +439,14 @@ export default function DiagnosticPage() {
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label
+                  htmlFor="prenom"
                   className="block text-xs mb-1.5"
                   style={{ color: "rgba(30,30,30,0.4)" }}
                 >
                   Prénom *
                 </label>
                 <input
+                  id="prenom"
                   required
                   type="text"
                   value={prenom}
@@ -459,12 +461,14 @@ export default function DiagnosticPage() {
               </div>
               <div>
                 <label
+                  htmlFor="entreprise"
                   className="block text-xs mb-1.5"
                   style={{ color: "rgba(30,30,30,0.4)" }}
                 >
                   Entreprise
                 </label>
                 <input
+                  id="entreprise"
                   type="text"
                   value={entreprise}
                   onChange={(e) => setEntreprise(e.target.value)}
@@ -480,12 +484,14 @@ export default function DiagnosticPage() {
 
             <div>
               <label
+                htmlFor="email"
                 className="block text-xs mb-1.5"
                 style={{ color: "rgba(30,30,30,0.4)" }}
               >
                 Email professionnel *
               </label>
               <input
+                id="email"
                 required
                 type="email"
                 value={email}
