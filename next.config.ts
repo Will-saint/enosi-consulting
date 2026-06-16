@@ -28,22 +28,6 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
-      // Allow polaroid viewer to be embedded in iframe from same origin
-      {
-        source: "/polaroid-viewer.html",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-inline'",
-              "style-src 'self' 'unsafe-inline'",
-              "frame-ancestors 'self'",
-            ].join("; "),
-          },
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
-        ],
-      },
       {
         source: "/(.*)",
         headers: securityHeaders,
