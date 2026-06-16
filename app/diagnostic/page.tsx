@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -165,6 +165,7 @@ export default function DiagnosticPage() {
   const [prenom, setPrenom] = useState("");
   const [entreprise, setEntreprise] = useState("");
   const [loading, setLoading] = useState(false);
+  const formStartAt = useRef<number>(0);
 
   const currentQ = step >= 1 && step <= 12 ? QUESTIONS[step - 1] : null;
   const axis = currentQ ? AXES[currentQ.axisIndex] : null;
@@ -176,6 +177,7 @@ export default function DiagnosticPage() {
     newAnswers[step - 1] = score;
     setAnswers(newAnswers);
     setSelected(null);
+    if (step === 12) formStartAt.current = Date.now();
     setStep(step < 12 ? step + 1 : 13);
   };
 
@@ -201,7 +203,7 @@ export default function DiagnosticPage() {
       await fetch("/api/diagnostic", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ scores, email, prenom, entreprise, id }),
+        body: JSON.stringify({ scores, email, prenom, entreprise, id, _hp: "", _t: Date.now() - formStartAt.current }),
       });
     } catch {
       // Non-blocking — continue even if email fails

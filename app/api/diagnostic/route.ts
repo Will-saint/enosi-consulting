@@ -3,6 +3,7 @@ import { Resend } from "resend";
 import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MIN_FILL_MS = 3_000;
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 15 * 60 * 1_000;
 
@@ -40,6 +41,17 @@ export async function POST(req: Request) {
     body = await req.json() as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: "Invalid body" }, { status: 400 });
+  }
+
+  // Honeypot — bots fill this, humans don't see it
+  if (typeof body._hp === "string" && body._hp !== "") {
+    return NextResponse.json({ success: true, id: "" }); // silent accept
+  }
+
+  // Timing — under 3s = bot
+  const fillTime = typeof body._t === "number" ? body._t : MIN_FILL_MS;
+  if (fillTime < MIN_FILL_MS) {
+    return NextResponse.json({ error: "Formulaire soumis trop rapidement." }, { status: 400 });
   }
 
   const scores = body.scores;
