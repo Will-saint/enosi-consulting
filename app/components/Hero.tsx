@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { CALENDLY_URL } from "@/lib/constants";
 
 const StarField3D = dynamic(() => import("./StarField3D"), {
   ssr: false,
@@ -60,11 +61,11 @@ export default function Hero() {
                  style={{background:'rgba(26,158,92,0.08)', border:'1px solid rgba(26,158,92,0.18)'}}>
               <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{background:'#1a9e5c'}}/>
               <span className="text-[10px] tracking-[0.15em] uppercase" style={{color:'#1a9e5c'}}>
-                Cabinet de conseil
+                Conseil indépendant
               </span>
             </div>
             <p className="text-xs leading-relaxed" style={{color:'rgba(30,30,30,0.4)'}}>
-              Performance · Data · IA
+              Finance · Data · IA
             </p>
           </div>
 
@@ -111,9 +112,10 @@ export default function Hero() {
               lineHeight:1.7,
               maxWidth:'480px'
             }}>
-              Conseil en pilotage de la performance, data et IA pour les directions financières.
+              J&apos;aide les directions financières à piloter leur performance
+              et le ROI de leurs investissements Data &amp; IA.
               Du diagnostic à l&apos;outil opérationnel, déployé avec vos équipes —
-              premier résultat en 2–3 jours.
+              premier livrable en 2–3 jours.
             </p>
             <div style={{display:'flex', flexDirection:'column', gap:'0.75rem', flexShrink:0, alignItems:'flex-start'}}>
               <div style={{display:'flex', gap:'0.75rem', flexWrap:'wrap'}}>
@@ -131,7 +133,9 @@ export default function Hero() {
                    }}>
                   Mon diagnostic gratuit →
                 </a>
-                <a href="/demo"
+                <a href={CALENDLY_URL}
+                   target="_blank"
+                   rel="noopener noreferrer"
                    style={{
                      padding:'0.875rem 2rem',
                      borderRadius:'2rem',
@@ -143,17 +147,17 @@ export default function Hero() {
                      whiteSpace:'nowrap',
                      background:'rgba(26,158,92,0.05)',
                    }}>
-                  Voir la démo live →
+                  Réserver 30 min →
                 </a>
               </div>
-              <a href="#offres"
+              <a href="/offres"
                  style={{
                    fontSize:'0.8rem',
                    color:'rgba(30,30,30,0.4)',
                    textDecoration:'none',
                    paddingLeft:'0.25rem',
                  }}>
-                Mes offres ↓
+                Mes offres →
               </a>
             </div>
           </div>

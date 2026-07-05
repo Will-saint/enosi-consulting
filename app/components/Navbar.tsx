@@ -10,10 +10,10 @@ type NavItem =
 const navItems: NavItem[] = [
   {
     label: "Mes offres",
-    anchor: "/#offres",
+    anchor: "/offres",
     sub: [
+      { label: "Pilotage financier & ROI Data/IA", href: "/offres/data-ia" },
       { label: "Pilotage de la performance", href: "/offres/pilotage" },
-      { label: "Data & IA pour la décision", href: "/offres/data-ia" },
       { label: "Efficacité et création de valeur", href: "/offres/efficacite" },
       { label: "⚡ Audit 5 jours — prix fixe", href: "/offres/quick-win" },
     ],
@@ -157,7 +157,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* CTAs desktop */}
+        {/* CTAs desktop — 2 portes d'entrée : diagnostic (principal) et RDV (direct) */}
         <div className="hidden lg:flex items-center gap-2">
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"
              style={{
@@ -180,7 +180,7 @@ export default function Navbar() {
              }}>
             Réserver 30 min
           </a>
-          <a href="/contact"
+          <a href="/diagnostic"
              style={{
                padding: '0.5rem 1.5rem',
                borderRadius: '2rem',
@@ -194,7 +194,7 @@ export default function Navbar() {
              }}
              onMouseEnter={e => (e.currentTarget as HTMLElement).style.boxShadow='0 4px 20px rgba(26,158,92,0.4)'}
              onMouseLeave={e => (e.currentTarget as HTMLElement).style.boxShadow='0 2px 12px rgba(26,158,92,0.25)'}>
-            Prendre contact
+            Diagnostic gratuit
           </a>
         </div>
 
@@ -262,14 +262,14 @@ export default function Navbar() {
                onClick={() => setMobileOpen(false)}>
               Réserver 30 min →
             </a>
-            <a href="/contact"
+            <a href="/diagnostic"
                style={{
                  display:'block', padding:'0.75rem', borderRadius:'2rem', textAlign:'center',
                  background:'linear-gradient(135deg, #1a9e5c, #157a47)',
                  color:'#fff', fontWeight:600, fontSize:'0.85rem', textDecoration:'none',
                }}
                onClick={() => setMobileOpen(false)}>
-              Prendre contact
+              Diagnostic gratuit
             </a>
           </div>
         </div>

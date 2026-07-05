@@ -40,10 +40,10 @@ export const secteurs: Record<string, SecteurData> = {
     ],
     caseStudy: {
       titre: "D'un reporting subi à un pilotage qui décide",
-      contexte: "Direction financière, ETI industrielle",
+      contexte: "Scénario type — direction financière, ETI industrielle",
       resultats: [
-        "Production reporting : 6 jours → 1 jour",
-        "Temps de décision COMEX divisé par 3",
+        "Reporting produit en 1 jour au lieu de 6",
+        "Décisions COMEX préparées avant la réunion",
         "Alertes automatiques sur 5 indicateurs critiques",
       ],
       href: "/portfolio#cas-1",
@@ -74,11 +74,11 @@ export const secteurs: Record<string, SecteurData> = {
     ],
     caseStudy: {
       titre: "D'un reporting subi à un pilotage qui décide",
-      contexte: "Direction financière, ETI industrielle",
+      contexte: "Scénario type — direction financière, ETI industrielle",
       resultats: [
-        "Production reporting : 6 jours → 1 jour",
+        "Reporting produit en 1 jour au lieu de 6",
         "Alertes automatiques sur 5 indicateurs critiques",
-        "Temps de décision COMEX divisé par 3",
+        "Décisions COMEX préparées avant la réunion",
       ],
       href: "/portfolio#cas-1",
     },
@@ -108,11 +108,11 @@ export const secteurs: Record<string, SecteurData> = {
     ],
     caseStudy: {
       titre: "De l'IA qui tourne en prod, pas en démo",
-      contexte: "Direction transformation, Grand groupe",
+      contexte: "Scénario type — direction transformation, grand groupe",
       resultats: [
         "12 cas d'usage scorés et priorisés",
         "1 modèle en production en 8 semaines",
-        "94% de détection sur données historiques",
+        "Détection automatisée, validée sur données historiques",
       ],
       href: "/portfolio#cas-2",
     },

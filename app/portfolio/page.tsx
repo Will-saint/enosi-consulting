@@ -37,7 +37,7 @@ function EnBref({
         { label: "Sujet", value: sujet },
         { label: "Problème", value: probleme },
         { label: "Action", value: action },
-        { label: "Impact", value: impact },
+        { label: "Objectif visé", value: impact },
       ].map((item) => (
         <div key={item.label}>
           <p className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-1">{item.label}</p>
@@ -104,11 +104,12 @@ export default function Portfolio() {
               className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
-              Exemples de missions
+              Comment j&apos;aborde ces sujets
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              Trois résultats concrets issus de mon parcours.
-              Les organisations ne sont pas nommées. Les résultats, si.
+              Je n&apos;ai pas encore de mission freelance à publier ici.
+              Ces trois scénarios illustrent, à partir de situations réelles du secteur et de ma méthode,
+              comment j&apos;aborderais ce type de problème et l&apos;objectif que je viserais.
             </p>
           </div>
 
@@ -139,7 +140,7 @@ export default function Portfolio() {
               sujet="Pilotage de la performance"
               probleme="Reporting exhaustif, inutilisé pour décider"
               action="Reconstruction autour des 5 décisions clés + alertes automatiques"
-              impact="−5 j de production · −65 % sur le temps de décision COMEX"
+              impact="Reporting produit en 1 jour au lieu de 6 · COMEX orienté avant la réunion"
             />
             <BeforeAfter
               color="#1a9e5c"
@@ -150,10 +151,10 @@ export default function Portfolio() {
                 "Aucune alerte sur les seuils critiques",
               ]}
               after={[
-                "Reporting 8 pages produit en 1 jour",
+                "Reporting court produit en 1 jour",
                 "5 indicateurs clés par décision COMEX",
                 "Décision orientée avant la réunion",
-                "5 alertes automatiques sur signaux critiques",
+                "Alertes automatiques sur signaux critiques",
               ]}
             />
 
@@ -189,7 +190,7 @@ export default function Portfolio() {
 
             {/* Ce que j&apos;ai fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que j&apos;ai fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Comment j&apos;interviendrais</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -255,12 +256,12 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-10"
               style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">L&apos;objectif visé</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { val: "−5 j", label: "de production / mois" },
-                  { val: "−65 %", label: "temps de décision COMEX" },
-                  { val: "−60%", label: "d'indicateurs" },
+                  { val: "1 jour", label: "de production, contre 6" },
+                  { val: "5", label: "alertes automatiques sur seuils critiques" },
+                  { val: "−60 %", label: "d'indicateurs superflus" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">
                     <div className="text-2xl font-bold text-[#1a9e5c] mb-1">{s.val}</div>
@@ -269,14 +270,6 @@ export default function Portfolio() {
                 ))}
               </div>
             </div>
-
-            {/* Citation */}
-            <blockquote className="bg-[#F2F0EC] border-l-4 border-[#1a9e5c]/30 p-6 rounded-r-xl mb-8">
-              <p className="italic text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
-                &ldquo;Au début je pensais qu'on allait juste refaire les graphiques. Ce qui a changé c'est qu'on a réduit le nombre d'indicateurs. Ça paraît contre-intuitif, mais c'est ça qui a débloqué les réunions.&rdquo;
-              </p>
-              <footer className="text-xs text-[rgba(30,30,30,0.4)] mt-3">— Directeur Financier, ETI industrielle</footer>
-            </blockquote>
 
             {/* Approche */}
             <ApprocheBanner />
@@ -311,7 +304,7 @@ export default function Portfolio() {
               sujet="IA décisionnelle sur flux financiers"
               probleme="12 cas d'usage IA identifiés, aucun en production depuis 18 mois"
               action="Scoring, sélection du cas prioritaire, déploiement en 8 semaines"
-              impact="1 modèle en prod · 91 % de détection · ~3 ETP économisés"
+              impact="1 modèle en production · détection automatisée · charge de contrôle manuelle réduite"
             />
             <BeforeAfter
               color="#4f46e5"
@@ -325,7 +318,7 @@ export default function Portfolio() {
                 "1 cas prioritaire sélectionné sur 4 critères",
                 "Métier impliqué dès le cadrage",
                 "Modèle en production en 8 semaines",
-                "91 % de détection, ~3 ETP économisés",
+                "Détection automatisée, charge manuelle réduite",
               ]}
             />
 
@@ -361,7 +354,7 @@ export default function Portfolio() {
 
             {/* Ce que j&apos;ai fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que j&apos;ai fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Comment j&apos;interviendrais</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -395,7 +388,7 @@ export default function Portfolio() {
                   {
                     n: "5",
                     titre: "Choix assumé : interprétabilité avant performance brute",
-                    desc: "J'ai sacrifié 4 points de performance au profit de l'interprétabilité : un modèle à 91 % qu'on utilise vaut mieux qu'un modèle à 95 % qu'on ne comprend pas. C'est le choix qui a rendu l'adoption possible.",
+                    desc: "Je privilégie systématiquement l'interprétabilité, quitte à sacrifier quelques points de performance : un modèle qu'on comprend et qu'on utilise vaut mieux qu'un modèle légèrement plus précis que personne n'adopte. C'est ce choix qui rend l'adoption possible.",
                     color: "#6366f1",
                     italic: true,
                   },
@@ -457,12 +450,12 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-10"
               style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">L&apos;objectif visé</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { val: "91 %", label: "taux de détection" },
-                  { val: "~3", label: "ETP économisés" },
-                  { val: "7 sem.", label: "du cadrage à la prod" },
+                  { val: "8 sem.", label: "du cadrage à la production" },
+                  { val: "1", label: "cas déployé plutôt que 12 listés" },
+                  { val: "0", label: "boîte noire livrée" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">
                     <div className="text-2xl font-bold text-[#6366f1] mb-1">{s.val}</div>
@@ -471,14 +464,6 @@ export default function Portfolio() {
                 ))}
               </div>
             </div>
-
-            {/* Citation */}
-            <blockquote className="bg-[#F2F0EC] border-l-4 border-[#1a9e5c]/30 p-6 rounded-r-xl mb-8">
-              <p className="italic text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
-                &ldquo;On avait les données depuis 3 ans. Il manquait quelqu&apos;un capable de faire le lien entre ce qu&apos;on avait et ce qu&apos;on devait décider.&rdquo;
-              </p>
-              <footer className="text-xs text-[rgba(30,30,30,0.4)] mt-3">— Directeur Transformation, Grand groupe</footer>
-            </blockquote>
 
             {/* Approche */}
             <ApprocheBanner />
@@ -513,7 +498,7 @@ export default function Portfolio() {
               sujet="Transformation du cycle budgétaire"
               probleme="14 semaines de budget, validé trop tard pour être utile"
               action="Cartographie des frictions + référentiel d'hypothèses commun"
-              impact="−3 semaines · −55 % d'allers-retours · budget utilisé en pilotage"
+              impact="−3 semaines de cycle · moins d'allers-retours · budget utilisé en pilotage"
             />
             <BeforeAfter
               color="#d97706"
@@ -526,7 +511,7 @@ export default function Portfolio() {
               after={[
                 "11 semaines de cycle (−3 sem.)",
                 "Référentiel d'hypothèses commun centralisé",
-                "−55 % d'allers-retours entre directions",
+                "Allers-retours entre directions fortement réduits",
                 "Budget utilisé en pilotage mensuel",
               ]}
             />
@@ -569,7 +554,7 @@ export default function Portfolio() {
 
             {/* Ce que j&apos;ai fait */}
             <div className="mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Ce que j&apos;ai fait</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Comment j&apos;interviendrais</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -634,11 +619,11 @@ export default function Portfolio() {
               className="rounded-xl p-6 mb-10"
               style={{ backgroundColor: "#F2F0EC", border: "1px solid rgba(0,0,0,0.08)" }}
             >
-              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">Le résultat</h3>
+              <h3 className="text-xs uppercase tracking-wider text-[rgba(30,30,30,0.4)] mb-4">L&apos;objectif visé</h3>
               <div className="grid grid-cols-3 gap-4">
                 {[
                   { val: "−3 sem.", label: "sur le cycle" },
-                  { val: "−55 %", label: "d'allers-retours" },
+                  { val: "1", label: "référentiel d'hypothèses commun" },
                   { val: "12 mois", label: "de pilotage actif" },
                 ].map((s) => (
                   <div key={s.label} className="text-center">
@@ -648,14 +633,6 @@ export default function Portfolio() {
                 ))}
               </div>
             </div>
-
-            {/* Citation */}
-            <blockquote className="bg-[#F2F0EC] border-l-4 border-[#1a9e5c]/30 p-6 rounded-r-xl mb-8">
-              <p className="italic text-[rgba(30,30,30,0.55)] text-sm leading-relaxed">
-                &ldquo;Ce n&apos;était pas un problème d&apos;outil. C&apos;était un problème de méthode. Maintenant tout le monde travaille avec les mêmes règles.&rdquo;
-              </p>
-              <footer className="text-xs text-[rgba(30,30,30,0.4)] mt-3">— Directeur de la Performance, ETI en croissance</footer>
-            </blockquote>
 
             {/* Approche */}
             <ApprocheBanner />

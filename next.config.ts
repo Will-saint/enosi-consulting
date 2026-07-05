@@ -10,6 +10,10 @@ const csp = [
   "connect-src 'self' https://plausible.io",
   "frame-ancestors 'none'",
   "frame-src 'self'",
+  "base-uri 'self'",
+  "form-action 'self' https://calendly.com",
+  "object-src 'none'",
+  "upgrade-insecure-requests",
 ].join("; ");
 
 const securityHeaders = [
@@ -17,8 +21,10 @@ const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-  { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()" },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  { key: "X-DNS-Prefetch-Control", value: "on" },
 ];
 
 const nextConfig: NextConfig = {

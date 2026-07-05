@@ -140,7 +140,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ slug: 
               fontSize: "0.65rem", letterSpacing: "0.2em",
               textTransform: "uppercase", color: "rgba(30,30,30,0.4)",
               marginBottom: "2rem",
-            }}>Mission de référence</p>
+            }}>Scénario d&apos;intervention type</p>
             <div style={{
               background: "#FFFFFF",
               borderRadius: "1.25rem",
@@ -168,7 +168,7 @@ export default async function SecteurPage({ params }: { params: Promise<{ slug: 
               <a href={s.caseStudy.href} style={{
                 fontSize: "0.8rem", color: s.color,
                 textDecoration: "none", fontWeight: 500,
-              }}>Lire le cas complet →</a>
+              }}>Lire le scénario complet →</a>
             </div>
           </div>
         </section>

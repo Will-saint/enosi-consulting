@@ -73,7 +73,8 @@ export default function StarField3D() {
 
     const geom = makeBranchGeometry(0.42, 1.25, 0.50);
 
-    const material = new THREE.MeshPhysicalMaterial({
+    // Deux teintes alternées — vert (marque) et indigo (data) — pour un rendu bicolore subtil
+    const materialGreen = new THREE.MeshPhysicalMaterial({
       color: 0xe8ede9,
       emissive: new THREE.Color(0x2a6040),
       emissiveIntensity: 0.12,
@@ -84,6 +85,9 @@ export default function StarField3D() {
       clearcoatRoughness: 0.05,
       flatShading: true,
     });
+    const materialIndigo = materialGreen.clone();
+    materialIndigo.emissive = new THREE.Color(0x35357a);
+    materialIndigo.emissiveIntensity = 0.10;
 
     // --- Hierarchy ---
     const root = new THREE.Group();
@@ -108,10 +112,14 @@ export default function StarField3D() {
       const pivot = new THREE.Group();
       pivot.rotation.z = (i * Math.PI) / 4;
       group.add(pivot);
-      const m = new THREE.Mesh(geom, material);
+      const m = new THREE.Mesh(geom, i % 2 === 0 ? materialGreen : materialIndigo);
       pivot.add(m);
       meshes.push(m);
     }
+
+    // --- Reduced motion : rendu statique élégant, pas de cycle d'animation ---
+    const prefersReducedMotion =
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     // --- Rubik-style animation ---
     const PI = Math.PI;
@@ -132,7 +140,7 @@ export default function StarField3D() {
     let cycleTimeline: gsap.core.Timeline | null = null;
 
     function runCycle() {
-      if (!alive) return;
+      if (!alive || prefersReducedMotion) return;
       cycleTimeline = gsap.timeline({ onComplete: runCycle });
       const tl = cycleTimeline;
 
@@ -166,10 +174,26 @@ export default function StarField3D() {
     }
     runCycle();
 
+    // --- Parallaxe souris : l'objet suit doucement le pointeur ---
+    let targetRX = -0.12;
+    let targetRY = 0;
+    function onPointerMove(e: PointerEvent) {
+      const nx = (e.clientX / window.innerWidth) * 2 - 1;   // -1 → 1
+      const ny = (e.clientY / window.innerHeight) * 2 - 1;
+      targetRY = nx * 0.28;
+      targetRX = -0.12 + ny * 0.18;
+    }
+    if (!prefersReducedMotion) {
+      window.addEventListener("pointermove", onPointerMove, { passive: true });
+    }
+
     // --- Render loop ---
     function render() {
       rafRef.current = requestAnimationFrame(render);
-      root.rotation.y = Math.sin(performance.now() * 0.00018) * 0.1;
+      const idle = prefersReducedMotion ? 0 : Math.sin(performance.now() * 0.00018) * 0.1;
+      // Lerp doux vers la cible pointeur (inertie)
+      root.rotation.y += (targetRY + idle - root.rotation.y) * 0.045;
+      root.rotation.x += (targetRX - root.rotation.x) * 0.045;
       renderer.render(scene, camera);
     }
     render();
@@ -198,9 +222,11 @@ export default function StarField3D() {
         group.rotation,
       ]);
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("pointermove", onPointerMove);
       renderer.dispose();
       geom.dispose();
-      material.dispose();
+      materialGreen.dispose();
+      materialIndigo.dispose();
       if (container.contains(renderer.domElement)) {
         container.removeChild(renderer.domElement);
       }

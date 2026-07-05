@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: 'https://enosi-consulting.vercel.app',
     siteName: 'Enosi Consulting',
     title: 'Enosi Consulting — Performance, Data & IA',
-    description: 'Cabinet de conseil en performance et création de valeur. Finance, data et IA au service de vos décisions.',
+    description: 'Conseil indépendant en performance et ROI des projets Data & IA. Finance, data et IA au service de vos décisions.',
     images: [{
       url: '/opengraph-image',
       width: 1200,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Enosi Consulting — Performance, Data & IA',
-    description: 'Cabinet de conseil en performance et création de valeur.',
+    description: 'Conseil indépendant en performance et ROI des projets Data & IA.',
     images: ['/opengraph-image'],
   },
   robots: {
@@ -69,7 +69,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "Enosi Consulting",
-              "description": "Cabinet de conseil en performance et création de valeur, combinant finance, data et IA.",
+              "description": "Conseil indépendant en performance et création de valeur, combinant finance, data et IA.",
               "url": "https://enosi-consulting.vercel.app",
               "logo": "https://enosi-consulting.vercel.app/opengraph-image",
               "founder": {
@@ -92,8 +92,8 @@ export default function RootLayout({
                 "name": "France"
               },
               "serviceType": [
+                "Pilotage financier & ROI des projets Data/IA",
                 "Conseil en pilotage de la performance",
-                "Data & IA pour la décision",
                 "Efficacité et création de valeur",
                 "Audit reporting 5 jours"
               ],

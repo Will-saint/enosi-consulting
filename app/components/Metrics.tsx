@@ -2,10 +2,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { end: 25, suffix: "%", label: "Réduction temps reporting", color: "#1a9e5c" },
-  { end: 8, suffix: " sem", label: "Zéro à modèle en production", color: "#4f46e5" },
-  { end: 3, suffix: "×", label: "Plus rapide en décision", color: "#d97706" },
-  { end: 91, suffix: "%", label: "Détection anomalies IA", color: "#1a9e5c" },
+  { end: 25, suffix: "%", label: "Temps de reporting réduit (Power Query)", color: "#1a9e5c" },
+  { end: 100, suffix: "M€", label: "Périmètre financier piloté", color: "#4f46e5" },
+  { end: 1, suffix: " an", label: "Data & IA Value Management chez LVMH", color: "#d97706" },
+  { end: 4, suffix: "", label: "Certifications Data/IA (PL-300, Azure, IBM)", color: "#1a9e5c" },
 ];
 
 function useCountUp(end: number, duration: number, started: boolean) {
@@ -127,7 +127,7 @@ export default function Metrics() {
           textTransform: "uppercase", textAlign: "center",
           color: "rgba(30,30,30,0.3)", marginBottom: "3.5rem",
         }}>
-          Résultats typiques de mes interventions
+          Mon expérience, en repères
         </p>
         <div style={{
           display: "grid",

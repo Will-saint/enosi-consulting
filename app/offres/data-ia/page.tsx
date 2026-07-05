@@ -16,25 +16,25 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Data & IA pour la décision",
-  "description": "Transformer les données en décisions concrètes. Automatisation du reporting, déploiement de cas d'usage IA en 6 à 10 semaines pour les directions transformation et DSI.",
+  "name": "Pilotage financier & ROI des projets Data/IA",
+  "description": "Évaluer, challenger et suivre le ROI des investissements Data & IA. Business cases, tracking coûts/valeur, automatisation du reporting, déploiement de cas d'usage en 6 à 10 semaines.",
   "provider": { "@type": "Organization", "name": "Enosi Consulting" },
   "areaServed": "France",
-  "serviceType": "Conseil en intelligence artificielle et data engineering",
-  "audience": { "@type": "Audience", "audienceType": "Direction Transformation, CDO, DSI, Direction générale" },
+  "serviceType": "Conseil en pilotage financier et ROI des projets Data et IA",
+  "audience": { "@type": "Audience", "audienceType": "Direction Financière, Direction Transformation, CDO, Direction générale" },
   "url": "https://enosi-consulting.vercel.app/offres/data-ia"
 };
 
 const interventions = [
   {
     n: "01",
-    titre: "Cartographie et scoring des cas d'usage",
-    texte: "Identification et évaluation des opportunités selon 4 critères : valeur business, faisabilité technique, disponibilité des données, rapidité de déploiement.",
+    titre: "ROI et suivi budgétaire des projets Data/IA",
+    texte: "Évaluation et challenge des business cases, dispositif de tracking coûts / valeur / ROI de votre portefeuille de projets — le rôle que j'occupe chez Moët Hennessy (LVMH), où j'ai conçu l'outil de suivi Synapse.",
   },
   {
     n: "02",
-    titre: "Cadrage orienté décision",
-    texte: "Pour chaque cas retenu : définition précise de la décision que le modèle doit déclencher. Un modèle sans décision associée n'est pas un cas d'usage, c'est un projet R&D.",
+    titre: "Cartographie et scoring des cas d'usage",
+    texte: "Identification et évaluation des opportunités selon 4 critères : valeur business, faisabilité technique, disponibilité des données, rapidité de déploiement.",
   },
   {
     n: "03",
@@ -106,14 +106,15 @@ export default function PageDataIA() {
             </a>
             <div className="mt-8 mb-4">
               <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: `${COLOR}15`, color: COLOR }}>
-                Data &amp; IA pour la décision
+                Pilotage financier &amp; ROI des projets Data/IA
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Transformer vos données en décisions concrètes.
+              Vos investissements Data &amp; IA méritent un vrai pilotage financier.
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              J&apos;aide les directions à identifier les cas d&apos;usage à forte valeur, et à les déployer, pas à les lister.
+              J&apos;aide les directions à évaluer, challenger et suivre le ROI de leurs projets Data &amp; IA —
+              et à déployer les cas d&apos;usage qui créent de la valeur, pas à les lister.
             </p>
           </div>
 
@@ -179,7 +180,7 @@ export default function PageDataIA() {
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Les résultats typiques</p>
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Ce que mes clients obtiennent
+              Ce que je vise pour vous
             </h2>
             <div className="grid grid-cols-2 gap-4">
               {resultats.map((r) => (
@@ -214,9 +215,9 @@ export default function PageDataIA() {
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <div className="flex items-center justify-between gap-4 rounded-xl p-6" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
               <div>
-                <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-1">Cas client</p>
-                <p className="text-sm font-bold text-[#0f0f0f] mb-1">Détection d&apos;anomalies sur flux financiers critiques</p>
-                <p className="text-xs text-[rgba(30,30,30,0.5)]">8 semaines de zéro à production · 94% de détection</p>
+                <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-1">Cas d&apos;usage type</p>
+                <p className="text-sm font-bold text-[#0f0f0f] mb-1">Suivi de la valeur et du ROI d&apos;un portefeuille de projets Data/IA</p>
+                <p className="text-xs text-[rgba(30,30,30,0.5)]">Inspiré de mon rôle chez LVMH (Moët Hennessy) — outil de tracking coûts/ROI &quot;Synapse&quot;</p>
               </div>
               <a href="/portfolio#cas-2" className="text-sm text-[#6366f1] hover:underline shrink-0">Lire le cas →</a>
             </div>

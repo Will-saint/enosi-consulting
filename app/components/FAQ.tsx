@@ -8,7 +8,7 @@ const questions = [
   },
   {
     q: "Quel ROI peut-on attendre ?",
-    a: "Sur les missions de pilotage et reporting, mes clients récupèrent en moyenne 25 % du temps de production dès les 3 premiers mois. Sur les cas d'usage IA, le premier modèle en production est opérationnel en 6 à 10 semaines. Mon calculateur sur la page Démo vous donnera une estimation basée sur votre situation réelle.",
+    a: "Sur le reporting, je vise une réduction de l'ordre de 25 % du temps de production — c'est le résultat que j'ai obtenu en automatisant le reporting financier chez un précédent employeur (Power Query). Sur les cas d'usage IA, l'objectif est un premier modèle en production en 6 à 10 semaines. Mon calculateur sur la page Démo vous donnera une estimation basée sur votre situation réelle.",
   },
   {
     q: "Combien de temps dure une intervention ?",

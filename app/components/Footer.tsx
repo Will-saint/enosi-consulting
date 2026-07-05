@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const liens: Record<string, { label: string; href: string }[]> = {
   "Mes offres": [
+    { label: "Pilotage financier & ROI Data/IA", href: "/offres/data-ia" },
     { label: "Pilotage de la performance", href: "/offres/pilotage" },
-    { label: "Data & IA pour la décision", href: "/offres/data-ia" },
     { label: "Efficacité et création de valeur", href: "/offres/efficacite" },
     { label: "Audit 5 jours — prix fixe", href: "/offres/quick-win" },
   ],
@@ -21,9 +21,10 @@ const liens: Record<string, { label: string; href: string }[]> = {
     { label: "Exemples de missions", href: "/portfolio" },
     { label: "Cas d'usage", href: "/portfolio" },
   ],
-  "Cabinet": [
-    { label: "À propos", href: "/a-propos" },
+  "À propos": [
+    { label: "Qui je suis", href: "/a-propos" },
     { label: "Mon positionnement", href: "/a-propos" },
+    { label: "Diagnostic gratuit", href: "/diagnostic" },
     { label: "Contact", href: "/contact" },
   ],
 };
@@ -46,7 +47,7 @@ export default function Footer() {
               <Image src="/logo-full.svg" alt="Enosi Consulting" width={150} height={34} />
             </div>
             <p className="text-xs text-gray-600 leading-relaxed mb-5 max-w-[220px]">
-              Cabinet de conseil en performance et création de valeur, finance, data et IA.
+              Conseil indépendant en performance, data &amp; IA — William Saint-Dizier.
             </p>
             <a
               href="/contact"

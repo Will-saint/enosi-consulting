@@ -41,13 +41,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Formulaire soumis trop rapidement." }, { status: 400 });
   }
 
-  const prenom = typeof body.prenom === "string" ? body.prenom.trim() : "";
-  const nom = typeof body.nom === "string" ? body.nom.trim() : "";
-  const entreprise = typeof body.entreprise === "string" ? body.entreprise.trim() : "";
-  const email = typeof body.email === "string" ? body.email.trim() : "";
-  const fonction = typeof body.fonction === "string" ? body.fonction.trim() : "";
-  const sujet = typeof body.sujet === "string" ? body.sujet.trim() : "";
-  const message = typeof body.message === "string" ? body.message.trim() : "";
+  const field = (v: unknown, max: number) =>
+    typeof v === "string" ? v.trim().slice(0, max) : "";
+
+  const prenom = field(body.prenom, 100);
+  const nom = field(body.nom, 100);
+  const entreprise = field(body.entreprise, 200);
+  const email = field(body.email, 254);
+  const fonction = field(body.fonction, 200);
+  const sujet = field(body.sujet, 300);
+  const message = field(body.message, 5_000);
 
   if (!prenom || !email || !message) {
     return NextResponse.json({ error: "Champs requis manquants" }, { status: 400 });

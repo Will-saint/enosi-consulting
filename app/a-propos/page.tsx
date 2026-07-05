@@ -62,7 +62,7 @@ export default function APropos() {
               className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
-              Un cabinet construit autour d&apos;une conviction.
+              Un conseil indépendant construit autour d&apos;une conviction.
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
               Que la donnée, la finance et l&apos;IA ne sont utiles
@@ -72,7 +72,7 @@ export default function APropos() {
 
           {/* ── Section 1 : Pourquoi Enosi ──────────── */}
           <section className="mb-16 pb-16 border-b border-[rgba(0,0,0,0.08)]">
-            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Le cabinet</p>
+            <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">La conviction</p>
             <h2
               className="text-3xl font-bold text-[#0f0f0f] mb-7"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -274,7 +274,7 @@ export default function APropos() {
               {/* Colonne droite — ce qu'on est */}
               <div className="space-y-3">
                 {[
-                  "Un cabinet orienté exécution et impact",
+                  "Un consultant indépendant orienté exécution et impact",
                   "Un partenaire qui reste jusqu'au résultat",
                   "Un pont entre business, data et décision",
                 ].map((item) => (

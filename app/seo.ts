@@ -1,23 +1,27 @@
 export const seoConfig = {
   home: {
-    title: "Enosi Consulting — Cabinet conseil Performance, Data & IA",
-    description: "Cabinet de conseil en performance et création de valeur. Pilotage, data et IA pour les directions financières, performance et transformation des ETI et grands groupes."
+    title: "Enosi Consulting — Conseil Performance, Data & IA",
+    description: "Conseil indépendant en pilotage de la performance et ROI des projets Data & IA. Pour les directions financières, performance et transformation des ETI et grands groupes."
+  },
+  offres: {
+    title: "Mes offres — Pilotage, ROI Data/IA, efficacité | Enosi Consulting",
+    description: "Trois angles d'intervention : pilotage financier & ROI des projets Data/IA, pilotage de la performance, efficacité opérationnelle. Diagnostic gratuit, audit 5 jours à prix fixe."
   },
   portfolio: {
-    title: "Portfolio — Missions conseil performance et data | Enosi Consulting",
-    description: "Exemples de missions : refonte du pilotage, déploiement IA, optimisation processus budgétaire. Résultats concrets pour directions financières et transformation."
+    title: "Approche — Scénarios d'intervention types | Enosi Consulting",
+    description: "Comment j'aborde les problèmes de pilotage, de déploiement IA et de cycle budgétaire : trois scénarios types construits à partir de mon expérience et de ma méthode."
   },
   aPropos: {
-    title: "À propos — Cabinet conseil finance, data et IA | Enosi Consulting",
-    description: "Enosi Consulting : cabinet à l'intersection de la finance, de la data et de l'IA. Fondé par William Saint-Dizier, consultant en performance et création de valeur."
+    title: "À propos — Conseil finance, data et IA | Enosi Consulting",
+    description: "Enosi Consulting : conseil indépendant à l'intersection de la finance, de la data et de l'IA. Fondé par William Saint-Dizier — ex-Moët Hennessy (LVMH), Data & AI Value Management."
   },
   offresPilotage: {
     title: "Pilotage de la performance — Conseil KPI et reporting | Enosi Consulting",
     description: "Structurer les indicateurs, fiabiliser le reporting, construire un dispositif de pilotage décisionnel. Pour directions financières et performance."
   },
   offresDataIA: {
-    title: "Data & IA pour la décision — Conseil cas usage IA | Enosi Consulting",
-    description: "Transformer les données en décisions concrètes. Automatisation reporting, prévision, détection anomalies, déploiement cas usage IA en 6 à 10 semaines."
+    title: "Pilotage financier & ROI des projets Data/IA | Enosi Consulting",
+    description: "Évaluer, challenger et suivre le ROI de vos investissements Data & IA. Business cases, tracking coûts/valeur, automatisation du reporting, cas d'usage déployés en 6 à 10 semaines."
   },
   offresEfficacite: {
     title: "Efficacité et création de valeur — Optimisation processus | Enosi Consulting",
@@ -25,7 +29,7 @@ export const seoConfig = {
   },
   contact: {
     title: "Contact — Échangeons sur vos enjeux | Enosi Consulting",
-    description: "Un premier échange de 30 minutes pour comprendre vos priorités. Cabinet de conseil en performance, data et IA."
+    description: "Un premier échange de 30 minutes pour comprendre vos priorités. Conseil indépendant en performance, data et IA."
   },
   demo: {
     title: "Démo — Tableau de bord interactif | Enosi Consulting",

@@ -34,7 +34,7 @@ export default function ContactCTA() {
           On identifie vos vraies priorités ensemble.
         </p>
         <div style={{ display:'flex', gap:'1rem', justifyContent:'center', flexWrap:'wrap' }}>
-          <a href="/contact" style={{
+          <a href="/diagnostic" style={{
             display:'inline-block',
             padding:'1rem 3rem',
             borderRadius:'2rem',
@@ -43,7 +43,7 @@ export default function ContactCTA() {
             fontSize:'0.85rem', textDecoration:'none',
             boxShadow:'0 4px 24px rgba(26,158,92,0.25)',
             letterSpacing:'0.02em'
-          }}>Réserver mon diagnostic gratuit</a>
+          }}>Mon diagnostic gratuit</a>
           <a
             href={CALENDLY_URL}
             target="_blank"

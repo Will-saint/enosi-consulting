@@ -4,6 +4,19 @@ import ScrollReveal from "./ScrollReveal";
 const offres = [
   {
     numero: "01",
+    nom: "Pilotage financier & ROI des projets Data/IA",
+    accroche: "Évaluer, challenger et piloter la valeur de vos investissements Data/IA.",
+    points: [
+      "ROI et suivi budgétaire des projets Data/IA",
+      "Automatisation et fiabilisation du reporting",
+      "Prévision, détection d'anomalies, alerting",
+    ],
+    couleur: "#4f46e5",
+    icone: "◈",
+    href: "/offres/data-ia",
+  },
+  {
+    numero: "02",
     nom: "Pilotage de la performance",
     accroche: "Rendre la performance lisible, fiable et utile pour la décision.",
     points: [
@@ -14,19 +27,6 @@ const offres = [
     couleur: "#1a9e5c",
     icone: "◎",
     href: "/offres/pilotage",
-  },
-  {
-    numero: "02",
-    nom: "Data & IA pour la décision",
-    accroche: "Transformer les données en leviers d'action concrets.",
-    points: [
-      "Automatisation et fiabilisation du reporting",
-      "Prévision, détection d'anomalies, alerting",
-      "Déploiement de cas d'usage IA en 6–10 semaines",
-    ],
-    couleur: "#4f46e5",
-    icone: "◈",
-    href: "/offres/data-ia",
   },
   {
     numero: "03",

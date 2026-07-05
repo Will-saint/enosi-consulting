@@ -55,9 +55,9 @@ export async function POST(req: Request) {
   }
 
   const scores = body.scores;
-  const email  = typeof body.email === "string" ? body.email.trim() : "";
-  const prenom = typeof body.prenom === "string" ? body.prenom.trim() : "";
-  const entreprise = typeof body.entreprise === "string" ? body.entreprise.trim() : "";
+  const email  = typeof body.email === "string" ? body.email.trim().slice(0, 254) : "";
+  const prenom = typeof body.prenom === "string" ? body.prenom.trim().slice(0, 100) : "";
+  const entreprise = typeof body.entreprise === "string" ? body.entreprise.trim().slice(0, 200) : "";
 
   if (
     !Array.isArray(scores) || scores.length !== 12 ||

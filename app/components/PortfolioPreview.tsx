@@ -7,11 +7,11 @@ const cas = [
     badgeBg: "#1a9e5c15",
     badgeColor: "#1a9e5c",
     titre: "D'un reporting subi à un pilotage qui décide",
-    contexte: "Direction financière, ETI industrielle",
+    contexte: "Scénario type — direction financière, ETI industrielle",
     resultats: [
-      "Production reporting : 6 jours → 1 jour",
-      "Temps de décision COMEX réduit de 65 %",
-      "Alertes automatiques sur 5 indicateurs critiques",
+      "Reporting produit en 1 jour au lieu de 6",
+      "Décisions COMEX préparées avant la réunion",
+      "Alertes automatiques sur les indicateurs critiques",
     ],
     href: "/portfolio#cas-1",
   },
@@ -20,11 +20,11 @@ const cas = [
     badgeBg: "#4f46e515",
     badgeColor: "#4f46e5",
     titre: "De l'IA qui tourne en prod, pas en démo",
-    contexte: "Direction transformation, Grand groupe",
+    contexte: "Scénario type — direction transformation, grand groupe",
     resultats: [
-      "12 cas d'usage scorés et priorisés",
-      "1 modèle en production en 7 semaines",
-      "91 % de détection — vs 23 % en contrôle manuel",
+      "Cas d'usage scorés et priorisés sur 4 critères",
+      "Un modèle en production en semaines, pas en mois",
+      "Détection automatisée plutôt que contrôle manuel",
     ],
     href: "/portfolio#cas-2",
   },
@@ -32,11 +32,11 @@ const cas = [
     badge: "Efficacité",
     badgeBg: "#d9770615",
     badgeColor: "#d97706",
-    titre: "14 semaines de budget. Réduit à 11.",
-    contexte: "Direction performance, ETI en croissance",
+    titre: "Un budget validé à temps pour être utile",
+    contexte: "Scénario type — direction performance, ETI en croissance",
     resultats: [
-      "Cycle budgétaire raccourci de 3 semaines",
-      "Allers-retours réduits de 55 %",
+      "Cycle budgétaire raccourci de plusieurs semaines",
+      "Allers-retours entre directions réduits",
       "Budget utilisé comme outil de pilotage annuel",
     ],
     href: "/portfolio#cas-3",
@@ -58,8 +58,8 @@ export default function PortfolioPreview() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-widest mb-3" style={labelColor}>Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={h2Style}>Trois missions. Trois résultats concrets.</h2>
-          <p className="max-w-xl mx-auto text-sm" style={subtitleColor}>Des interventions réelles, présentées sans fioritures.</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={h2Style}>Trois façons d&apos;aborder ces sujets.</h2>
+          <p className="max-w-xl mx-auto text-sm" style={subtitleColor}>Trois scénarios type, construits à partir de mon expérience et de ma méthode — pas encore de mission freelance à publier.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">

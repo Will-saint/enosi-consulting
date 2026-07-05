@@ -179,7 +179,7 @@ export default function PageEfficacite() {
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-3">Les résultats typiques</p>
             <h2 className="text-2xl font-bold text-[#0f0f0f] mb-8" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Ce que mes clients obtiennent
+              Ce que je vise pour vous
             </h2>
             <div className="grid grid-cols-2 gap-4">
               {resultats.map((r) => (
@@ -214,9 +214,9 @@ export default function PageEfficacite() {
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <div className="flex items-center justify-between gap-4 rounded-xl p-6" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
               <div>
-                <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-1">Cas client</p>
+                <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-1">Cas d&apos;usage type</p>
                 <p className="text-sm font-bold text-[#0f0f0f] mb-1">Transformation du cycle budgétaire d&apos;une ETI</p>
-                <p className="text-xs text-[rgba(30,30,30,0.5)]">−3 semaines · −60% d&apos;allers-retours</p>
+                <p className="text-xs text-[rgba(30,30,30,0.5)]">−3 semaines de cycle · référentiel d&apos;hypothèses commun</p>
               </div>
               <a href="/portfolio#cas-3" className="text-sm text-[#f59e0b] hover:underline shrink-0">Lire le cas →</a>
             </div>

@@ -42,6 +42,27 @@ h1, h2, h3 {
 
 html { scroll-behavior: smooth; }
 
+/* Sélection de texte aux couleurs de la marque */
+::selection {
+  background: rgba(26,158,92,0.18);
+  color: #0f0f0f;
+}
+
+/* Focus visible — accessibilité clavier */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid #1a9e5c;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect de prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-scroll { animation: none; flex-wrap: wrap; justify-content: center; }
+  .card-premium, .blog-card { transition: none; }
+  .card-premium:hover, .blog-card:hover { transform: none; }
+}
+
 /* Carrousel */
 @keyframes scrollX {
   from { transform: translateX(0); }
