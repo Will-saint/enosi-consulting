@@ -58,7 +58,7 @@ export default function PortfolioPreview() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-widest mb-3" style={labelColor}>Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={h2Style}>Trois façons d&apos;aborder ces sujets.</h2>
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-4" style={{...h2Style, letterSpacing:'-0.02em', lineHeight:1.05}}>Trois façons<br /><span style={{color:'#1a9e5c'}}>d&apos;aborder ces sujets.</span></h2>
           <p className="max-w-xl mx-auto text-sm" style={subtitleColor}>Trois scénarios type, construits à partir de mon expérience et de ma méthode — pas encore de mission freelance à publier.</p>
         </div>
 

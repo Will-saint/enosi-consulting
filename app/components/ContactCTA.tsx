@@ -3,46 +3,54 @@ import { CALENDLY_URL } from "@/lib/constants";
 export default function ContactCTA() {
   return (
     <section style={{
-      background:'#F2F0EC', padding:'7rem 1.5rem',
+      background:'linear-gradient(135deg, #0d3b24 0%, #157a47 65%, #1a9e5c 100%)',
+      padding:'7.5rem 1.5rem',
       textAlign:'center', position:'relative', overflow:'hidden'
     }}>
+      {/* Halo lumineux */}
       <div style={{
-        position:'absolute', bottom:'-20%', left:'50%',
+        position:'absolute', top:'-30%', left:'50%',
         transform:'translateX(-50%)',
-        width:'600px', height:'300px',
-        background:'radial-gradient(ellipse, rgba(26,158,92,0.08), transparent 70%)',
-        filter:'blur(40px)', pointerEvents:'none'
+        width:'700px', height:'400px',
+        background:'radial-gradient(ellipse, rgba(255,255,255,0.12), transparent 70%)',
+        filter:'blur(50px)', pointerEvents:'none'
       }}/>
-      <div style={{position:'relative', maxWidth:'36rem', margin:'0 auto'}}>
+      <div style={{
+        position:'absolute', inset:0, pointerEvents:'none',
+        backgroundImage:'radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px)',
+        backgroundSize:'28px 28px',
+      }}/>
+      <div style={{position:'relative', maxWidth:'42rem', margin:'0 auto'}}>
         <p style={{
-          fontSize:'0.65rem', letterSpacing:'0.2em',
+          fontSize:'0.65rem', letterSpacing:'0.22em',
           textTransform:'uppercase',
-          color:'rgba(30,30,30,0.35)', marginBottom:'1.5rem'
+          color:'rgba(255,255,255,0.55)', marginBottom:'1.5rem'
         }}>Contact</p>
         <h2 style={{
           fontFamily:"'Playfair Display', serif",
-          fontSize:'clamp(2.5rem,5vw,4rem)',
-          fontWeight:700, color:'#0f0f0f',
-          marginBottom:'1.25rem', lineHeight:1.1
+          fontSize:'clamp(2.6rem,5.5vw,4.4rem)',
+          fontWeight:800, color:'#ffffff',
+          marginBottom:'1.25rem', lineHeight:1.05,
+          letterSpacing:'-0.02em',
         }}>Prêt à transformer vos données en décisions ?</h2>
         <p style={{
-          color:'rgba(30,30,30,0.5)',
-          fontSize:'1rem', lineHeight:1.7,
-          marginBottom:'2.5rem'
+          color:'rgba(255,255,255,0.75)',
+          fontSize:'1.05rem', lineHeight:1.7,
+          marginBottom:'2.75rem'
         }}>
-          Un diagnostic gratuit de 30 minutes, sans engagement.<br />
+          Un diagnostic gratuit de 3 minutes, sans engagement.<br />
           On identifie vos vraies priorités ensemble.
         </p>
         <div style={{ display:'flex', gap:'1rem', justifyContent:'center', flexWrap:'wrap' }}>
           <a href="/diagnostic" style={{
             display:'inline-block',
-            padding:'1rem 3rem',
+            padding:'1.1rem 3.2rem',
             borderRadius:'2rem',
-            background:'linear-gradient(135deg, #1a9e5c, #157a47)',
-            color:'#fff', fontWeight:700,
-            fontSize:'0.85rem', textDecoration:'none',
-            boxShadow:'0 4px 24px rgba(26,158,92,0.25)',
-            letterSpacing:'0.02em'
+            background:'#ffffff',
+            color:'#0d3b24', fontWeight:800,
+            fontSize:'0.95rem', textDecoration:'none',
+            boxShadow:'0 6px 32px rgba(0,0,0,0.25)',
+            letterSpacing:'0.01em'
           }}>Mon diagnostic gratuit</a>
           <a
             href={CALENDLY_URL}
@@ -50,12 +58,12 @@ export default function ContactCTA() {
             rel="noopener noreferrer"
             style={{
               display:'inline-block',
-              padding:'1rem 2.5rem',
+              padding:'1.1rem 2.6rem',
               borderRadius:'2rem',
-              border:'1.5px solid #1a9e5c',
-              color:'#1a9e5c', fontWeight:700,
-              fontSize:'0.85rem', textDecoration:'none',
-              letterSpacing:'0.02em',
+              border:'1.5px solid rgba(255,255,255,0.55)',
+              color:'#ffffff', fontWeight:700,
+              fontSize:'0.9rem', textDecoration:'none',
+              letterSpacing:'0.01em',
             }}
           >Réserver 30 minutes →</a>
         </div>

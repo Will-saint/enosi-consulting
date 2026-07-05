@@ -2,10 +2,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { end: 25, suffix: "%", label: "Temps de reporting réduit (Power Query)", color: "#1a9e5c" },
-  { end: 100, suffix: "M€", label: "Périmètre financier piloté", color: "#4f46e5" },
-  { end: 1, suffix: " an", label: "Data & IA Value Management chez LVMH", color: "#d97706" },
-  { end: 4, suffix: "", label: "Certifications Data/IA (PL-300, Azure, IBM)", color: "#1a9e5c" },
+  { end: 25, suffix: "%", label: "Temps de reporting réduit (Power Query)" },
+  { end: 100, suffix: "M€", label: "Périmètre financier piloté" },
+  { end: 1, suffix: " an", label: "Data & IA Value Management chez LVMH" },
+  { end: 4, suffix: "", label: "Certifications Data/IA (PL-300, Azure, IBM)" },
 ];
 
 function useCountUp(end: number, duration: number, started: boolean) {
@@ -26,54 +26,42 @@ function useCountUp(end: number, duration: number, started: boolean) {
   return val;
 }
 
-function ArcMetric({
-  end, suffix, label, color, index, started,
+function BigMetric({
+  end, suffix, label, index, started,
 }: {
-  end: number; suffix: string; label: string; color: string; index: number; started: boolean;
+  end: number; suffix: string; label: string; index: number; started: boolean;
 }) {
-  const radius = 40;
-  const circumference = 2 * Math.PI * radius;
-  const progress = Math.min(end / 100, 1);
-  const dashOffset = started ? circumference * (1 - progress) : circumference;
   const val = useCountUp(end, 1600, started);
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <div style={{ position: "relative", display: "inline-block", marginBottom: "1rem" }}>
-        <svg width="100" height="100" style={{ transform: "rotate(-90deg)" }}>
-          <circle
-            cx="50" cy="50" r={radius}
-            fill="none"
-            stroke="rgba(0,0,0,0.06)"
-            strokeWidth="3"
-          />
-          <circle
-            cx="50" cy="50" r={radius}
-            fill="none"
-            stroke={color}
-            strokeWidth="3"
-            strokeLinecap="round"
-            strokeDasharray={circumference}
-            strokeDashoffset={dashOffset}
-            style={{ transition: `stroke-dashoffset 1.5s ease ${index * 200}ms` }}
-          />
-        </svg>
-        <div style={{
-          position: "absolute", inset: 0,
-          display: "flex", alignItems: "center", justifyContent: "center",
-          fontFamily: "'Playfair Display', serif",
-          fontSize: "1.4rem", fontWeight: 700,
-          color: color,
-        }}>
-          {val}{suffix}
-        </div>
+    <div style={{
+      textAlign: "left",
+      opacity: started ? 1 : 0,
+      transform: started ? "translateY(0)" : "translateY(16px)",
+      transition: `opacity 0.6s ease ${index * 120}ms, transform 0.6s ease ${index * 120}ms`,
+    }}>
+      <div style={{
+        fontFamily: "'Playfair Display', serif",
+        fontSize: "clamp(2.6rem, 5vw, 4rem)",
+        fontWeight: 700,
+        lineHeight: 1,
+        color: "#ffffff",
+        marginBottom: "0.6rem",
+        letterSpacing: "-0.02em",
+      }}>
+        {val}<span style={{ fontSize: "0.5em", color: "rgba(255,255,255,0.55)" }}>{suffix}</span>
       </div>
+      <div style={{
+        width: "2.5rem", height: "3px",
+        background: "rgba(255,255,255,0.35)",
+        borderRadius: "2px",
+        marginBottom: "0.75rem",
+      }} />
       <p style={{
-        fontSize: "0.72rem",
-        color: "rgba(30,30,30,0.45)",
-        lineHeight: 1.5,
-        maxWidth: "120px",
-        margin: "0 auto",
+        fontSize: "0.8rem",
+        color: "rgba(255,255,255,0.75)",
+        lineHeight: 1.55,
+        maxWidth: "200px",
       }}>
         {label}
       </p>
@@ -90,14 +78,12 @@ export default function Metrics() {
     if (!el) return;
     const start = () => setStarted(true);
 
-    // If already visible on mount, start immediately
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight * 0.9) {
       start();
       return;
     }
 
-    // Fallback: force after 4s in case observer never fires
     const fallback = setTimeout(start, 4000);
 
     const obs = new IntersectionObserver(
@@ -116,26 +102,32 @@ export default function Metrics() {
 
   return (
     <section ref={sectionRef} style={{
-      background: "#F2F0EC",
-      padding: "5rem 1.5rem",
-      borderTop: "1px solid rgba(0,0,0,0.05)",
-      borderBottom: "1px solid rgba(0,0,0,0.05)",
+      background: "linear-gradient(135deg, #0d3b24 0%, #157a47 60%, #1a9e5c 100%)",
+      padding: "5.5rem 1.5rem",
+      position: "relative",
+      overflow: "hidden",
     }}>
-      <div style={{ maxWidth: "56rem", margin: "0 auto" }}>
+      {/* Texture discrète */}
+      <div style={{
+        position: "absolute", inset: 0, pointerEvents: "none",
+        backgroundImage: "radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)",
+        backgroundSize: "28px 28px",
+      }} />
+      <div style={{ maxWidth: "72rem", margin: "0 auto", position: "relative" }}>
         <p style={{
-          fontSize: "0.65rem", letterSpacing: "0.2em",
-          textTransform: "uppercase", textAlign: "center",
-          color: "rgba(30,30,30,0.3)", marginBottom: "3.5rem",
+          fontSize: "0.65rem", letterSpacing: "0.22em",
+          textTransform: "uppercase",
+          color: "rgba(255,255,255,0.55)", marginBottom: "3rem",
         }}>
           Mon expérience, en repères
         </p>
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
-          gap: "2rem",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          gap: "3rem 2rem",
         }}>
           {stats.map((s, i) => (
-            <ArcMetric key={i} {...s} index={i} started={started} />
+            <BigMetric key={i} {...s} index={i} started={started} />
           ))}
         </div>
       </div>

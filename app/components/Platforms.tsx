@@ -14,6 +14,7 @@ const offres = [
     couleur: "#4f46e5",
     icone: "◈",
     href: "/offres/data-ia",
+    phare: true,
   },
   {
     numero: "02",
@@ -27,6 +28,7 @@ const offres = [
     couleur: "#1a9e5c",
     icone: "◎",
     href: "/offres/pilotage",
+    phare: false,
   },
   {
     numero: "03",
@@ -40,6 +42,7 @@ const offres = [
     couleur: "#d97706",
     icone: "◉",
     href: "/offres/efficacite",
+    phare: false,
   },
 ];
 
@@ -60,10 +63,11 @@ export default function Platforms() {
           }}>Mes offres</p>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(2rem,4vw,3rem)",
-            fontWeight: 700, color: "#0f0f0f", lineHeight: 1.1, marginBottom: "0.75rem",
-          }}>Trois domaines d&apos;intervention</h2>
-          <p style={{ color: "rgba(30,30,30,0.5)", fontSize: "0.9rem" }}>
+            fontSize: "clamp(2.4rem,5vw,3.8rem)",
+            fontWeight: 800, color: "#0f0f0f", lineHeight: 1.05, marginBottom: "0.75rem",
+            letterSpacing: "-0.02em",
+          }}>Une expertise.<br /><span style={{ color: "#1a9e5c" }}>Trois angles d&apos;attaque.</span></h2>
+          <p style={{ color: "rgba(30,30,30,0.5)", fontSize: "0.95rem" }}>
             Un périmètre resserré. Des expertises complémentaires.
           </p>
         </div>
@@ -79,23 +83,37 @@ export default function Platforms() {
                 background: "#FFFFFF",
                 borderRadius: "1.25rem",
                 padding: "2rem",
-                boxShadow: "0 0 0 1px rgba(0,0,0,0.06)",
+                boxShadow: o.phare
+                  ? `0 0 0 2px ${o.couleur}, 0 12px 40px ${o.couleur}25`
+                  : "0 0 0 1px rgba(0,0,0,0.06)",
                 display: "flex",
                 flexDirection: "column",
                 gap: "1rem",
                 height: "100%",
+                position: "relative",
                 transition: "box-shadow 0.25s, transform 0.25s",
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.boxShadow = `0 0 0 1px ${o.couleur}30, 0 8px 28px rgba(0,0,0,0.08)`;
-                el.style.transform = "translateY(-3px)";
+                el.style.boxShadow = `0 0 0 2px ${o.couleur}, 0 12px 40px ${o.couleur}30`;
+                el.style.transform = "translateY(-4px)";
               }}
               onMouseLeave={e => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.boxShadow = "0 0 0 1px rgba(0,0,0,0.06)";
+                el.style.boxShadow = o.phare
+                  ? `0 0 0 2px ${o.couleur}, 0 12px 40px ${o.couleur}25`
+                  : "0 0 0 1px rgba(0,0,0,0.06)";
                 el.style.transform = "translateY(0)";
               }}>
+                {o.phare && (
+                  <span style={{
+                    position: "absolute", top: "-0.8rem", left: "1.5rem",
+                    padding: "0.3rem 1rem", borderRadius: "2rem",
+                    background: o.couleur, color: "#fff",
+                    fontSize: "0.62rem", fontWeight: 700,
+                    letterSpacing: "0.12em", textTransform: "uppercase",
+                  }}>Offre phare</span>
+                )}
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <span style={{
                     fontSize: "0.65rem", fontFamily: "monospace",

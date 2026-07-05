@@ -40,7 +40,7 @@ export default function CompanyStats() {
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-14">
           <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(30,30,30,0.35)'}}>Ce qui me distingue</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif", letterSpacing: '-0.02em', lineHeight: 1.05 }}>
             Pas de reporting décoratif.<br />
             <span className="text-[#1a9e5c]">Pas d&apos;IA gadget.</span>
           </h2>

@@ -69,13 +69,13 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Titre animé mot à mot */}
+          {/* Titre animé mot à mot — typo XXL */}
           <h1 style={{
             fontFamily:"'Playfair Display', serif",
-            fontSize:'clamp(2.8rem, 6vw, 5.5rem)',
-            fontWeight:700,
-            lineHeight:1.0,
-            letterSpacing:'-0.02em',
+            fontSize:'clamp(3.2rem, 7.5vw, 6.8rem)',
+            fontWeight:800,
+            lineHeight:0.98,
+            letterSpacing:'-0.03em',
             color:'#0f0f0f',
             flex:1,
           }}>
@@ -84,12 +84,15 @@ export default function Hero() {
                 key={i}
                 style={{
                   display:'inline-block',
-                  marginRight:'0.25em',
+                  marginRight:'0.22em',
                   opacity: i < visibleWords ? 1 : 0,
-                  transform: i < visibleWords ? 'translateY(0)' : 'translateY(12px)',
-                  transition: 'opacity 0.4s ease, transform 0.4s ease',
+                  transform: i < visibleWords ? 'translateY(0)' : 'translateY(16px)',
+                  transition: 'opacity 0.45s ease, transform 0.45s ease',
                   color: i >= 4 ? '#1a9e5c' : '#0f0f0f',
                   fontStyle: i === 3 ? 'italic' : 'normal',
+                  ...(i === words.length - 1 ? {
+                    backgroundImage: 'linear-gradient(to top, rgba(26,158,92,0.22) 0%, rgba(26,158,92,0.22) 28%, transparent 28%)',
+                  } : {}),
                 }}
               >
                 {word}
@@ -121,15 +124,16 @@ export default function Hero() {
               <div style={{display:'flex', gap:'0.75rem', flexWrap:'wrap'}}>
                 <a href="/diagnostic"
                    style={{
-                     padding:'0.875rem 2rem',
+                     padding:'1.05rem 2.6rem',
                      borderRadius:'2rem',
                      background:'linear-gradient(135deg, #1a9e5c, #157a47)',
                      color:'#fff',
-                     fontWeight:600,
-                     fontSize:'0.85rem',
-                     boxShadow:'0 4px 20px rgba(26,158,92,0.3)',
+                     fontWeight:700,
+                     fontSize:'0.95rem',
+                     boxShadow:'0 6px 28px rgba(26,158,92,0.38)',
                      textDecoration:'none',
                      whiteSpace:'nowrap',
+                     letterSpacing:'0.01em',
                    }}>
                   Mon diagnostic gratuit →
                 </a>
@@ -199,26 +203,22 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* 3 piliers */}
+        {/* 3 piliers — cartes accent gauche */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
             {label:'Un seul interlocuteur, de bout en bout', desc:"Celui qui propose est celui qui exécute — pas d'intermédiaire.", color:'#1a9e5c'},
             {label:'Finance × Data × IA', desc:"Trois expertises dans la même conversation, sans silos.", color:'#4f46e5'},
-            {label:'Livrables en semaines', desc:"Premier résultat en 2–3 jours. Mission complète en 6–12 semaines.", color:'#d97706'},
+            {label:'Livrables en semaines', desc:"Premier livrable en 2–3 jours. Mission complète en 6–12 semaines.", color:'#d97706'},
           ].map((p) => (
             <div key={p.label} style={{
-              background:'rgba(0,0,0,0.02)',
-              border:'1px solid rgba(0,0,0,0.07)',
-              borderRadius:'1rem',
+              background:'#FFFFFF',
+              borderLeft:`3px solid ${p.color}`,
+              boxShadow:'0 2px 12px rgba(0,0,0,0.05)',
+              borderRadius:'0.75rem',
               padding:'1.25rem 1.5rem',
             }}>
-              <div style={{
-                width:'6px', height:'6px', borderRadius:'50%',
-                background:p.color,
-                marginBottom:'0.75rem'
-              }}/>
-              <p style={{fontSize:'0.85rem', fontWeight:600, color:'#0f0f0f', marginBottom:'0.35rem'}}>{p.label}</p>
-              <p style={{fontSize:'0.75rem', color:'rgba(30,30,30,0.4)', lineHeight:1.5}}>{p.desc}</p>
+              <p style={{fontSize:'0.88rem', fontWeight:700, color:'#0f0f0f', marginBottom:'0.35rem'}}>{p.label}</p>
+              <p style={{fontSize:'0.76rem', color:'rgba(30,30,30,0.45)', lineHeight:1.55}}>{p.desc}</p>
             </div>
           ))}
         </div>

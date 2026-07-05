@@ -32,10 +32,11 @@ export default function FAQ() {
           </p>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 'clamp(2rem,4vw,3rem)',
-            fontWeight: 700, color: '#0f0f0f', lineHeight: 1.1,
+            fontSize: 'clamp(2.4rem,5vw,3.8rem)',
+            fontWeight: 800, color: '#0f0f0f', lineHeight: 1.05,
+            letterSpacing: '-0.02em',
           }}>
-            Ce que les décideurs<br />me demandent d&apos;abord.
+            Ce que les décideurs<br /><span style={{color:'#1a9e5c'}}>me demandent d&apos;abord.</span>
           </h2>
         </div>
 
