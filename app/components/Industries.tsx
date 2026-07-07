@@ -40,8 +40,8 @@ export default function Industries() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-xs uppercase tracking-widest mb-3" style={{color: 'rgba(30,30,30,0.35)'}}>Contextes d&apos;intervention</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-            Avec qui je travaille
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif", letterSpacing: '-0.02em', lineHeight: 1.05 }}>
+            Avec qui<br /><span style={{color:'#1a9e5c'}}>je travaille.</span>
           </h2>
           <p className="max-w-xl mx-auto text-sm leading-relaxed" style={{color: 'rgba(30,30,30,0.5)'}}>
             J&apos;interviens auprès de directions qui cherchent à mieux piloter,

@@ -226,7 +226,12 @@ export default function Hero() {
         </div>{/* end LEFT COLUMN */}
 
         {/* RIGHT COLUMN — hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-center" style={{height:'420px'}}>
+        <div className="hidden lg:flex items-center justify-center relative" style={{height:'520px'}}>
+          <div style={{
+            position:'absolute', inset:'10%',
+            background:'radial-gradient(ellipse, rgba(26,158,92,0.10), rgba(79,70,229,0.05) 55%, transparent 75%)',
+            filter:'blur(40px)', pointerEvents:'none',
+          }}/>
           <StarField3D />
         </div>
 

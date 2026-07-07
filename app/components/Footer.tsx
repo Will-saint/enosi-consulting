@@ -88,6 +88,22 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Signature géante en filigrane */}
+        <div aria-hidden="true" style={{ overflow: "hidden", margin: "1rem 0 2rem" }}>
+          <p style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: "clamp(4rem, 15vw, 12rem)",
+            fontWeight: 800,
+            lineHeight: 0.85,
+            color: "transparent",
+            WebkitTextStroke: "1px rgba(255,255,255,0.1)",
+            letterSpacing: "0.02em",
+            textAlign: "center",
+            userSelect: "none",
+            margin: 0,
+          }}>ENOSI</p>
+        </div>
+
         {/* Bottom */}
         <div className="border-t border-[#1e1e1e] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-700">

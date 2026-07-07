@@ -60,26 +60,33 @@ export default function Methode() {
 
   return (
     <section id="methode" style={{
-      background: "#FFFFFF",
-      padding: "7rem 0",
-      borderTop: "1px solid rgba(0,0,0,0.05)",
-      borderBottom: "1px solid rgba(0,0,0,0.05)",
+      background: "#0f0f0f",
+      padding: "7.5rem 0",
       overflow: "hidden",
+      position: "relative",
     }}>
+      {/* Halo vert discret */}
+      <div style={{
+        position: "absolute", top: "-20%", right: "-10%",
+        width: "600px", height: "400px",
+        background: "radial-gradient(ellipse, rgba(26,158,92,0.12), transparent 70%)",
+        filter: "blur(60px)", pointerEvents: "none",
+      }} />
       {/* Header */}
-      <div style={{ padding: "0 1.5rem", maxWidth: "64rem", margin: "0 auto 3rem" }}>
+      <div style={{ padding: "0 1.5rem", maxWidth: "64rem", margin: "0 auto 3rem", position: "relative" }}>
         <p style={{
-          fontSize: "0.65rem", letterSpacing: "0.2em",
+          fontSize: "0.65rem", letterSpacing: "0.22em",
           textTransform: "uppercase",
-          color: "rgba(30,30,30,0.3)", marginBottom: "1rem"
+          color: "rgba(255,255,255,0.35)", marginBottom: "1rem"
         }}>Mon approche</p>
         <div style={{ display: "flex", alignItems: "flex-end",
                       justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(2rem, 4vw, 3rem)",
-            fontWeight: 700, color: "#0f0f0f",
-            margin: 0, lineHeight: 1.1,
+            fontSize: "clamp(2.4rem, 5vw, 3.8rem)",
+            fontWeight: 800, color: "#ffffff",
+            margin: 0, lineHeight: 1.05,
+            letterSpacing: "-0.02em",
           }}>
             Je clarifie.<br />
             J&apos;outille.<br />
@@ -97,7 +104,7 @@ export default function Methode() {
                   borderRadius: "4px",
                   border: "none",
                   cursor: "pointer",
-                  background: i === active ? "#1a9e5c" : "rgba(0,0,0,0.15)",
+                  background: i === active ? "#1a9e5c" : "rgba(255,255,255,0.2)",
                   transition: "all 0.3s ease",
                   padding: 0,
                 }}
@@ -131,16 +138,16 @@ export default function Methode() {
               flexShrink: 0,
               width: "clamp(260px, 35vw, 320px)",
               scrollSnapAlign: "start",
-              background: i === active ? "#F8F7F4" : "#FAFAF8",
+              background: i === active ? "#1a1a1a" : "#161616",
               border: `1px solid ${i === active
-                ? "rgba(26,158,92,0.2)"
-                : "rgba(0,0,0,0.06)"}`,
+                ? "rgba(26,158,92,0.45)"
+                : "rgba(255,255,255,0.08)"}`,
               borderRadius: "1.25rem",
               padding: "2rem",
               cursor: "pointer",
               transition: "all 0.3s ease",
               boxShadow: i === active
-                ? "0 4px 24px rgba(26,158,92,0.08)"
+                ? "0 8px 32px rgba(26,158,92,0.15)"
                 : "none",
             }}
           >
@@ -155,11 +162,11 @@ export default function Methode() {
             <h3 style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "1.4rem", fontWeight: 700,
-              color: "#0f0f0f", marginBottom: "0.75rem",
+              color: "#ffffff", marginBottom: "0.75rem",
             }}>{e.titre}</h3>
             <p style={{
               fontSize: "0.85rem",
-              color: "rgba(30,30,30,0.55)",
+              color: "rgba(255,255,255,0.55)",
               lineHeight: 1.7,
             }}>{e.description}</p>
           </div>
@@ -172,7 +179,7 @@ export default function Methode() {
         padding: "0 1.5rem"
       }}>
         <div style={{
-          height: "2px", background: "rgba(0,0,0,0.06)",
+          height: "2px", background: "rgba(255,255,255,0.1)",
           borderRadius: "1px", overflow: "hidden"
         }}>
           <div style={{
