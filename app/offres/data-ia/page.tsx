@@ -109,8 +109,8 @@ export default function PageDataIA() {
                 Pilotage financier &amp; ROI des projets Data/IA
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Vos investissements Data &amp; IA méritent un vrai pilotage financier.
+            <h1 className="font-extrabold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", letterSpacing: "-0.02em", lineHeight: 1.08 }}>
+              Vos investissements Data &amp; IA <span style={{ color: COLOR }}>méritent un vrai pilotage financier.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
               J&apos;aide les directions à évaluer, challenger et suivre le ROI de leurs projets Data &amp; IA —

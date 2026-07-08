@@ -77,9 +77,9 @@ export default function OffresHub() {
               Retour à l&apos;accueil
             </a>
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mt-8 mb-3">Mes offres</p>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Une expertise. Trois angles d&apos;attaque.
+            <h1 className="font-extrabold leading-tight text-[#0f0f0f] mb-5"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.8rem, 6vw, 5rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}>
+              Une expertise.<br /><span style={{ color: "#1a9e5c" }}>Trois angles d&apos;attaque.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
               Je ne vends pas un catalogue : j&apos;interviens à la jonction de la finance,

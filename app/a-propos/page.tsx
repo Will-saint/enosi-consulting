@@ -59,10 +59,10 @@ export default function APropos() {
             </a>
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mt-8 mb-3">À propos</p>
             <h1
-              className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              className="font-extrabold leading-tight text-[#0f0f0f] mb-5"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.6rem, 6vw, 4.6rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}
             >
-              Un conseil indépendant construit autour d&apos;une conviction.
+              Un conseil indépendant<br /><span style={{ color: "#1a9e5c" }}>construit autour d&apos;une conviction.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
               Que la donnée, la finance et l&apos;IA ne sont utiles
@@ -245,13 +245,19 @@ export default function APropos() {
 
           {/* ── Section 5 : Ce qu'on n'est pas ─────── */}
           <section
-            className="mb-16 py-16 px-8 rounded-2xl"
+            className="mb-16 py-16 px-8 rounded-2xl relative overflow-hidden"
             style={{ backgroundColor: "#0d0d0d" }}
           >
-            <p className="text-xs uppercase tracking-widest mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>Pour être clair</p>
+            <div style={{
+              position: "absolute", top: "-30%", right: "-10%",
+              width: "400px", height: "300px",
+              background: "radial-gradient(ellipse, rgba(26,158,92,0.15), transparent 70%)",
+              filter: "blur(50px)", pointerEvents: "none",
+            }} />
+            <p className="text-xs uppercase tracking-widest mb-3 relative" style={{ color: "rgba(255,255,255,0.35)" }}>Pour être clair</p>
             <h2
-              className="text-2xl font-bold mb-8"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif", color: "#ffffff" }}
+              className="font-extrabold mb-8 relative"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif", color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", letterSpacing: "-0.02em" }}
             >
               Ce que je ne suis pas
             </h2>

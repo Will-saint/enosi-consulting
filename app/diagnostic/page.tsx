@@ -217,53 +217,96 @@ export default function DiagnosticPage() {
       <>
         <Navbar />
         <main className="min-h-screen" style={{ background: "#F8F7F4" }}>
-          <div className="max-w-2xl mx-auto px-6 pt-32 pb-24">
-            <p
-              className="text-xs uppercase tracking-widest mb-4"
-              style={{ color: "rgba(30,30,30,0.35)" }}
-            >
-              Outil gratuit
-            </p>
-            <h1
-              className="text-4xl md:text-5xl font-bold leading-tight mb-6"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif", color: "#0f0f0f" }}
-            >
-              Évaluez la maturité<br />Data&nbsp;/&nbsp;IA de votre organisation
-            </h1>
-            <p
-              className="text-base leading-relaxed mb-10 max-w-lg"
-              style={{ color: "rgba(30,30,30,0.55)" }}
-            >
-              12 questions · 3 minutes · Un rapport personnalisé sur 4 axes
-              avec vos priorités d&apos;action identifiées — envoyé gratuitement.
-            </p>
+          <div className="max-w-5xl mx-auto px-6 pt-32 pb-24 grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-14 items-center">
+            <div>
+              <p
+                className="text-xs uppercase tracking-widest mb-4"
+                style={{ color: "#1a9e5c", fontWeight: 600, letterSpacing: "0.2em" }}
+              >
+                Outil gratuit · 3 minutes
+              </p>
+              <h1
+                className="font-extrabold leading-tight mb-6"
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  color: "#0f0f0f",
+                  fontSize: "clamp(2.6rem, 6vw, 4.2rem)",
+                  letterSpacing: "-0.02em",
+                  lineHeight: 1.05,
+                }}
+              >
+                Évaluez la maturité<br />
+                <span style={{ color: "#1a9e5c" }}>Data&nbsp;/&nbsp;IA</span> de votre organisation
+              </h1>
+              <p
+                className="text-base leading-relaxed mb-10 max-w-lg"
+                style={{ color: "rgba(30,30,30,0.55)" }}
+              >
+                12 questions · 3 minutes · Un rapport personnalisé sur 4 axes
+                avec vos priorités d&apos;action identifiées — envoyé gratuitement.
+              </p>
 
-            <div className="flex flex-wrap gap-2.5 mb-12">
-              {AXES.map((a) => (
-                <span
-                  key={a.label}
-                  className="text-xs px-3 py-1.5 rounded-full border font-medium"
-                  style={{
-                    borderColor: `${a.color}40`,
-                    color: a.color,
-                    background: `${a.color}0d`,
-                  }}
-                >
-                  {a.shortLabel}
-                </span>
-              ))}
+              <div className="flex flex-wrap gap-2.5 mb-12">
+                {AXES.map((a) => (
+                  <span
+                    key={a.label}
+                    className="text-xs px-3 py-1.5 rounded-full border font-medium"
+                    style={{
+                      borderColor: `${a.color}40`,
+                      color: a.color,
+                      background: `${a.color}0d`,
+                    }}
+                  >
+                    {a.shortLabel}
+                  </span>
+                ))}
+              </div>
+
+              <button
+                onClick={() => setStep(1)}
+                className="inline-flex items-center gap-2 px-9 py-4.5 rounded-full font-bold text-sm transition-transform hover:scale-[1.02]"
+                style={{ background: "linear-gradient(135deg, #1a9e5c, #157a47)", color: "#fff", boxShadow: "0 6px 28px rgba(26,158,92,0.35)", padding: "1.1rem 2.4rem" }}
+              >
+                Commencer le diagnostic →
+              </button>
+              <p className="text-xs mt-5" style={{ color: "rgba(30,30,30,0.3)" }}>
+                Gratuit · Sans inscription préalable · Résultats immédiats
+              </p>
             </div>
 
-            <button
-              onClick={() => setStep(1)}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm transition-colors"
-              style={{ background: "#1a9e5c", color: "#000" }}
-            >
-              Commencer le diagnostic →
-            </button>
-            <p className="text-xs mt-5" style={{ color: "rgba(30,30,30,0.3)" }}>
-              Gratuit · Sans inscription préalable · Résultats immédiats
-            </p>
+            {/* Aperçu du rapport — donne envie avant de commencer */}
+            <div className="hidden lg:block" style={{
+              background: "#ffffff",
+              borderRadius: "1.5rem",
+              padding: "2rem",
+              boxShadow: "0 12px 48px rgba(0,0,0,0.08)",
+              border: "1px solid rgba(0,0,0,0.06)",
+            }}>
+              <p style={{ fontSize: "0.62rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(30,30,30,0.3)", marginBottom: "1rem" }}>
+                Aperçu de votre rapport
+              </p>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1.25rem" }}>
+                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.8rem", fontWeight: 800, color: "#1a9e5c", lineHeight: 1 }}>32</span>
+                <span style={{ fontSize: "1rem", color: "rgba(30,30,30,0.3)" }}>/48</span>
+                <span style={{ marginLeft: "auto", fontSize: "0.7rem", fontWeight: 700, color: "#1a9e5c", background: "#1a9e5c15", padding: "0.3rem 0.8rem", borderRadius: "999px" }}>Avancé</span>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem" }}>
+                {AXES.map((a, i) => (
+                  <div key={a.label}>
+                    <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.7rem", marginBottom: "0.3rem" }}>
+                      <span style={{ fontWeight: 600, color: "#0f0f0f" }}>{a.shortLabel}</span>
+                      <span style={{ color: a.color, fontWeight: 700 }}>{[9, 7, 8, 8][i]}/12</span>
+                    </div>
+                    <div style={{ height: "5px", borderRadius: "99px", background: "rgba(0,0,0,0.06)" }}>
+                      <div style={{ height: "100%", width: `${([9, 7, 8, 8][i] / 12) * 100}%`, background: a.color, borderRadius: "99px" }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p style={{ fontSize: "0.72rem", color: "rgba(30,30,30,0.4)", marginTop: "1.5rem", lineHeight: 1.6 }}>
+                + priorités d&apos;action détaillées par axe, avec ce qui vous fait le plus progresser en premier.
+              </p>
+            </div>
           </div>
         </main>
         <Footer />

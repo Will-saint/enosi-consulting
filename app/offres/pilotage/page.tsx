@@ -109,8 +109,8 @@ export default function PagePilotage() {
                 Pilotage de la performance
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Rendre la performance lisible, fiable et utile.
+            <h1 className="font-extrabold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.6rem, 6vw, 4.6rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}>
+              Rendre la performance <span style={{ color: COLOR }}>lisible, fiable et utile.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
               J&apos;aide les directions à construire un pilotage qui sert vraiment à décider, pas à constater.

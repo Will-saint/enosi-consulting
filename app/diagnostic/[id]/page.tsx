@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { CALENDLY_URL } from "@/lib/constants";
 
 // ─── Decode ──────────────────────────────────────────────────────────────────
 function decodeId(id: string): number[] | null {
@@ -309,10 +310,11 @@ export default function DiagnosticResult() {
                 <span
                   style={{
                     fontFamily: "'Playfair Display', Georgia, serif",
-                    fontSize: "clamp(2.5rem, 6vw, 4rem)",
-                    fontWeight: 700,
+                    fontSize: "clamp(3rem, 7vw, 5rem)",
+                    fontWeight: 800,
                     color: level.color,
                     lineHeight: 1,
+                    letterSpacing: "-0.02em",
                   }}
                 >
                   {total}
@@ -578,19 +580,27 @@ export default function DiagnosticResult() {
           {/* ── CTA ──────────────────────────────────────────────────────── */}
           <div
             style={{
-              background: "#0d0d0d",
+              background: "linear-gradient(135deg, #0d3b24 0%, #157a47 65%, #1a9e5c 100%)",
               borderRadius: "1.25rem",
-              padding: "2.5rem",
+              padding: "3rem 2.5rem",
               textAlign: "center",
+              position: "relative",
+              overflow: "hidden",
             }}
           >
+            <div style={{
+              position: "absolute", inset: 0, pointerEvents: "none",
+              backgroundImage: "radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)",
+              backgroundSize: "26px 26px",
+            }} />
             <p
               style={{
                 fontSize: "0.65rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.3)",
+                color: "rgba(255,255,255,0.6)",
                 marginBottom: "1rem",
+                position: "relative",
               }}
             >
               Prochaine étape
@@ -598,53 +608,59 @@ export default function DiagnosticResult() {
             <h2
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                fontWeight: 700,
+                fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
+                fontWeight: 800,
                 color: "#ffffff",
                 marginBottom: "0.75rem",
+                letterSpacing: "-0.02em",
+                position: "relative",
               }}
             >
               Discutons de votre plan d&apos;action.
             </h2>
             <p
               style={{
-                fontSize: "0.85rem",
-                color: "rgba(255,255,255,0.45)",
-                marginBottom: "2rem",
+                fontSize: "0.9rem",
+                color: "rgba(255,255,255,0.75)",
+                marginBottom: "2.25rem",
                 maxWidth: "36ch",
-                margin: "0 auto 2rem",
+                margin: "0 auto 2.25rem",
+                position: "relative",
               }}
             >
-              30 minutes d&apos;échange pour transformer ce diagnostic
+              30 minutes d&apos;échange pour transformer ce score {total}/48
               en feuille de route concrète.
             </p>
 
-            <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", position: "relative" }}>
               <a
-                href="/contact"
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: "inline-block",
-                  padding: "0.85rem 2rem",
-                  background: "#1a9e5c",
-                  color: "#000",
-                  fontWeight: 700,
+                  padding: "0.95rem 2.4rem",
+                  background: "#ffffff",
+                  color: "#0d3b24",
+                  fontWeight: 800,
                   borderRadius: "999px",
-                  fontSize: "0.85rem",
+                  fontSize: "0.88rem",
                   textDecoration: "none",
+                  boxShadow: "0 6px 24px rgba(0,0,0,0.2)",
                 }}
               >
-                Prendre contact →
+                Réserver 30 minutes →
               </a>
               <button
                 onClick={handleCopy}
                 style={{
-                  padding: "0.85rem 2rem",
-                  background: "rgba(255,255,255,0.08)",
-                  color: "rgba(255,255,255,0.7)",
+                  padding: "0.95rem 2rem",
+                  background: "rgba(255,255,255,0.1)",
+                  color: "rgba(255,255,255,0.85)",
                   fontWeight: 600,
                   borderRadius: "999px",
                   fontSize: "0.85rem",
-                  border: "1px solid rgba(255,255,255,0.12)",
+                  border: "1px solid rgba(255,255,255,0.25)",
                   cursor: "pointer",
                 }}
               >
@@ -652,12 +668,12 @@ export default function DiagnosticResult() {
               </button>
             </div>
 
-            <div style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+            <div style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(255,255,255,0.15)", position: "relative" }}>
               <a
                 href="/diagnostic"
                 style={{
                   fontSize: "0.78rem",
-                  color: "rgba(255,255,255,0.3)",
+                  color: "rgba(255,255,255,0.5)",
                   textDecoration: "none",
                 }}
               >

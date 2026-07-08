@@ -109,8 +109,8 @@ export default function PageEfficacite() {
                 Efficacité et création de valeur
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
-              Améliorer l&apos;exécution. Réduire les frictions. Piloter ce qui compte.
+            <h1 className="font-extrabold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", letterSpacing: "-0.02em", lineHeight: 1.08 }}>
+              Améliorer l&apos;exécution. <span style={{ color: COLOR }}>Réduire les frictions.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
               J&apos;interviens sur les processus qui ralentissent l&apos;organisation et sur les mécanismes qui empêchent de créer de la valeur.
