@@ -60,11 +60,12 @@ export default function BlogPage() {
             </p>
             <h1 style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
-              fontWeight: 700, color: "#0f0f0f", lineHeight: 1.1,
+              fontSize: "clamp(2.6rem, 6vw, 4.4rem)",
+              fontWeight: 800, color: "#0f0f0f", lineHeight: 1.05,
+              letterSpacing: "-0.02em",
               marginBottom: "1rem",
             }}>
-              Points de vue sur la data,<br />l&apos;IA et la performance.
+              Points de vue sur la data,<br /><span style={{ color: "#1a9e5c" }}>l&apos;IA et la performance.</span>
             </h1>
             <p style={{ color: "rgba(30,30,30,0.5)", fontSize: "1rem", maxWidth: "480px", lineHeight: 1.7 }}>
               Articles de fond sur ce que j&apos;observe sur le terrain — sans

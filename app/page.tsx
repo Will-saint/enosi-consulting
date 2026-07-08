@@ -15,6 +15,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Partners from "./components/Partners";
 import Metrics from "./components/Metrics";
+import Parcours from "./components/Parcours";
 import Platforms from "./components/Platforms";
 import Methode from "./components/Methode";
 import PortfolioPreview from "./components/PortfolioPreview";
@@ -75,6 +76,7 @@ export default function Home() {
         <Hero />
         <Partners />
         <Metrics />
+        <Parcours />
         <Platforms />
         <Methode />
         <PortfolioPreview />

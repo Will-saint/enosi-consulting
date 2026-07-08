@@ -26,10 +26,10 @@ export default function PageContact() {
           <div className="mb-14">
             <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-widest mb-4">Contact</p>
             <h1
-              className="text-5xl md:text-6xl font-bold leading-tight text-[#0f0f0f] mb-5"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              className="font-extrabold leading-tight text-[#0f0f0f] mb-5"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.6rem, 6vw, 4.6rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}
             >
-              Discutons de vos enjeux.
+              Discutons de <span style={{ color: "#1a9e5c" }}>vos enjeux.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-lg">
               Un premier échange de 30 minutes pour comprendre
