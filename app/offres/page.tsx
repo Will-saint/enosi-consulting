@@ -17,40 +17,41 @@ export const metadata: Metadata = {
 const offres = [
   {
     numero: "01",
-    nom: "Pilotage financier & ROI des projets Data/IA",
-    accroche: "Évaluer, challenger et suivre la valeur réelle de vos investissements Data & IA.",
+    nom: "Automatisation du reporting",
+    accroche: "Ce qui prend deux jours doit prendre trente secondes.",
     detail:
-      "Business cases challengés, suivi coûts / valeur / ROI de votre portefeuille de projets, arbitrages éclairés. C'est le cœur de mon expérience chez Moët Hennessy (LVMH).",
+      "Vos fichiers arrivent de partout, dans des formats qui ne se parlent pas, et quelqu'un passe deux jours à reconstruire un pack que personne ne relira. Je remplace ce travail par un traitement qui s'exécute tout seul, avec les contrôles intégrés.",
     points: [
-      "ROI et suivi budgétaire des projets Data/IA",
-      "Cartographie et scoring des cas d'usage",
-      "Automatisation et fiabilisation du reporting",
+      "Consolidation multi-sources automatisée",
+      "Contrôles de cohérence systématiques",
+      "Génération du pack mensuel en un clic",
+    ],
+    couleur: "#1a9e5c",
+    icone: "◎",
+    href: "/offres/pilotage",
+    demo: "/demo/reporting",
+  },
+  {
+    numero: "02",
+    nom: "Contrôles & traitement par IA",
+    accroche: "Détecter les écarts le jour même, supprimer la ressaisie.",
+    detail:
+      "Les anomalies découvertes en fin de mois coûtent plus cher que celles détectées le jour même. Et personne ne devrait ressaisir des factures à la main en 2026. L'IA fait très bien ces deux choses.",
+    points: [
+      "Détection d'anomalies et alertes automatiques",
+      "Extraction de factures et pièces comptables",
+      "Contrôles par règles métier",
     ],
     couleur: "#4f46e5",
     icone: "◈",
     href: "/offres/data-ia",
   },
   {
-    numero: "02",
-    nom: "Pilotage de la performance",
-    accroche: "Rendre la performance lisible, fiable et utile pour la décision.",
-    detail:
-      "Vos indicateurs existent mais votre pilotage reste flou. Je structure les KPI qui comptent et je construis les dispositifs dont votre COMEX a besoin pour décider.",
-    points: [
-      "Structuration des KPI et indicateurs clés",
-      "Refonte du reporting décisionnel",
-      "Tableaux de bord orientés COMEX",
-    ],
-    couleur: "#1a9e5c",
-    icone: "◎",
-    href: "/offres/pilotage",
-  },
-  {
     numero: "03",
-    nom: "Efficacité et création de valeur",
+    nom: "Process de gestion",
     accroche: "Réduire les frictions, piloter ce qui crée vraiment de la valeur.",
     detail:
-      "Cycles budgétaires trop longs, allers-retours redondants, coordination métier / data / finance défaillante : j'identifie les frictions et je les traite.",
+      "Cycles budgétaires interminables, allers-retours redondants, coordination métier / data / finance défaillante : j'identifie les frictions et je les traite, sans plaquer une méthode toute faite.",
     points: [
       "Optimisation des processus critiques",
       "Coordination métier / data / finance",
@@ -83,9 +84,10 @@ export default function OffresHub() {
               Une expertise.<br /><span style={{ color: "#1a9e5c" }}>Trois angles d&apos;attaque.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              Je ne vends pas un catalogue : j&apos;interviens à la jonction de la finance,
-              de la data et de l&apos;IA. Ces trois offres sont trois façons concrètes
-              dont cette expertise se traduit chez vous.
+              Je ne vends pas un catalogue. Je viens du contrôle de gestion et je construis
+              les outils moi-même : ces trois offres sont trois façons concrètes dont ce
+              profil se traduit chez vous. Et plus largement, tout ce qui fait perdre du
+              temps à une équipe finance m&apos;intéresse.
             </p>
           </div>
 
@@ -118,8 +120,15 @@ export default function OffresHub() {
                       </div>
                     </div>
                   </div>
-                  <span className="text-sm font-semibold shrink-0 mt-1" style={{ color: o.couleur }}>
-                    En savoir plus →
+                  <span className="flex flex-col items-end gap-1.5 shrink-0 mt-1">
+                    <span className="text-sm font-semibold" style={{ color: o.couleur }}>
+                      En savoir plus →
+                    </span>
+                    {o.demo && (
+                      <span className="text-xs" style={{ color: "rgba(30,30,30,0.4)" }}>
+                        ▶ démo interactive
+                      </span>
+                    )}
                   </span>
                 </div>
               </a>

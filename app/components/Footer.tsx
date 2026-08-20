@@ -1,3 +1,4 @@
+import { LINKEDIN_URL } from "@/lib/constants";
 import Image from "next/image";
 
 const liens: Record<string, { label: string; href: string }[]> = {
@@ -57,7 +58,7 @@ export default function Footer() {
               Me contacter
             </a>
             <a
-              href="https://www.linkedin.com/in/williamsaintdizier"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-4 text-xs text-gray-600 hover:text-white transition-colors"

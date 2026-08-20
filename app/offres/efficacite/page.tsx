@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Efficacité et création de valeur",
+  "name": "Optimisation des process de gestion",
   "description": "Réduire les frictions, améliorer les processus critiques, piloter ce qui crée vraiment de la valeur. Pour ETI en croissance et directions en transformation.",
   "provider": { "@type": "Organization", "name": "Enosi Consulting" },
   "areaServed": "France",
@@ -78,9 +78,9 @@ const etapes = [
 ];
 
 const resultats = [
-  { chiffre: "−30 à 50%", label: "Sur les délais des processus critiques" },
-  { chiffre: "−60%", label: "D'allers-retours sur les cycles budgétaires" },
-  { chiffre: "1 référentiel", label: "Commun entre toutes les directions" },
+  { chiffre: "1 référentiel", label: "D'hypothèses commun à toutes les directions" },
+  { chiffre: "−3 sem.", label: "Objectif visé sur un cycle budgétaire de 14 semaines" },
+  { chiffre: "0", label: "Boucle de validation redondante conservée" },
   { chiffre: "Année 1", label: "Gains visibles dès la première itération" },
 ];
 
@@ -107,7 +107,7 @@ export default function PageEfficacite() {
             </a>
             <div className="mt-8 mb-4">
               <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: `${COLOR}15`, color: COLOR }}>
-                Efficacité et création de valeur
+                Process de gestion
               </span>
             </div>
             <h1 className="font-extrabold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", letterSpacing: "-0.02em", lineHeight: 1.08 }}>
@@ -146,10 +146,10 @@ export default function PageEfficacite() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {interventions.map((item) => (
-                <div key={item.n} className="rounded-xl p-5" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
+                <div key={item.n} className="rounded-xl p-5 bg-white transition-shadow hover:shadow-[0_6px_24px_rgba(0,0,0,0.07)]" style={{ boxShadow: "0 0 0 1px rgba(0,0,0,0.07)", borderTop: `2px solid ${COLOR}` }}>
                   <span className="text-xs font-mono mb-2 block" style={{ color: COLOR }}>{item.n}</span>
                   <h3 className="text-sm font-bold text-[#0f0f0f] mb-1.5">{item.titre}</h3>
-                  <p className="text-xs text-[rgba(30,30,30,0.5)] leading-relaxed">{item.texte}</p>
+                  <p className="text-xs text-[rgba(30,30,30,0.55)] leading-relaxed">{item.texte}</p>
                 </div>
               ))}
             </div>
@@ -195,7 +195,7 @@ export default function PageEfficacite() {
           {/* Ce que nous ne faisons pas */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <div className="rounded-xl p-6" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e", borderLeft: `2px solid ${COLOR}` }}>
-              <h3 className="text-sm font-bold text-[#0f0f0f] mb-4">Ce que cette offre n&apos;est pas</h3>
+              <h3 className="text-sm font-bold mb-4" style={{ color: "#ffffff" }}>Ce que cette offre n&apos;est pas</h3>
               <div className="space-y-3">
                 {[
                   "Des audits sans recommandations opérationnelles",
@@ -203,8 +203,8 @@ export default function PageEfficacite() {
                   "De la conduite du changement déconnectée des vrais enjeux métier",
                 ].map((item) => (
                   <div key={item} className="flex gap-3 items-start">
-                    <span className="text-[rgba(30,30,30,0.4)] text-sm shrink-0">✗</span>
-                    <p className="text-sm text-[rgba(30,30,30,0.5)]">{item}</p>
+                    <span className="text-sm shrink-0" style={{ color: "rgba(255,255,255,0.35)" }}>✗</span>
+                    <p className="text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>{item}</p>
                   </div>
                 ))}
               </div>
@@ -213,7 +213,7 @@ export default function PageEfficacite() {
 
           {/* Cas client */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
-            <div className="flex items-center justify-between gap-4 rounded-xl p-6" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
+            <div className="flex items-center justify-between gap-4 rounded-xl p-6 bg-white" style={{ boxShadow: "0 0 0 1px rgba(0,0,0,0.07)" }}>
               <div>
                 <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-1">Cas d&apos;usage type</p>
                 <p className="text-sm font-bold text-[#0f0f0f] mb-1">Transformation du cycle budgétaire d&apos;une ETI</p>

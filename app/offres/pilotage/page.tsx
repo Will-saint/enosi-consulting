@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Pilotage de la performance",
-  "description": "Structurer les indicateurs, fiabiliser le reporting, construire un dispositif de pilotage décisionnel pour les directions financières et de performance.",
+  "name": "Automatisation du reporting financier",
+  "description": "Consolidation multi-sources, contrôles de cohérence et génération automatique du pack de reporting mensuel pour les directions financières.",
   "provider": { "@type": "Organization", "name": "Enosi Consulting" },
   "areaServed": "France",
-  "serviceType": "Conseil en pilotage de la performance",
+  "serviceType": "Automatisation du reporting et des contrôles financiers",
   "audience": { "@type": "Audience", "audienceType": "Direction financière, Direction de la performance, COMEX" },
   "url": `${SITE_URL}/offres/pilotage`
 };
@@ -78,10 +78,10 @@ const etapes = [
 ];
 
 const resultats = [
-  { chiffre: "−60 à 80%", label: "de temps de production reporting" },
-  { chiffre: "÷2 à 3", label: "sur le temps de décision en réunion" },
+  { chiffre: "−25 %", label: "de temps de production — résultat obtenu sur un périmètre de 100 M€" },
+  { chiffre: "J+1", label: "disponibilité des données au lieu d'attendre la fin de semaine" },
   { chiffre: "1 source", label: "de vérité partagée entre les directions" },
-  { chiffre: "J+1", label: "disponibilité des données vs J+5 à J+15 avant" },
+  { chiffre: "0", label: "ressaisie manuelle dans la chaîne" },
 ];
 
 const COLOR = "#1a9e5c";
@@ -107,14 +107,16 @@ export default function PagePilotage() {
             </a>
             <div className="mt-8 mb-4">
               <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: `${COLOR}15`, color: COLOR }}>
-                Pilotage de la performance
+                Automatisation du reporting
               </span>
             </div>
             <h1 className="font-extrabold leading-tight text-[#0f0f0f] mb-5" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.6rem, 6vw, 4.6rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}>
-              Rendre la performance <span style={{ color: COLOR }}>lisible, fiable et utile.</span>
+              Votre reporting mensuel <span style={{ color: COLOR }}>ne devrait pas prendre deux jours.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              J&apos;aide les directions à construire un pilotage qui sert vraiment à décider, pas à constater.
+              Des fichiers qui arrivent de partout, des formats qui ne se parlent pas, des contrôles
+              faits à la main : je remplace tout ça par un traitement qui s&apos;exécute seul.
+              <a href="/demo/reporting" style={{ color: COLOR, fontWeight: 600, textDecoration: "none" }}> ▶ Voir la démo</a>
             </p>
           </div>
 
@@ -146,10 +148,10 @@ export default function PagePilotage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {interventions.map((item) => (
-                <div key={item.n} className="rounded-xl p-5" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
+                <div key={item.n} className="rounded-xl p-5 bg-white transition-shadow hover:shadow-[0_6px_24px_rgba(0,0,0,0.07)]" style={{ boxShadow: "0 0 0 1px rgba(0,0,0,0.07)", borderTop: `2px solid ${COLOR}` }}>
                   <span className="text-xs font-mono mb-2 block" style={{ color: COLOR }}>{item.n}</span>
                   <h3 className="text-sm font-bold text-[#0f0f0f] mb-1.5">{item.titre}</h3>
-                  <p className="text-xs text-[rgba(30,30,30,0.5)] leading-relaxed">{item.texte}</p>
+                  <p className="text-xs text-[rgba(30,30,30,0.55)] leading-relaxed">{item.texte}</p>
                 </div>
               ))}
             </div>
@@ -195,7 +197,7 @@ export default function PagePilotage() {
           {/* Ce que nous ne faisons pas */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
             <div className="rounded-xl p-6" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e", borderLeft: `2px solid ${COLOR}` }}>
-              <h3 className="text-sm font-bold text-[#0f0f0f] mb-4">Ce que cette offre n&apos;est pas</h3>
+              <h3 className="text-sm font-bold mb-4" style={{ color: "#ffffff" }}>Ce que cette offre n&apos;est pas</h3>
               <div className="space-y-3">
                 {[
                   "Un projet de déploiement d'outil BI sans réflexion sur les usages",
@@ -203,8 +205,8 @@ export default function PagePilotage() {
                   "Un audit sans suite opérationnelle",
                 ].map((item) => (
                   <div key={item} className="flex gap-3 items-start">
-                    <span className="text-[rgba(30,30,30,0.4)] text-sm shrink-0">✗</span>
-                    <p className="text-sm text-[rgba(30,30,30,0.5)]">{item}</p>
+                    <span className="text-sm shrink-0" style={{ color: "rgba(255,255,255,0.35)" }}>✗</span>
+                    <p className="text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>{item}</p>
                   </div>
                 ))}
               </div>
@@ -213,7 +215,7 @@ export default function PagePilotage() {
 
           {/* Cas client */}
           <section className="mb-14 pb-14 border-b border-[rgba(0,0,0,0.08)]">
-            <div className="flex items-center justify-between gap-4 rounded-xl p-6" style={{ backgroundColor: "#0d0d0d", border: "1px solid #1e1e1e" }}>
+            <div className="flex items-center justify-between gap-4 rounded-xl p-6 bg-white" style={{ boxShadow: "0 0 0 1px rgba(0,0,0,0.07)" }}>
               <div>
                 <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-1">Cas d&apos;usage type</p>
                 <p className="text-sm font-bold text-[#0f0f0f] mb-1">Refonte du pilotage mensuel d&apos;une ETI industrielle</p>

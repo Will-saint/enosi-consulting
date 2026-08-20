@@ -1,4 +1,4 @@
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, LINKEDIN_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -32,7 +32,7 @@ const personSchema = {
     "Pilotage de la performance", "Reporting financier", "Data engineering",
     "Intelligence artificielle", "Business intelligence", "Power BI", "Dataiku"
   ],
-  "sameAs": ["https://www.linkedin.com/in/williamsaintdizier"],
+  "sameAs": [LINKEDIN_URL],
   "url": `${SITE_URL}/a-propos`
 };
 

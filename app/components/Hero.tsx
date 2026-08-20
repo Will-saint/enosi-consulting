@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { CALENDLY_URL } from "@/lib/constants";
+import { CALENDLY_URL, LINKEDIN_URL } from "@/lib/constants";
 
 const StarField3D = dynamic(() => import("./StarField3D"), {
   ssr: false,
@@ -193,7 +193,7 @@ export default function Hero() {
               </p>
             </div>
             <a
-              href="https://www.linkedin.com/in/william-saint-dizier/"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{marginLeft:'auto', fontSize:'0.7rem', color:'#1a9e5c', textDecoration:'none', flexShrink:0, whiteSpace:'nowrap'}}

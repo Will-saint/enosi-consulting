@@ -1,3 +1,4 @@
+import { CALENDLY_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -85,7 +86,7 @@ export default function QuickWinPage() {
               Résultats concrets, livrables garantis, sans engagement de suite.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <a href="https://calendly.com/williamsaintdizier" target="_blank" rel="noopener noreferrer" style={{
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" style={{
                 padding: "0.9rem 2.5rem", borderRadius: "2rem",
                 background: "linear-gradient(135deg, #1a9e5c, #157a47)",
                 color: "#fff", fontWeight: 700, fontSize: "0.88rem",

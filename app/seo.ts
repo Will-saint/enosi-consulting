@@ -1,50 +1,67 @@
+/**
+ * Titres et descriptions SEO, centralisés.
+ * Règle : chaque titre contient un mot-clé réellement cherché + la marque.
+ * Descriptions entre 150 et 165 caractères, orientées bénéfice concret.
+ */
 export const seoConfig = {
   home: {
     title: "Automatisation IA des process finance | Enosi Consulting",
-    description: "Contrôleur de gestion de métier, j'automatise le reporting, les contrôles et le traitement documentaire des équipes finance. Vous repartez avec un outil qui tourne, pas avec un rapport."
+    description:
+      "Contrôleur de gestion de métier, j'automatise le reporting, les contrôles et le traitement documentaire des équipes finance. Un outil qui tourne, pas un rapport.",
   },
   offres: {
-    title: "Mes offres — Pilotage, ROI Data/IA, efficacité | Enosi Consulting",
-    description: "Trois angles d'intervention : pilotage financier & ROI des projets Data/IA, pilotage de la performance, efficacité opérationnelle. Diagnostic gratuit, audit 5 jours à prix fixe."
+    title: "Mes offres — Automatiser le reporting et les contrôles | Enosi Consulting",
+    description:
+      "Automatisation du reporting, contrôles et détection d'anomalies, extraction documentaire par IA. Diagnostic gratuit, audit 5 jours à prix fixe, missions au forfait.",
   },
   portfolio: {
-    title: "Approche — Scénarios d'intervention types | Enosi Consulting",
-    description: "Comment j'aborde les problèmes de pilotage, de déploiement IA et de cycle budgétaire : trois scénarios types construits à partir de mon expérience et de ma méthode."
+    title: "Réalisations et scénarios d'automatisation | Enosi Consulting",
+    description:
+      "Architectures réellement déployées et démonstrations construites sur ma méthode : pipelines de collecte, chaînes automatisées, contrôles de cohérence. Provenance indiquée.",
   },
   aPropos: {
-    title: "À propos — Conseil finance, data et IA | Enosi Consulting",
-    description: "Enosi Consulting : conseil indépendant à l'intersection de la finance, de la data et de l'IA. Fondé par William Saint-Dizier — ex-Moët Hennessy (LVMH), Data & AI Value Management."
+    title: "William Saint-Dizier — Contrôleur de gestion & automatisation IA",
+    description:
+      "Contrôleur de gestion passé par Moët Hennessy (LVMH), Bourbon Voyages et Appart'City. Je fais le pont entre la finance et les outils, à Paris et Montpellier.",
   },
   offresPilotage: {
-    title: "Pilotage de la performance — Conseil KPI et reporting | Enosi Consulting",
-    description: "Structurer les indicateurs, fiabiliser le reporting, construire un dispositif de pilotage décisionnel. Pour directions financières et performance."
+    title: "Automatisation du reporting financier | Enosi Consulting",
+    description:
+      "Consolidation multi-sources, contrôles de cohérence et génération automatique du pack mensuel. Ce qui prend deux jours doit prendre trente secondes.",
   },
   offresDataIA: {
-    title: "Pilotage financier & ROI des projets Data/IA | Enosi Consulting",
-    description: "Évaluer, challenger et suivre le ROI de vos investissements Data & IA. Business cases, tracking coûts/valeur, automatisation du reporting, cas d'usage déployés en 6 à 10 semaines."
+    title: "Contrôles automatisés et extraction documentaire par IA | Enosi Consulting",
+    description:
+      "Détection d'anomalies le jour même, extraction de factures et pièces comptables sans ressaisie, contrôle par règles métier avec revue humaine sur exception.",
   },
   offresEfficacite: {
-    title: "Efficacité et création de valeur — Optimisation processus | Enosi Consulting",
-    description: "Réduire les frictions, améliorer les processus critiques, piloter ce qui crée vraiment de la valeur. Pour ETI en croissance et directions en transformation."
+    title: "Optimisation des process de gestion | Enosi Consulting",
+    description:
+      "Cycles budgétaires trop longs, allers-retours redondants, coordination métier-data-finance défaillante : j'identifie les frictions et je les traite.",
   },
   contact: {
-    title: "Contact — Échangeons sur vos enjeux | Enosi Consulting",
-    description: "Un premier échange de 30 minutes pour comprendre vos priorités. Conseil indépendant en performance, data et IA."
+    title: "Contact — Parlons de ce qui vous prend du temps | Enosi Consulting",
+    description:
+      "Un premier échange de 30 minutes pour identifier ce qui mérite d'être automatisé chez vous. Réponse sous 48 h. Paris, Montpellier et à distance.",
   },
   demo: {
     title: "Démo — Tableau de bord interactif | Enosi Consulting",
-    description: "Voyez en direct ce que vos données pourraient ressembler. Dashboard financier animé et calculateur ROI pour directeurs financiers et CDO."
+    description:
+      "Dashboard financier animé et calculateur de ROI. Voyez concrètement à quoi ressemble un pilotage automatisé avant de vous engager.",
   },
   mentionsLegales: {
     title: "Mentions légales | Enosi Consulting",
-    description: "Mentions légales du site enosi-consulting.fr — éditeur, hébergeur et informations légales."
+    description:
+      "Mentions légales du site enosi-consulting.fr — éditeur, hébergeur et informations légales.",
   },
   politiqueConfidentialite: {
     title: "Politique de confidentialité | Enosi Consulting",
-    description: "Politique de confidentialité et de traitement des données personnelles — conformité RGPD."
+    description:
+      "Politique de confidentialité et de traitement des données personnelles — conformité RGPD.",
   },
   diagnostic: {
-    title: "Diagnostic de maturité Data & IA — Outil gratuit | Enosi Consulting",
-    description: "Évaluez la maturité Data/IA de votre organisation en 12 questions. Rapport personnalisé sur 4 axes avec vos priorités d'action. Gratuit, 3 minutes."
-  }
-}
+    title: "Diagnostic gratuit — Qu'automatiser en premier ? | Enosi Consulting",
+    description:
+      "Douze questions, trois minutes, un rapport personnalisé sur quatre axes. Identifiez ce qui vous fait perdre le plus de temps et par où commencer. Sans inscription.",
+  },
+};
