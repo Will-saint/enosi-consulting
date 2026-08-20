@@ -1,7 +1,7 @@
 import { SITE_URL, LINKEDIN_URL, CONTACT_EMAIL, NOM_COMPLET, MARQUE, VILLES } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
 import PageTransition from "./components/PageTransition";
@@ -62,14 +62,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        {/* Plausible Analytics — RGPD-friendly, pas de cookie banner requis */}
-        {/* Créer un compte sur plausible.io et ajouter le domaine pour activer */}
-        <Script
-          defer
-          data-domain={SITE_URL.replace(/^https?:\/\//, "")}
-          src="https://plausible.io/js/script.js"
-          strategy="afterInteractive"
-        />
+        {/* Vercel Web Analytics — sans cookie ni donnée personnelle,
+            donc pas de bandeau de consentement requis.
+            Remplace le script Plausible qui pointait vers un compte inexistant. */}
+        <Analytics />
         {/* Balise <script> native et non next/script : le JSON-LD doit être présent
             dans le HTML rendu côté serveur pour être lu de façon fiable par les moteurs. */}
         <script
