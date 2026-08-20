@@ -50,7 +50,7 @@ export const secteurs: Record<string, SecteurData> = {
     },
     color: "#1a9e5c",
     offreHref: "/offres/pilotage",
-    offreLabel: "Pilotage de la performance",
+    offreLabel: "Automatisation du reporting",
   },
 
   "direction-financiere": {
@@ -84,7 +84,7 @@ export const secteurs: Record<string, SecteurData> = {
     },
     color: "#4f46e5",
     offreHref: "/offres/pilotage",
-    offreLabel: "Pilotage de la performance",
+    offreLabel: "Automatisation du reporting",
   },
 
   "direction-transformation": {
@@ -118,7 +118,7 @@ export const secteurs: Record<string, SecteurData> = {
     },
     color: "#d97706",
     offreHref: "/offres/data-ia",
-    offreLabel: "Data & IA pour la décision",
+    offreLabel: "Contrôles & traitement par IA",
   },
 };
 

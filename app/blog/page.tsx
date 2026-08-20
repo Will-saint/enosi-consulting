@@ -6,10 +6,10 @@ import { articles, categoryColors } from "./articles";
 
 export const metadata: Metadata = {
   title: "Notes — Conseil performance, data et IA | Enosi Consulting",
-  description: "Articles de fond sur le pilotage de la performance, l'IA en production et l'automatisation du reporting. Pour directeurs financiers, transformation et performance.",
+  description: "Ce que j'observe sur le terrain en automatisation des process finance : reporting, contrôles, IA appliquée. Sans jargon, avec des cas concrets.",
   openGraph: {
     title: "Notes — Enosi Consulting",
-    description: "Articles de fond sur le pilotage, la data et l'IA appliquée aux organisations.",
+    description: "Ce que j'observe sur le terrain en automatisation des process finance.",
   },
 };
 
@@ -17,7 +17,7 @@ const blogSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "Notes — Enosi Consulting",
-  "description": "Articles de fond sur le pilotage de la performance, l'IA en production et l'automatisation du reporting.",
+  "description": "Ce que j'observe sur le terrain en automatisation des process finance : reporting, contrôles, IA appliquée.",
   "url": `${SITE_URL}/blog`,
   "publisher": {
     "@type": "Organization",

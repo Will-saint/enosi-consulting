@@ -70,8 +70,9 @@ export default function RootLayout({
           src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />
-        <Script
-          id="schema-org"
+        {/* Balise <script> native et non next/script : le JSON-LD doit être présent
+            dans le HTML rendu côté serveur pour être lu de façon fiable par les moteurs. */}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({

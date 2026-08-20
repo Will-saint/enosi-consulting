@@ -2,9 +2,9 @@
 import { useState, useRef } from "react";
 
 const sujets = [
-  "Pilotage de la performance",
-  "Data & IA pour la décision",
-  "Efficacité et création de valeur",
+  "Automatisation du reporting",
+  "Contrôles et traitement par IA",
+  "Optimisation des process de gestion",
   "Plusieurs sujets à la fois",
   "Je ne sais pas encore",
 ];

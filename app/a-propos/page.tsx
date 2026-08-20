@@ -63,11 +63,11 @@ export default function APropos() {
               className="font-extrabold leading-tight text-[#0f0f0f] mb-5"
               style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.6rem, 6vw, 4.6rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}
             >
-              Un conseil indépendant<br /><span style={{ color: "#1a9e5c" }}>construit autour d&apos;une conviction.</span>
+              Je viens de la finance,<br /><span style={{ color: "#1a9e5c" }}>et je construis les outils.</span>
             </h1>
             <p className="text-[rgba(30,30,30,0.5)] text-base leading-relaxed max-w-xl">
-              Que la donnée, la finance et l&apos;IA ne sont utiles
-              que si elles améliorent une décision réelle.
+              Ceux qui comprennent le contrôle de gestion ne savent pas développer.
+              Ceux qui développent ne comprennent pas le métier. Je fais le pont.
             </p>
           </div>
 
