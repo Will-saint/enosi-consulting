@@ -154,14 +154,14 @@ export default function Hero() {
                   Réserver 30 min →
                 </a>
               </div>
-              <a href="/offres"
+              <a href="/demo/reporting"
                  style={{
                    fontSize:'0.8rem',
-                   color:'rgba(30,30,30,0.4)',
+                   color:'rgba(30,30,30,0.45)',
                    textDecoration:'none',
                    paddingLeft:'0.25rem',
                  }}>
-                Mes offres →
+                ▶ Voir une automatisation tourner en direct
               </a>
             </div>
           </div>

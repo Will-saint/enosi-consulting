@@ -8,6 +8,7 @@ type Piece = {
   tag: string;
   tagColor: string;
   large?: boolean;
+  demo?: string;
 };
 
 const pieces: Piece[] = [
@@ -19,6 +20,7 @@ const pieces: Piece[] = [
     tag: "Démonstration — données synthétiques",
     tagColor: "#1a9e5c",
     large: true,
+    demo: "/demo/reporting",
   },
   {
     src: "/portfolio/pipeline.jpg",
@@ -83,6 +85,15 @@ function Carte({ p }: { p: Piece }) {
         <p className="text-xs leading-relaxed" style={{ color: "rgba(30,30,30,0.55)" }}>
           {p.legende}
         </p>
+        {p.demo && (
+          <a
+            href={p.demo}
+            className="mt-auto pt-3 text-xs font-semibold inline-flex items-center gap-1.5"
+            style={{ color: "#1a9e5c", textDecoration: "none" }}
+          >
+            ▶ Lancer la démo interactive
+          </a>
+        )}
       </figcaption>
     </figure>
   );
