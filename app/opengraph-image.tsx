@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { SITE_URL } from '@/lib/constants';
 
 export const runtime = 'edge';
 export const alt = 'Enosi Consulting — Performance, Data & IA';
@@ -103,7 +104,7 @@ export default function Image() {
           color: 'rgba(255,255,255,0.2)',
           letterSpacing: 2,
         }}>
-          enosi-consulting.vercel.app
+          {SITE_URL.replace(/^https?:\/\//, "")}
         </div>
       </div>
     ),

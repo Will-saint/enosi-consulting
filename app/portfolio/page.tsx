@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.portfolio.title,
     description: seoConfig.portfolio.description,
-    url: 'https://enosi-consulting.vercel.app/portfolio',
+    url: `${SITE_URL}/portfolio`,
   },
 };
 

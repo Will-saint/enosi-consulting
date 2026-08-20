@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
@@ -80,8 +81,7 @@ export async function POST(req: Request) {
   ];
   const level = LEVELS.find((l) => total >= l.min && total <= l.max)?.label ?? "Latent";
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://enosi-consulting.vercel.app";
-  const resultsUrl = `${baseUrl}/diagnostic/${id}`;
+  const resultsUrl = `${SITE_URL}/diagnostic/${id}`;
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -132,7 +132,7 @@ export async function POST(req: Request) {
       </p>
       <p style="font-size:13px;color:#555;">
         Vous souhaitez discuter de ce résultat et construire un plan d'action ?<br/>
-        <a href="${baseUrl}/contact" style="color:#1a9e5c;">Prenons 30 minutes →</a>
+        <a href="${SITE_URL}/contact" style="color:#1a9e5c;">Prenons 30 minutes →</a>
       </p>
       <p style="margin-top:24px;font-size:11px;color:#999;">Enosi Consulting — contact@enosi-consulting.fr</p>
     </div>`;

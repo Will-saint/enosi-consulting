@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.offresPilotage.title,
     description: seoConfig.offresPilotage.description,
-    url: 'https://enosi-consulting.vercel.app/offres/pilotage',
+    url: `${SITE_URL}/offres/pilotage`,
   },
 };
 
@@ -22,7 +23,7 @@ const serviceSchema = {
   "areaServed": "France",
   "serviceType": "Conseil en pilotage de la performance",
   "audience": { "@type": "Audience", "audienceType": "Direction financière, Direction de la performance, COMEX" },
-  "url": "https://enosi-consulting.vercel.app/offres/pilotage"
+  "url": `${SITE_URL}/offres/pilotage`
 };
 
 const interventions = [

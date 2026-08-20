@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.mentionsLegales.title,
     description: seoConfig.mentionsLegales.description,
-    url: 'https://enosi-consulting.vercel.app/mentions-legales',
+    url: `${SITE_URL}/mentions-legales`,
   },
 };
 

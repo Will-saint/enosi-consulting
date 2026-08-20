@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -17,16 +18,16 @@ const blogSchema = {
   "@type": "Blog",
   "name": "Notes — Enosi Consulting",
   "description": "Articles de fond sur le pilotage de la performance, l'IA en production et l'automatisation du reporting.",
-  "url": "https://enosi-consulting.vercel.app/blog",
+  "url": `${SITE_URL}/blog`,
   "publisher": {
     "@type": "Organization",
     "name": "Enosi Consulting",
-    "url": "https://enosi-consulting.vercel.app"
+    "url": SITE_URL
   },
   "blogPost": articles.map((a) => ({
     "@type": "BlogPosting",
     "headline": a.title,
-    "url": `https://enosi-consulting.vercel.app/blog/${a.slug}`,
+    "url": `${SITE_URL}/blog/${a.slug}`,
     "datePublished": a.date,
     "description": a.excerpt,
   })),

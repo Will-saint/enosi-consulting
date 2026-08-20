@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Navbar from "../../components/Navbar";
@@ -57,14 +58,14 @@ export default async function ArticlePage({
     "author": {
       "@type": "Person",
       "name": "William Saint-Dizier",
-      "url": "https://enosi-consulting.vercel.app/a-propos",
+      "url": `${SITE_URL}/a-propos`,
     },
     "publisher": {
       "@type": "Organization",
       "name": "Enosi Consulting",
-      "url": "https://enosi-consulting.vercel.app",
+      "url": SITE_URL,
     },
-    "url": `https://enosi-consulting.vercel.app/blog/${article.slug}`,
+    "url": `${SITE_URL}/blog/${article.slug}`,
     "keywords": article.keywords.join(", "),
   };
 

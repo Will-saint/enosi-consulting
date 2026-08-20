@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.offresEfficacite.title,
     description: seoConfig.offresEfficacite.description,
-    url: 'https://enosi-consulting.vercel.app/offres/efficacite',
+    url: `${SITE_URL}/offres/efficacite`,
   },
 };
 
@@ -22,7 +23,7 @@ const serviceSchema = {
   "areaServed": "France",
   "serviceType": "Conseil en optimisation des processus et création de valeur",
   "audience": { "@type": "Audience", "audienceType": "Direction générale, Direction de la performance, ETI" },
-  "url": "https://enosi-consulting.vercel.app/offres/efficacite"
+  "url": `${SITE_URL}/offres/efficacite`
 };
 
 const interventions = [

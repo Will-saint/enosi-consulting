@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.aPropos.title,
     description: seoConfig.aPropos.description,
-    url: 'https://enosi-consulting.vercel.app/a-propos',
+    url: `${SITE_URL}/a-propos`,
   },
 };
 
@@ -22,7 +23,7 @@ const personSchema = {
   "worksFor": {
     "@type": "Organization",
     "name": "Enosi Consulting",
-    "url": "https://enosi-consulting.vercel.app"
+    "url": SITE_URL
   },
   "alumniOf": [
     { "@type": "CollegeOrUniversity", "name": "Université Paris 1 Panthéon-Sorbonne" }
@@ -32,7 +33,7 @@ const personSchema = {
     "Intelligence artificielle", "Business intelligence", "Power BI", "Dataiku"
   ],
   "sameAs": ["https://www.linkedin.com/in/williamsaintdizier"],
-  "url": "https://enosi-consulting.vercel.app/a-propos"
+  "url": `${SITE_URL}/a-propos`
 };
 
 export default function APropos() {

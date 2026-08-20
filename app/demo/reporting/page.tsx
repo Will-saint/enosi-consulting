@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Démo interactive — Automatisation d'un reporting mensuel",
     description: "4 fichiers en désordre, un pack consolidé en quelques secondes. Lancez la démonstration.",
-    url: "https://enosi-consulting.vercel.app/demo/reporting",
+    url: `${SITE_URL}/demo/reporting`,
   },
 };
 

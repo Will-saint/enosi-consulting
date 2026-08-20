@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { seoConfig } from "./seo";
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.home.title,
     description: seoConfig.home.description,
-    url: 'https://enosi-consulting.vercel.app',
+    url: SITE_URL,
   },
 };
 

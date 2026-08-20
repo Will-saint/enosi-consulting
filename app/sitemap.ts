@@ -1,7 +1,8 @@
+import { SITE_URL } from "@/lib/constants";
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://enosi-consulting.vercel.app'
+  const baseUrl = SITE_URL
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
     { url: `${baseUrl}/portfolio`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },

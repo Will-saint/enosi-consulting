@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { seoConfig } from "../seo";
 import DashboardDemo from "./DashboardDemo";
 import RoiCalculator from "./RoiCalculator";
-import { CALENDLY_URL } from "@/lib/constants";
+import { CALENDLY_URL, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: seoConfig.demo.title,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.demo.title,
     description: seoConfig.demo.description,
-    url: 'https://enosi-consulting.vercel.app/demo',
+    url: `${SITE_URL}/demo`,
   },
 };
 

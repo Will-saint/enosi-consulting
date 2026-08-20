@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactForm from "./ContactForm";
 import { seoConfig } from "../seo";
-import { CALENDLY_URL } from "@/lib/constants";
+import { CALENDLY_URL, SITE_URL, CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: seoConfig.contact.title,
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.contact.title,
     description: seoConfig.contact.description,
-    url: 'https://enosi-consulting.vercel.app/contact',
+    url: `${SITE_URL}/contact`,
   },
 };
 
@@ -83,10 +83,10 @@ export default function PageContact() {
               {/* Encadré email */}
               <div className="rounded-xl p-5 bg-[#F2F0EC] border border-[rgba(0,0,0,0.08)]">
                 <a
-                  href="mailto:william.saint-dizier@enosi-consulting.fr"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="text-sm text-[#1a9e5c] block"
                 >
-                  william.saint-dizier@enosi-consulting.fr
+                  {CONTACT_EMAIL}
                 </a>
                 <p className="text-xs text-[rgba(30,30,30,0.4)] mt-1">Réponse sous 48h ouvrées</p>
               </div>

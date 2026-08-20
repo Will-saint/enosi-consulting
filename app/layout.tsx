@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Script from "next/script";
@@ -12,7 +13,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://enosi-consulting.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   title: 'Enosi Consulting — Automatisation IA des process finance',
   description: "Contrôleur de gestion de métier, j'automatise ce qui fait perdre des jours aux équipes finance : reporting, contrôles, traitement de documents. Vous repartez avec un outil qui tourne.",
   keywords: ['automatisation reporting', 'automatisation finance', 'IA finance', 'contrôle de gestion freelance', 'consultant automatisation', 'extraction documentaire IA', 'détection anomalies finance'],
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://enosi-consulting.vercel.app',
+    url: SITE_URL,
     siteName: 'Enosi Consulting',
     title: 'Enosi Consulting — Performance, Data & IA',
     description: 'Conseil indépendant en performance et ROI des projets Data & IA. Finance, data et IA au service de vos décisions.',
@@ -57,7 +58,7 @@ export default function RootLayout({
         {/* Créer un compte sur plausible.io et ajouter le domaine pour activer */}
         <Script
           defer
-          data-domain="enosi-consulting.vercel.app"
+          data-domain={SITE_URL.replace(/^https?:\/\//, "")}
           src="https://plausible.io/js/script.js"
           strategy="afterInteractive"
         />
@@ -70,8 +71,8 @@ export default function RootLayout({
               "@type": "ProfessionalService",
               "name": "Enosi Consulting",
               "description": "Conseil indépendant en performance et création de valeur, combinant finance, data et IA.",
-              "url": "https://enosi-consulting.vercel.app",
-              "logo": "https://enosi-consulting.vercel.app/opengraph-image",
+              "url": SITE_URL,
+              "logo": `${SITE_URL}/opengraph-image`,
               "founder": {
                 "@type": "Person",
                 "name": "William Saint-Dizier",

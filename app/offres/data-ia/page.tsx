@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: seoConfig.offresDataIA.title,
     description: seoConfig.offresDataIA.description,
-    url: 'https://enosi-consulting.vercel.app/offres/data-ia',
+    url: `${SITE_URL}/offres/data-ia`,
   },
 };
 
@@ -22,7 +23,7 @@ const serviceSchema = {
   "areaServed": "France",
   "serviceType": "Conseil en pilotage financier et ROI des projets Data et IA",
   "audience": { "@type": "Audience", "audienceType": "Direction Financière, Direction Transformation, CDO, Direction générale" },
-  "url": "https://enosi-consulting.vercel.app/offres/data-ia"
+  "url": `${SITE_URL}/offres/data-ia`
 };
 
 const interventions = [
