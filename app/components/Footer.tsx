@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const liens: Record<string, { label: string; href: string }[]> = {
   "Mes offres": [
-    { label: "Pilotage financier & ROI Data/IA", href: "/offres/data-ia" },
-    { label: "Pilotage de la performance", href: "/offres/pilotage" },
-    { label: "Efficacité et création de valeur", href: "/offres/efficacite" },
+    { label: "Automatisation du reporting", href: "/offres/pilotage" },
+    { label: "Contrôles & traitement par IA", href: "/offres/data-ia" },
+    { label: "Process de gestion", href: "/offres/efficacite" },
     { label: "Audit 5 jours — prix fixe", href: "/offres/quick-win" },
   ],
   "Secteurs": [
@@ -47,7 +47,7 @@ export default function Footer() {
               <Image src="/logo-full.svg" alt="Enosi Consulting" width={150} height={34} />
             </div>
             <p className="text-xs text-gray-600 leading-relaxed mb-5 max-w-[220px]">
-              Conseil indépendant en performance, data &amp; IA — William Saint-Dizier.
+              Automatisation IA des process finance — William Saint-Dizier, contrôleur de gestion indépendant.
             </p>
             <a
               href="/contact"

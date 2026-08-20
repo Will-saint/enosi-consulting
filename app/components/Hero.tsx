@@ -10,7 +10,7 @@ const StarField3D = dynamic(() => import("./StarField3D"), {
 });
 
 export default function Hero() {
-  const words = ["Vos", "données", "savent", "déjà", "la", "réponse."];
+  const words = ["Vos", "process", "tournent", "tout", "seuls."];
   const [visibleWords, setVisibleWords] = useState<number>(0);
 
   useEffect(() => {
@@ -88,8 +88,8 @@ export default function Hero() {
                   opacity: i < visibleWords ? 1 : 0,
                   transform: i < visibleWords ? 'translateY(0)' : 'translateY(16px)',
                   transition: 'opacity 0.45s ease, transform 0.45s ease',
-                  color: i >= 4 ? '#1a9e5c' : '#0f0f0f',
-                  fontStyle: i === 3 ? 'italic' : 'normal',
+                  color: i >= 3 ? '#1a9e5c' : '#0f0f0f',
+                  fontStyle: i === 2 ? 'italic' : 'normal',
                   ...(i === words.length - 1 ? {
                     backgroundImage: 'linear-gradient(to top, rgba(26,158,92,0.22) 0%, rgba(26,158,92,0.22) 28%, transparent 28%)',
                   } : {}),
@@ -115,10 +115,10 @@ export default function Hero() {
               lineHeight:1.7,
               maxWidth:'480px'
             }}>
-              J&apos;aide les directions financières à piloter leur performance
-              et le ROI de leurs investissements Data &amp; IA.
-              Du diagnostic à l&apos;outil opérationnel, déployé avec vos équipes —
-              premier livrable en 2–3 jours.
+              Contrôleur de gestion de métier, j&apos;automatise ce qui fait perdre
+              des jours à vos équipes finance : reporting, contrôles, traitement
+              de documents. Vous repartez avec quelque chose qui tourne, pas
+              avec un rapport.
             </p>
             <div style={{display:'flex', flexDirection:'column', gap:'0.75rem', flexShrink:0, alignItems:'flex-start'}}>
               <div style={{display:'flex', gap:'0.75rem', flexWrap:'wrap'}}>
@@ -206,9 +206,9 @@ export default function Hero() {
         {/* 3 piliers — cartes accent gauche */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
-            {label:'Un seul interlocuteur, de bout en bout', desc:"Celui qui propose est celui qui exécute — pas d'intermédiaire.", color:'#1a9e5c'},
-            {label:'Finance × Data × IA', desc:"Trois expertises dans la même conversation, sans silos.", color:'#4f46e5'},
-            {label:'Livrables en semaines', desc:"Premier livrable en 2–3 jours. Mission complète en 6–12 semaines.", color:'#d97706'},
+            {label:'Je viens de la finance', desc:"Contrôle de gestion, budgets, clôtures — je sais ce qui vaut la peine d'être automatisé.", color:'#1a9e5c'},
+            {label:'Je construis moi-même', desc:"Celui qui propose est celui qui livre. Pas d'intermédiaire, pas de junior.", color:'#4f46e5'},
+            {label:'Vous restez autonomes', desc:"Périmètre écrit, livraison documentée, transfert aux équipes.", color:'#d97706'},
           ].map((p) => (
             <div key={p.label} style={{
               background:'#FFFFFF',

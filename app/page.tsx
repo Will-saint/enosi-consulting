@@ -17,6 +17,7 @@ import Partners from "./components/Partners";
 import Metrics from "./components/Metrics";
 import Parcours from "./components/Parcours";
 import Platforms from "./components/Platforms";
+import Realisations from "./components/Realisations";
 import Methode from "./components/Methode";
 import PortfolioPreview from "./components/PortfolioPreview";
 import Industries from "./components/Industries";
@@ -31,10 +32,10 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Pourquoi ne pas prendre un grand cabinet ?",
+      "name": "Pourquoi vous plutôt qu'un développeur ou qu'un cabinet ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les grands cabinets facturent un senior en avant-vente, puis déploient des juniors à la livraison. Chez Enosi, l'interlocuteur qui propose est le même qui exécute — du diagnostic au déploiement. Résultat : moins cher, plus rapide, et quelqu'un qui comprend vraiment vos contraintes opérationnelles."
+        "text": "Un développeur construira exactement ce que vous lui demandez, sans savoir si ça valait la peine. Un cabinet vous expliquera ce qu'il faudrait faire, puis déploiera des juniors. Moi je viens du contrôle de gestion : je sais quelles tâches méritent d'être automatisées, et je les construis moi-même."
       }
     },
     {
@@ -50,15 +51,15 @@ const faqSchema = {
       "name": "Combien de temps dure une intervention ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Un diagnostic initial : 2 à 3 jours. Une mission de structuration, d'automatisation ou de déploiement IA : 6 à 12 semaines. Chaque étape livre quelque chose de concret."
+        "text": "Un diagnostic initial : 2 à 3 jours. Une automatisation livrée et transférée : 4 à 8 semaines selon le périmètre. Le périmètre est écrit noir sur blanc dans le devis."
       }
     },
     {
       "@type": "Question",
-      "name": "Comment se déroule concrètement une mission ?",
+      "name": "Que se passe-t-il si l'automatisation casse après votre départ ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Je commence par comprendre vos décisions, pas vos données. Puis j'analyse les flux, les outils, les contraintes réelles. Je structure la solution dans vos systèmes existants, je déploie avec vos équipes et je transfère les compétences."
+        "text": "Je livre systématiquement avec la documentation et un transfert à vos équipes : vous devez pouvoir comprendre et modifier ce que j'ai construit sans moi. Je commence aussi par les process périphériques plutôt que par vos systèmes critiques."
       }
     }
   ]
@@ -78,6 +79,7 @@ export default function Home() {
         <Metrics />
         <Parcours />
         <Platforms />
+        <Realisations />
         <Methode />
         <PortfolioPreview />
         <Industries />

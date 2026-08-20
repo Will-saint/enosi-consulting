@@ -1,7 +1,7 @@
 export const seoConfig = {
   home: {
-    title: "Enosi Consulting — Conseil Performance, Data & IA",
-    description: "Conseil indépendant en pilotage de la performance et ROI des projets Data & IA. Pour les directions financières, performance et transformation des ETI et grands groupes."
+    title: "Automatisation IA des process finance | Enosi Consulting",
+    description: "Contrôleur de gestion de métier, j'automatise le reporting, les contrôles et le traitement documentaire des équipes finance. Vous repartez avec un outil qui tourne, pas avec un rapport."
   },
   offres: {
     title: "Mes offres — Pilotage, ROI Data/IA, efficacité | Enosi Consulting",

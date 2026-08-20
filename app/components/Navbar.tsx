@@ -12,9 +12,9 @@ const navItems: NavItem[] = [
     label: "Mes offres",
     anchor: "/offres",
     sub: [
-      { label: "Pilotage financier & ROI Data/IA", href: "/offres/data-ia" },
-      { label: "Pilotage de la performance", href: "/offres/pilotage" },
-      { label: "Efficacité et création de valeur", href: "/offres/efficacite" },
+      { label: "Automatisation du reporting", href: "/offres/pilotage" },
+      { label: "Contrôles & traitement par IA", href: "/offres/data-ia" },
+      { label: "Process de gestion", href: "/offres/efficacite" },
       { label: "⚡ Audit 5 jours — prix fixe", href: "/offres/quick-win" },
     ],
   },

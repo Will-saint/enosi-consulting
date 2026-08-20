@@ -32,14 +32,14 @@ export default function ContactCTA() {
           fontWeight:800, color:'#ffffff',
           marginBottom:'1.25rem', lineHeight:1.05,
           letterSpacing:'-0.02em',
-        }}>Prêt à transformer vos données en décisions ?</h2>
+        }}>Qu&apos;est-ce qui vous prend le plus de temps ?</h2>
         <p style={{
           color:'rgba(255,255,255,0.75)',
           fontSize:'1.05rem', lineHeight:1.7,
           marginBottom:'2.75rem'
         }}>
           Un diagnostic gratuit de 3 minutes, sans engagement.<br />
-          On identifie vos vraies priorités ensemble.
+          On identifie ensemble ce qui mérite d&apos;être automatisé en premier.
         </p>
         <div style={{ display:'flex', gap:'1rem', justifyContent:'center', flexWrap:'wrap' }}>
           <a href="/diagnostic" style={{

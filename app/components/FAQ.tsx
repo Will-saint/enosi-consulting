@@ -3,8 +3,8 @@ import { useState } from "react";
 
 const questions = [
   {
-    q: "Pourquoi ne pas prendre un grand cabinet ?",
-    a: "Les grands cabinets facturent un senior en avant-vente, puis déploient des juniors à la livraison. Chez Enosi, l'interlocuteur qui propose est le même qui exécute — du diagnostic au déploiement. Résultat : moins cher, plus rapide, et quelqu'un qui comprend vraiment vos contraintes opérationnelles, pas seulement votre brief.",
+    q: "Pourquoi vous plutôt qu'un développeur ou qu'un cabinet ?",
+    a: "Un développeur construira exactement ce que vous lui demandez, sans savoir si ça valait la peine. Un cabinet vous expliquera ce qu'il faudrait faire, puis déploiera des juniors. Moi je viens du contrôle de gestion : je sais quelles tâches méritent d'être automatisées, et je les construis moi-même. Celui qui propose est celui qui livre.",
   },
   {
     q: "Quel ROI peut-on attendre ?",
@@ -12,11 +12,11 @@ const questions = [
   },
   {
     q: "Combien de temps dure une intervention ?",
-    a: "Un diagnostic initial : 2 à 3 jours. Une mission de structuration, d'automatisation ou de déploiement IA : 6 à 12 semaines. Chaque étape livre quelque chose de concret. Pas de mission ouverte indéfiniment — vous savez toujours où vous en êtes et ce qui a été produit.",
+    a: "Un diagnostic initial : 2 à 3 jours. Une automatisation livrée et transférée : 4 à 8 semaines selon le périmètre. Chaque étape livre quelque chose de concret, et le périmètre est écrit noir sur blanc dans le devis. Pas de mission ouverte indéfiniment.",
   },
   {
-    q: "Comment se déroule concrètement une mission ?",
-    a: "Je commence par comprendre vos décisions, pas vos données. Puis j'analyse les flux, les outils, les contraintes réelles. Je structure la solution dans vos systèmes existants, je déploie avec vos équipes et je transfère les compétences. Vous restez autonomes après mon départ — c'est l'objectif depuis le début.",
+    q: "Que se passe-t-il si l'automatisation casse après votre départ ?",
+    a: "C'est la question qu'il faut poser, et elle conditionne ma façon de travailler. Je livre systématiquement avec la documentation et un transfert à vos équipes : vous devez pouvoir comprendre et modifier ce que j'ai construit sans moi. Je commence aussi par les process périphériques plutôt que par vos systèmes critiques — une automatisation de reporting qui s'arrête est un désagrément, pas un incident de paie.",
   },
 ];
 
