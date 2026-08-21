@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   creator: NOM_COMPLET,
   publisher: MARQUE,
   alternates: { canonical: SITE_URL },
+  // Jeton de propriété Google Search Console (public par nature).
+  // Ne pas retirer : Google révoque la propriété si la balise disparaît.
+  verification: { google: "d-hfdQV4jlHMYm1wXrFG__kxaeNb5JwGHAREKC7VIeo" },
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
