@@ -10,14 +10,14 @@ export const seoConfig = {
       "Contrôleur de gestion de métier, j'automatise le reporting, les contrôles et le traitement documentaire des équipes finance. Un outil qui tourne, pas un rapport.",
   },
   offres: {
-    title: "Mes offres — Automatiser le reporting et les contrôles | Enosi Consulting",
+    title: "Mes offres — Automatisation finance | Enosi Consulting",
     description:
-      "Automatisation du reporting, contrôles et détection d'anomalies, extraction documentaire par IA. Diagnostic gratuit, audit 5 jours à prix fixe, missions au forfait.",
+      "Automatisation du reporting, contrôles et détection d'anomalies, extraction documentaire par IA. Diagnostic gratuit, audit 5 jours à prix fixe.",
   },
   portfolio: {
     title: "Réalisations et scénarios d'automatisation | Enosi Consulting",
     description:
-      "Architectures réellement déployées et démonstrations construites sur ma méthode : pipelines de collecte, chaînes automatisées, contrôles de cohérence. Provenance indiquée.",
+      "Architectures réellement déployées et démonstrations construites sur ma méthode : collecte, automatisation, contrôles de cohérence. Provenance indiquée.",
   },
   aPropos: {
     title: "William Saint-Dizier — Contrôleur de gestion & automatisation IA",
@@ -30,9 +30,9 @@ export const seoConfig = {
       "Consolidation multi-sources, contrôles de cohérence et génération automatique du pack mensuel. Ce qui prend deux jours doit prendre trente secondes.",
   },
   offresDataIA: {
-    title: "Contrôles automatisés et extraction documentaire par IA | Enosi Consulting",
+    title: "Contrôles & extraction documentaire par IA | Enosi Consulting",
     description:
-      "Détection d'anomalies le jour même, extraction de factures et pièces comptables sans ressaisie, contrôle par règles métier avec revue humaine sur exception.",
+      "Détection d'anomalies le jour même, extraction de factures sans ressaisie, contrôle par règles métier avec revue humaine sur exception.",
   },
   offresEfficacite: {
     title: "Optimisation des process de gestion | Enosi Consulting",
@@ -60,8 +60,8 @@ export const seoConfig = {
       "Politique de confidentialité et de traitement des données personnelles — conformité RGPD.",
   },
   diagnostic: {
-    title: "Diagnostic gratuit — Qu'automatiser en premier ? | Enosi Consulting",
+    title: "Diagnostic gratuit — Enosi Consulting",
     description:
-      "Douze questions, trois minutes, un rapport personnalisé sur quatre axes. Identifiez ce qui vous fait perdre le plus de temps et par où commencer. Sans inscription.",
+      "Douze questions, trois minutes, un rapport personnalisé sur quatre axes. Identifiez ce qui vous fait perdre le plus de temps et par où commencer.",
   },
 };

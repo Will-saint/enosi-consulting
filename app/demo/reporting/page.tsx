@@ -5,11 +5,11 @@ import Footer from "../../components/Footer";
 import DemoReporting from "./DemoReporting";
 
 export const metadata: Metadata = {
-  title: "Démo interactive — Automatisation d'un reporting mensuel | Enosi Consulting",
+  title: "Démo interactive — Reporting automatisé | Enosi Consulting",
   description:
-    "Lancez vous-même l'automatisation : 4 fichiers de filiales en désordre, contrôles de cohérence, détection d'anomalies et pack consolidé généré en quelques secondes.",
+    "Lancez vous-même l'automatisation : fichiers en désordre, contrôles de cohérence, détection d'anomalies et pack consolidé généré en quelques secondes.",
   openGraph: {
-    title: "Démo interactive — Automatisation d'un reporting mensuel",
+    title: "Démo interactive — Reporting automatisé | Enosi Consulting",
     description: "4 fichiers en désordre, un pack consolidé en quelques secondes. Lancez la démonstration.",
     url: `${SITE_URL}/demo/reporting`,
   },

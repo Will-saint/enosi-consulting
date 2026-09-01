@@ -5,10 +5,10 @@ import Footer from "../components/Footer";
 import { articles, categoryColors } from "./articles";
 
 export const metadata: Metadata = {
-  title: "Notes — Conseil performance, data et IA | Enosi Consulting",
+  title: "Notes — Automatisation des process finance | Enosi Consulting",
   description: "Ce que j'observe sur le terrain en automatisation des process finance : reporting, contrôles, IA appliquée. Sans jargon, avec des cas concrets.",
   openGraph: {
-    title: "Notes — Enosi Consulting",
+    title: "Notes — Automatisation des process finance | Enosi Consulting",
     description: "Ce que j'observe sur le terrain en automatisation des process finance.",
   },
 };
