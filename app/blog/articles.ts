@@ -104,6 +104,8 @@ export const articles: Article[] = [
 <p>L'échec des projets IA n'est pas une fatalité. Il est prévisible, et dans la majorité des cas, évitable avec deux à trois jours de cadrage rigoureux avant tout développement. Le problème n'est pas que l'IA ne fonctionne pas — c'est qu'on lui demande de fonctionner dans des conditions où même une solution plus simple échouerait.</p>
 
 <p>Commencer par la décision que vous voulez améliorer. Vérifier que les données sont là. Nommer un sponsor réel. Définir le succès. Dans cet ordre.</p>
+
+<p>C'est exactement la logique derrière mon offre <a href="/offres/data-ia" style="color:#1a9e5c;font-weight:600;">contrôles et traitement par IA</a> : cadrer avant de coder, et livrer un modèle utilisé plutôt qu'un POC de plus.</p>
     `,
   },
 
@@ -185,6 +187,8 @@ export const articles: Article[] = [
 </ul>
 
 <p>Si ces questions révèlent un écart entre ce que votre dispositif devrait faire et ce qu'il fait réellement, la transformation n'est pas une question de budget ou de technologie. C'est une question de choix — sur ce que vous voulez que vos données fassent concrètement pour votre organisation.</p>
+
+<p>C'est le sujet exact de mon offre <a href="/offres/pilotage" style="color:#1a9e5c;font-weight:600;">automatisation du reporting</a> — vous pouvez d'ailleurs voir <a href="/demo/reporting" style="color:#1a9e5c;font-weight:600;">une démonstration en direct</a> de ce à quoi ça ressemble concrètement.</p>
     `,
   },
 
@@ -274,10 +278,12 @@ export const articles: Article[] = [
   <li>Cartographier les sources de données et identifier les points de friction</li>
   <li>Estimer le temps réel consacré à la production du reporting</li>
   <li>Identifier les 2 à 3 automatisations qui représentent 80&nbsp;% du gain accessible</li>
-  <li>Proposer une architecture simple — souvent sous Power BI — qui s'intègre dans les systèmes existants sans projet de 18 mois</li>
+  <li>Proposer une architecture simple, qui s'intègre dans les systèmes existants sans projet de 18 mois</li>
 </ul>
 
 <p>Le ROI d'une telle intervention est rarement difficile à calculer. La difficulté est plutôt de trouver une semaine pour se poser et regarder le problème en face — plutôt que de continuer à produire le reporting du mois prochain.</p>
+
+<p>Si vous voulez voir ce que ça change concrètement, j'ai construit <a href="/demo/reporting" style="color:#1a9e5c;font-weight:600;">une démo interactive</a> qui montre l'automatisation tourner sur un cas réaliste.</p>
     `,
   },
 ];

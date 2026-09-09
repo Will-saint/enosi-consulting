@@ -101,6 +101,12 @@ export default function RootLayout({
                     ...VILLES.map((v) => ({ "@type": "City", name: v })),
                     { "@type": "Country", name: "France" },
                   ],
+                  // GEO : "service area business" sans adresse publique — un rayon
+                  // géographique explicite est un signal plus fort qu'un simple nom de ville.
+                  "serviceArea": [
+                    { "@type": "GeoCircle", "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 48.8566, "longitude": 2.3522 }, "geoRadius": "50000" },
+                    { "@type": "GeoCircle", "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 43.6108, "longitude": 3.8767 }, "geoRadius": "50000" },
+                  ],
                   "contactPoint": {
                     "@type": "ContactPoint",
                     "contactType": "Commercial",
