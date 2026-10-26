@@ -219,7 +219,7 @@ export default function PagePilotage() {
               <div>
                 <p className="text-xs text-[rgba(30,30,30,0.4)] uppercase tracking-wider mb-1">Cas d&apos;usage type</p>
                 <p className="text-sm font-bold text-[#0f0f0f] mb-1">Refonte du pilotage mensuel d&apos;une ETI industrielle</p>
-                <p className="text-xs text-[rgba(30,30,30,0.5)]">Reporting produit en 1 jour au lieu de 6 · décision COMEX préparée avant la réunion</p>
+                <p className="text-xs text-[rgba(30,30,30,0.5)]">Scénario illustratif : reporting produit en 1 jour au lieu de 6 · décision COMEX préparée avant la réunion</p>
               </div>
               <a href="/portfolio#cas-1" className="text-sm text-[#1a9e5c] hover:underline shrink-0">Lire le cas →</a>
             </div>

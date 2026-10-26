@@ -9,7 +9,7 @@ const cas = [
     titre: "D'un reporting subi à un pilotage qui décide",
     contexte: "Scénario type — direction financière, ETI industrielle",
     resultats: [
-      "Reporting produit en 1 jour au lieu de 6",
+      "Scénario illustratif : reporting produit en 1 jour au lieu de 6",
       "Décisions COMEX préparées avant la réunion",
       "Alertes automatiques sur les indicateurs critiques",
     ],

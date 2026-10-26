@@ -139,7 +139,7 @@ export default function OffresHub() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
             {[
               { titre: "Diagnostic gratuit", desc: "12 questions, 3 minutes, rapport personnalisé — le point d'entrée recommandé.", cta: "Commencer →", href: "/diagnostic", accent: "#1a9e5c", fond: true },
-              { titre: "Audit 5 jours — 2 900 € HT", desc: "Prix fixe, 4 livrables garantis, résiliation sans frais à J+2. Pour tester sans engagement long.", cta: "Découvrir →", href: "/offres/quick-win", accent: "#d97706", fond: false },
+              { titre: "Audit 5 jours — 2 900 € HT", desc: "Prix fixe, 4 livrables remis à J5, résiliation sans frais à J+2. Pour tester sans engagement long.", cta: "Découvrir →", href: "/offres/quick-win", accent: "#d97706", fond: false },
               { titre: "Mission 6–12 semaines", desc: "Sur devis, cadré à l'issue du diagnostic. Chaque étape livre quelque chose de concret.", cta: "En discuter →", href: "/contact", accent: "#4f46e5", fond: false },
             ].map((r) => (
               <div key={r.titre}

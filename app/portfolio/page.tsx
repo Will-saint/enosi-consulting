@@ -141,7 +141,7 @@ export default function Portfolio() {
               sujet="Pilotage de la performance"
               probleme="Reporting exhaustif, inutilisé pour décider"
               action="Reconstruction autour des 5 décisions clés + alertes automatiques"
-              impact="Reporting produit en 1 jour au lieu de 6 · COMEX orienté avant la réunion"
+              impact="Scénario illustratif : reporting produit en 1 jour au lieu de 6 · COMEX orienté avant la réunion"
             />
             <BeforeAfter
               color="#1a9e5c"
@@ -207,7 +207,7 @@ export default function Portfolio() {
                   {
                     n: "3",
                     titre: "Automatisation de la production",
-                    desc: "Connexion directe aux sources de données, élimination des retraitements manuels. Le reporting devient produit en 1 jour au lieu de 6.",
+                    desc: "Connexion directe aux sources de données, élimination des retraitements manuels. Dans le scénario illustratif, le reporting est produit en 1 jour au lieu de 6.",
                   },
                   {
                     n: "4",

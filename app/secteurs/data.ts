@@ -42,7 +42,7 @@ export const secteurs: Record<string, SecteurData> = {
       titre: "D'un reporting subi à un pilotage qui décide",
       contexte: "Scénario type — direction financière, ETI industrielle",
       resultats: [
-        "Reporting produit en 1 jour au lieu de 6",
+        "Scénario illustratif : reporting produit en 1 jour au lieu de 6",
         "Décisions COMEX préparées avant la réunion",
         "Alertes automatiques sur 5 indicateurs critiques",
       ],
@@ -76,7 +76,7 @@ export const secteurs: Record<string, SecteurData> = {
       titre: "D'un reporting subi à un pilotage qui décide",
       contexte: "Scénario type — direction financière, ETI industrielle",
       resultats: [
-        "Reporting produit en 1 jour au lieu de 6",
+        "Scénario illustratif : reporting produit en 1 jour au lieu de 6",
         "Alertes automatiques sur 5 indicateurs critiques",
         "Décisions COMEX préparées avant la réunion",
       ],
@@ -103,7 +103,7 @@ export const secteurs: Record<string, SecteurData> = {
     solutions: [
       "Scoring et priorisation de 10 à 15 cas d'usage en 2 semaines",
       "Déploiement d'un premier modèle en production en 6 à 8 semaines",
-      "Transfert de compétences aux équipes — autonomie garantie",
+      "Transfert de compétences aux équipes — pour qu'elles soient autonomes",
       "Business case documenté et défendable avec les vrais chiffres",
     ],
     caseStudy: {

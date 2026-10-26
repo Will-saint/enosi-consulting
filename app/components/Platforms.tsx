@@ -179,7 +179,7 @@ export default function Platforms() {
               Pas encore prêt à vous engager sur 3 mois ?
             </p>
             <p style={{ fontSize: "0.8rem", color: "rgba(30,30,30,0.5)" }}>
-              Commencez par un audit de 5 jours à prix fixe — livrables garantis, zéro risque.
+              Commencez par un audit de 5 jours à prix fixe — livrables remis à J5, sans engagement de suite.
             </p>
           </div>
           <a href="/offres/quick-win" style={{

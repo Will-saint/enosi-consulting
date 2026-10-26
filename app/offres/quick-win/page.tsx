@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Un diagnostic complet de vos reportings et tableaux de bord en 5 jours, à prix fixe. Livrables concrets, sans engagement long terme.",
   openGraph: {
     title: "Audit Reporting 5 jours | Enosi Consulting",
-    description: "Diagnostic complet de vos reportings en 5 jours, prix fixe, livrables garantis.",
+    description: "Diagnostic complet de vos reportings en 5 jours, prix fixe, livrables remis à J5.",
   },
 };
 
@@ -83,7 +83,7 @@ export default function QuickWinPage() {
               lineHeight: 1.8, maxWidth: "44rem", marginBottom: "2.5rem",
             }}>
               Un diagnostic complet de vos reportings, tableaux de bord et indicateurs.
-              Résultats concrets, livrables garantis, sans engagement de suite.
+              Résultats concrets, livrables remis à J5, sans engagement de suite.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" style={{
@@ -116,8 +116,8 @@ export default function QuickWinPage() {
             {[
               { label: "5 jours", desc: "calendaires" },
               { label: "2 900 € HT", desc: "Prix de lancement 2026" },
-              { label: "4 livrables", desc: "garantis" },
-              { label: "Zéro risque", desc: "résiliation sans frais à J+2" },
+              { label: "4 livrables", desc: "remis à J5" },
+              { label: "Sans engagement", desc: "résiliation sans frais à J+2" },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: "center", minWidth: "120px" }}>
                 <p style={{ fontSize: "1.1rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.2rem" }}>{item.label}</p>
@@ -233,7 +233,7 @@ export default function QuickWinPage() {
           </div>
         </section>
 
-        {/* Garantie */}
+        {/* Conditions de sortie */}
         <section style={{ background: "#FFFFFF", padding: "4rem 1.5rem", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
           <div style={{ maxWidth: "44rem", margin: "0 auto", textAlign: "center" }}>
             <div style={{
@@ -248,7 +248,7 @@ export default function QuickWinPage() {
               fontFamily: "'Playfair Display', serif",
               fontSize: "1.6rem", fontWeight: 700,
               color: "#0f0f0f", marginBottom: "1rem",
-            }}>Zéro risque.</h2>
+            }}>Sans engagement de suite.</h2>
             <p style={{ fontSize: "0.95rem", color: "rgba(30,30,30,0.6)", lineHeight: 1.8 }}>
               La fin du Jour 2 est un point d&apos;étape formel. Si vous estimez que
               l&apos;intervention ne crée pas de valeur, vous pouvez y mettre fin
