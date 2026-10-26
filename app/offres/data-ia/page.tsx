@@ -30,7 +30,7 @@ const interventions = [
   {
     n: "01",
     titre: "ROI et suivi budgétaire des projets Data/IA",
-    texte: "Évaluation et challenge des business cases, dispositif de tracking coûts / valeur / ROI de votre portefeuille de projets — le rôle que j'occupe chez Moët Hennessy (LVMH), où j'ai conçu l'outil de suivi Synapse.",
+    texte: "Évaluation et challenge des business cases, dispositif de tracking coûts / valeur / ROI de votre portefeuille de projets — le rôle que j'ai tenu pendant un an chez Moët Hennessy (LVMH), où j'ai conçu l'outil de suivi Synapse.",
   },
   {
     n: "02",

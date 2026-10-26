@@ -1,4 +1,4 @@
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, CONTACT_EMAIL } from "@/lib/constants";
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -50,15 +50,19 @@ export default function MentionsLegales() {
                 Éditeur du site
               </h2>
               <div className="space-y-2 text-sm text-[rgba(30,30,30,0.55)] leading-relaxed">
-                <p><span className="text-[#3a3a3a] font-medium">Dénomination sociale :</span> Enosi Consulting</p>
+                <p><span className="text-[#3a3a3a] font-medium">Éditeur :</span> William Saint-Dizier, entrepreneur individuel</p>
+                <p><span className="text-[#3a3a3a] font-medium">Activité exercée sous l&apos;appellation :</span> Enosi Consulting</p>
+                <p><span className="text-[#3a3a3a] font-medium">SIREN :</span> 918 826 165</p>
+                <p><span className="text-[#3a3a3a] font-medium">SIRET :</span> 918 826 165 00022</p>
+                <p><span className="text-[#3a3a3a] font-medium">Activité :</span> Conseil pour les affaires et autres conseils de gestion (APE 7022Z)</p>
                 <p><span className="text-[#3a3a3a] font-medium">Responsable de la publication :</span> William Saint-Dizier</p>
                 <p>
                   <span className="text-[#3a3a3a] font-medium">Contact :</span>{" "}
                   <a
-                    href="mailto:williamsaintdizier34@gmail.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="text-[#1a9e5c] hover:underline"
                   >
-                    williamsaintdizier34@gmail.com
+                    {CONTACT_EMAIL}
                   </a>
                 </p>
               </div>

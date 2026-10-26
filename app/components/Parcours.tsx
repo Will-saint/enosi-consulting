@@ -2,28 +2,28 @@ import ScrollReveal from "./ScrollReveal";
 
 const etapes = [
   {
-    periode: "2026",
+    periode: "2025 – 2026",
     org: "Moët Hennessy — LVMH",
     role: "Data AI Value Management",
     desc: "Évaluation et challenge du ROI des projets Data/IA. Conception de l'outil de tracking coûts/valeur «Synapse».",
     couleur: "#4f46e5",
   },
   {
-    periode: "2025",
+    periode: "mai – sept. 2025",
     org: "Bourbon Voyages",
     role: "Financial Controller — Assistant CFO",
     desc: "Pilotage d'un périmètre de 100 M€ de revenus. Automatisation du reporting : −25% de temps de production (Power Query).",
     couleur: "#1a9e5c",
   },
   {
-    periode: "2023",
+    periode: "2022 – 2023",
     org: "Appart'City",
     role: "Internal & Financial Controller",
     desc: "Audits financiers et de conformité sur 98 résidences pour un groupe à 200 M€.",
     couleur: "#d97706",
   },
   {
-    periode: "2026",
+    periode: "2025 – 2026",
     org: "Panthéon-Sorbonne × PSTB",
     role: "Master Data IA for Business",
     desc: "Certifié Power BI (PL-300), Azure, Dataiku. Data Science + AI Engineering (IBM, 340h).",
