@@ -1,7 +1,7 @@
 import { SITE_URL, LINKEDIN_URL, CONTACT_EMAIL, NOM_COMPLET, MARQUE, VILLES } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import AnalyticsSansMoi from "./components/AnalyticsSansMoi";
 import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
 import PageTransition from "./components/PageTransition";
@@ -68,7 +68,7 @@ export default function RootLayout({
         {/* Vercel Web Analytics — sans cookie ni donnée personnelle,
             donc pas de bandeau de consentement requis.
             Remplace le script Plausible qui pointait vers un compte inexistant. */}
-        <Analytics />
+        <AnalyticsSansMoi />
         {/* Balise <script> native et non next/script : le JSON-LD doit être présent
             dans le HTML rendu côté serveur pour être lu de façon fiable par les moteurs. */}
         <script
@@ -121,7 +121,7 @@ export default function RootLayout({
                       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation du reporting financier", "description": "Consolidation multi-sources, contrôles de cohérence et génération automatique du pack mensuel." } },
                       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Contrôles et détection d'anomalies", "description": "Seuils, doublons, écarts budgétaires détectés le jour même avec alerte par exception." } },
                       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extraction documentaire par IA", "description": "Factures et pièces comptables transformées en données structurées, sans ressaisie." } },
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit reporting 5 jours", "description": "Diagnostic à prix fixe, quatre livrables garantis." }, "price": "2900", "priceCurrency": "EUR" },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit reporting 5 jours", "description": "Diagnostic à prix fixe, quatre livrables remis à J5." }, "price": "2900", "priceCurrency": "EUR" },
                     ],
                   },
                   "inLanguage": "fr",

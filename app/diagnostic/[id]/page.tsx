@@ -150,7 +150,7 @@ function RadarChart({ axisScores }: { axisScores: number[] }) {
   ];
 
   return (
-    <svg viewBox="0 0 320 320" style={{ width: "100%", maxWidth: 300 }}>
+    <svg viewBox="0 0 320 320" style={{ width: "100%", maxWidth: 300, overflow: "visible" }}>
       {/* Grid rings */}
       {levelRatios.map((ratio, ri) => {
         const pts = angles.map((a) => pt(a, ratio));
