@@ -5,7 +5,7 @@
  */
 
 /** URL de prise de rendez-vous. */
-export const CALENDLY_URL = "https://calendly.com/williamsaintdizier";
+export const CALENDLY_URL = "https://calendly.com/williamsaintdizier34/30min";
 
 /**
  * URL canonique du site.
