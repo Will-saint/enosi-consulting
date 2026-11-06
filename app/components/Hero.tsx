@@ -53,10 +53,10 @@ export default function Hero() {
         {/* LEFT COLUMN */}
         <div>
 
-        <div className="flex flex-col md:flex-row md:items-end md:gap-16 mb-8">
+        <div className="flex flex-col mb-8">
 
-          {/* Label gauche */}
-          <div className="md:w-48 shrink-0 mb-6 md:mb-0 md:pb-4">
+          {/* Label au-dessus du titre : le titre prend toute la colonne */}
+          <div className="shrink-0 mb-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4"
                  style={{background:'rgba(26,158,92,0.08)', border:'1px solid rgba(26,158,92,0.18)'}}>
               <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{background:'#1a9e5c'}}/>
@@ -106,7 +106,7 @@ export default function Hero() {
              style={{borderTop:'1px solid rgba(0,0,0,0.07)', paddingTop:'2rem'}}>
 
           {/* Subtitle + CTA row */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6"
+          <div className="flex flex-col gap-6"
                style={{marginBottom:'1.5rem'}}>
             <p style={{
               color:'rgba(30,30,30,0.5)',
