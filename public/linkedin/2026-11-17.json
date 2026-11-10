@@ -1,0 +1,6 @@
+{
+ "date": "2026-11-17",
+ "texte": "Nous avons mis une démonstration en accès libre sur notre site.\n\nLe scénario : quatre fichiers de filiales, comme ils arrivent en vrai. Des formats qui ne se parlent pas, des dates au format américain, un doublon, des lignes sans centre de coût.\n\nUn clic, et le traitement s'exécute devant vous : lecture, normalisation, contrôles de cohérence, consolidation. Vous obtenez un pack consolidé, la marge de chaque filiale comparée au budget, et la liste des anomalies trouvées, chacune avec son explication.\n\nLes données sont synthétiques, générées dans votre navigateur. Les contrôles, eux, sont réellement calculés : rien n'est pré-enregistré.\n\nC'est ce type de traitement que nous construisons sur les fichiers d'une entreprise, avec ses propres règles.\n\nÀ essayer ici : https://enosi-consulting.fr/demo/reporting\n\n{hashtag|\\#|Automatisation} {hashtag|\\#|ControleDeGestion} {hashtag|\\#|Reporting} {hashtag|\\#|IA}",
+ "image": "https://enosi-consulting.fr/linkedin/02-demo-reporting.jpg",
+ "alt": "Capture de la démonstration de reporting d'Enosi Consulting, avec le texte : Quatre fichiers en désordre. Un pack consolidé."
+}
