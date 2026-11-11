@@ -38,7 +38,19 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      // Page de démonstration privée : accessible par lien direct, jamais indexée.
+      {
+        source: "/grille-2027/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noimageindex" }],
+      },
+      {
+        source: "/grille-2027",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noimageindex" }],
+      },
     ];
+  },
+  async rewrites() {
+    return [{ source: "/grille-2027", destination: "/grille-2027/index.html" }];
   },
   /**
    * L'ancien domaine Vercel restait accessible et servait le site à l'identique.
