@@ -26,6 +26,9 @@ export const CONTACT_EMAIL = "contact@enosi-consulting.fr";
  */
 export const LINKEDIN_URL = "https://www.linkedin.com/in/williamsaintdizier";
 
+/** Page LinkedIn d'Enosi Consulting : c'est elle qu'on invite à suivre, jamais le profil de William (demande du 17/11). */
+export const LINKEDIN_PAGE_URL = "https://www.linkedin.com/company/146904417";
+
 /** Identité affichée. */
 export const NOM_COMPLET = "William Saint-Dizier";
 export const MARQUE = "Enosi Consulting";

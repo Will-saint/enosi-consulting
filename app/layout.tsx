@@ -1,4 +1,4 @@
-import { SITE_URL, LINKEDIN_URL, CONTACT_EMAIL, NOM_COMPLET, MARQUE, VILLES } from "@/lib/constants";
+import { SITE_URL, LINKEDIN_URL, LINKEDIN_PAGE_URL, CONTACT_EMAIL, NOM_COMPLET, MARQUE, VILLES } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import AnalyticsSansMoi from "./components/AnalyticsSansMoi";
@@ -89,7 +89,7 @@ export default function RootLayout({
                   "priceRange": "€€",
                   "currenciesAccepted": "EUR",
                   "founder": { "@id": `${SITE_URL}/#william` },
-                  "sameAs": [LINKEDIN_URL],
+                  "sameAs": [LINKEDIN_PAGE_URL],
                   "address": {
                     "@type": "PostalAddress",
                     "addressLocality": "Paris",
